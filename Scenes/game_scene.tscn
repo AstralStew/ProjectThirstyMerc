@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://pyahp0w2yidh"]
+
+[ext_resource type="Texture2D" uid="uid://kkfvtgn1ild5" path="res://Assets/Images/Prototyping/mockup.png" id="1_x87qo"]
+[ext_resource type="Texture2D" uid="uid://3vnwq5wdt8xh" path="res://Assets/Images/Prototyping/MainCharacter.png" id="2_b6fju"]
+[ext_resource type="Script" uid="uid://rfuaxqfq5ds6" path="res://Scripts/PlayerCharacter.gd" id="2_fiftr"]
+[ext_resource type="FontFile" uid="uid://cwv1nyo616hys" path="res://Resources/Theme/Jersey10-Regular.ttf" id="3_6h5vk"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_6h5vk"]
+vertices = PackedVector2Array(-71.92969, 98.89844, 283.27344, -278.32813, 292.02344, -280.04688, 304.8203, -276.6328, 391.3125, -64.57031, 195.74219, 231.96094, -34.398438, 236.82813, -451.52344, 350.0625, -789.1328, 367.78125, -678.28906, 239.03906, -348.95313, -118.14844, -160.70313, 123.96094, -126.97656, 266.7422, 492.09375, 124.921875, 558.8906, 323.4375, 422.03906, 318.0703, -209.63281, -277.67188, -215.50781, -328.6328, -185.84375, -322.97656, -90.96094, 103.703125, 316.8203, -381.0625, 324.5078, -358.5625, 281.67188, -353.79688, 272.77344, -355.7422, -325.2578, -350.09375, -280.77344, -337.3828, -278.79688, -274.5078, 221.59375, -308.85156, 249.64844, -315.67188, 255.49219, -274.85938, 318.4375, -294.1328, 314.17188, -328.20313, 342.3203, -331.39844, 358.42188, -309.15625, -267.57813, -269.32813, -144.82813, 117.50781, -650.72656, -113.14844, -256.6172, -357.09375, -270.75, -365.39844, -260.09375, -394.71094, -247, -363.03906, 497.4297, -69.671875, 541.8828, 38.273438, 129.97656, -315.9922, 171.25, -315.0078, 84.86719, -314.9922, 42.453125, -317.0078, -5.6796875, -320.02344, -46.320313, -323, -97.11719, -323, -137.03906, -323.9922, -127.703125, 146.0625, -248.4375, -284.64063, -239.17969, -280.96094, -56.242188, 253.07031, -58.046875, 261.5, -73.77344, 274.4922, -95.61719, 265.60938, 5.75, -384, 65.171875, -362)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6), PackedInt32Array(7, 8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 5, 4), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(10, 24, 25, 26), PackedInt32Array(27, 28, 29, 0), PackedInt32Array(2, 1, 23, 22), PackedInt32Array(30, 31, 32, 33, 4), PackedInt32Array(3, 30, 4), PackedInt32Array(10, 26, 34, 35, 11), PackedInt32Array(9, 36, 10), PackedInt32Array(37, 38, 39, 40), PackedInt32Array(4, 41, 42, 13), PackedInt32Array(29, 1, 0), PackedInt32Array(43, 44, 27, 0, 45), PackedInt32Array(46, 45, 0), PackedInt32Array(47, 46, 0), PackedInt32Array(48, 47, 0, 49), PackedInt32Array(50, 49, 0, 19, 18), PackedInt32Array(51, 35, 34, 52, 53, 19, 54, 55), PackedInt32Array(53, 16, 19), PackedInt32Array(55, 56, 57, 51), PackedInt32Array(40, 53, 52, 37), PackedInt32Array(40, 39, 58, 59), PackedInt32Array(59, 58, 20, 23)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, -394, -267, -405, -283, -361, -266, -351, -259, -289, -269, -281, -271, -345, -334, -363, -358, -128, -660, -123, -688, 235, -812, 379, -450, 360, -115, 274, -149, 130, -137, 150, -104, 273, -72, 286, -49, 267, -46, 253, -79, 111, -42, 247, 194, 242, 420, 328, 573, 334, 503, 126, 553, 39, 504, -80, 400, -75, 368, -313, 347, -342, 303, -337, 308, -297, 301, -288, 293, -345, 338, -350, 324, -391), PackedVector2Array(-230, -290, -236, -353, 65, -352, 264, -346, 272, -287, 264, -286, 258, -328, 221, -319, 172, -325, 130, -326, 85, -325, 43, -327, -5, -330, -46, -333, -97, -333, -137, -334, -185, -333, -227, -341, -221, -289)])
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fiftr"]
+radius = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6fju"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiftr"]
+
+[node name="GameScene" type="Node" unique_id=1888737747]
+
+[node name="Managers" type="Node" parent="." unique_id=4243343]
+
+[node name="World" type="Node" parent="." unique_id=701354549]
+
+[node name="Level" type="Node2D" parent="World" unique_id=1506754726]
+texture_filter = 1
+
+[node name="Mockup" type="Sprite2D" parent="World/Level" unique_id=1195561341]
+texture = ExtResource("1_x87qo")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="World/Level" unique_id=1225317790]
+navigation_polygon = SubResource("NavigationPolygon_6h5vk")
+
+[node name="ColorRect" type="ColorRect" parent="World/Level" unique_id=2000405352]
+offset_left = -137.0
+offset_top = -147.0
+offset_right = -133.0
+offset_bottom = -143.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="World/Level" unique_id=1483123014]
+offset_left = 62.0
+offset_top = -158.0
+offset_right = 66.0
+offset_bottom = -154.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="World/Level" unique_id=1538661099]
+offset_left = 92.0
+offset_top = -48.0
+offset_right = 96.0
+offset_bottom = -44.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="World/Level" unique_id=752354453]
+offset_left = -41.0
+offset_top = -93.0
+offset_right = -37.0
+offset_bottom = -89.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="World/Level" unique_id=1598915460]
+offset_left = -220.0
+offset_top = 18.0
+offset_right = -216.0
+offset_bottom = 22.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="World/Level" unique_id=1849603257]
+offset_left = 210.0
+offset_top = -98.0
+offset_right = 214.0
+offset_bottom = -94.0
+color = Color(1, 0, 1, 1)
+
+[node name="Entities" type="Node2D" parent="World" unique_id=1378868865]
+texture_filter = 1
+
+[node name="PlayerCharacter" type="CharacterBody2D" parent="World/Entities" unique_id=1158223150]
+motion_mode = 1
+script = ExtResource("2_fiftr")
+
+[node name="TextureRect" type="TextureRect" parent="World/Entities/PlayerCharacter" unique_id=2118622852]
+offset_left = -19.0
+offset_top = -31.0
+offset_right = 13.0
+offset_bottom = 1.0
+texture = ExtResource("2_b6fju")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/PlayerCharacter" unique_id=1574023361]
+position = Vector2(-1, -15)
+shape = SubResource("CapsuleShape2D_fiftr")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/PlayerCharacter" unique_id=122119729]
+debug_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="World/Entities/PlayerCharacter" unique_id=1908921792]
+process_callback = 0
+position_smoothing_speed = 100.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.3
+drag_bottom_margin = 0.1
+
+[node name="Effects" type="Node2D" parent="World" unique_id=1779975020]
+
+[node name="DialogueBubble" type="ColorRect" parent="World/Effects" unique_id=1434103206]
+offset_left = 93.0
+offset_top = -213.99998
+offset_right = 605.0
+offset_bottom = -175.12358
+scale = Vector2(0.31262437, 0.848844)
+mouse_filter = 2
+color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+
+[node name="DialogueLabel" type="RichTextLabel" parent="World/Effects" unique_id=1992742168]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 103.0
+offset_top = -206.99997
+offset_right = 250.525
+offset_bottom = -184.61497
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 8
+text = "This is just a normal speech bubble.
+Maybe if there was something else here?"
+scroll_active = false
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=298506667]
+
+[node name="MetalDetector" type="ColorRect" parent="HUD" unique_id=359693496]
+offset_left = 11.0
+offset_top = 200.00002
+offset_right = 621.6963
+offset_bottom = 460.0
+scale = Vector2(0.40254825, 0.6346099)
+color = Color(0.5747106, 0.57471067, 0.5747106, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD" unique_id=1994630281]
+offset_left = 198.0
+offset_top = 206.0
+offset_right = 348.0
+offset_bottom = 406.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6fju")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/PanelContainer" unique_id=648389454]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD/PanelContainer/VBoxContainer" unique_id=1975461377]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiftr")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/PanelContainer/VBoxContainer/PanelContainer" unique_id=49748531]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/PanelContainer/VBoxContainer/PanelContainer/MarginContainer" unique_id=678759126]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="DialogueLabel" type="RichTextLabel" parent="HUD/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1003946754]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 8
+text = " Balance: $15.00"
+vertical_alignment = 1
+
+[node name="DialogueLabel2" type="RichTextLabel" parent="HUD/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1948595842]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 17.27)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.5
+theme_override_fonts/normal_font = ExtResource("3_6h5vk")
+theme_override_font_sizes/normal_font_size = 16
+text = "20:00"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+
+[node name="Phone" type="ColorRect" parent="HUD/PanelContainer/VBoxContainer" unique_id=1816685760]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PauseMenu" type="Node" parent="." unique_id=1795159322]
+
+[node name="Transitions" type="Node" parent="." unique_id=401277600]

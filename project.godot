@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="Project ThirstyMerc"
+run/main_scene="uid://pyahp0w2yidh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=240
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [file_customization]
 
@@ -21,6 +29,18 @@ folder_colors={
 "res://Resources/": "blue",
 "res://Scenes/": "orange",
 "res://Scripts/": "yellow"
+}
+
+[gui]
+
+theme/custom="uid://dr42pk7e7bbt7"
+
+[input]
+
+Click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(444, 30),"global_position":Vector2(460, 114),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
 }
 
 [physics]
