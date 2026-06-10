@@ -12,6 +12,6 @@ var indicator_direction : Vector2 :
 	get:
 		return (get_child(0) as Node2D).transform.y
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	global_position = PlayerCharacter.instance.global_position + offset
 	rotation = PlayerCharacter.instance.movement_direction.rotated(-PI/2).angle()

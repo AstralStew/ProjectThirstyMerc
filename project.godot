@@ -45,6 +45,11 @@ Click={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="PlayerCharacter"
+2d_physics/layer_9="Collectable"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
