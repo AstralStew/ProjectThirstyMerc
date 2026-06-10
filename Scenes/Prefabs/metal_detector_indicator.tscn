@@ -4,10 +4,31 @@
 [ext_resource type="Script" uid="uid://dlmfgmhxe4i7i" path="res://Scripts/World/MetalDetectorIndicator.gd" id="2_g21kq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgdss"]
-size = Vector2(12, 12)
+size = Vector2(10, 10)
 
 [node name="MetalDetectorIndicator" unique_id=820276514 instance=ExtResource("1_tgdss")]
 script = ExtResource("2_g21kq")
+global_offset = Vector2(0, -5)
+rotate_to_movement_direction = true
+rotation_range = 45.0
+
+[node name="ColorRect" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1762873939]
+offset_left = -3.0
+offset_top = 10.0
+offset_right = 3.0
+offset_bottom = 12.0
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.5381477, 0.5381477, 0.5381477, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="1" unique_id=132329204]
+offset_left = -2.0
+offset_top = 14.0
+offset_right = 2.0
+offset_bottom = 18.0
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.5381477, 0.5381477, 0.5381477, 1)
 
 [node name="Area2D" type="Area2D" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="2" unique_id=1235176437]
 position = Vector2(0, 16)
@@ -19,11 +40,11 @@ monitorable = false
 shape = SubResource("RectangleShape2D_tgdss")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Area2D" index="1" unique_id=1275532828]
-position = Vector2(-6, 12)
+position = Vector2(-5, 10)
 shape = SubResource("RectangleShape2D_tgdss")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Area2D" index="2" unique_id=35180589]
-position = Vector2(6, 12)
+position = Vector2(5, 10)
 shape = SubResource("RectangleShape2D_tgdss")
 
 [connection signal="area_entered" from="Node2D/Area2D" to="." method="_on_area_2d_area_entered"]

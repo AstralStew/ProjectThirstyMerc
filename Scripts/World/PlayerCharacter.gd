@@ -27,13 +27,14 @@ func _physics_process(delta):
 	if _click_held_down:
 		set_movement_target(get_global_mouse_position())
 		if player_move_target != null:
-			player_move_target.global_position = get_global_mouse_position()
+			player_move_target.set_deferred("global_position", navigation_agent.get_final_position()) #) .global_position = get_global_mouse_position()
 			player_move_target.visible = true
 	super._physics_process(delta)
 
 
 func on_navigation_finished() -> void:
-	#super.on_navigation_finished()
+	if movement_speed == 0:
+		super.on_navigation_finished()
 	if player_move_target != null:
 			player_move_target.visible = false
 
@@ -46,6 +47,8 @@ func _start_using_tool(speed_modifier:float = 0.5) -> void:
 	
 	if speed_modifier == 0:
 		set_movement_target(global_position)
+		
+		
 	
 	movement_speed = base_movement_speed * speed_modifier
 

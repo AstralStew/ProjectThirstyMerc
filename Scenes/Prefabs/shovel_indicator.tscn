@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://w80klp0rbev4"]
+
+[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/direction_indicator.tscn" id="1_y1mnu"]
+[ext_resource type="Script" uid="uid://cli5xv4kbvohx" path="res://Scripts/World/ShovelIndicator.gd" id="2_ge3fa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mnu"]
+size = Vector2(12, 10)
+
+[node name="ShovelIndicator" unique_id=820276514 instance=ExtResource("1_y1mnu")]
+script = ExtResource("2_ge3fa")
+progress_per_dig = 1
+dig_up_threshold = -0.8
+dig_down_threshold = 0.8
+shovel_up = false
+ready_to_dig = false
+global_offset = Vector2(0, -8)
+position_y_range = 1.5
+
+[node name="Control" type="Control" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1442455224]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 3.0
+offset_bottom = 3.0
+scale = Vector2(0.1, 0.1)
+
+[node name="Polygon2D" type="Polygon2D" parent="Node2D/Control" index="0" unique_id=1457915834]
+position = Vector2(0, 60)
+color = Color(0.74857974, 0.74857974, 0.7485797, 1)
+polygon = PackedVector2Array(-34, 0, 0, -4, 34, 0, 24, 44, 0, 64, -24, 44)
+
+[node name="Gfx2" type="ColorRect" parent="Node2D/Control" index="1" unique_id=1039377852]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 9.0
+offset_right = 9.0
+offset_bottom = 63.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.6, 0.18, 0.27100003, 1)
+
+[node name="Gfx" type="ColorRect" parent="Node2D/Control" index="2" unique_id=482195300]
+layout_mode = 0
+offset_left = -33.0
+offset_top = -9.0
+offset_right = 33.0
+offset_bottom = 9.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.6, 0.18, 0.27100003, 1)
+
+[node name="Area2D" type="Area2D" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="1" unique_id=908884314]
+position = Vector2(0, 9)
+collision_mask = 256
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" index="0" unique_id=1332767645]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_y1mnu")

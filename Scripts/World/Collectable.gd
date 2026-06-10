@@ -1,28 +1,74 @@
 class_name Collectable extends Area2D
 
-@onready var gfx: Node2D = $Gfx
+@onready var buried_gfx: Node2D = $BuriedGfx
+@onready var real_gfx: Control = $RealGfx
+@onready var object_gfx: Control = $RealGfx/ObjectGfx
+@onready var ground_gfx: ColorRect = $RealGfx/GroundGfx
 
 
+@export var digs_required: int = 3
+@export var player_y_offset_on_start_digging: float = 2
+@export var player_y_offset_on_collect: float = -10
+
+
+@export_category("READ ONLY")
+@export var is_collected: bool = false
+@export var is_buried: bool = true
+@export_range(0,1) var dig_progress: int = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	gfx.visible = false
+	buried_gfx.visible = false
+	real_gfx.visible = false
+	real_gfx.modulate = Color(Color.WHITE,0)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-var reveal_tween : Tween
+var _tween : Tween
 func reveal(duration: float = 1.0):
+	if is_collected || !is_buried: return
 	
-	gfx.visible = true
-	gfx.modulate = Color.WHITE
+	buried_gfx.visible = true
+	buried_gfx.modulate = Color.WHITE
 	
-	if reveal_tween: reveal_tween.kill()
-	reveal_tween = create_tween().set_parallel()
-	reveal_tween.tween_property(gfx,"modulate",Color(Color.WHITE,0),duration)
-	while reveal_tween.is_running(): await get_tree().process_frame
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel()
+	_tween.tween_property(buried_gfx,"modulate",Color(Color.WHITE,0),duration)
 	
-	gfx.visible = false
+	while _tween.is_running() && is_buried && !is_collected:
+		await get_tree().process_frame
+	buried_gfx.visible = false
+
+func dig(progress:int = 1) -> void:
+	if is_collected: return
 	
+	if is_buried:
+		is_buried = false
+		global_position = global_position.lerp(PlayerCharacter.instance.global_position + Vector2(0,player_y_offset_on_start_digging),0.5)
+		real_gfx.set_deferred("visible",true)
+	
+	dig_progress += 1  # clamp(, 0, max(digs_required - 1,1))
+	
+	if dig_progress >= digs_required:
+		collect()
+	
+	real_gfx.modulate = Color(Color.WHITE,0.5).lerp(Color.WHITE,dig_progress as float / max(digs_required - 1,1))
+	
+	object_gfx.position = Vector2(5,9 - (dig_progress as float / max(digs_required - 1,1) * 4))
+	
+
+func collect() -> void:
+	if is_collected: return
+	is_collected = true
+	
+	var initial_pos = object_gfx.global_position
+	object_gfx.reparent(self)
+	
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel().set_ease(Tween.EASE_OUT)
+	_tween.tween_property(object_gfx,"global_position",PlayerCharacter.instance.global_position + Vector2(0,player_y_offset_on_collect),1).from(initial_pos)
+	_tween.tween_property(object_gfx,"modulate",Color(Color.WHITE,0),0.5).set_delay(0.5)
+	_tween.tween_property(ground_gfx,"modulate",Color(Color.WHITE,0),0.75)
+
+	while _tween.is_running(): await get_tree().process_frame
+	
+	queue_free()
