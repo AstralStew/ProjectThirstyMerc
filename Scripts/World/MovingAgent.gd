@@ -5,6 +5,9 @@ class_name MovingAgent extends CharacterBody2D
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
+@export_category("READ ONLY")
+@export var movement_direction : Vector2 = Vector2.ZERO
+
 func _ready():
 	# These values need to be adjusted for the actor's speed
 	# and the navigation layout.
@@ -31,6 +34,7 @@ func _physics_process(delta):
 
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = navigation_agent.get_next_path_position()
-
-	velocity = current_agent_position.direction_to(next_path_position) * movement_speed
+	
+	movement_direction = current_agent_position.direction_to(next_path_position)
+	velocity = movement_direction * movement_speed
 	move_and_slide()
