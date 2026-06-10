@@ -4,7 +4,6 @@ const DEBUG_NAME : String = "[b][PlayerCharacter][/b] "
 
 @export var player_move_target : Node2D
 
-
 @export var is_using_tool : bool = false
 
 @export_category("READ ONLY")
@@ -30,12 +29,13 @@ func _physics_process(delta):
 		if player_move_target != null:
 			player_move_target.global_position = get_global_mouse_position()
 			player_move_target.visible = true
-	elif navigation_agent.is_navigation_finished():
-		if player_move_target != null:
-			player_move_target.visible = false
-		return
-	
 	super._physics_process(delta)
+
+
+func on_navigation_finished() -> void:
+	#super.on_navigation_finished()
+	if player_move_target != null:
+			player_move_target.visible = false
 
 
 static func start_using_tool(speed_modifier:float = 0.5) -> void:

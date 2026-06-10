@@ -1,6 +1,6 @@
 class_name MetalDetector extends Rotator
 
-@onready var direction_indicator_prefab : PackedScene = preload("res://Scenes/Prefabs/direction_indicator.tscn")
+@export var direction_indicator_prefab : PackedScene  #= preload("res://Scenes/Prefabs/direction_indicator.tscn")
 
 @export_range(0,1) var movement_speed_modifier : float  = 0.5
 @export_range(0,1) var indicator_rotation_range : float  = 90
