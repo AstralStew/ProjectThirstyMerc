@@ -2,6 +2,8 @@ class_name PlayerCharacter extends MovingAgent
 static var instance : PlayerCharacter = null
 const DEBUG_NAME : String = "[b][PlayerCharacter][/b] "
 
+static var camera : Camera2D = null
+
 @export var player_move_target : Node2D
 
 @export var is_using_tool : bool = false
@@ -16,6 +18,9 @@ func _enter_tree() -> void:
 	instance = self
 	base_movement_speed = movement_speed
 	if player_move_target != null: player_move_target.visible = false
+
+func _ready():
+	camera = $Camera2D
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Click"):

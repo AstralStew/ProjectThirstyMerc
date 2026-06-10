@@ -19,7 +19,6 @@ collision_mask = 0
 input_pickable = false
 monitoring = false
 script = ExtResource("1_v2a6p")
-player_y_offset_on_start_digging = 5.0
 metadata/_custom_type_script = "uid://btco0bah4lyb5"
 
 [node name="BuriedGfx" type="Node2D" parent="." unique_id=1376092548]
@@ -31,6 +30,7 @@ offset_top = -2.0
 offset_right = 2.0
 offset_bottom = 2.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
 color = Color(1, 0, 1, 1)
 
 [node name="RealGfx" type="Control" parent="." unique_id=2111345392]
@@ -41,6 +41,7 @@ offset_left = -5.0
 offset_top = -4.0
 offset_right = 5.0
 offset_bottom = 4.0
+mouse_filter = 2
 
 [node name="ObjectGfx" type="Control" parent="RealGfx" unique_id=456666999]
 anchors_preset = 0
@@ -48,6 +49,7 @@ offset_left = 5.0
 offset_top = 4.0
 offset_right = 5.0
 offset_bottom = 4.0
+mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="RealGfx/ObjectGfx" unique_id=639782143]
 layout_mode = 0
@@ -55,6 +57,7 @@ offset_left = -3.0
 offset_top = -3.0
 offset_right = 3.0
 offset_bottom = 3.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v2a6p")
 
 [node name="GroundGfx" type="ColorRect" parent="RealGfx" unique_id=1541818670]
@@ -63,6 +66,7 @@ offset_top = 6.0
 offset_right = 10.0
 offset_bottom = 8.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
 color = Color(0.6640047, 0.32725295, 3.85046e-07, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1644836759]
