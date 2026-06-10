@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d1gyjemrc7e70"]
+
+[ext_resource type="Script" uid="uid://rf1dwydpscuo" path="res://Scripts/World/DirectionIndicator.gd" id="1_gubkt"]
+
+[node name="DirectionIndicator" type="Node2D" unique_id=820276514]
+script = ExtResource("1_gubkt")
+offset = Vector2(0, -5)
+metadata/_custom_type_script = "uid://rf1dwydpscuo"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=919585061]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D" unique_id=345186019]
+offset_left = -3.0
+offset_top = 10.0
+offset_right = 3.0
+offset_bottom = 12.0
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.5381477, 0.5381477, 0.5381477, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D" unique_id=1557209568]
+offset_left = -2.0
+offset_top = 14.0
+offset_right = 2.0
+offset_bottom = 18.0
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.5381477, 0.5381477, 0.5381477, 1)
