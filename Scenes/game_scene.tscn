@@ -251,6 +251,34 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
 color = Color(0.5747106, 0.57471067, 0.5747106, 1)
 
+[node name="MetalDetector2" type="Control" parent="HUD" unique_id=705264362]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 331.0
+offset_top = 228.0
+offset_right = 331.0
+offset_bottom = 228.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("5_7iton")
+direction_indicator_prefab = ExtResource("7_ikfsv")
+movement_speed_modifier = 0.41
+rotation_bounds = Vector2(-10, 10)
+dragged_object = NodePath("Gfx")
+position_bounds = Array[Vector2]([Vector2(-160, -20), Vector2(20, -20)])
+reset_on_drag_end = true
+metadata/_custom_type_script = "uid://d0tcjrsdnm5rs"
+
+[node name="Gfx" type="ColorRect" parent="HUD/MetalDetector2" unique_id=1860630740]
+layout_mode = 0
+offset_left = -70.0
+offset_top = 20.0
+offset_right = 70.0
+offset_bottom = 100.0
+scale = Vector2(1, 1.6)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.5747106, 0.57471067, 0.5747106, 1)
+
 [node name="Phone" type="PanelContainer" parent="HUD" unique_id=1994630281]
 offset_left = -98.0
 offset_top = 118.0
@@ -322,4 +350,5 @@ mouse_filter = 1
 [node name="Transitions" type="Node" parent="." unique_id=401277600]
 
 [connection signal="gui_input" from="HUD/MetalDetector" to="HUD/MetalDetector" method="_on_gui_input"]
+[connection signal="gui_input" from="HUD/MetalDetector2" to="HUD/MetalDetector2" method="_on_gui_input"]
 [connection signal="gui_input" from="HUD/Phone" to="HUD/Phone" method="_on_gui_input"]

@@ -43,6 +43,10 @@ static func start_using_tool(speed_modifier:float = 0.5) -> void:
 func _start_using_tool(speed_modifier:float = 0.5) -> void:
 	print_rich(DEBUG_NAME,"StartUsingTool > Multiplying speed by " + str(speed_modifier))
 	is_using_tool = true
+	
+	if speed_modifier == 0:
+		set_movement_target(global_position)
+	
 	movement_speed = base_movement_speed * speed_modifier
 
 static func stop_using_tool() -> void:
