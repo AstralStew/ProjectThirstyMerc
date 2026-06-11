@@ -7,7 +7,7 @@ class_name DirectionIndicator extends Node2D
 @export var position_y_range : float = 0
 @export_range(0,360) var rotation_range : float = 0
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export_range(-1,1) var indicator_position_x : float :
 	set(value):
 		(get_child(0) as Node2D).position.x = value * position_x_range

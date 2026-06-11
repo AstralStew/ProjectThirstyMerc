@@ -1,26 +1,49 @@
 [gd_scene format=3 uid="uid://paddlm4mglvp"]
 
 [ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/Indicators/direction_indicator.tscn" id="1_8ufan"]
-[ext_resource type="Script" uid="uid://beshq8bpu6e4h" path="res://Scripts/World/BinocularIndicator.gd" id="2_i8snb"]
+[ext_resource type="Script" uid="uid://beshq8bpu6e4h" path="res://Scripts/World/Indicators/BinocularIndicator.gd" id="2_i8snb"]
+[ext_resource type="Shader" uid="uid://dclv00apa346n" path="res://Assets/Shaders/blur.gdshader" id="3_8sfgx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8sfgx"]
+shader = ExtResource("3_8sfgx")
+shader_parameter/strength = 2.00000009174012
+shader_parameter/mix_percentage = 0.050000002375
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ufan"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0.8001019, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sfgx"]
+bg_color = Color(1, 1, 1, 1)
 draw_center = false
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-corner_radius_top_left = 500
-corner_radius_top_right = 500
-corner_radius_bottom_right = 500
-corner_radius_bottom_left = 500
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.53333336)
+border_blend = true
+corner_radius_top_left = 124
+corner_radius_top_right = 124
+corner_radius_bottom_right = 124
+corner_radius_bottom_left = 124
+shadow_color = Color(1, 1, 1, 0.49411765)
+shadow_size = 12
+anti_aliasing = false
+anti_aliasing_size = 0.01
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8snb"]
 size = Vector2(16, 16)
 
 [node name="BinocularIndicator" unique_id=820276514 instance=ExtResource("1_8ufan")]
+texture_filter = 1
 script = ExtResource("2_i8snb")
 radius = 125.0
-radius_colour = Color(0, 0, 1, 0.45882353)
+radius_colour = Color(0.378, 0.42149997, 0.9, 1)
 is_far = false
 
 [node name="CenterContainer" type="CenterContainer" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1400158550]
@@ -38,16 +61,26 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="RadiusGfx" type="PanelContainer" parent="Node2D/CenterContainer" index="0" unique_id=1303573740]
+[node name="BlurGfx" type="PanelContainer" parent="Node2D/CenterContainer" index="0" unique_id=1303573740]
+material = SubResource("ShaderMaterial_8sfgx")
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ufan")
 
+[node name="RadiusGfx" type="PanelContainer" parent="Node2D/CenterContainer" index="1" unique_id=690200578]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_8sfgx")
+
 [node name="Area2D" type="Area2D" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="1" unique_id=2008103852]
 collision_mask = 256
 input_pickable = false
+monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" index="0" unique_id=59256515]

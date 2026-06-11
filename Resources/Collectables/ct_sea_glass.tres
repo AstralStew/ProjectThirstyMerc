@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://bri8u7r1v5itr"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_ch6oc"]
+
+[resource]
+script = ExtResource("1_ch6oc")
+name = "Sea Glass"
+digs_required = 2
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

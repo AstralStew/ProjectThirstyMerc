@@ -5,7 +5,7 @@ class_name MovingAgent extends CharacterBody2D
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export var movement_direction : Vector2 = Vector2.ZERO
 
 func _ready():

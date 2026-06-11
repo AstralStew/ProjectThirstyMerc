@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cm6wpeer5ojsl"]
 
 [ext_resource type="PackedScene" uid="uid://cqo6tqnt78qv8" path="res://Scenes/Prefabs/Collectables/collectable.tscn" id="1_j828y"]
+[ext_resource type="Resource" uid="uid://b71jhg0b6wm7p" path="res://Resources/Collectables/ct_pottery_sherd.tres" id="2_wmddy"]
 
 [node name="PotterySherd" unique_id=1041127925 instance=ExtResource("1_j828y")]
+collectable_type = ExtResource("2_wmddy")
 
 [node name="ColorRect" type="ColorRect" parent="RealGfx/ObjectGfx" parent_id_path=PackedInt32Array(456666999) index="1" unique_id=1395196877]
 layout_mode = 0

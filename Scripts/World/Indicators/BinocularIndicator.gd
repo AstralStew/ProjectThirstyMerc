@@ -2,10 +2,12 @@ class_name BinocularIndicator extends DirectionIndicator
 
 @onready var area_2d: Area2D = $Node2D/Area2D
 @onready var radius_gfx: PanelContainer = $Node2D/CenterContainer/RadiusGfx
+@onready var blur_gfx: PanelContainer = $Node2D/CenterContainer/BlurGfx
 
 @export var radius : float = 150.0:
 	set(value):
 		if radius_gfx: radius_gfx.custom_minimum_size = Vector2(value*2,value*2)
+		if blur_gfx: blur_gfx.custom_minimum_size = Vector2(value*2-5,value*2-5)
 		radius = value
 		_sqr_radius = radius * radius
 
@@ -13,7 +15,7 @@ class_name BinocularIndicator extends DirectionIndicator
 
 var _sqr_radius : float = 0.0
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export var is_far : bool = false
 
 signal on_near

@@ -1,6 +1,9 @@
 class_name Rotator extends Dragger
 
+enum RotateSource {VALUE,VALUE_X_ONLY,VALUE_Y_ONLY}
+
 @export var rotation_bounds : Vector2
+@export var rotate_source : RotateSource = RotateSource.VALUE
 
 var _initial_rotation : float
 
@@ -24,7 +27,14 @@ func _process(delta: float) -> void:
 	if !is_dragging: return
 	if _total_diff.is_zero_approx(): return 
 	
-	dragged_object.rotation_degrees = lerpf(rotation_bounds.x,rotation_bounds.y,value)
+	match rotate_source:
+		RotateSource.VALUE:
+			dragged_object.rotation_degrees = lerpf(rotation_bounds.x,rotation_bounds.y,value)
+		RotateSource.VALUE_X_ONLY:
+			dragged_object.rotation_degrees = lerpf(rotation_bounds.x,rotation_bounds.y,value_x_only)
+		RotateSource.VALUE_Y_ONLY:
+			dragged_object.rotation_degrees = lerpf(rotation_bounds.x,rotation_bounds.y,value_y_only)
+	
 
 
 func resetting() -> void:

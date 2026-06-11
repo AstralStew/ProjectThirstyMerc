@@ -8,7 +8,7 @@ static var camera : Camera2D = null
 
 @export var is_using_tool : bool = false
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export var base_movement_speed : float = 0.0
 
 var _click_held_down: bool = false

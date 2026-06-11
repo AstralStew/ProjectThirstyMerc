@@ -11,7 +11,7 @@ const DEBUG_NAME : String = "[b][ShovelIndicator][/b] "
 @export_range(-1,0) var dig_up_threshold : float = -1
 @export_range(-1,1) var dig_down_threshold : float = 0.8
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export var shovel_up : bool = false
 @export var ready_to_dig : bool = false
 

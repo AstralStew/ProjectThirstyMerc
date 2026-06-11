@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://b71jhg0b6wm7p"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_iw86r"]
+
+[resource]
+script = ExtResource("1_iw86r")
+name = "Pottery Sherd"
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

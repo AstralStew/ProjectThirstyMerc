@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://brk0lv0kl46ty"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_f0r1u"]
+
+[resource]
+script = ExtResource("1_f0r1u")
+name = "Silver Necklace"
+digs_required = 4
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

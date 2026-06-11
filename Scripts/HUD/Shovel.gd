@@ -21,6 +21,8 @@ func start() -> void:
 	PlayerCharacter.instance.add_child(_direction_indicator)
 	_direction_indicator.indicator_position_y = 0
 	
+	z_index = -5
+	
 	call_deferred("digging")
 
 func digging() -> void:
@@ -35,6 +37,8 @@ func digging() -> void:
 
 func stop() -> void:
 	PlayerCharacter.stop_using_tool()
+	
+	z_index = 0
 	
 	if _direction_indicator != null:
 		_direction_indicator.queue_free()

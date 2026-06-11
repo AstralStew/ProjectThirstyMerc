@@ -5,7 +5,7 @@ class_name Footprints extends Node2D
 @export var time_before_footprint_removed : float = 5
 
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export var step_index : int = 0
 
 var _last_pos : Vector2 = Vector2.ZERO

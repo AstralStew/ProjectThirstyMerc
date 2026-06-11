@@ -28,6 +28,8 @@ func start() -> void:
 	(_direction_indicator as BinocularIndicator).on_near.connect(on_near)
 	(_direction_indicator as BinocularIndicator).on_far.connect(on_far)
 	
+	z_index = -5
+	
 	call_deferred("seeing")
 
 func on_near() -> void:
@@ -49,6 +51,8 @@ func on_far() -> void:
 
 func seeing() -> void:
 	
+	var original_offset : Vector2 = PlayerCharacter.camera.offset
+	PlayerCharacter.camera.offset = Vector2.ZERO
 	PlayerCharacter.camera.position_smoothing_enabled = true
 	PlayerCharacter.camera.position_smoothing_speed = 2.0
 	while(is_dragging):
@@ -59,6 +63,7 @@ func seeing() -> void:
 		
 		await get_tree().process_frame
 	
+	PlayerCharacter.camera.offset = original_offset
 	PlayerCharacter.camera.position_smoothing_speed = 10
 	PlayerCharacter.camera.position = Vector2.ZERO
 	await get_tree().create_timer(0.4).timeout
@@ -69,6 +74,8 @@ func seeing() -> void:
 
 func stop() -> void:
 	PlayerCharacter.stop_using_tool()
+	
+	z_index = 0
 	
 	if _direction_indicator != null:
 		_direction_indicator.queue_free()

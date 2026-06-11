@@ -8,7 +8,7 @@ class_name Dragger extends Control
 @export var reset_on_drag_end : bool
 @export var reset_duration : float = 0.25
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 
 @export var is_dragging : bool = false
 @export var value : float
