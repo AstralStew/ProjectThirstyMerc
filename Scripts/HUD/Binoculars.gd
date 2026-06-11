@@ -1,10 +1,16 @@
 class_name Binoculars extends Rotator
 
-#@export var direction_indicator_prefab : PackedScene 
+@export var direction_indicator_prefab : PackedScene 
 
 @export_range(0,1) var movement_speed_modifier : float  = 0
 
-#var _direction_indicator : DirectionIndicator
+@export var camera_move_multiplier : float  = 1.0
+
+@export var transition_duration : float = 0.1
+@export var near_scale : float = 1.25
+@export var far_scale : float = 0.5
+
+var _direction_indicator : DirectionIndicator
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,20 +22,39 @@ func _ready() -> void:
 func start() -> void:
 	PlayerCharacter.start_using_tool(movement_speed_modifier)
 	
-	#_direction_indicator = direction_indicator_prefab.instantiate()
-	#PlayerCharacter.instance.add_child(_direction_indicator)
-	#_direction_indicator.indicator_position_y = 0
+	_direction_indicator = direction_indicator_prefab.instantiate()
+	PlayerCharacter.instance.add_child(_direction_indicator)
 	
-	call_deferred("digging")
+	(_direction_indicator as BinocularIndicator).on_near.connect(on_near)
+	(_direction_indicator as BinocularIndicator).on_far.connect(on_far)
+	
+	call_deferred("seeing")
 
-func digging() -> void:
+func on_near() -> void:
+	if is_resetting: return
+	print("on near, scale = " + str(Vector2.ONE * near_scale))
+	
+	if _tween: _tween.kill()
+	_tween = create_tween()
+	_tween.tween_property(dragged_object,"scale",Vector2.ONE * near_scale,transition_duration)
+
+func on_far() -> void:
+	if is_resetting: return
+	print("on far, scale = " + str(Vector2.ONE * far_scale))
+	
+	if _tween: _tween.kill()
+	_tween = create_tween()
+	_tween.tween_property(dragged_object,"scale",Vector2.ONE * far_scale,transition_duration)
+
+
+func seeing() -> void:
 	
 	PlayerCharacter.camera.position_smoothing_enabled = true
 	PlayerCharacter.camera.position_smoothing_speed = 2.0
 	while(is_dragging):
 		#print("indicator value = " + str())
 		#_direction_indicator.indicator_position_y = clamp(remap(value_y_only,0,1,-1,1),-1,1)
-		PlayerCharacter.camera.position = Vector2.ZERO.lerp(dragged_object.global_position - Vector2(180,120),0.5) #- PlayerCharacter.instance.global_position
+		PlayerCharacter.camera.position = Vector2.ZERO.lerp(dragged_object.global_position - Vector2(180,120),camera_move_multiplier) #- PlayerCharacter.instance.global_position
 		#print("offset = " + str(dragged_object.global_position - PlayerCharacter.instance.global_position))
 		
 		await get_tree().process_frame
@@ -37,18 +62,18 @@ func digging() -> void:
 	PlayerCharacter.camera.position_smoothing_speed = 10
 	PlayerCharacter.camera.position = Vector2.ZERO
 	await get_tree().create_timer(0.4).timeout
-	#while (PlayerCharacter.instance.global_position - PlayerCharacter.camera.get_screen_center_position()).length_squared() > 4:
-		#await get_tree().process_frame
 	
 	PlayerCharacter.camera.position_smoothing_enabled = false
-	
-#func _process(delta: float) -> void:
-	#print(str())
+
 
 
 func stop() -> void:
 	PlayerCharacter.stop_using_tool()
 	
-	#if _direction_indicator != null:
-		#_direction_indicator.queue_free()
-		#_direction_indicator = null
+	if _direction_indicator != null:
+		_direction_indicator.queue_free()
+		_direction_indicator = null
+
+func resetting() -> void:
+	super.resetting()
+	_tween.tween_property(dragged_object,"scale",Vector2.ONE,reset_duration)

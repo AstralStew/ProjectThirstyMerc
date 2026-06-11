@@ -20,6 +20,7 @@ func _enter_tree() -> void:
 	if player_move_target != null: player_move_target.visible = false
 
 func _ready():
+	super._ready()
 	camera = $Camera2D
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -41,8 +42,14 @@ func on_navigation_finished() -> void:
 	if movement_speed == 0:
 		super.on_navigation_finished()
 	if player_move_target != null:
-			player_move_target.visible = false
+		player_move_target.visible = false
 
+func set_movement_target(movement_target: Vector2):
+	super.set_movement_target(movement_target)
+	if movement_target.distance_squared_to(PlayerCharacter.instance.global_position) < navigation_agent.target_desired_distance ** 2:
+		movement_direction = movement_target.direction_to(PlayerCharacter.instance.global_position)
+		player_move_target.visible = true
+		player_move_target.set_deferred("visible",false)
 
 static func start_using_tool(speed_modifier:float = 0.5) -> void:
 	instance._start_using_tool(speed_modifier)
@@ -52,7 +59,6 @@ func _start_using_tool(speed_modifier:float = 0.5) -> void:
 	
 	if speed_modifier == 0:
 		set_movement_target(global_position)
-		
 		
 	
 	movement_speed = base_movement_speed * speed_modifier

@@ -10,7 +10,7 @@ size = Vector2(10, 10)
 script = ExtResource("2_g21kq")
 global_offset = Vector2(0, -5)
 rotate_to_movement_direction = true
-rotation_range = 45.0
+rotation_range = 60.0
 
 [node name="ColorRect" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1762873939]
 offset_left = -3.0

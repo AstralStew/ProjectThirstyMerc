@@ -69,4 +69,5 @@ func _on_gui_input(event: InputEvent) -> void:
 		on_drag_end.emit()
 	
 	if is_dragging && event is InputEventMouseMotion:
-		dragged_object.position = (dragged_object.position + event.relative).clamp(position_bounds[0],position_bounds[1])
+		dragged_object.position = get_global_mouse_position().clamp(position_bounds[0],position_bounds[1])
+		#dragged_object.position = (dragged_object.position + event.relative).clamp(position_bounds[0],position_bounds[1])
