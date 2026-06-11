@@ -9,6 +9,7 @@ class_name Collectable extends Area2D
 @export var digs_required: int = 3
 @export var player_y_offset_on_start_digging: float = 2
 @export var player_y_offset_on_collect: float = -10
+@export var mirage_strength: float = 7
 
 
 @export_category("READ ONLY")
@@ -24,19 +25,33 @@ func _ready() -> void:
 
 
 var _tween : Tween
-func reveal(duration: float = 1.0):
+func reveal(duration: float = 1.0,mirage: bool = false):
 	if is_collected || !is_buried: return
 	
 	buried_gfx.visible = true
 	buried_gfx.modulate = Color.WHITE
+	buried_gfx.position = Vector2.ZERO
+	buried_gfx.rotation = 0
+	buried_gfx.get_child(0).position = Vector2.ZERO
+	buried_gfx.get_child(0).rotation = 0
 	
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel()
 	_tween.tween_property(buried_gfx,"modulate",Color(Color.WHITE,0),duration)
+	if mirage: 
+		_tween.tween_property(buried_gfx,"position",Vector2.ONE * randf() * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from(Vector2.ONE * randf() * mirage_strength).set_ease(Tween.EASE_OUT_IN)
+		_tween.tween_property(buried_gfx,"rotation",(randf()-1) * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from((randf()-1) * mirage_strength).set_ease(Tween.EASE_IN_OUT)
+		_tween.tween_property(buried_gfx.get_child(0),"position",Vector2.ONE * randf() * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from(Vector2.ONE * randf() * mirage_strength).set_ease(Tween.EASE_IN_OUT)
+		_tween.tween_property(buried_gfx.get_child(0),"rotation",(randf()-1) * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from((randf()-1) * mirage_strength).set_ease(Tween.EASE_OUT_IN)
+		
+		
 	
 	while _tween.is_running() && is_buried && !is_collected:
 		await get_tree().process_frame
 	buried_gfx.visible = false
+	buried_gfx.position = Vector2.ZERO
+
+
 
 func dig(progress:int = 1) -> void:
 	if is_collected: return
