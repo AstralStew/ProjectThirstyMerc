@@ -3,6 +3,8 @@ class_name Dragger extends Control
 @export var dragged_object : CanvasItem 
 @export var position_bounds : Array[Vector2]
 
+@export var respect_grab_position : bool = false
+
 @export var reset_on_drag_end : bool
 @export var reset_duration : float = 0.25
 
@@ -14,6 +16,7 @@ class_name Dragger extends Control
 @export var value_y_only : float
 @export var is_resetting : bool = false
 
+
 #var _dragged_object : CanvasItem
 var _initial_position : Vector2
 
@@ -21,6 +24,8 @@ var _total_diff : Vector2
 #var _total_diff_x : float
 #var _total_diff_y : float
 var _current_diff : Vector2
+
+var _grab_pos : Vector2
 
 signal on_drag_start
 signal on_drag_end
@@ -59,7 +64,9 @@ func _on_gui_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("Click"):
 		is_dragging = true
-		dragged_object.position = dragged_object.position.clamp(position_bounds[0],position_bounds[1])
+		if respect_grab_position:
+			_grab_pos = dragged_object.get_local_mouse_position()
+		dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
 
 		on_drag_start.emit()
 	elif event.is_action_released("Click"):
@@ -69,5 +76,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		on_drag_end.emit()
 	
 	if is_dragging && event is InputEventMouseMotion:
-		dragged_object.position = get_global_mouse_position().clamp(position_bounds[0],position_bounds[1])
+		dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
+		#dragged_object.position = get_global_mouse_position().clamp(position_bounds[0],position_bounds[1])
+	
 		#dragged_object.position = (dragged_object.position + event.relative).clamp(position_bounds[0],position_bounds[1])

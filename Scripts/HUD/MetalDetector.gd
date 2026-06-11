@@ -34,5 +34,6 @@ func detecting() -> void:
 func stop() -> void:
 	PlayerCharacter.stop_using_tool()
 	
-	_direction_indicator.queue_free()
-	_direction_indicator = null
+	if _direction_indicator != null:
+		_direction_indicator.queue_free()
+		_direction_indicator = null

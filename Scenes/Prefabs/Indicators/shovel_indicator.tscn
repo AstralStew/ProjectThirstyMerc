@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://w80klp0rbev4"]
 
-[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/direction_indicator.tscn" id="1_y1mnu"]
+[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/Indicators/direction_indicator.tscn" id="1_y1mnu"]
 [ext_resource type="Script" uid="uid://cli5xv4kbvohx" path="res://Scripts/World/ShovelIndicator.gd" id="2_ge3fa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1mnu"]

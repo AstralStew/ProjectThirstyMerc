@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://du5p2psjdb5fi"]
 
-[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/direction_indicator.tscn" id="1_tgdss"]
+[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/Indicators/direction_indicator.tscn" id="1_tgdss"]
 [ext_resource type="Script" uid="uid://dlmfgmhxe4i7i" path="res://Scripts/World/MetalDetectorIndicator.gd" id="2_g21kq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgdss"]

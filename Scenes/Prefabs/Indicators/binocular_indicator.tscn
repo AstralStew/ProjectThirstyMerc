@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://paddlm4mglvp"]
 
-[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/direction_indicator.tscn" id="1_8ufan"]
+[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/Indicators/direction_indicator.tscn" id="1_8ufan"]
 [ext_resource type="Script" uid="uid://beshq8bpu6e4h" path="res://Scripts/World/BinocularIndicator.gd" id="2_i8snb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ufan"]
