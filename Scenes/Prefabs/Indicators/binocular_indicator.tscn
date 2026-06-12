@@ -62,6 +62,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="BlurGfx" type="PanelContainer" parent="Node2D/CenterContainer" index="0" unique_id=1303573740]
+z_index = 15
+z_as_relative = false
 material = SubResource("ShaderMaterial_8sfgx")
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2

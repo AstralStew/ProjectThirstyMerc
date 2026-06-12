@@ -43,9 +43,9 @@ func _physics_process(delta):
 	
 	movement_direction = current_agent_position.direction_to(next_path_position)
 	if navigation_agent.avoidance_enabled:
-		navigation_agent.velocity = movement_direction * movement_speed
+		navigation_agent.velocity = movement_direction * movement_speed * WorldManager.get_speed_at_tile_position(global_position)
 	else:
-		on_velocity_computed(movement_direction * movement_speed)
+		on_velocity_computed(movement_direction * movement_speed * WorldManager.get_speed_at_tile_position(global_position))
 		#velocity = 
 		#move_and_slide()
 	

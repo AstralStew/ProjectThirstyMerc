@@ -21,7 +21,7 @@ window/size/viewport_width=720
 window/size/viewport_height=560
 window/size/window_width_override=1440
 window/size/window_height_override=1120
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [file_customization]
 
@@ -52,6 +52,10 @@ pointing/emulate_touch_from_mouse=true
 
 2d_physics/layer_1="PlayerCharacter"
 2d_physics/layer_9="Collectable"
+
+[navigation]
+
+2d/default_edge_connection_margin=10.0
 
 [physics]
 

@@ -8,6 +8,7 @@ func _enter_tree() -> void:
 static var level_root : Node2D :
 	get: return instance.level
 
+@onready var tile_map_layer: TileMapLayer = $"../../World/Level/TileMapLayer"
 
 
 @onready var entities: Node2D = $"../../World/Entities"
@@ -18,7 +19,17 @@ static var entities_root : Node2D :
 static var effects_root : Node2D :
 	get: return instance.effects
 
-#
+
+
+static func get_speed_at_tile_position(global_position:Vector2) -> float:
+	var current_tile_pos = instance.tile_map_layer.local_to_map(instance.tile_map_layer.to_local(global_position))
+	var _data_at_pos = instance.tile_map_layer.get_cell_tile_data(current_tile_pos)
+	if _data_at_pos && _data_at_pos.has_custom_data("Speed"):
+		print("speed = " + str(_data_at_pos.get_custom_data("Speed") as float))
+		return _data_at_pos.get_custom_data("Speed") as float
+	else:
+		return 1.0
+
 #var nav_regions: Array[NavigationRegion2D]
 #var rand_point_gens: Array[PolygonRandomPointGenerator]
 #
