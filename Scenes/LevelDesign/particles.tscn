@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b82kwl38m5f5j"]
+
+[ext_resource type="Texture2D" uid="uid://cuiwqkvdwbtam" path="res://Assets/Images/Prototyping/minasprite.png" id="1_23lw4"]
+
+[node name="Particles" type="Node2D" unique_id=308113646]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1627566099]
+texture_filter = 1
+position = Vector2(297, 32)
+texture = ExtResource("1_23lw4")
+region_rect = Rect2(32, 0, 13, 16)
+
+[node name="SandSpray" type="CPUParticles2D" parent="." unique_id=562330485]
+position = Vector2(297, 48)
+emitting = false
+amount = 5
+lifetime = 0.26
+one_shot = true
+speed_scale = 0.75
+explosiveness = 0.61
+randomness = 0.77
+lifetime_randomness = 0.55
+direction = Vector2(0, -1)
+spread = 57.48
+initial_velocity_min = 190.5
+initial_velocity_max = 259.53
+angular_velocity_min = -384.95
+angular_velocity_max = -242.38
+linear_accel_min = -25.74
+linear_accel_max = 3.96
+radial_accel_min = -100.0
+radial_accel_max = -29.71
+angle_min = -154.3
+angle_max = 474.6
+scale_amount_min = 0.1
+color = Color(1, 1, 0.35686275, 1)
+hue_variation_min = -0.45
+hue_variation_max = 1.0
