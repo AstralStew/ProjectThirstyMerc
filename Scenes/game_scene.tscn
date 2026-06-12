@@ -765,7 +765,6 @@ color = Color(0.6566, 0.87759, 0.98, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HUD/Notepad/Gfx/PanelContainer" unique_id=534108836]
 layout_mode = 2
-mouse_filter = 0
 vertical_scroll_mode = 3
 scroll_hint_mode = 1
 
