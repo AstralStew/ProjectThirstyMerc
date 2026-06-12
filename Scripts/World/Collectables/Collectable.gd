@@ -8,7 +8,7 @@ class_name Collectable extends Area2D
 
 @export var collectable_type: CollectableType = null
 #@export var digs_required: int = 3
-@export var player_y_offset_on_start_digging: float = 2
+@export var player_y_offset_on_start_digging: float = 10
 @export var player_y_offset_on_collect: float = -10
 @export var mirage_strength: float = 7
 

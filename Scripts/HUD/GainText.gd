@@ -1,7 +1,7 @@
 class_name GainText extends Control
 
 
-var offset: Vector2 = Vector2(0,-22)
+var offset: Vector2 = Vector2(0,-16)
 
 var _is_displaying: bool = false
 
@@ -16,7 +16,7 @@ func gain(
 	_is_displaying = true
 	
 	$GainTextLabel.text = _text
-	global_position = PlayerCharacter.instance.get_viewport().get_canvas_transform() * PlayerCharacter.instance.global_position + offset
+	global_position = get_viewport().get_canvas_transform() * PlayerCharacter.instance.global_position * 0.5 + offset
 	
 	await get_tree().create_timer(_wait).timeout
 	

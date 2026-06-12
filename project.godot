@@ -19,7 +19,9 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=720
 window/size/viewport_height=560
-window/stretch/mode="viewport"
+window/size/window_width_override=1440
+window/size/window_height_override=1120
+window/stretch/mode="canvas_items"
 
 [file_customization]
 
@@ -60,4 +62,3 @@ pointing/emulate_touch_from_mouse=true
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-2d/snap/snap_2d_transforms_to_pixel=true

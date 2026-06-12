@@ -19,7 +19,6 @@ collision_mask = 0
 input_pickable = false
 monitoring = false
 script = ExtResource("1_v2a6p")
-player_y_offset_on_start_digging = -3.0
 metadata/_custom_type_script = "uid://btco0bah4lyb5"
 
 [node name="BuriedGfx" type="Node2D" parent="." unique_id=1376092548]
