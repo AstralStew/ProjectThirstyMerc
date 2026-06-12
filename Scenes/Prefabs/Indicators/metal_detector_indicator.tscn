@@ -8,7 +8,6 @@ size = Vector2(10, 10)
 
 [node name="MetalDetectorIndicator" unique_id=820276514 instance=ExtResource("1_tgdss")]
 script = ExtResource("2_g21kq")
-global_offset = Vector2(0, -5)
 rotate_to_movement_direction = true
 rotation_range = 60.0
 

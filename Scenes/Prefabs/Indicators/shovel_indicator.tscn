@@ -13,7 +13,7 @@ dig_up_threshold = -0.8
 dig_down_threshold = 0.8
 shovel_up = false
 ready_to_dig = false
-global_offset = Vector2(0, -8)
+global_offset = Vector2(0, -3)
 position_y_range = 1.5
 
 [node name="Control" type="Control" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1442455224]

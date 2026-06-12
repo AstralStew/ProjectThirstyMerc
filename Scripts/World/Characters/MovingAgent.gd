@@ -5,15 +5,19 @@ class_name MovingAgent extends CharacterBody2D
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
+@export var use_computed: bool = false
+
 @export_group("READ ONLY")
 @export var movement_direction : Vector2 = Vector2.ZERO
+@export var _safe_velocity : Vector2 = Vector2.ZERO
 
 func _ready():
 	# These values need to be adjusted for the actor's speed
 	# and the navigation layout.
-	navigation_agent.path_desired_distance = 4.0
+	navigation_agent.path_desired_distance = 8.0
 	navigation_agent.target_desired_distance = 4.0
 	navigation_agent.navigation_finished.connect(on_navigation_finished)
+	navigation_agent.velocity_computed.connect(on_velocity_computed)
 
 	# Make sure to not await during _ready.
 	actor_setup.call_deferred()
@@ -31,14 +35,24 @@ func set_movement_target(movement_target: Vector2):
 	navigation_agent.target_position = movement_target
 
 func _physics_process(delta):
-	if navigation_agent.is_navigation_finished():
+	if navigation_agent.is_navigation_finished(): #&& !navigation_agent.avoidance_enabled:
 		return
 
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = navigation_agent.get_next_path_position()
 	
 	movement_direction = current_agent_position.direction_to(next_path_position)
-	velocity = movement_direction * movement_speed
+	if navigation_agent.avoidance_enabled:
+		navigation_agent.velocity = movement_direction * movement_speed
+	else:
+		on_velocity_computed(movement_direction * movement_speed)
+		#velocity = 
+		#move_and_slide()
+	
+
+func on_velocity_computed(safe_velocity:Vector2) -> void:
+	velocity = velocity.move_toward(safe_velocity, 100)
+	#velocity = safe_velocity
 	move_and_slide()
 
 func on_navigation_finished() -> void:
