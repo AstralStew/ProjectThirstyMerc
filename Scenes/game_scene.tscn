@@ -9,10 +9,10 @@
 [ext_resource type="Script" uid="uid://dph608xq07qqq" path="res://Scripts/Managers/InventoryManager.gd" id="3_817jg"]
 [ext_resource type="Script" uid="uid://4kkcowh1bs5q" path="res://Scripts/HUD/Dragger.gd" id="4_1ixah"]
 [ext_resource type="Script" uid="uid://d0tcjrsdnm5rs" path="res://Scripts/HUD/MetalDetector.gd" id="5_7iton"]
-[ext_resource type="Texture2D" uid="uid://cuiwqkvdwbtam" path="res://Assets/Images/Prototyping/minasprite.png" id="5_ikfsv"]
 [ext_resource type="Texture2D" uid="uid://1n1v3vbosvvs" path="res://Assets/Images/Prototyping/footprints.png" id="6_5dgvu"]
 [ext_resource type="PackedScene" uid="uid://du5p2psjdb5fi" path="res://Scenes/Prefabs/Indicators/metal_detector_indicator.tscn" id="7_ikfsv"]
 [ext_resource type="Script" uid="uid://cmai64jlhstqf" path="res://Scripts/World/Characters/Footprints.gd" id="7_uscyt"]
+[ext_resource type="Texture2D" uid="uid://t05rigdnl20p" path="res://Assets/Images/SpriteSheet_Characters.png" id="8_817jg"]
 [ext_resource type="PackedScene" uid="uid://dglq44i5kh165" path="res://Scenes/Prefabs/Collectables/sea_glass.tscn" id="9_np3vi"]
 [ext_resource type="Script" uid="uid://ddcfnn4fvctf8" path="res://Scripts/HUD/Shovel.gd" id="10_4xiap"]
 [ext_resource type="PackedScene" uid="uid://cm6wpeer5ojsl" path="res://Scenes/Prefabs/Collectables/pottery_sherd.tscn" id="10_mipjh"]
@@ -170,6 +170,18 @@ self_modulate = Color(0.40570694, 0.22252968, 9.62615e-08, 0.08627451)
 position = Vector2(0, 8)
 texture = ExtResource("6_5dgvu")
 
+[node name="SpriteSheetCharacters" type="Sprite2D" parent="World/SubViewportContainer/SubViewport" unique_id=786424360]
+position = Vector2(119, 65)
+texture = ExtResource("8_817jg")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="SpriteSheetCharacters2" type="Sprite2D" parent="World/SubViewportContainer/SubViewport" unique_id=365105227]
+position = Vector2(146, 45.5)
+texture = ExtResource("8_817jg")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
 [node name="Entities" type="Node2D" parent="World/SubViewportContainer/SubViewport" unique_id=1378868865]
 y_sort_enabled = true
 texture_filter = 1
@@ -183,8 +195,9 @@ movement_speed = 40.0
 [node name="Sprite2D" type="Sprite2D" parent="World/SubViewportContainer/SubViewport/Entities/PlayerCharacter" unique_id=867989397]
 texture_filter = 1
 position = Vector2(0, -8)
-texture = ExtResource("5_ikfsv")
-region_rect = Rect2(32, 0, 13, 16)
+texture = ExtResource("8_817jg")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/SubViewportContainer/SubViewport/Entities/PlayerCharacter" unique_id=1574023361]
 position = Vector2(0, -7)
