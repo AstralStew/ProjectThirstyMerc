@@ -51,7 +51,7 @@ func on_far() -> void:
 
 func seeing() -> void:
 	
-	var original_offset : Vector2 = PlayerCharacter.camera.offset
+	#var original_offset : Vector2 = PlayerCharacter.camera.offset
 	PlayerCharacter.camera.offset = Vector2.ZERO
 	PlayerCharacter.camera.position_smoothing_enabled = true
 	PlayerCharacter.camera.position_smoothing_speed = 2.0
@@ -63,7 +63,7 @@ func seeing() -> void:
 		
 		await get_tree().process_frame
 	
-	PlayerCharacter.camera.offset = original_offset
+	PlayerCharacter.camera.offset = PlayerCharacter.instance.camera_base_offset
 	PlayerCharacter.camera.position_smoothing_speed = 10
 	PlayerCharacter.camera.position = Vector2.ZERO
 	await get_tree().create_timer(0.4).timeout

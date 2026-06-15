@@ -10,6 +10,7 @@ var DEBUG_NAME : String = "[b][NPCharacter("+name+")][/b] "
 @export_category("READ ONLY")
 @export var is_wandering : bool = false
 @export var wander_point_index : int = 0
+@export var is_talking: bool = false
 
 
 
@@ -28,16 +29,24 @@ func wandering() -> void:
 
 func on_navigation_finished() -> void:
 	super.on_navigation_finished()
-	#print("beep")
 	wandering()
 
 
+func start_talking() -> void:
+	is_talking = true
+	if do_wander:
+		is_wandering = false
+	set_movement_target(global_position)
 
+func stop_talking() -> void:
+	is_talking = false
+	if do_wander:
+		is_wandering = true
+		set_movement_target(wander_points[wander_point_index])
 
 
 func _on_gui_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("Click"):
 		# any checks that happen here
-		
-		PlayerCharacter.start_dialogue()
+		PlayerCharacter.move_to_start_dialogue(self)
