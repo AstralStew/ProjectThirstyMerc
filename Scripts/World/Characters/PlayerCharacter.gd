@@ -38,6 +38,21 @@ func _physics_process(delta):
 	super._physics_process(delta)
 
 
+
+
+static func start_dialogue() -> void:
+	instance._start_dialogue()
+func _start_dialogue() -> void:
+	if _click_held_down: return
+	if is_using_tool: return
+	print(DEBUG_NAME,"StartDialogue > Got here!")
+
+static func stop_dialogue() -> void:
+	instance._start_dialogue()
+func _stop_dialogue() -> void:
+	pass
+
+
 func on_navigation_finished() -> void:
 	if movement_speed == 0:
 		super.on_navigation_finished()
@@ -51,6 +66,10 @@ func set_movement_target(movement_target: Vector2):
 		player_move_target.visible = true
 		player_move_target.set_deferred("visible",false)
 
+
+
+
+
 static func start_using_tool(speed_modifier:float = 0.5) -> void:
 	instance._start_using_tool(speed_modifier)
 func _start_using_tool(speed_modifier:float = 0.5) -> void:
@@ -59,7 +78,6 @@ func _start_using_tool(speed_modifier:float = 0.5) -> void:
 	
 	if speed_modifier == 0:
 		set_movement_target(global_position)
-		
 	
 	movement_speed = base_movement_speed * speed_modifier
 

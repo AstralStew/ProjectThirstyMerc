@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" format=3 uid="uid://qaiu8rw1746q"]
+
+[ext_resource type="FontFile" uid="uid://cwv1nyo616hys" path="res://Resources/Theme/Jersey10-Regular.ttf" id="1_n8ymd"]
+
+[resource]
+base_font = ExtResource("1_n8ymd")
+variation_embolden = -0.34
+variation_transform = Transform2D(0.835, 0.06, 0, 1.05, 0, 0)
+spacing_space = 1
+spacing_top = -2
+spacing_bottom = -2
