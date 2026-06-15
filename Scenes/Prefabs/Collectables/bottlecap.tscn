@@ -2,11 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://cqo6tqnt78qv8" path="res://Scenes/Prefabs/Collectables/collectable.tscn" id="1_7m75l"]
 [ext_resource type="Resource" uid="uid://4jioa8dy36vc" path="res://Resources/Collectables/ct_bottlecap.tres" id="2_66g53"]
+[ext_resource type="Texture2D" uid="uid://c20dmq62ii6sj" path="res://Assets/Images/SpriteSheet_Items_Small.png" id="3_jcs51"]
 
 [node name="Bottlecap" unique_id=1041127925 instance=ExtResource("1_7m75l")]
 collectable_type = ExtResource("2_66g53")
 
-[node name="ColorRect" type="ColorRect" parent="RealGfx/ObjectGfx" parent_id_path=PackedInt32Array(456666999) index="1" unique_id=1395196877]
+[node name="SpriteSheetItemsSmall" type="Sprite2D" parent="RealGfx/ObjectGfx" parent_id_path=PackedInt32Array(456666999) index="1" unique_id=1129512191]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jcs51")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="RealGfx/ObjectGfx" parent_id_path=PackedInt32Array(456666999) index="2" unique_id=1395196877]
 layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0

@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dglq44i5kh165" path="res://Scenes/Prefabs/Collectables/sea_glass.tscn" id="9_np3vi"]
 [ext_resource type="Script" uid="uid://ddcfnn4fvctf8" path="res://Scripts/HUD/Shovel.gd" id="10_4xiap"]
 [ext_resource type="PackedScene" uid="uid://cm6wpeer5ojsl" path="res://Scenes/Prefabs/Collectables/pottery_sherd.tscn" id="10_mipjh"]
-[ext_resource type="Texture2D" uid="uid://bdgvxwvr6txvt" path="res://Assets/Images/SpriteSheet_Items.png" id="11_5q52j"]
+[ext_resource type="Texture2D" path="res://Assets/Images/SpriteSheet_Items.png" id="11_5q52j"]
 [ext_resource type="PackedScene" uid="uid://drsua3l5ohrrx" path="res://Scenes/Prefabs/Collectables/silver_necklace.tscn" id="11_aq00n"]
 [ext_resource type="Script" uid="uid://daf0h2p3no1m4" path="res://Scripts/World/Characters/NPCharacter.gd" id="11_gqlrj"]
 [ext_resource type="PackedScene" uid="uid://w80klp0rbev4" path="res://Scenes/Prefabs/Indicators/shovel_indicator.tscn" id="11_wywco"]
@@ -2330,6 +2330,11 @@ offset_right = 360.0
 offset_bottom = 315.0
 color = Color(0.21555865, 0, 0, 1)
 
+[node name="Timer" type="Timer" parent="HUD" unique_id=1569623145]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [node name="PauseMenu" type="Node" parent="." unique_id=1795159322]
 
 [node name="Transitions" type="Node" parent="." unique_id=401277600]
@@ -2340,3 +2345,4 @@ color = Color(0.21555865, 0, 0, 1)
 [connection signal="gui_input" from="HUD/Binoculars" to="HUD/Binoculars" method="_on_gui_input"]
 [connection signal="gui_input" from="HUD/Phone" to="HUD/Phone" method="_on_gui_input"]
 [connection signal="gui_input" from="HUD/Notepad" to="HUD/Notepad" method="_on_gui_input"]
+[connection signal="timeout" from="HUD/Timer" to="HUD/Phone" method="alotl_speech" binds= ["Never gonna give you up, never gonna let you down, never gonna run around and... desert you :^)"]]
