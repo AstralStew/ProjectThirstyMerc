@@ -43,7 +43,7 @@ size = Vector2(16, 16)
 texture_filter = 1
 script = ExtResource("2_i8snb")
 radius = 125.0
-radius_colour = Color(0.378, 0.42149997, 0.9, 1)
+radius_colour = Color(0.21176471, 0.4862745, 0.3137255, 1)
 is_far = false
 
 [node name="CenterContainer" type="CenterContainer" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1400158550]

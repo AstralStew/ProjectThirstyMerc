@@ -177,6 +177,7 @@ bg_color = Color(1, 0.92941177, 0.84313726, 1)
 
 [node name="WorldManager" type="Node" parent="Managers" unique_id=1320016716]
 script = ExtResource("1_ikfsv")
+day_duration = 280.0
 metadata/_custom_type_script = "uid://dkkfnnhgyik5t"
 
 [node name="HudManager" type="Node" parent="Managers" unique_id=254078220]
@@ -389,7 +390,14 @@ metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 texture_filter = 1
 texture = ExtResource("8_817jg")
 region_enabled = true
-region_rect = Rect2(0, 16, 16, 16)
+region_rect = Rect2(32, 16, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="SpriteSheetCharacters3" type="Sprite2D" parent="World/Entities/Characters/NPCharacter" unique_id=651257947]
+texture_filter = 1
+texture = ExtResource("8_817jg")
+region_enabled = true
+region_rect = Rect2(16, 16, 16, 16)
 region_filter_clip_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter" unique_id=1606013968]
