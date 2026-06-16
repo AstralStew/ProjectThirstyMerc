@@ -19,7 +19,7 @@ static var entities_root : Node2D :
 static var effects_root : Node2D :
 	get: return instance.effects
 
-@export var day_duration: float = 240
+@export var day_duration: float = 20
 @export var day_start_in_mins: float = 480
 @export var day_end_in_mins: float = 1201
 # total mins = 1440

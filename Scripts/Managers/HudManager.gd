@@ -11,6 +11,11 @@ func _enter_tree() -> void:
 @export var talking_zoom_transition: Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
 
 
+@export var day_cap_duration: float = 2.0
+@export var day_cap_black_background_size: float = 280
+@export var day_cap_ease: Tween.EaseType = Tween.EaseType.EASE_IN_OUT
+@export var day_cap_transition: Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
+
 
 @onready var hud: CanvasLayer = $"../../HUD"
 static var hud_root : CanvasLayer :
@@ -36,6 +41,17 @@ static var black_bar_progress: float :
 		instance.black_bars_bottom.custom_minimum_size.y = instance.talking_zoom_black_bar_size * value
 		black_bar_progress = value
 
+static var black_background_progress: float :
+	set(value):
+		if black_background_progress == value: return
+		black_background_progress = clamp(value,0,1)
+		if value == 0:
+			instance.black_bars.visible = false
+		elif value > 0:
+			instance.black_bars.visible = true
+		instance.black_bars_top.custom_minimum_size.y = instance.day_cap_black_background_size * value
+		instance.black_bars_bottom.custom_minimum_size.y = instance.day_cap_black_background_size * value
+		black_background_progress = value
 
 
 @onready var bag: Control = $"../../HUD/Bag"
@@ -53,7 +69,9 @@ static var bag_progress: float :
 
 
 func _ready() -> void:
-	call_deferred("bag_appear")
+	#call_deferred("bag_appear")
+	WorldManager.day_started().connect(_start_day)
+	WorldManager.day_ended().connect(_end_day)
 
 func bag_appear() -> void:
 	if _tween: _tween.kill()
@@ -87,3 +105,17 @@ func _stop_dialogue() -> void:
 	
 	await _tween.finished
 	PlayerCharacter.stop_dialogue()
+
+
+func _start_day() -> void:
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel().set_ease(day_cap_ease).set_trans(day_cap_transition)
+	_tween.tween_property(HudManager,"black_background_progress",0,day_cap_duration).from(1)
+	_tween.tween_property(HudManager,"bag_progress",1,day_cap_duration).from(0)
+
+func _end_day() -> void:
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
+	_tween.tween_property(HudManager,"black_background_progress",1,day_cap_duration).from(0)
+	_tween.tween_property(HudManager,"bag_progress",0,day_cap_duration).from(1)
+	

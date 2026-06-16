@@ -4,7 +4,7 @@ const DEBUG_NAME : String = "[b][Notepad][/b] "
 func _enter_tree() -> void:
 	instance = self
 
-@onready var notepad_entries: VBoxContainer = $Gfx/PanelContainer/ScrollContainer/NotepadEntries
+@onready var notepad_entries: VBoxContainer = $Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries
 
 
 static func update_entries(list:Dictionary[CollectableType,int]) -> void:

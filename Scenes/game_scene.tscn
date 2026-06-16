@@ -33,9 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://cgibv2e2eexru" path="res://Assets/Images/SpriteSheet_Axolotal.png" id="29_t53j4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbc1q"]
-vertices = PackedVector2Array(-74, 133, -68, 133, -68, 268, -139, 268, -134, 134, -139, 134, -134, 112, -74, 112, 280.90625, -410.0703, 279.9297, -413, 281, -413, 281, -410, -230.92188, -288.8203, -248.07031, -288.1797, -249.07813, -355.0703, -229.92188, -355.02344, 334.92188, -410, 334.0703, -354, 299.29688, -354, -42, -410.04688, -42, -414, -23, -414, -23, -410, 151, -409, 151, -413, 169, -413, 169, -408.95313, -261.97656, -409.32813, -318.0703, -354.0703, -318.9922, -414.54688, -318.90625, -414.9297, -261.97656, -414.0703, -10.7109375, -410, -9.7109375, -393, 295.29688, -289, 282.6172, -289, 277.6328, -352.97656, 70.40625, -393, -219.09375, -408.8828, -218.49219, -414.82813, -198.35156, -414.10938, -195.99219, -408.5625, 72.40625, -409)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 4), PackedInt32Array(0, 4, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(11, 16, 17, 18), PackedInt32Array(19, 20, 21, 22), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(27, 14, 28, 29, 30), PackedInt32Array(30, 31, 27), PackedInt32Array(22, 32, 33), PackedInt32Array(18, 34, 35, 36, 11), PackedInt32Array(8, 11, 36, 15, 37), PackedInt32Array(38, 39, 40, 41), PackedInt32Array(15, 14, 27, 38, 41), PackedInt32Array(37, 42, 23, 26), PackedInt32Array(33, 15, 41, 19, 22), PackedInt32Array(15, 33, 37), PackedInt32Array(8, 37, 26)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-253, -283, -254, -350, -323, -349, -324, -415, -323, -420, -257, -419, -256.9904, -414.28387, -223.6132, -413.9272, -223, -420, -195, -419, -192.70096, -413.5968, -47, -415, -47, -419, -18, -419, -18, -415, -6, -415, -5, -398, 66, -398, 68, -414, 146, -414, 146, -418, 174, -418, 174, -414, 274, -415, 273, -418, 286, -418, 286, -415, 340, -415, 339, -349, 304, -349, 300, -284, 278, -284, 273, -348, -225, -350, -226, -284), PackedVector2Array(-139, 107, -69, 107, -69, 128, -63, 128, -63, 273, -144, 273, -144, 129, -139, 129)])
+vertices = PackedVector2Array(-74, 133, -68, 133, -68, 268, -139, 268, -134, 134, -139, 134, -134, 112, -74, 112, 334.90625, -409.70313, 334.09375, -355.04688, 293.07813, -363.04688, 285, -406.8203, -261.97656, -409.32813, -245.07031, -360.42188, -318.07813, -354.40625, -318.9922, -414.54688, -318.90625, -414.9297, -236, -288.71875, -244.07031, -288.27344, -236, -361.7422, -42, -410.04688, -42, -414, -23, -414, -23, -410, 151, -409, 151, -413, 169, -413, 169, -409.10156, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, -261.97656, -414.0703, -10.7109375, -410, -9.7109375, -393, -194.67188, -356, -219.09375, -408.8828, -218.49219, -414.82813, -198.35156, -414.10938, -195.99219, -408.5625, 70.40625, -393, 72.40625, -409, 251.5625, -356.9922, 276.57813, -406.9297, 281.90625, -413, 278.60156, -413)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 4), PackedInt32Array(0, 4, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(17, 18, 13, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(10, 28, 29, 30, 11), PackedInt32Array(16, 31, 12), PackedInt32Array(23, 32, 33), PackedInt32Array(34, 35, 36, 37, 38), PackedInt32Array(13, 12, 35, 19), PackedInt32Array(34, 19, 35), PackedInt32Array(33, 34, 38, 20, 23), PackedInt32Array(39, 40, 24), PackedInt32Array(11, 30, 41, 42, 43), PackedInt32Array(42, 44, 43), PackedInt32Array(27, 42, 41, 39, 24), PackedInt32Array(41, 34, 33, 39)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-249, -283, -250, -355, -323, -349, -324, -415, -323, -420, -257, -419, -256.9904, -414.28387, -223.6132, -413.9272, -223, -420, -195, -419, -192.70096, -413.5968, -47, -415, -47, -419, -18, -419, -18, -415, -6, -415, -5, -398, 66, -398, 68, -414, 146, -414, 146, -418, 174, -418, 174, -414, 273, -412, 275, -418, 285, -418, 288, -412, 340, -415, 339, -349, 298, -357, 297, -285, 282, -285, 280, -357, 252, -352, -195, -351, -231, -356, -231, -284), PackedVector2Array(-139, 107, -69, 107, -69, 128, -63, 128, -63, 273, -144, 273, -144, 129, -139, 129)])
 agent_radius = 5.0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_m8c54"]
@@ -68,18 +68,34 @@ bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juer4"]
 bg_color = Color(0.97, 0.582, 0.6596001, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obvom"]
+bg_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6fju"]
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2gex"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiftr"]
+bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5q52j"]
@@ -92,11 +108,12 @@ bg_color = Color(1, 1, 1, 1)
 [sub_resource type="Gradient" id="Gradient_pbc1q"]
 interpolation_mode = 2
 interpolation_color_space = 1
-offsets = PackedFloat32Array(0.12524559, 0.7323183)
-colors = PackedColorArray(0.89549994, 0.81, 1, 1, 0.85, 0.9425, 1, 1)
+colors = PackedColorArray(0.3529412, 0.7254902, 0.63529414, 1, 0.43137255, 0.8392157, 0.6431373, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_t53j4"]
 gradient = SubResource("Gradient_pbc1q")
+width = 8
+height = 8
 fill_from = Vector2(0.0964591, 0.08913309)
 fill_to = Vector2(1, 1)
 
@@ -110,7 +127,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.2666669, 0, 1, 1)
+border_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -127,24 +144,32 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.2666669, 0, 1, 1)
+border_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 3
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udify"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+anti_aliasing = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mipjh"]
 border_width_left = 5
 border_width_top = 6
 border_width_right = 7
 border_width_bottom = 4
-border_color = Color(0.62635094, 0.33899367, 3.85046e-07, 1)
+border_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq00n"]
 content_margin_left = 5.0
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
 
 [node name="GameScene" type="Node" unique_id=1888737747]
 
@@ -159,6 +184,9 @@ script = ExtResource("2_aq00n")
 talking_zoom_amount = 3.0
 talking_zoom_ease = 1
 talking_zoom_transition = 1
+day_cap_duration = 3.0
+day_cap_ease = 1
+day_cap_transition = 1
 metadata/_custom_type_script = "uid://iakb8cgqbcdy"
 
 [node name="InventoryManager" type="Node" parent="Managers" unique_id=1064568452]
@@ -786,7 +814,10 @@ position = Vector2(-647, 3)
 position = Vector2(-695, 195)
 
 [node name="Rock1_5" parent="World/Entities/Objects" unique_id=1281986532 instance=ExtResource("20_t53j4")]
-position = Vector2(-951, 163)
+position = Vector2(-918, 196)
+
+[node name="Rock1_8" parent="World/Entities/Objects" unique_id=10880504 instance=ExtResource("20_t53j4")]
+position = Vector2(-1071, -29)
 
 [node name="Rock1_6" parent="World/Entities/Objects" unique_id=1352545217 instance=ExtResource("20_t53j4")]
 position = Vector2(-1079, -189)
@@ -983,7 +1014,7 @@ offset_bottom = 50.0
 
 [node name="BagBackground" type="Polygon2D" parent="HUD/Bag" unique_id=451128958]
 position = Vector2(0, -11)
-color = Color(0.33881742, 3.4593978e-07, 1.5642495e-07, 1)
+color = Color(0.4392157, 0.1764706, 0.31764707, 1)
 polygon = PackedVector2Array(6, 246.28572, 55, 258.2857, 146, 267.2857, 226, 268.2857, 286, 265.2857, 362, 244.28572, 363, 333.2857, -6.286499, 332.2847, -6, 237.28572)
 
 [node name="Blocker" type="Control" parent="HUD/Bag/BagBackground" unique_id=53502814]
@@ -997,7 +1028,7 @@ offset_bottom = 308.5
 [node name="BagBackground2" type="Polygon2D" parent="HUD/Bag/BagBackground" unique_id=235050310]
 z_index = -1
 position = Vector2(0, -6.5)
-color = Color(0.4231848, 3.730133e-07, 9.62615e-08, 1)
+color = Color(0.54509807, 0.22745098, 0.28627452, 1)
 polygon = PackedVector2Array(6, 246.28572, 55, 258.2857, 146, 267.2857, 226, 268.2857, 286, 265.2857, 362, 244.28572, 363, 333.2857, -6.286499, 332.2847, -6, 237.28572)
 
 [node name="MetalDetector" type="Control" parent="HUD/Bag" unique_id=738039325 node_paths=PackedStringArray("dragged_object")]
@@ -1007,23 +1038,22 @@ script = ExtResource("5_7iton")
 direction_indicator_prefab = ExtResource("7_ikfsv")
 movement_speed_modifier = 0.41
 rotation_bounds = Vector2(-10, 10)
-dragged_object = NodePath("Gfx")
+dragged_object = NodePath("Panel")
 position_bounds = Array[Vector2]([Vector2(13, 234), Vector2(253, 234)])
 respect_grab_position = true
 reset_on_drag_end = true
 metadata/_custom_type_script = "uid://d0tcjrsdnm5rs"
 
-[node name="Gfx" type="ColorRect" parent="HUD/Bag/MetalDetector" unique_id=359693496]
+[node name="Panel" type="Panel" parent="HUD/Bag/MetalDetector" unique_id=1096691666]
 layout_mode = 0
-offset_left = 136.00002
-offset_top = 283.00003
-offset_right = 236.0
-offset_bottom = 363.00003
-rotation = 0.08304656
-scale = Vector2(1, 1.6)
+offset_left = 141.4812
+offset_top = 255.07306
+offset_right = 241.4812
+offset_bottom = 383.12805
+rotation = 0.0837758
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.5747106, 0.57471067, 0.5747106, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_obvom")
 
 [node name="Shovel" type="Control" parent="HUD/Bag" unique_id=823107157 node_paths=PackedStringArray("dragged_object")]
 anchors_preset = 0
@@ -1042,7 +1072,14 @@ rotation = -0.007114202
 
 [node name="Polygon2D" type="Polygon2D" parent="HUD/Bag/Shovel/Gfx" unique_id=1067521255]
 position = Vector2(0, 60)
-color = Color(0.74857974, 0.74857974, 0.7485797, 1)
+color = Color(1, 0.92941177, 0.84313726, 1)
+polygon = PackedVector2Array(-34, 0, 0, -4, 34, 0, 24, 44, 0, 64, -24, 44)
+
+[node name="Polygon2D2" type="Polygon2D" parent="HUD/Bag/Shovel/Gfx/Polygon2D" unique_id=1744477551]
+z_index = -1
+position = Vector2(0.083804816, -1.49793)
+scale = Vector2(1.0500001, 1.0500001)
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 polygon = PackedVector2Array(-34, 0, 0, -4, 34, 0, 24, 44, 0, 64, -24, 44)
 
 [node name="Gfx" type="ColorRect" parent="HUD/Bag/Shovel/Gfx" unique_id=1860630740]
@@ -1052,7 +1089,7 @@ offset_right = 33.0
 offset_bottom = 9.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.6, 0.18, 0.27100003, 1)
+color = Color(0.81960785, 0.3137255, 0.35686275, 1)
 
 [node name="Gfx2" type="ColorRect" parent="HUD/Bag/Shovel/Gfx" unique_id=294993497]
 offset_left = -9.0
@@ -1061,7 +1098,7 @@ offset_right = 9.0
 offset_bottom = 63.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.6, 0.18, 0.27100003, 1)
+color = Color(0.81960785, 0.3137255, 0.35686275, 1)
 
 [node name="Binoculars" type="Control" parent="HUD/Bag" unique_id=1869789990 node_paths=PackedStringArray("dragged_object")]
 anchors_preset = 0
@@ -1099,7 +1136,7 @@ offset_right = 9.0
 offset_bottom = 6.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.1723215, 0.21423873, 0.7714485, 1)
+color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 
 [node name="Gfx2" type="ColorRect" parent="HUD/Bag/Binoculars/Gfx/Control" unique_id=1779789922]
 layout_mode = 0
@@ -1109,7 +1146,7 @@ offset_right = -9.0
 offset_bottom = 12.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.19490024, 0.24554679, 0.84165084, 1)
+color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 
 [node name="Gfx7" type="ColorRect" parent="HUD/Bag/Binoculars/Gfx/Control" unique_id=1587773651]
 layout_mode = 0
@@ -1119,7 +1156,7 @@ offset_right = -12.0
 offset_bottom = 9.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0, 0, 0, 1)
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="Gfx3" type="ColorRect" parent="HUD/Bag/Binoculars/Gfx/Control" unique_id=1562078886]
 layout_mode = 0
@@ -1129,7 +1166,7 @@ offset_right = 29.0
 offset_bottom = 12.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.19490024, 0.24554679, 0.84165084, 1)
+color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 
 [node name="Gfx6" type="ColorRect" parent="HUD/Bag/Binoculars/Gfx/Control" unique_id=405477430]
 layout_mode = 0
@@ -1139,7 +1176,7 @@ offset_right = 26.0
 offset_bottom = 9.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0, 0, 0, 1)
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="Gfx5" type="ColorRect" parent="HUD/Bag/Binoculars/Gfx/Control" unique_id=524516029]
 layout_mode = 0
@@ -1149,7 +1186,7 @@ offset_right = -15.0
 offset_bottom = 6.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.6010569, 0.6945559, 0.9888455, 1)
+color = Color(0.8235294, 0.9254902, 0.6, 1)
 
 [node name="Gfx4" type="ColorRect" parent="HUD/Bag/Binoculars/Gfx/Control" unique_id=268963389]
 layout_mode = 0
@@ -1159,7 +1196,7 @@ offset_right = 23.0
 offset_bottom = 6.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
-color = Color(0.6010569, 0.6945559, 0.9888455, 1)
+color = Color(0.8235294, 0.9254902, 0.6, 1)
 
 [node name="Phone" type="Control" parent="HUD/Bag" unique_id=2070850992 node_paths=PackedStringArray("dragged_object")]
 texture_filter = 1
@@ -1183,15 +1220,16 @@ mouse_filter = 1
 layout_mode = 0
 offset_left = -75.0
 offset_top = -100.0
-offset_right = 55.0
-offset_bottom = 100.0
+offset_right = 45.0
+offset_bottom = 90.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_b6fju")
 
-[node name="Phone" type="ColorRect" parent="HUD/Bag/Phone/Gfx/PanelContainer" unique_id=1816685760]
+[node name="Phone" type="Panel" parent="HUD/Bag/Phone/Gfx/PanelContainer" unique_id=1192503569]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_k2gex")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer" unique_id=648389454]
 layout_mode = 2
@@ -1211,6 +1249,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer" unique_id=678759126]
 clip_contents = true
+custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 0
@@ -1218,28 +1257,36 @@ alignment = 1
 
 [node name="BalanceLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer" unique_id=1003946754]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
 mouse_filter = 1
-theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_colors/default_color = Color(0.8235294, 0.9254902, 0.6, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 8
 text = "Bal: $15.00"
 scroll_active = false
 vertical_alignment = 1
 
-[node name="TimeLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer" unique_id=1948595842]
-texture_filter = 1
-custom_minimum_size = Vector2(0, 17.27)
+[node name="TimeHolder" type="Control" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer" unique_id=1719306460]
 layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 1
+
+[node name="TimeLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer/TimeHolder" unique_id=1948595842]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 15.845)
+layout_mode = 0
+offset_left = -35.5
+offset_top = -1.5
+offset_right = -0.5
+offset_bottom = 14.345
 size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.5
 mouse_filter = 1
+theme_override_colors/default_color = Color(0.8235294, 0.9254902, 0.6, 1)
 theme_override_fonts/normal_font = ExtResource("3_6h5vk")
-theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/normal_font_size = 14
 text = "20:00"
 scroll_active = false
 autowrap_mode = 0
@@ -1248,13 +1295,14 @@ horizontal_alignment = 2
 [node name="PanelContainer" type="PanelContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer" unique_id=213984784]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_5q52j")
 
 [node name="PurpleBorder" type="ColorRect" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer" unique_id=630552715]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 1
-color = Color(0.49750364, 0.32910132, 1, 1)
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer" unique_id=240800835]
 layout_mode = 2
@@ -1293,7 +1341,8 @@ stretch_mode = 5
 [node name="AlotlSpeechLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1" unique_id=685327298]
 layout_mode = 2
 size_flags_vertical = 2
-theme_override_colors/default_color = Color(0.23382542, 1.155138e-05, 0.96180767, 1)
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_constants/line_separation = 0
 theme_override_fonts/normal_font = ExtResource("28_e624q")
 theme_override_font_sizes/normal_font_size = 11
@@ -1311,8 +1360,8 @@ alignment = 2
 [node name="Ask Question" type="Button" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons" unique_id=1322512614]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.2666669, 0, 1, 1)
-theme_override_colors/font_hover_color = Color(0.2666669, 0, 1, 1)
+theme_override_colors/font_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+theme_override_colors/font_hover_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_fonts/font = ExtResource("28_e624q")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pbc1q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pbc1q")
@@ -1322,8 +1371,8 @@ text = "Ask Question"
 [node name="BuyTokensButton" type="Button" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons" unique_id=120943739]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.2666669, 0, 1, 1)
-theme_override_colors/font_hover_color = Color(0.2666669, 0, 1, 1)
+theme_override_colors/font_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+theme_override_colors/font_hover_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_fonts/font = ExtResource("28_e624q")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pbc1q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pbc1q")
@@ -1352,26 +1401,31 @@ offset_top = -100.0
 offset_right = 54.0
 offset_bottom = 61.03
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_udify")
+
+[node name="PanelContainer2" type="PanelContainer" parent="HUD/Bag/Notepad/Gfx/PanelContainer" unique_id=1251011072]
+layout_mode = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_mipjh")
 
-[node name="Notepad" type="ColorRect" parent="HUD/Bag/Notepad/Gfx/PanelContainer" unique_id=1363948822]
+[node name="Notepad" type="ColorRect" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2" unique_id=1363948822]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 1
-color = Color(0.6566, 0.87759, 0.98, 1)
+color = Color(0.43137255, 0.8392157, 0.6431373, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HUD/Bag/Notepad/Gfx/PanelContainer" unique_id=534108836]
+[node name="ScrollContainer" type="ScrollContainer" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2" unique_id=534108836]
 layout_mode = 2
 vertical_scroll_mode = 3
 scroll_hint_mode = 1
 
-[node name="NotepadEntries" type="VBoxContainer" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer" unique_id=1518147849]
+[node name="NotepadEntries" type="VBoxContainer" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer" unique_id=1518147849]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
 theme_override_constants/separation = 1
 
-[node name="NotepadEntry0" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=1797492780]
+[node name="NotepadEntry0" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=1797492780]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1382,7 +1436,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry1" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=134795500]
+[node name="NotepadEntry1" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=134795500]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1393,7 +1447,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry2" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=1299013354]
+[node name="NotepadEntry2" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=1299013354]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1404,7 +1458,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry3" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=446120583]
+[node name="NotepadEntry3" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=446120583]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1415,7 +1469,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry4" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=1639186158]
+[node name="NotepadEntry4" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=1639186158]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1426,7 +1480,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry5" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=1138060435]
+[node name="NotepadEntry5" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=1138060435]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1437,7 +1491,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry6" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=1908062456]
+[node name="NotepadEntry6" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=1908062456]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1448,7 +1502,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry7" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=833562618]
+[node name="NotepadEntry7" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=833562618]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1459,7 +1513,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 2
 
-[node name="NotepadEntry8" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/ScrollContainer/NotepadEntries" unique_id=425406452]
+[node name="NotepadEntry8" type="RichTextLabel" parent="HUD/Bag/Notepad/Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries" unique_id=425406452]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -1478,14 +1532,14 @@ offset_right = 20.5
 offset_bottom = -97.0
 size_flags_vertical = 3
 mouse_filter = 1
-color = Color(0.5, 0.5, 0.5, 1)
+color = Color(0.4392157, 0.1764706, 0.31764707, 1)
 
 [node name="BagForeground" type="ColorRect" parent="HUD/Bag" unique_id=231942330]
 layout_mode = 0
 offset_top = 275.0
 offset_right = 360.0
 offset_bottom = 315.0
-color = Color(0.21555865, 0, 0, 1)
+color = Color(0.29803923, 0.13333334, 0.25882354, 1)
 
 [node name="Timer" type="Timer" parent="HUD" unique_id=1569623145]
 wait_time = 3.0
@@ -1502,18 +1556,17 @@ offset_bottom = -278.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_constants/separation = 0
 
 [node name="BlackBarsTop" type="ColorRect" parent="HUD/BlackBars" unique_id=346891044]
 layout_mode = 2
 size_flags_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="BlackBarsBottom" type="ColorRect" parent="HUD/BlackBars" unique_id=1490738524]
 layout_mode = 2
 size_flags_vertical = 10
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="PauseMenu" type="Node" parent="." unique_id=1795159322]
 
