@@ -51,6 +51,7 @@ pointing/emulate_touch_from_mouse=true
 [layer_names]
 
 2d_physics/layer_1="PlayerCharacter"
+2d_physics/layer_2="NPCharacter"
 2d_physics/layer_9="Collectable"
 
 [navigation]

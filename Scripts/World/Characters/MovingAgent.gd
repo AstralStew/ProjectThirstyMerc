@@ -5,8 +5,6 @@ class_name MovingAgent extends CharacterBody2D
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
-@export var use_computed: bool = false
-
 @export_group("READ ONLY")
 @export var movement_direction : Vector2 = Vector2.ZERO
 @export var _safe_velocity : Vector2 = Vector2.ZERO

@@ -10,10 +10,8 @@ var DEBUG_NAME : String = "[b][NPCharacter("+name+")][/b] "
 @export_category("READ ONLY")
 @export var is_wandering : bool = false
 @export var wander_point_index : int = 0
-#
-#func _ready():
-	#super._ready()
-	
+@export var is_talking: bool = false
+
 
 
 func actor_setup():
@@ -24,17 +22,31 @@ func actor_setup():
 
 func wandering() -> void:
 	await get_tree().create_timer(wander_wait_time).timeout
-	#while is_wandering:
 	if !is_wandering: return
 	wander_point_index = (wander_point_index + 1) % wander_points.size()
 	set_movement_target(wander_points[wander_point_index])
-	#await get_tree().physics_frame
-	#await navigation_agent.velocity_computed
-	#await navigation_agent.navigation_finished
-
 
 
 func on_navigation_finished() -> void:
 	super.on_navigation_finished()
-	print("beep")
 	wandering()
+
+
+func start_talking() -> void:
+	is_talking = true
+	if do_wander:
+		is_wandering = false
+	set_movement_target(global_position)
+
+func stop_talking() -> void:
+	is_talking = false
+	if do_wander:
+		is_wandering = true
+		set_movement_target(wander_points[wander_point_index])
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	
+	if event.is_action_pressed("Click"):
+		# any checks that happen here
+		PlayerCharacter.move_to_start_dialogue(self)
