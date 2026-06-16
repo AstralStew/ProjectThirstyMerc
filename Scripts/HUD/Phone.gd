@@ -11,8 +11,12 @@ func _enter_tree() -> void:
 @onready var phone_screen_1: VBoxContainer = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1
 @onready var alotl_speech_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/AlotlSpeechLabel
 
-
 @export var alotl_speech_speed : float = 1.0
+
+
+func _process(delta: float) -> void:
+	if WorldManager.is_daytime:
+		time_label.text = WorldManager.day_fake_time
 
 
 static func alotl_speech(speech:String) -> void:
