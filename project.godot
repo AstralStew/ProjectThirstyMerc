@@ -53,6 +53,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_1="PlayerCharacter"
 2d_physics/layer_2="NPCharacter"
 2d_physics/layer_9="Collectable"
+2d_physics/layer_13="TilemapCollision"
 
 [navigation]
 

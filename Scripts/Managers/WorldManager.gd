@@ -8,7 +8,7 @@ func _enter_tree() -> void:
 static var level_root : Node2D :
 	get: return instance.level
 
-@onready var tile_map_layer: TileMapLayer = $"../../World/Level/TileMapLayer"
+@onready var tilemap: Node = $"../../World/Level/Tilemap"
 
 
 @onready var entities: Node2D = $"../../World/Entities"
@@ -81,14 +81,30 @@ static func end_day() -> void:
 	day_ended().emit()
 	print(DEBUG_NAME,"EndDay > Ending day!")
 
+
+
 static func get_speed_at_tile_position(global_position:Vector2) -> float:
-	var current_tile_pos = instance.tile_map_layer.local_to_map(instance.tile_map_layer.to_local(global_position))
-	var _data_at_pos = instance.tile_map_layer.get_cell_tile_data(current_tile_pos)
+	return instance._get_speed_at_tile_position(global_position)
+func _get_speed_at_tile_position(global_position:Vector2) -> float:
+	
+	var boardwalk:TileMapLayer = tilemap.find_child("Boardwalk")
+	var current_pos = boardwalk.local_to_map(boardwalk.to_local(global_position))
+	var _data_at_pos = boardwalk.get_cell_tile_data(current_pos)
 	if _data_at_pos && _data_at_pos.has_custom_data("Speed"):
-		#print("speed = " + str(_data_at_pos.get_custom_data("Speed") as float))
-		return _data_at_pos.get_custom_data("Speed") as float
-	else:
-		return 1.0
+		if _data_at_pos.get_custom_data("Speed") > -1:
+			return _data_at_pos.get_custom_data("Speed") as float
+	
+	var beach:TileMapLayer = tilemap.find_child("Beach")
+	current_pos = beach.local_to_map(beach.to_local(global_position))
+	_data_at_pos = beach.get_cell_tile_data(current_pos)
+	if _data_at_pos && _data_at_pos.has_custom_data("Speed"):
+		if _data_at_pos.get_custom_data("Speed") > -1:
+			return _data_at_pos.get_custom_data("Speed") as float
+	
+	# Nothing found somehow, return normal speed
+	return 1.0
+
+
 
 #var nav_regions: Array[NavigationRegion2D]
 #var rand_point_gens: Array[PolygonRandomPointGenerator]
