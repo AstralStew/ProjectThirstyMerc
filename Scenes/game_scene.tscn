@@ -30,7 +30,7 @@
 [ext_resource type="Script" uid="uid://dwa7d63qu5514" path="res://Scripts/HUD/Notepad.gd" id="21_aq00n"]
 [ext_resource type="Script" uid="uid://b1gvdf7johau2" path="res://Scripts/HUD/Phone.gd" id="26_pbc1q"]
 [ext_resource type="FontVariation" uid="uid://qaiu8rw1746q" path="res://Resources/Theme/Jersey10-Adjusted.tres" id="28_e624q"]
-[ext_resource type="Texture2D" uid="uid://3vnwq5wdt8xh" path="res://Assets/Images/Prototyping/MainCharacter.png" id="29_pbc1q"]
+[ext_resource type="Texture2D" uid="uid://cgibv2e2eexru" path="res://Assets/Images/SpriteSheet_Axolotal.png" id="29_t53j4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5q52j"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -2276,7 +2276,7 @@ theme_override_constants/separation = 8
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 2
-texture = ExtResource("29_pbc1q")
+texture = ExtResource("29_t53j4")
 expand_mode = 1
 stretch_mode = 5
 
