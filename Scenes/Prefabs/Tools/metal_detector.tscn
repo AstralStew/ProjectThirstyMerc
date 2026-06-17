@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dt5agm7wja7gl"]
+
+[ext_resource type="Script" uid="uid://d0tcjrsdnm5rs" path="res://Scripts/HUD/MetalDetector.gd" id="1_7rkj5"]
+[ext_resource type="PackedScene" uid="uid://du5p2psjdb5fi" path="res://Scenes/Prefabs/Indicators/metal_detector_indicator.tscn" id="2_0y2oq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obvom"]
+bg_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="MetalDetector" type="Control" unique_id=787976201 node_paths=PackedStringArray("dragged_object")]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_7rkj5")
+direction_indicator_prefab = ExtResource("2_0y2oq")
+movement_speed_modifier = 0.41
+rotation_bounds = Vector2(-10, 10)
+dragged_object = NodePath("Gfx")
+position_bounds = Array[Vector2]([Vector2(60, 215), Vector2(300, 215)])
+initial_position_offset = Vector2(0, -16)
+respect_grab_position = true
+reset_on_drag_end = true
+metadata/_custom_type_script = "uid://d0tcjrsdnm5rs"
+
+[node name="Gfx" type="Control" parent="." unique_id=1776884264]
+anchors_preset = 0
+rotation = 0.08726646
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+
+[node name="Handle" type="Panel" parent="Gfx" unique_id=380196954]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 18.33
+offset_right = 15.0
+offset_bottom = 108.33
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_obvom")
+
+[node name="Panel" type="Panel" parent="Gfx" unique_id=2024105305]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -22.5
+offset_right = 30.0
+offset_bottom = 22.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_obvom")
