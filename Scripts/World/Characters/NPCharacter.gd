@@ -7,7 +7,7 @@ var DEBUG_NAME : String = "[b][NPCharacter("+name+")][/b] "
 
 @export var wander_points : Array[Vector2] = [Vector2.ZERO,Vector2.ONE]
 
-@export_category("READ ONLY")
+@export_group("READ ONLY")
 @export var is_wandering : bool = false
 @export var wander_point_index : int = 0
 @export var is_talking: bool = false
@@ -30,6 +30,7 @@ func wandering() -> void:
 func on_navigation_finished() -> void:
 	super.on_navigation_finished()
 	wandering()
+
 
 
 func start_talking() -> void:

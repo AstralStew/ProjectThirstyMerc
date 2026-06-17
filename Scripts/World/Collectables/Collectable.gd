@@ -39,7 +39,7 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel()
-	_tween.tween_property(buried_gfx,"modulate",Color(Color.WHITE,0),duration)
+	_tween.tween_property(buried_gfx,"modulate",Color(Color(0.231, 0.075, 0.169, 1.0)*2.5,0),duration)
 	if mirage: 
 		_tween.tween_property(buried_gfx,"position",Vector2.ONE * randf() * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from(Vector2.ONE * randf() * mirage_strength).set_ease(Tween.EASE_OUT_IN)
 		_tween.tween_property(buried_gfx,"rotation",(randf()-1) * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from((randf()-1) * mirage_strength).set_ease(Tween.EASE_IN_OUT)
@@ -94,4 +94,4 @@ func collect() -> void:
 func create_gain_text() -> void:
 	var _gain_text : GainText = preload("res://Scenes/Prefabs/UI/gain_text.tscn").instantiate()
 	HudManager.hud_root.add_child(_gain_text)
-	_gain_text.gain("+ " + collectable_type.name)
+	_gain_text.gain("+ " + collectable_type.name.to_upper())

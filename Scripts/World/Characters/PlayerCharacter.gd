@@ -13,6 +13,7 @@ static var camera : Camera2D = null
 @export var base_movement_speed : float = 0.0
 @export var is_using_tool : bool = false
 @export var is_talking: bool = false
+@export var sqr_distance_to_target : float = 0.0
 
 var _click_held_down: bool = false
 var _npc_target:NPCharacter = null
@@ -26,6 +27,7 @@ func _ready():
 	super._ready()
 	camera = $Camera2D
 	camera.offset = camera_base_offset
+	adjusting_move_target()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Click"):
@@ -35,16 +37,23 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta):
 	if is_talking: return
+	sqr_distance_to_target = global_position.distance_squared_to(navigation_agent.target_position)
 	if _npc_target:
-		if global_position.distance_squared_to(_npc_target.global_position) < move_to_dialogue_start_distance**2:
+		if _click_held_down:
+			_npc_target = null
+		#elif global_position.distance_squared_to(_npc_target.global_position) < move_to_dialogue_start_distance**2:
+		elif sqr_distance_to_target < move_to_dialogue_start_distance**2:
 			start_talking()
 		else:
-			set_movement_target(_npc_target.global_position)
-			if player_move_target != null:
-				player_move_target.visible = false
-	elif _click_held_down:
+			set_movement_target(_npc_target.global_position + Vector2(0,6))
+			#if player_move_target != null:
+				#player_move_target.visible = false
+	if _click_held_down:
 		set_movement_target(get_global_mouse_position())
-		if player_move_target != null:
+	if player_move_target != null:
+		if navigation_agent.is_navigation_finished(): 
+			player_move_target.visible = false
+		else:
 			player_move_target.set_deferred("global_position", navigation_agent.get_final_position()) #) .global_position = get_global_mouse_position()
 			player_move_target.visible = true
 	super._physics_process(delta)
@@ -93,6 +102,27 @@ func set_movement_target(movement_target: Vector2):
 		player_move_target.visible = true
 		player_move_target.set_deferred("visible",false)
 
+
+
+func adjusting_move_target() -> void:
+	var _circle: Panel = player_move_target.get_child(0)
+	var _colour_dark = Color(0.329, 0.604, 0.553) 
+	var _colour_light = Color(0.824, 0.925, 0.6)
+	var _target_colour = _colour_dark
+	#var _is_light = false
+	var _elapsed = 0
+	while true:
+		await get_tree().physics_frame
+		if player_move_target.visible:
+			if _npc_target: 	_circle.size = Vector2.ONE * 12
+			else: 			_circle.size = Vector2.ONE * 6
+			_elapsed += get_physics_process_delta_time()
+			if _elapsed > 1.0:
+				_elapsed = 0
+				_target_colour = _colour_dark if _target_colour == _colour_light else _colour_light
+			player_move_target.modulate = Color(_target_colour,clampf(sqr_distance_to_target/1000,0.25,1.25) - 0.25)
+			#print("dist = " + str(clampf(sqr_distance_to_target/1000,0.5,1.5) - 0.5))
+			#_is_light = !_is_light
 
 
 

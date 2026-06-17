@@ -4,12 +4,6 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcg8v"]
 texture = ExtResource("1_nlloo")
-4:2/size_in_atlas = Vector2i(2, 2)
-4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.833445, 0.63726234, 13.20042, 3.0042324, 13.564568, 13.564566, -9.558922, 13.746641, -12.836267, 9.740999)
-0:0/size_in_atlas = Vector2i(4, 4)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.435951, 22.764977, -1.8499756, 22.970535, -2.15831, 31.603752, -12.2304, 31.295425)
 6:5/0 = 0
 6:6/0 = 0
 6:7/0 = 0
