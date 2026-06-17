@@ -26,6 +26,7 @@ static var effects_root : Node2D :
 
 #@export_category("READ ONLY")
 static var is_daytime : bool = false
+static var is_paused : bool = false
 
 static var day_progress: float = 0 :
 	get: return day_progress
@@ -39,6 +40,12 @@ static var day_fake_time: String :
 signal _day_started
 static func day_started() -> Signal:
 	return instance._day_started
+signal _day_paused
+static func day_paused() -> Signal:
+	return instance._day_paused
+signal _day_resumed
+static func day_resumed() -> Signal:
+	return instance._day_resumed
 signal _day_ended
 static func day_ended() -> Signal:
 	return instance._day_ended
@@ -51,20 +58,19 @@ func get_fake_mins_from_progress(progress:float) -> int:
 func convert_fake_mins_to_fake_time(mins:int) -> String:
 	return str(mins/60) + ":" + str(floor((mins % 60) / 10)) + "0"
 
-
-func _ready() -> void:
-	call_deferred("start_day")
+#
+#func _ready() -> void:
+	#call_deferred("start_day")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if is_daytime: 
+	if is_daytime && !is_paused: 
 		progress_day(delta)
 
 func progress_day(delta: float) -> void:
 	
 	day_progress += 1 / day_duration * delta
-	
 	
 	if day_progress >= 1:
 		end_day()
@@ -74,6 +80,16 @@ static func start_day() -> void:
 	is_daytime = true
 	day_started().emit()
 	print(DEBUG_NAME,"StartDay > Starting day!")
+
+static func pause_day() -> void:
+	is_paused = true
+	day_paused().emit()
+	print(DEBUG_NAME,"PauseDay > Pausing day!")
+
+static func resume_day() -> void:
+	is_paused = false
+	day_resumed().emit()
+	print(DEBUG_NAME,"ResumeDay > Resuming day!")
 
 static func end_day() -> void:
 	instance.day_progress = 1

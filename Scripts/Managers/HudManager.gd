@@ -4,6 +4,16 @@ const DEBUG_NAME : String = "[b][HudManager][/b] "
 func _enter_tree() -> void:
 	instance = self
 
+@export_group("Shop Settings")
+@export var shop_zoom_duration: float = 0.69
+@export var shop_zoom_amount: float = 2.15
+@export var shop_zoom_black_bar_size: float = 30
+@export var shop_zoom_ease: Tween.EaseType = Tween.EaseType.EASE_IN_OUT
+@export var shop_zoom_transition: Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
+@export var shop_zoom_camera_offset: Vector2 = Vector2(0,-40)
+
+
+@export_group("Talking Settings")
 @export var talking_zoom_duration: float = 0.69
 @export var talking_zoom_amount: float = 2.15
 @export var talking_zoom_black_bar_size: float = 30
@@ -11,6 +21,7 @@ func _enter_tree() -> void:
 @export var talking_zoom_transition: Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
 
 
+@export_group("Day Cap Settings")
 @export var day_cap_duration: float = 2.0
 @export var day_cap_black_background_size: float = 280
 @export var day_cap_ease: Tween.EaseType = Tween.EaseType.EASE_IN_OUT
@@ -22,7 +33,9 @@ static var hud_root : CanvasLayer :
 	get: return instance.hud
 
 
+@onready var shop: Control = $"../../HUD/Shop"
 @onready var dialogue: Control = $"../../HUD/Dialogue"
+
 
 
 @onready var black_bars: VBoxContainer = $"../../HUD/BlackBars"
@@ -89,20 +102,30 @@ func _stop_dialogue() -> void:
 	await _tween.finished
 	PlayerCharacter.stop_dialogue()
 
-static func start_shop(offset_to_shop:Vector2) -> void:
-	instance._start_dialogue(offset_to_shop)
-func _start_shop(offset_to_shop:Vector2) -> void:
+static func start_shop() -> void:
+	instance._start_shop()
+func _start_shop() -> void:
 	if _tween: _tween.kill()
 	
-	_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
-	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * talking_zoom_amount,talking_zoom_duration)
-	_tween.tween_property(PlayerCharacter.camera,"offset",offset_to_shop,talking_zoom_duration)
-	_tween.tween_property(HudManager,"black_bar_progress",1,talking_zoom_duration)
+	_tween = create_tween().set_parallel().set_ease(shop_zoom_ease).set_trans(shop_zoom_transition)
+	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * shop_zoom_amount,shop_zoom_duration)
+	_tween.tween_property(PlayerCharacter.camera,"offset",shop_zoom_camera_offset,shop_zoom_duration)
+	#_tween.tween_property(HudManager,"black_bar_progress",1,shop_zoom_duration)
 	#_tween.tween_property(Bag,"bag_progress",0,talking_zoom_duration)
-	_tween.tween_property(dialogue,"visible",true,0).set_delay(talking_zoom_duration)
+	_tween.tween_property(shop,"visible",true,0).set_delay(shop_zoom_duration)
 
 
 
+static func stop_shop() -> void:
+	instance._stop_shop()
+func _stop_shop() -> void:
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel().set_ease(shop_zoom_ease).set_trans(shop_zoom_transition)
+	_tween.tween_property(shop,"visible",false,0)
+	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * 2,shop_zoom_duration)
+	_tween.tween_property(PlayerCharacter.camera,"offset",PlayerCharacter.instance.camera_base_offset,shop_zoom_duration)
+	#_tween.tween_property(HudManager,"black_bar_progress",0,shop_zoom_duration)
+	#_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration)
 
 
 
@@ -110,14 +133,16 @@ func _start_shop(offset_to_shop:Vector2) -> void:
 
 
 func _start_day() -> void:
+	#pass
 	if _tween: _tween.kill()
-	Bag.bag_progress = 0
+	#Bag.bag_progress = 0
 	_tween = create_tween().set_parallel().set_ease(day_cap_ease).set_trans(day_cap_transition)
 	_tween.tween_property(HudManager,"black_background_progress",0,day_cap_duration).from(1)
-	#_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0)
-	await _tween.finished
-	await get_tree().create_timer(1.0).timeout
-	start_shop(Vector2.UP*10)
+	_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0)
+	#await _tween.finished
+	#await get_tree().create_timer(1.0).timeout
+	#start_shop()
+	#await get_tree().create_timer(5.0).timeout
 	
 
 func _end_day() -> void:

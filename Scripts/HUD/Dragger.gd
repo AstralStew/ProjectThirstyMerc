@@ -12,6 +12,15 @@ class_name Dragger extends Control
 
 @export_group("READ ONLY")
 
+@export var is_usable : bool = false :
+	get: return is_usable
+	set(value):
+		is_usable = value
+		if value && is_dragging:
+			is_dragging = false
+			if reset_on_drag_end:
+				resetting()
+			on_drag_end.emit()
 @export var is_dragging : bool = false
 @export var value : float
 @export var value_x_only : float
@@ -55,6 +64,7 @@ func setup(pivot:Control) -> void:
 
 
 func _process(delta: float) -> void:
+	if !is_usable: return
 	if is_resetting: return
 	if !is_dragging: return
 	if _total_diff.is_zero_approx(): return 
@@ -77,6 +87,7 @@ func resetting() -> void:
 	is_resetting = false
 
 func _on_gui_input(event: InputEvent) -> void:
+	if !is_usable: return
 	if is_resetting: return
 	
 	if event.is_action_pressed("Click"):

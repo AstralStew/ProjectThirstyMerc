@@ -35,6 +35,16 @@ func _ready():
 
 func start_day() -> void:
 	is_talking = true
+	await get_tree().create_timer(5.0).timeout
+	start_shopping()
+	
+	# NOTE > Delete these
+	await get_tree().create_timer(3.0).timeout
+	Bag.setup_tool(0,Bag.ToolType.SHOVEL)
+	await get_tree().create_timer(1.0).timeout
+	Bag.setup_tool(1,Bag.ToolType.METAL_DETECTOR)
+	await get_tree().create_timer(1.0).timeout
+	Bag.setup_tool(2,Bag.ToolType.BINOCULARS)
 
 func end_day() -> void:
 	is_talking = true
@@ -70,6 +80,17 @@ func _physics_process(delta):
 			player_move_target.set_deferred("global_position", navigation_agent.get_final_position()) #) .global_position = get_global_mouse_position()
 			player_move_target.visible = true
 	super._physics_process(delta)
+
+
+
+
+func start_shopping() -> void:
+	#get_tree().paused = true
+	set_deferred("is_talking", true)
+	set_movement_target(global_position)
+	HudManager.start_shop() # .start_dialogue((_npc_target.global_position - global_position)/2)
+
+
 
 
 var _talking_tween: Tween

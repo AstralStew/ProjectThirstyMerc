@@ -35,16 +35,24 @@ static var bag_progress: float = 1 :
 		bag_progress = value
 
 
-func _ready() -> void:
-	test()
+#func _ready() -> void:
+	#test()
 
-func test() -> void:
-	await get_tree().create_timer(3.0).timeout
-	setup_tool(0,ToolType.SHOVEL)
-	await get_tree().create_timer(1.0).timeout
-	setup_tool(1,ToolType.METAL_DETECTOR)
-	await get_tree().create_timer(1.0).timeout
-	setup_tool(2,ToolType.BINOCULARS)
+#func test() -> void:
+	#await get_tree().create_timer(3.0).timeout
+	#setup_tool(0,ToolType.SHOVEL)
+	#await get_tree().create_timer(1.0).timeout
+	#setup_tool(1,ToolType.METAL_DETECTOR)
+	#await get_tree().create_timer(1.0).timeout
+	#setup_tool(2,ToolType.BINOCULARS)
+
+
+static func set_tools_usable(toggle:bool=true) -> void:
+	instance._set_tools_usable(toggle)
+func _set_tools_usable(toggle:bool=true) -> void:
+	if tool_1: tool_1.is_usable = toggle
+	if tool_2: tool_2.is_usable = toggle
+	if tool_3: tool_3.is_usable = toggle
 
 static func setup_tool(index:int,tool_type:ToolType) -> void:
 	instance._setup_tool(index,tool_type)

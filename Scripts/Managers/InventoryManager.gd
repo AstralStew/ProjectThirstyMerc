@@ -6,7 +6,7 @@ func _enter_tree() -> void:
 
 
 
-@export var inventory : Dictionary[CollectableType,int] = {}
+static var inventory : Dictionary[CollectableType,int] = {}
 
 
 
