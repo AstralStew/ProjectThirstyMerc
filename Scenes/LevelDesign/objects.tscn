@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://jreor4aw007b" path="res://Scenes/LevelDesign/tree1.tscn" id="1_mfevw"]
 [ext_resource type="PackedScene" uid="uid://dk4bn77w8ola2" path="res://Scenes/LevelDesign/rock1.tscn" id="2_bq26t"]
 
-[node name="Objects" type="Node2D" unique_id=763068632]
+[node name="Objects" type="Node2D" unique_id=1793039576]
 y_sort_enabled = true
 
 [node name="Tree1_0" parent="." unique_id=1557634134 instance=ExtResource("1_mfevw")]
@@ -11,59 +11,64 @@ y_sort_enabled = false
 position = Vector2(-221, -165)
 scale = Vector2(-1, 1)
 
-[node name="Tree1_1" parent="." unique_id=259172171 instance=ExtResource("1_mfevw")]
+[node name="Tree1_1" parent="." unique_id=1045072880 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
-position = Vector2(-319, -253)
+position = Vector2(-321, -253)
 
-[node name="Tree1_2" parent="." unique_id=35011407 instance=ExtResource("1_mfevw")]
+[node name="Tree1_7" parent="." unique_id=949361070 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(339, -253)
+scale = Vector2(-1, 1)
+
+[node name="Tree1_2" parent="." unique_id=1183367547 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-383, -77)
 
-[node name="Tree1_3" parent="." unique_id=1440920617 instance=ExtResource("1_mfevw")]
+[node name="Tree1_3" parent="." unique_id=205662081 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1007, -61)
 
-[node name="Tree1_4" parent="." unique_id=1699122860 instance=ExtResource("1_mfevw")]
+[node name="Tree1_4" parent="." unique_id=565513128 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1007, -397)
 
-[node name="Tree1_5" parent="." unique_id=1105347188 instance=ExtResource("1_mfevw")]
+[node name="Tree1_5" parent="." unique_id=147936106 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1199, -429)
 
-[node name="Tree1_6" parent="." unique_id=129129635 instance=ExtResource("1_mfevw")]
+[node name="Tree1_6" parent="." unique_id=1895761012 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(369, -317)
 
 [node name="Rock1_0" parent="." unique_id=2139641766 instance=ExtResource("2_bq26t")]
 position = Vector2(1049, -45)
 
-[node name="Rock1_1" parent="." unique_id=1946220796 instance=ExtResource("2_bq26t")]
+[node name="Rock1_1" parent="." unique_id=256222847 instance=ExtResource("2_bq26t")]
 position = Vector2(793, 131)
 
-[node name="Rock1_2" parent="." unique_id=1496125753 instance=ExtResource("2_bq26t")]
+[node name="Rock1_2" parent="." unique_id=1574535166 instance=ExtResource("2_bq26t")]
 position = Vector2(1113, 211)
 
-[node name="Rock1_3" parent="." unique_id=144464003 instance=ExtResource("2_bq26t")]
+[node name="Rock1_3" parent="." unique_id=1665227248 instance=ExtResource("2_bq26t")]
 position = Vector2(-647, 3)
 
-[node name="Rock1_4" parent="." unique_id=1152830284 instance=ExtResource("2_bq26t")]
+[node name="Rock1_4" parent="." unique_id=334019755 instance=ExtResource("2_bq26t")]
 position = Vector2(-695, 195)
 
-[node name="Rock1_5" parent="." unique_id=222514305 instance=ExtResource("2_bq26t")]
+[node name="Rock1_5" parent="." unique_id=265341369 instance=ExtResource("2_bq26t")]
 position = Vector2(-918, 196)
 
-[node name="Rock1_8" parent="." unique_id=755804125 instance=ExtResource("2_bq26t")]
+[node name="Rock1_8" parent="." unique_id=1253798048 instance=ExtResource("2_bq26t")]
 position = Vector2(-1071, -29)
 
-[node name="Rock1_6" parent="." unique_id=220628445 instance=ExtResource("2_bq26t")]
+[node name="Rock1_6" parent="." unique_id=1947106544 instance=ExtResource("2_bq26t")]
 position = Vector2(-1079, -189)
 
-[node name="Rock1_7" parent="." unique_id=495030657 instance=ExtResource("2_bq26t")]
+[node name="Rock1_7" parent="." unique_id=276103564 instance=ExtResource("2_bq26t")]
 position = Vector2(-1079, -317)
 
-[node name="Rock1_9" parent="." unique_id=1123013468 instance=ExtResource("2_bq26t")]
+[node name="Rock1_9" parent="." unique_id=707757418 instance=ExtResource("2_bq26t")]
 position = Vector2(-220, 151)
 
-[node name="Rock1_10" parent="." unique_id=1779426021 instance=ExtResource("2_bq26t")]
+[node name="Rock1_10" parent="." unique_id=1752452995 instance=ExtResource("2_bq26t")]
 position = Vector2(539, 116)
