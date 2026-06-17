@@ -35,11 +35,12 @@ func _ready():
 
 func start_day() -> void:
 	is_talking = true
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(3.5).timeout
+	
 	start_shopping()
 	
 	# NOTE > Delete these
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	Bag.setup_tool(0,Bag.ToolType.SHOVEL)
 	await get_tree().create_timer(1.0).timeout
 	Bag.setup_tool(1,Bag.ToolType.METAL_DETECTOR)
@@ -88,8 +89,16 @@ func start_shopping() -> void:
 	#get_tree().paused = true
 	set_deferred("is_talking", true)
 	set_movement_target(global_position)
+	WorldManager.pause_day()
+	Bag.set_tools_usable(false)
 	HudManager.start_shop() # .start_dialogue((_npc_target.global_position - global_position)/2)
 
+static func stop_shopping() -> void:
+	instance._stop_shopping()
+func _stop_shopping() -> void:
+	WorldManager.resume_day()
+	Bag.set_tools_usable(true)
+	is_talking = false
 
 
 
@@ -99,6 +108,8 @@ func start_talking() -> void:
 	set_deferred("is_talking", true)
 	set_movement_target(global_position)
 	_npc_target.start_talking()
+	WorldManager.pause_day()
+	Bag.set_tools_usable(false)
 	HudManager.start_dialogue((_npc_target.global_position - global_position)/2)
 
 
@@ -119,6 +130,8 @@ static func stop_dialogue() -> void:
 func _stop_dialogue() -> void:
 	_npc_target.stop_talking()
 	_npc_target = null
+	WorldManager.resume_day()
+	Bag.set_tools_usable(true)
 	is_talking = false
 
 

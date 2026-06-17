@@ -126,6 +126,8 @@ func _stop_shop() -> void:
 	_tween.tween_property(PlayerCharacter.camera,"offset",PlayerCharacter.instance.camera_base_offset,shop_zoom_duration)
 	#_tween.tween_property(HudManager,"black_bar_progress",0,shop_zoom_duration)
 	#_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration)
+	await _tween.finished
+	PlayerCharacter.stop_shopping()
 
 
 

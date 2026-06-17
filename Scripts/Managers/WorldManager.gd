@@ -58,9 +58,9 @@ func get_fake_mins_from_progress(progress:float) -> int:
 func convert_fake_mins_to_fake_time(mins:int) -> String:
 	return str(mins/60) + ":" + str(floor((mins % 60) / 10)) + "0"
 
-#
-#func _ready() -> void:
-	#call_deferred("start_day")
+
+func _ready() -> void:
+	call_deferred("start_day")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -68,8 +68,7 @@ func _process(delta: float) -> void:
 	if is_daytime && !is_paused: 
 		progress_day(delta)
 
-func progress_day(delta: float) -> void:
-	
+func progress_day(delta: float) -> void:	
 	day_progress += 1 / day_duration * delta
 	
 	if day_progress >= 1:
