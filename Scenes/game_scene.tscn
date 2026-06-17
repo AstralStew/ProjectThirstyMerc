@@ -100,7 +100,7 @@ corner_detail = 3
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaga3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6xwo"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
@@ -116,6 +116,22 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k3ma"]
 content_margin_left = 10.0
 content_margin_right = 10.0
@@ -127,6 +143,22 @@ border_width_bottom = 1
 border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 expand_margin_left = 1.0
 expand_margin_right = 22.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaga3"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
 shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 shadow_size = 1
 shadow_offset = Vector2(0, 3)
@@ -164,7 +196,8 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k3ma"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asuqw"]
+content_margin_left = 3.0
 content_margin_right = 3.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opjrb"]
@@ -214,6 +247,10 @@ shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k3ma"]
+content_margin_left = 3.0
+content_margin_right = 3.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_asuqw"]
 content_margin_left = 10.0
@@ -1235,6 +1272,8 @@ scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="Shop" type="Control" parent="HUD" unique_id=702404961]
+visible = false
+z_index = -10
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
@@ -1242,8 +1281,38 @@ size_flags_horizontal = 0
 
 [node name="DialogueShop" type="Control" parent="HUD/Shop" unique_id=20575516]
 anchors_preset = 0
-offset_top = 22.0
-offset_bottom = 22.0
+offset_top = 10.5
+offset_right = 360.0
+offset_bottom = 290.5
+
+[node name="LeftBanner" type="Panel" parent="HUD/Shop/DialogueShop" unique_id=1520858046]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -18.5
+offset_right = 100.0
+offset_bottom = -18.5
+grow_vertical = 2
+scale = Vector2(1, 1.235)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a6xwo")
+
+[node name="RightBanner" type="Panel" parent="HUD/Shop/DialogueShop" unique_id=1627524087]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -18.5
+offset_right = -10.0
+offset_bottom = -18.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1, 1.235)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a6xwo")
 
 [node name="DialogueBubble" type="Panel" parent="HUD/Shop/DialogueShop" unique_id=1684494514]
 layout_mode = 0
@@ -1252,9 +1321,9 @@ offset_top = 2.0
 offset_right = 407.5
 offset_bottom = 53.5
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ol4r")
 
-[node name="DialogueLabel" type="RichTextLabel" parent="HUD/Shop/DialogueShop" unique_id=372667859]
+[node name="DialogueLabel" type="RichTextLabel" parent="HUD/Shop/DialogueShop/DialogueBubble" unique_id=372667859]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1262,19 +1331,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 14.5
-offset_right = 351.0
-offset_bottom = 57.5
+offset_left = -165.75
+offset_top = -21.5
+offset_right = 165.75
+offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_colors/default_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_colors/default_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_constants/shadow_offset_x = 82
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
-text = "Welcome to Pawn's Point! You can rent up to 3 tools per day. I'll give you back most of your dosh whenever you return them :)"
+text = "Welcome to [color=f7738e]Pawn's Point[/color]! You can rent up to 3 tools per day. I'll give you back most of your dosh whenever you return them :)"
 scroll_active = false
+vertical_alignment = 1
 
 [node name="DialoguePlayer" type="Control" parent="HUD/Shop" unique_id=416817570]
 anchors_preset = 0
@@ -1288,9 +1358,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 90
+theme_override_constants/margin_top = 70
 theme_override_constants/margin_right = 0
-theme_override_constants/margin_bottom = 60
+theme_override_constants/margin_bottom = 70
 
 [node name="LeftTools" type="VBoxContainer" parent="HUD/Shop/DialoguePlayer/MarginContainer" unique_id=1669571566]
 layout_mode = 2
@@ -1335,7 +1405,7 @@ theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$5"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -1378,8 +1448,8 @@ theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$13"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
+text = "$8"
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -1421,7 +1491,7 @@ theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$13"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -1464,8 +1534,8 @@ theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$13"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
+text = "$14"
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -1514,8 +1584,8 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$13"
-horizontal_alignment = 1
+text = "$3"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="ButtonOption2" type="Button" parent="HUD/Shop/DialoguePlayer/MarginContainer/RightTools" unique_id=865295906]
@@ -1558,8 +1628,8 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$13"
-horizontal_alignment = 1
+text = "$6"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="ButtonOption3" type="Button" parent="HUD/Shop/DialoguePlayer/MarginContainer/RightTools" unique_id=2114213581]
@@ -1602,8 +1672,8 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$13"
-horizontal_alignment = 1
+text = "$10"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="ButtonOption4" type="Button" parent="HUD/Shop/DialoguePlayer/MarginContainer/RightTools" unique_id=2055640213]
@@ -1646,8 +1716,8 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$13"
-horizontal_alignment = 1
+text = "$15"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="ButtonOption4" type="Button" parent="HUD/Shop/DialoguePlayer" unique_id=382255158]
@@ -2024,7 +2094,6 @@ dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(-18, 100), Vector2(290, 320)])
 respect_grab_position = true
 setup_on_ready = true
-is_usable = true
 metadata/_custom_type_script = "uid://b1gvdf7johau2"
 
 [node name="Gfx" type="Control" parent="HUD/Bag/Phone" unique_id=126478202]
@@ -2207,7 +2276,6 @@ dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(69, 90), Vector2(380, 315)])
 respect_grab_position = true
 setup_on_ready = true
-is_usable = true
 
 [node name="Gfx" type="Control" parent="HUD/Bag/Notepad" unique_id=2065521794]
 anchors_preset = 0

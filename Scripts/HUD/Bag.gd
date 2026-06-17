@@ -14,6 +14,10 @@ enum ToolType {NONE,BINOCULARS,SHOVEL,METAL_DETECTOR}
 @onready var tool_pivot_2: Control = $ToolPivots/ToolPivot2
 @onready var tool_pivot_3: Control = $ToolPivots/ToolPivot3
 
+@onready var phone: Phone = $Phone
+@onready var notepad: Notepad = $Notepad
+
+
 @export_group("READ ONLY")
 @export var tool_1:Rotator = null
 @export var tool_2:Rotator = null
@@ -53,6 +57,9 @@ func _set_tools_usable(toggle:bool=true) -> void:
 	if tool_1: tool_1.is_usable = toggle
 	if tool_2: tool_2.is_usable = toggle
 	if tool_3: tool_3.is_usable = toggle
+	
+	phone.is_usable = toggle
+	notepad.is_usable = toggle
 
 static func setup_tool(index:int,tool_type:ToolType) -> void:
 	instance._setup_tool(index,tool_type)
