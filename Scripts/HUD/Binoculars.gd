@@ -18,6 +18,8 @@ func _ready() -> void:
 	on_drag_start.connect(start)
 	on_drag_end.connect(stop)
 
+#func setup(initial_pos:Vector2) -> void:
+	#super.setup(initial_pos)
 
 func start() -> void:
 	PlayerCharacter.start_using_tool(movement_speed_modifier)
@@ -83,4 +85,4 @@ func stop() -> void:
 
 func resetting() -> void:
 	super.resetting()
-	_tween.tween_property(dragged_object,"scale",Vector2.ONE,reset_duration)
+	_tween.tween_property(dragged_object,"scale",Vector2.ONE * 0.8,reset_duration)

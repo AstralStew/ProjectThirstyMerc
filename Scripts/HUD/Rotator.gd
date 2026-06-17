@@ -10,15 +10,19 @@ var _initial_rotation : float
 func _ready() -> void:
 	super._ready()
 	
-	if reset_on_drag_end: _initial_rotation = dragged_object.rotation_degrees
-	
 	#on_drag_start.connect(set_active.bind(true))
 	#on_drag_end.connect(set_active.bind(false))
+
+func setup(pivot:Control) -> void:
+	super.setup(pivot)
+	_initial_rotation = dragged_object.rotation_degrees
+
 
 #func set_active(active:bool) -> void:
 	
 	#if active: _initial_rotation = _dragged_object.rotation_degrees
 	#else: _dragged_object.rotation_degrees = _initial_rotation
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

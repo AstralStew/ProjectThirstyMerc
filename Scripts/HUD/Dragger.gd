@@ -3,8 +3,10 @@ class_name Dragger extends Control
 @export var dragged_object : CanvasItem 
 @export var position_bounds : Array[Vector2]
 
+@export var initial_position_offset: Vector2 = Vector2.ZERO
 @export var respect_grab_position : bool = false
 
+@export var setup_on_ready : bool = false
 @export var reset_on_drag_end : bool
 @export var reset_duration : float = 0.25
 
@@ -33,9 +35,24 @@ signal on_drag_end
 
 func _ready() -> void:
 	#_dragged_object = get_node(dragged_object)
-	if reset_on_drag_end: _initial_position = dragged_object.position
+	
+	if setup_on_ready: setup(null)
 	
 	_total_diff = position_bounds[1] - position_bounds[0]
+	
+	gui_input.connect(_on_gui_input)
+	
+
+func setup(pivot:Control) -> void:
+	if pivot:
+		print("pivot = " + pivot.name + ", global pos = " + str(pivot.global_position))
+		_initial_position = pivot.global_position
+		dragged_object.global_position = _initial_position + initial_position_offset
+	else:
+		_initial_position = dragged_object.global_position
+	
+
+
 
 func _process(delta: float) -> void:
 	if is_resetting: return
@@ -54,7 +71,7 @@ func resetting() -> void:
 	
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel()
-	_tween.tween_property(dragged_object,"position",_initial_position,reset_duration)
+	_tween.tween_property(dragged_object,"global_position",_initial_position + initial_position_offset,reset_duration)
 	
 	while(_tween.is_running()): await get_tree().process_frame
 	is_resetting = false

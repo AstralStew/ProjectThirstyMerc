@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://b0qruvc8r4wfn"]
+
+[ext_resource type="Script" uid="uid://drhpp74rjokfy" path="res://Scripts/HUD/Binoculars.gd" id="1_0ddn4"]
+[ext_resource type="PackedScene" uid="uid://paddlm4mglvp" path="res://Scenes/Prefabs/Indicators/binocular_indicator.tscn" id="2_n03ir"]
+
+[node name="Binoculars" type="Control" unique_id=1855102657 node_paths=PackedStringArray("dragged_object")]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_0ddn4")
+direction_indicator_prefab = ExtResource("2_n03ir")
+camera_move_multiplier = 0.75
+near_scale = 1.0
+rotation_bounds = Vector2(-30, 30)
+rotate_source = 1
+dragged_object = NodePath("Gfx")
+position_bounds = Array[Vector2]([Vector2(37.000015, 10.000015), Vector2(323, 265)])
+reset_on_drag_end = true
+metadata/_custom_type_script = "uid://drhpp74rjokfy"
+
+[node name="Gfx" type="Control" parent="." unique_id=497739244]
+anchors_preset = 0
+rotation = 0.20943952
+mouse_filter = 1
+
+[node name="Control" type="Control" parent="Gfx" unique_id=1710514156]
+anchors_preset = 0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 1
+
+[node name="Gfx" type="ColorRect" parent="Gfx/Control" unique_id=1346827058]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 9.0
+offset_bottom = 6.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+
+[node name="Gfx2" type="ColorRect" parent="Gfx/Control" unique_id=1648832815]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -8.0
+offset_right = -9.0
+offset_bottom = 12.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+
+[node name="Gfx7" type="ColorRect" parent="Gfx/Control" unique_id=869048252]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -5.0
+offset_right = -12.0
+offset_bottom = 9.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="Gfx3" type="ColorRect" parent="Gfx/Control" unique_id=888514203]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -8.0
+offset_right = 29.0
+offset_bottom = 12.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+
+[node name="Gfx6" type="ColorRect" parent="Gfx/Control" unique_id=1180324208]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -5.0
+offset_right = 26.0
+offset_bottom = 9.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="Gfx5" type="ColorRect" parent="Gfx/Control" unique_id=1366692924]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -2.0
+offset_right = -15.0
+offset_bottom = 6.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.8235294, 0.9254902, 0.6, 1)
+
+[node name="Gfx4" type="ColorRect" parent="Gfx/Control" unique_id=1908720393]
+layout_mode = 0
+offset_left = 15.0
+offset_top = -2.0
+offset_right = 23.0
+offset_bottom = 6.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.8235294, 0.9254902, 0.6, 1)
