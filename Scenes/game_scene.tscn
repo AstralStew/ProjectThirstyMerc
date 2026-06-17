@@ -282,12 +282,6 @@ travel_cost = 2.0
 visible = false
 polygon = PackedVector2Array(-146, 128, -146, 274, -61, 274, -62, 129)
 
-[node name="Shop" type="Sprite2D" parent="World/Level" unique_id=1055891014]
-position = Vector2(32, -431)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(16, 64, 72, 64)
-
 [node name="Footprints" type="Node2D" parent="World/Level" unique_id=801718807 node_paths=PackedStringArray("steps")]
 z_index = 1
 texture_repeat = 2
@@ -357,11 +351,17 @@ texture = ExtResource("12_uaga3")
 y_sort_enabled = true
 texture_filter = 1
 
+[node name="Shop" type="Sprite2D" parent="World/Entities" unique_id=1055891014]
+position = Vector2(32, -431)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(16, 64, 72, 64)
+
 [node name="Characters" type="Node2D" parent="World/Entities" unique_id=277602795]
 y_sort_enabled = true
 
 [node name="PlayerCharacter" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1850846413 node_paths=PackedStringArray("player_move_target", "body", "head")]
-position = Vector2(70, 61)
+position = Vector2(31, -384)
 motion_mode = 1
 safe_margin = 3.0
 script = ExtResource("2_fiftr")
@@ -889,6 +889,137 @@ render_target_update_mode = 0
 [node name="HUD" type="CanvasLayer" parent="." unique_id=298506667]
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="Shop" type="Control" parent="HUD" unique_id=702404961]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+
+[node name="DialogueShop" type="Control" parent="HUD/Shop" unique_id=20575516]
+anchors_preset = 0
+offset_top = 22.0
+offset_bottom = 22.0
+
+[node name="DialogueBubble" type="Panel" parent="HUD/Shop/DialogueShop" unique_id=1684494514]
+layout_mode = 0
+offset_left = -50.5
+offset_top = 0.5
+offset_right = 205.5
+offset_bottom = 75.5
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uaga3")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="HUD/Shop/DialogueShop" unique_id=372667859]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = 10.5
+offset_right = 197.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Welcome to Pawn's Point!
+You can rent up to 3 tools per day. I'll give you back most of your dosh when you return them!"
+scroll_active = false
+
+[node name="DialoguePlayer" type="Control" parent="HUD/Shop" unique_id=416817570]
+layout_direction = 3
+anchors_preset = 0
+offset_left = -360.0
+offset_top = 211.0
+offset_right = -360.0
+offset_bottom = 211.0
+
+[node name="DialogueOption2" type="Control" parent="HUD/Shop/DialoguePlayer" unique_id=639770399]
+anchors_preset = 0
+offset_top = -40.5
+offset_bottom = -40.5
+
+[node name="DialogueBubble" type="Panel" parent="HUD/Shop/DialoguePlayer/DialogueOption2" unique_id=367605636]
+layout_mode = 0
+offset_left = -50.5
+offset_top = 1.5
+offset_right = 205.5
+offset_bottom = 33.5
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lafet")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="HUD/Shop/DialoguePlayer/DialogueOption2" unique_id=1812800545]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = 10.5
+offset_right = 197.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_constants/strikethrough_alpha = 100
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[s]... You mean this one? ;D"
+scroll_active = false
+
+[node name="DialogueOption1" type="Control" parent="HUD/Shop/DialoguePlayer" unique_id=895425394]
+visible = false
+anchors_preset = 0
+
+[node name="DialogueBubble" type="Panel" parent="HUD/Shop/DialoguePlayer/DialogueOption1" unique_id=234221619]
+layout_mode = 0
+offset_left = -50.5
+offset_top = 1.5
+offset_right = 205.5
+offset_bottom = 33.5
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uaga3")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="HUD/Shop/DialoguePlayer/DialogueOption1" unique_id=174640160]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = 10.5
+offset_right = 197.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "I'll let you know if I find it!"
+scroll_active = false
+
+[node name="Button" type="Button" parent="HUD/Shop/DialoguePlayer" unique_id=382255158]
+layout_mode = 0
+offset_left = -51.5
+offset_top = 1.5
+offset_right = 204.5
+offset_bottom = 33.5
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_juer4")
+text = "   I'll let you know if I find it!"
+alignment = 2
 
 [node name="Dialogue" type="Control" parent="HUD" unique_id=908124618]
 visible = false
@@ -1551,5 +1682,6 @@ one_shot = true
 [node name="Transitions" type="Node" parent="." unique_id=401277600]
 
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter/ClickBoundary" to="World/Entities/Characters/NPCharacter" method="_on_gui_input"]
+[connection signal="pressed" from="HUD/Shop/DialoguePlayer/Button" to="Managers/HudManager" method="stop_dialogue"]
 [connection signal="pressed" from="HUD/Dialogue/DialoguePlayer/Button" to="Managers/HudManager" method="stop_dialogue"]
 [connection signal="timeout" from="HUD/Timer" to="HUD/Bag/Phone" method="alotl_speech" binds= ["Never gonna give you up, never gonna let you down, never gonna run around and... desert you :^)"]]

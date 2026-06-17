@@ -28,6 +28,19 @@ func _ready():
 	camera = $Camera2D
 	camera.offset = camera_base_offset
 	adjusting_move_target()
+	
+	WorldManager.day_started().connect(start_day)
+	WorldManager.day_ended().connect(end_day)
+
+
+func start_day() -> void:
+	is_talking = true
+
+func end_day() -> void:
+	is_talking = true
+	_click_held_down = false
+	
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Click"):

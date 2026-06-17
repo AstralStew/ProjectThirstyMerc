@@ -89,12 +89,36 @@ func _stop_dialogue() -> void:
 	await _tween.finished
 	PlayerCharacter.stop_dialogue()
 
+static func start_shop(offset_to_shop:Vector2) -> void:
+	instance._start_dialogue(offset_to_shop)
+func _start_shop(offset_to_shop:Vector2) -> void:
+	if _tween: _tween.kill()
+	
+	_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
+	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * talking_zoom_amount,talking_zoom_duration)
+	_tween.tween_property(PlayerCharacter.camera,"offset",offset_to_shop,talking_zoom_duration)
+	_tween.tween_property(HudManager,"black_bar_progress",1,talking_zoom_duration)
+	#_tween.tween_property(Bag,"bag_progress",0,talking_zoom_duration)
+	_tween.tween_property(dialogue,"visible",true,0).set_delay(talking_zoom_duration)
+
+
+
+
+
+
+
+
 
 func _start_day() -> void:
 	if _tween: _tween.kill()
+	Bag.bag_progress = 0
 	_tween = create_tween().set_parallel().set_ease(day_cap_ease).set_trans(day_cap_transition)
 	_tween.tween_property(HudManager,"black_background_progress",0,day_cap_duration).from(1)
-	_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0)
+	#_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0)
+	await _tween.finished
+	await get_tree().create_timer(1.0).timeout
+	start_shop(Vector2.UP*10)
+	
 
 func _end_day() -> void:
 	if _tween: _tween.kill()

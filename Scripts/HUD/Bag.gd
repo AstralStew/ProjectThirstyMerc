@@ -23,7 +23,7 @@ signal _tool_pivots_moved
 static func tool_pivots_moved() -> Signal:
 	return instance._tool_pivots_moved
 
-static var bag_progress: float :
+static var bag_progress: float = 1 :
 	set(value):
 		if bag_progress == value: return
 		bag_progress = clamp(value,0,1)
