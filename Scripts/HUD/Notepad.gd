@@ -7,7 +7,7 @@ func _enter_tree() -> void:
 @onready var notepad_entries: VBoxContainer = $Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries
 
 func _ready() -> void:
-	InventoryManager.o
+	InventoryManager.on_inventory_changed().connect(update_entries)
 
 static func update_entries(list:Dictionary[CollectableType,int]) -> void:
 	instance._update_entries(list)

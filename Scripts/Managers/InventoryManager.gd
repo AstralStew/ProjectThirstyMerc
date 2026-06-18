@@ -8,16 +8,16 @@ func _enter_tree() -> void:
 
 static var inventory : Dictionary[CollectableType,int] = {}
 signal _on_inventory_changed(new_total)
-func on_inventory_changed() -> Signal:
-	return instance._inventory_changed
+static func on_inventory_changed() -> Signal:
+	return instance._on_inventory_changed
 
 static var dosh : int = 15:
 	get: return dosh
 	set(value):
 		dosh = clamp(value,0,1)
 signal _on_dosh_changed(new_total)
-func on_dosh_changed() -> Signal:
-	return instance._dosh_changed
+static func on_dosh_changed() -> Signal:
+	return instance._on_dosh_changed
 
 
 static func add_dosh(amount:int) -> void:

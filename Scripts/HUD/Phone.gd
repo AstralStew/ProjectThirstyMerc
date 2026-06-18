@@ -13,11 +13,15 @@ func _enter_tree() -> void:
 
 @export var alotl_speech_speed : float = 1.0
 
+func _ready() -> void:
+	InventoryManager.on_dosh_changed().connect(update_dosh)
 
 func _process(delta: float) -> void:
 	if WorldManager.is_daytime:
 		time_label.text = WorldManager.day_fake_time
 
+func update_dosh(new_amount:int) -> void:
+	balance_label.text = "$" + str(new_amount)
 
 static func alotl_speech(speech:String) -> void:
 	instance._alotl_speech(speech)

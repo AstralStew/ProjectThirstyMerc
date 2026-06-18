@@ -13,10 +13,8 @@
 [ext_resource type="Script" uid="uid://co0h4xrb1vtwp" path="res://Scripts/World/Characters/SpawnBox.gd" id="10_4k3ma"]
 [ext_resource type="Script" uid="uid://daf0h2p3no1m4" path="res://Scripts/World/Characters/NPCharacter.gd" id="11_gqlrj"]
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="11_kut41"]
-[ext_resource type="Texture2D" uid="uid://u15xmbhxp7nb" path="res://Assets/Images/SpriteSheet_Items_Big.png" id="11_t53j4"]
 [ext_resource type="Texture2D" uid="uid://siy84y14m0q1" path="res://Resources/Atlases/Characters/NPC2_Body_Back.tres" id="12_atg6p"]
 [ext_resource type="Resource" uid="uid://4jioa8dy36vc" path="res://Resources/Collectables/ct_bottlecap.tres" id="12_b14wf"]
-[ext_resource type="Texture2D" uid="uid://c20dmq62ii6sj" path="res://Assets/Images/SpriteSheet_Items_Small.png" id="12_uaga3"]
 [ext_resource type="Resource" uid="uid://bri8u7r1v5itr" path="res://Resources/Collectables/ct_sea_glass.tres" id="13_b14wf"]
 [ext_resource type="Texture2D" uid="uid://csane6fusip" path="res://Resources/Atlases/Characters/NPC1_Body_Back.tres" id="13_obvom"]
 [ext_resource type="Texture2D" uid="uid://b6b8jl8chpgo2" path="res://Resources/Atlases/Characters/NPC1_Body_Front.tres" id="13_uaga3"]
@@ -429,10 +427,6 @@ texture_filter = 1
 
 [node name="Tilemap" parent="World/Level" unique_id=1592017223 groups=["tilemaps"] instance=ExtResource("4_t53j4")]
 
-[node name="Mockup" type="Sprite2D" parent="World/Level" unique_id=1195561341]
-visible = false
-texture = ExtResource("1_x87qo")
-
 [node name="Boardwalk" type="NavigationRegion2D" parent="World/Level" unique_id=983806963]
 navigation_polygon = SubResource("NavigationPolygon_pbc1q")
 enter_cost = 1.0
@@ -536,16 +530,6 @@ texture = ExtResource("6_5dgvu")
 visible = false
 modulate = Color(1, 1, 1, 0.62352943)
 texture = ExtResource("1_x87qo")
-
-[node name="SpriteSheetItems" type="Sprite2D" parent="World/Level" unique_id=1477606008]
-visible = false
-position = Vector2(34, -67)
-texture = ExtResource("11_t53j4")
-
-[node name="SpriteSheetItems2" type="Sprite2D" parent="World/Level" unique_id=1956957359]
-visible = false
-position = Vector2(43, 5)
-texture = ExtResource("12_uaga3")
 
 [node name="Spawner_MiddleTop" type="ReferenceRect" parent="World/Level" unique_id=2056892345 groups=["spawners"]]
 z_index = 500
@@ -702,6 +686,12 @@ position = Vector2(-88, -427)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(104, 0, 80, 72)
+
+[node name="Shop3" type="Sprite2D" parent="World/Entities" unique_id=7815882]
+position = Vector2(145, -428)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(32, 136, 96, 64)
 
 [node name="Characters" type="Node2D" parent="World/Entities" unique_id=277602795]
 y_sort_enabled = true
@@ -2261,21 +2251,10 @@ text = "Buy Tokens"
 z_index = 3
 anchors_preset = 0
 script = ExtResource("21_aq00n")
-rotation_bounds = null
-rotate_source = null
 dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(69, 90), Vector2(380, 315)])
-initial_position_offset = null
 respect_grab_position = true
 setup_on_ready = true
-reset_on_drag_end = null
-reset_duration = null
-is_usable = null
-is_dragging = null
-value = null
-value_x_only = null
-value_y_only = null
-is_resetting = null
 
 [node name="Gfx" type="Control" parent="HUD/Bag/Notepad" unique_id=2065521794]
 anchors_preset = 0
