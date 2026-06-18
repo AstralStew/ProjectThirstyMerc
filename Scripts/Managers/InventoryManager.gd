@@ -11,10 +11,10 @@ signal _on_inventory_changed(new_total)
 static func on_inventory_changed() -> Signal:
 	return instance._on_inventory_changed
 
-static var dosh : int = 15:
+static var dosh : int = 5:
 	get: return dosh
 	set(value):
-		dosh = clamp(value,0,1)
+		dosh = clamp(value,0,1000)
 signal _on_dosh_changed(new_total)
 static func on_dosh_changed() -> Signal:
 	return instance._on_dosh_changed

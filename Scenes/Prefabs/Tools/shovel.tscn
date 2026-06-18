@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3v2idfvg2d2q"]
 
-[ext_resource type="Script" uid="uid://ddcfnn4fvctf8" path="res://Scripts/HUD/Shovel.gd" id="1_ae6b5"]
+[ext_resource type="Script" uid="uid://ddcfnn4fvctf8" path="res://Scripts/HUD/Tools/Shovel.gd" id="1_ae6b5"]
 [ext_resource type="PackedScene" uid="uid://w80klp0rbev4" path="res://Scenes/Prefabs/Indicators/shovel_indicator.tscn" id="2_6acnc"]
 
 [node name="Shovel" type="Control" unique_id=538118477 node_paths=PackedStringArray("dragged_object")]

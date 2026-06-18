@@ -33,19 +33,13 @@ func _ready():
 	WorldManager.day_ended().connect(end_day)
 
 
+
 func start_day() -> void:
 	is_talking = true
 	await get_tree().create_timer(3.5).timeout
 	
 	start_shopping()
 	
-	# NOTE > Delete these
-	await get_tree().create_timer(1.0).timeout
-	Bag.setup_tool(0,Bag.ToolType.SHOVEL)
-	await get_tree().create_timer(1.0).timeout
-	Bag.setup_tool(1,Bag.ToolType.METAL_DETECTOR)
-	await get_tree().create_timer(1.0).timeout
-	Bag.setup_tool(2,Bag.ToolType.BINOCULARS)
 
 func end_day() -> void:
 	is_talking = true

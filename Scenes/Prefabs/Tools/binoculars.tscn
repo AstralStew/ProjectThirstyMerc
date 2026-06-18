@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0qruvc8r4wfn"]
 
-[ext_resource type="Script" uid="uid://drhpp74rjokfy" path="res://Scripts/HUD/Binoculars.gd" id="1_0ddn4"]
+[ext_resource type="Script" uid="uid://drhpp74rjokfy" path="res://Scripts/HUD/Tools/Binoculars.gd" id="1_0ddn4"]
 [ext_resource type="PackedScene" uid="uid://paddlm4mglvp" path="res://Scenes/Prefabs/Indicators/binocular_indicator.tscn" id="2_n03ir"]
 
 [node name="Binoculars" type="Control" unique_id=1855102657 node_paths=PackedStringArray("dragged_object")]

@@ -1,4 +1,6 @@
 class_name Dragger extends Control
+var DEBUG_NAME: String:
+	get: return "[b][" + name + "][/b] "
 
 @export var dragged_object : CanvasItem 
 @export var position_bounds : Array[Vector2]
@@ -54,7 +56,7 @@ func _ready() -> void:
 
 func setup(pivot:Control) -> void:
 	if pivot:
-		print("pivot = " + pivot.name + ", global pos = " + str(pivot.global_position))
+		print_rich(DEBUG_NAME,"Setup > pivot = " + pivot.name + ", global pos = " + str(pivot.global_position))
 		_initial_position = pivot.global_position
 		dragged_object.global_position = _initial_position + initial_position_offset
 	else:

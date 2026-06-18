@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolType" format=3 uid="uid://dw1nos3tpluk4"]
+
+[ext_resource type="PackedScene" uid="uid://dt5agm7wja7gl" path="res://Scenes/Prefabs/Tools/metal_detector.tscn" id="1_2dj3j"]
+[ext_resource type="Script" uid="uid://c7j4vdr0vkiuy" path="res://Scripts/HUD/Tools/ToolType.gd" id="2_6sobm"]
+
+[resource]
+script = ExtResource("2_6sobm")
+name = "Metal Detector"
+description = "Detects any metal objects in a straight line from a medium distance"
+cost = 2
+prefab = ExtResource("1_2dj3j")
+utility = 2
+metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

@@ -4,11 +4,13 @@ const DEBUG_NAME : String = "[b][Bag][/b] "
 func _enter_tree() -> void:
 	instance = self
 
+
+
 const BINOCULARS: PackedScene = preload("uid://b0qruvc8r4wfn")
 const METAL_DETECTOR: PackedScene = preload("uid://dt5agm7wja7gl")
 const SHOVEL: PackedScene = preload("uid://d3v2idfvg2d2q")
 
-enum ToolType {NONE,BINOCULARS,SHOVEL,METAL_DETECTOR}
+#enum ToolType {NONE,BINOCULARS,SHOVEL,METAL_DETECTOR}
 
 @onready var tool_pivot_1: Control = $ToolPivots/ToolPivot1
 @onready var tool_pivot_2: Control = $ToolPivots/ToolPivot2
@@ -19,6 +21,7 @@ enum ToolType {NONE,BINOCULARS,SHOVEL,METAL_DETECTOR}
 
 
 @export_group("READ ONLY")
+
 @export var tool_1:Rotator = null
 @export var tool_2:Rotator = null
 @export var tool_3:Rotator = null
@@ -38,46 +41,59 @@ static var bag_progress: float = 1 :
 		instance.position.y = 50 * (1-value)
 		bag_progress = value
 
-#
+static var is_full:bool = false:
+	get: return instance.tool_1 and instance.tool_2 and instance.tool_3
+
+var index: int :
+	get: return (
+		1 if (instance.tool_1!=null) else 0 + 
+		1 if (instance.tool_2!=null) else 0 + 
+		1 if (instance.tool_3!=null) else 0 )
+
 func _ready() -> void:
 	bag_progress = 0
 
-#func test() -> void:
-	#await get_tree().create_timer(3.0).timeout
-	#setup_tool(0,ToolType.SHOVEL)
-	#await get_tree().create_timer(1.0).timeout
-	#setup_tool(1,ToolType.METAL_DETECTOR)
-	#await get_tree().create_timer(1.0).timeout
-	#setup_tool(2,ToolType.BINOCULARS)
 
 
 static func set_tools_usable(toggle:bool=true) -> void:
 	instance._set_tools_usable(toggle)
 func _set_tools_usable(toggle:bool=true) -> void:
-	if tool_1: tool_1.is_usable = toggle
-	if tool_2: tool_2.is_usable = toggle
-	if tool_3: tool_3.is_usable = toggle
+	if tool_1:
+		tool_1.is_usable = toggle
+		print_rich(DEBUG_NAME,"SetToolsUsable > Toggled tool 1 '" + tool_1.name + ("' on" if toggle else "off"))
+	if tool_2:
+		tool_2.is_usable = toggle
+		print_rich(DEBUG_NAME,"SetToolsUsable > Toggled tool 2 '" + tool_2.name + ("' on" if toggle else "off"))
+	if tool_3:
+		tool_3.is_usable = toggle
+		print_rich(DEBUG_NAME,"SetToolsUsable > Toggled tool 3 '" + tool_3.name + ("' on" if toggle else "off"))
 	
 	phone.is_usable = toggle
 	notepad.is_usable = toggle
+	print_rich(DEBUG_NAME,"SetToolsUsable > Toggled phone + notepad " + ("on" if toggle else "off"))
 
-static func setup_tool(index:int,tool_type:ToolType) -> void:
-	instance._setup_tool(index,tool_type)
-func _setup_tool(index:int,tool_type:ToolType) -> void:
+static func setup_tool(tool_type:ToolType) -> bool:
+	if instance.index >= 3: return false
+	else:
+		instance._setup_tool(tool_type)
+		return true
+func _setup_tool(tool_type:ToolType) -> void:
 	var pivot:Control
 	match index:
 		0: pivot = tool_pivot_1
 		1: pivot = tool_pivot_2
 		2: pivot = tool_pivot_3
-		_:push_error(DEBUG_NAME,"SetupTool > Bad index provided! ("+str(index)+")")
+		_:
+			push_error(DEBUG_NAME,"SetupTool > Bad index provided! ("+str(index)+")")
+			return
 	
 	if !pivot.visible:
 		pivot.visible = true
 		await get_tree().process_frame
 		_tool_pivots_moved.emit()
 	
-	var prefab = get_tool_prefab_from_tool_type(tool_type)
-	var new_tool:Rotator = prefab.instantiate()
+	#var prefab = tool_type.prefab # get_tool_prefab_from_tool_type(tool_type)
+	var new_tool:Rotator = tool_type.prefab.instantiate()
 	add_child(new_tool)
 	new_tool.setup(pivot)
 	_tool_pivots_moved.connect(func(): new_tool.setup(pivot))
@@ -95,14 +111,14 @@ func _setup_tool(index:int,tool_type:ToolType) -> void:
 	#_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
 	#_tween.tween_property(HudManager,"bag_progress",1,talking_zoom_duration)
 
-
-func get_tool_prefab_from_tool_type(tool_type:ToolType) -> PackedScene:
-	match tool_type:
-		ToolType.BINOCULARS: return BINOCULARS
-		ToolType.SHOVEL: return SHOVEL
-		ToolType.METAL_DETECTOR: return METAL_DETECTOR
-		
-		_:
-			push_error(DEBUG_NAME,"SetupTool > Bad tool type provided! ("+str(ToolType.keys()[tool_type])+")")
-			return null
-	
+#
+#func get_tool_prefab_from_tool_type(tool_type:ToolType) -> PackedScene:
+	#match tool_type:
+		#ToolType.BINOCULARS: return BINOCULARS
+		#ToolType.SHOVEL: return SHOVEL
+		#ToolType.METAL_DETECTOR: return METAL_DETECTOR
+		#
+		#_:
+			#push_error(DEBUG_NAME,"SetupTool > Bad tool type provided! ("+str(ToolType.keys()[tool_type])+")")
+			#return null
+	#

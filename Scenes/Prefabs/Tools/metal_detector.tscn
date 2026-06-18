@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt5agm7wja7gl"]
 
-[ext_resource type="Script" uid="uid://d0tcjrsdnm5rs" path="res://Scripts/HUD/MetalDetector.gd" id="1_7rkj5"]
+[ext_resource type="Script" uid="uid://d0tcjrsdnm5rs" path="res://Scripts/HUD/Tools/MetalDetector.gd" id="1_7rkj5"]
 [ext_resource type="PackedScene" uid="uid://du5p2psjdb5fi" path="res://Scenes/Prefabs/Indicators/metal_detector_indicator.tscn" id="2_0y2oq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obvom"]

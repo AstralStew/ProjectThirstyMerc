@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolType" format=3 uid="uid://beg2wll35sp7e"]
+
+[ext_resource type="Script" uid="uid://c7j4vdr0vkiuy" path="res://Scripts/HUD/Tools/ToolType.gd" id="1_fwugn"]
+[ext_resource type="PackedScene" uid="uid://b0qruvc8r4wfn" path="res://Scenes/Prefabs/Tools/binoculars.tscn" id="1_teccv"]
+
+[resource]
+script = ExtResource("1_fwugn")
+name = "Binoculars"
+description = "Pair of binoculars are great for getting the rough location of far away stuff!"
+cost = 13
+prefab = ExtResource("1_teccv")
+utility = 2
+metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

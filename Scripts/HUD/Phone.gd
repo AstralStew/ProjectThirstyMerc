@@ -1,6 +1,6 @@
 class_name Phone extends Rotator
 static var instance : Phone = null
-const DEBUG_NAME : String = "[b][Phone][/b] "
+#const DEBUG_NAME : String = "[b][Phone][/b] "
 func _enter_tree() -> void:
 	instance = self
 
@@ -14,7 +14,9 @@ func _enter_tree() -> void:
 @export var alotl_speech_speed : float = 1.0
 
 func _ready() -> void:
+	super._ready()
 	InventoryManager.on_dosh_changed().connect(update_dosh)
+	update_dosh(InventoryManager.dosh)
 
 func _process(delta: float) -> void:
 	if WorldManager.is_daytime:

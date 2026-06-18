@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolType" format=3 uid="uid://cys46dx7t1gui"]
+
+[ext_resource type="PackedScene" uid="uid://d3v2idfvg2d2q" path="res://Scenes/Prefabs/Tools/shovel.tscn" id="1_pshsn"]
+[ext_resource type="Script" uid="uid://c7j4vdr0vkiuy" path="res://Scripts/HUD/Tools/ToolType.gd" id="2_eaxjj"]
+
+[resource]
+script = ExtResource("2_eaxjj")
+name = "Old Shovel"
+description = "A trusty digging tool, swing it up and down to dig straight beneath you!"
+cost = 3
+prefab = ExtResource("1_pshsn")
+utility = 1
+metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

@@ -55,7 +55,9 @@
 [ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/Characters/NPC5_Head_Back.tres" id="40_pwxri"]
 [ext_resource type="Texture2D" uid="uid://b8vqrtpatpf41" path="res://Resources/Atlases/Characters/NPC5_Head_Front.tres" id="41_eeytp"]
 [ext_resource type="Texture2D" uid="uid://is0qvu05ig62" path="res://Resources/Atlases/Characters/NPC5_Head_Side.tres" id="42_jqptc"]
+[ext_resource type="Script" uid="uid://c7yamvfropoc1" path="res://Scripts/World/Shop.gd" id="50_4k3ma"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="50_asuqw"]
+[ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/shop_button_group.tres" id="51_opjrb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbc1q"]
 vertices = PackedVector2Array(-108.89844, 134, -109.89844, 81, -83.90625, 81, -82.89844, 133, -68, 268, -122.96875, 268, -122.03125, 134, -68, 133, 334.90625, -409.70313, 334.09375, -355.04688, 293.07813, -363.04688, 285, -406.8203, -261.97656, -409.32813, -245.07031, -360.42188, -318.07813, -354.40625, -318.9922, -414.54688, -318.90625, -414.9297, -236, -288.71875, -244.07031, -288.27344, -236, -361.7422, -42, -410.04688, -42, -414, -23, -414, -23, -410, 151, -409, 151, -413, 169, -413, 169, -409.10156, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, -261.97656, -414.0703, -10.7109375, -410, -9.7109375, -393, -194.67188, -356, -219.09375, -408.8828, -218.49219, -414.82813, -198.35156, -414.10938, -195.99219, -408.5625, 70.40625, -393, 72.40625, -409, 251.5625, -356.9922, 276.57813, -406.9297, 281.90625, -413, 278.60156, -413)
@@ -64,8 +66,8 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-249, -283, -250, -355,
 agent_radius = 5.0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_m8c54"]
-vertices = PackedVector2Array(211.10156, -316.78906, 221, -317.57813, 243.10156, -316.78906, 264.72656, -286, 163.10156, -316.78906, 189, -317.57813, 822.85156, 107.42969, 814, 117, 771, 117, 743.27344, 114.35156, 737.8125, 93.86719, 757, 85, 789, 81, 827.7031, 79.546875, 689, 145, 691, 133, 702.5703, 128.75781, 736.22656, 131.25, 717, 141, 1199, 67, 1199, 273, 1187, 149, 1187, 95, 1195, 67, 1147, -77, 1167, -77, 1167, 53, 1070, -36, 1070, -59, 382, -308, 411, -325, 411, -155, 352, -244, 352, -263, 1121.9688, -257.97656, 1123.0313, -431.02344, 1131, -447, 1157, -447, 1167, -211, 1165, -211, 755, 289, 755, 272.29688, 757.03906, 256, 1091, 220, 1134, 220, 1096.0469, 287.14063, 988.4297, 300, 774.21094, 300, 267.72656, -343, 242.53125, -332.85938, 693, 241, 703.27344, 250.03906, 584.96094, 249.03906, 619, 241, -199, 160, -184.89063, 173.0625, -261.6797, 174.0625, -242, 160, -219.07813, -343, 221.29688, -333.25, -183.92188, 128.21875, -199, 137, 570.1406, 63.203125, 568.0625, 131.85156, 560.7422, 139.17188, 560, 125, 560, 102, 310.09375, -286, 356, -308, 326, -263, 326, -244, 411, -149, -208, -156, -208, -175, 1123, 133, 1123, 79, 1130.9609, 128, 1133, 144.29688, 1133, 111.6875, 1133, 93, 382, -327, 1078.7969, 212.13281, 1091, 206.57813, 945, 225, 931.1172, 49.757813, 937.1875, 20.617188, 1027, -36, 1109, 77, 584.03125, 135.1875, 619, 207.6875, 621, 191.6875, 621, 159, 635, 159, 623.1875, 128.34375, 635, 157, 928.60156, -2.6875, 1027, -59, -234, -175, -308, -244, -308, -263, -261, -282.67188, -220.07813, -285.3125, 411, -111.6875, 412.34375, -101, 410.34375, -101, 1134, 197, 1094.4688, 197, 1095.0781, 190.28906, 1133, 161, 1185, 161, 210.53125, -332.85938, 189.29688, -333.25, 141, -317.57813, 131.10156, -316.78906, 130.53125, -332.85938, 141.29688, -333.25, 45, -317.57813, 35.101563, -316.78906, 34.53125, -332.85938, 45.296875, -333.25, 695.75, 112.390625, 691, 47, 700.0625, 95.13281, 867.9531, 73.96094, 789, 59, 844.96875, 48.492188, 877.8125, 53.023438, 613, 33, 613, -5, 637, 1, 733, 29, 733, 47.6875, 677, 45, 1021, 95.6875, 1018.96094, 112, 961.71875, 132.96094, 970.28125, 104.828125, 1021, 77, 309.09375, -343, 345, -343, 356, -327, 345, -378.9375, 427, -378.03906, 427, -325, 1211, 275, 1231.1016, 275, 1231.0313, 283.14063, 1099, -463, 1131, -463, 890.9375, -429.97656, 1157, -463, 1165.0938, -463, 1165.5938, -459, 1167, -459, 1165, -197, 1163, -197, 1163, -195, 1117, -195, 1117, -79, 1147, -79, 1183, 53, 1183, 65, 1173, 93, 1195, 65, 1173, 95, 1109, 79, 838.8672, 24.101563, 787, 59, 787, 31, 833, 17, 773, 31, 773, 29, 637, -15.6875, 611, -5, 611, -49, 634.96094, -32, 597, -49, 597, -51, 637, -63, 506.34375, 5, 509, 5, 509, 17, 571, 17, 571, 33, 757, 81, 677, 47, 689, 133, 1121, 145, 1121, 133, 1185, 149, 1088.5313, 173.24219, 1021, 145, 1070.4219, 171.95313, 1053.5, 177.14844, 999.3125, 193, 992.6094, 174.22656, 947, 159, 933, 159, 933, 157, 893, 157, 893, 187, 890.34375, 187, 945, 213, 947, 213, 755, 143, 741, 143, 741, 141, 714.34375, 181, 717, 181, 717, 277, 719, 277, 719, 289, 1211, 273, 717, 159.70313, 693, 203, 691, 203, 691, 159, 677, 159, 677, 157, -347, -127, -347, -364, -329, -364, -329, -343, -334, -263, -261, -343, 427, -155, 427, -149, 749, 1, 749, 17, 833, 5, 835, 5, 835, -49, 821, -49, 821, -51, 1041, -63, 755, -51, 755, -59, 757, -59, 757, -63, 1041, -75, 1043, -75, 1043, -101, 1041, -101, 1041, -177, 1117, -128.29688, 1114.9609, -112, 1029, -177, 1029, -179, 997, -179, 997, -181, 995, -181, 995, -193, 981, -193, 981, -195, 933, -195, 933, -197, 929, -197, 929, -225, 917, -225, 917, -227, 891, -227, 891, -225, 837, -225, 837, -229, 833, -229, 833, -363, 835, -363, 835, -395, 837, -395, 837, -399, 849, -399, 849, -411, 851, -411, 893.0625, -259.02344, 851, -427, 865, -427, 865, -443, 881, -443, 881, -459, 885, -459, 885, -463, 977, -463, 977, -475, 997, -475, 997, -479, 1099, -479, -335.1875, 172.57813, -365.97656, 168.60156, -365.02344, -127, -242, 137, 162.53125, -332.85938, 109.296875, -333.25, 13, -317.57813, -12.8984375, -316.78906, -13.46875, -332.85938, 13.296875, -333.25, -35, -317.57813, -60.898438, -316.78906, -61.46875, -332.85938, -34.703125, -333.25, -83, -317.57813, -108.89844, -316.78906, -109.46875, -332.85938, -82.703125, -333.25, -131, -317.57813, -156.89844, -316.78906, -157.46875, -332.85938, -130.70313, -333.25, 823.6172, 194.6875, 893, 208.28906, 813.52344, 209.10938, 109, -317.57813, 67.10156, -316.78906, 66.53125, -332.85938, -178.70313, -333.25, 522, 142.39844, 522, 162.78906, 518.2031, 251.9375, 339.90625, 250.04688, 338.92188, 194.21875, 517, 125, -264.67188, 218.86719, -333.20313, 217.10938, 1095.0469, 376.27344, 998.3906, 381.7422, 710.3203, 294.35938, 273.85156, 191.21875, 272.85156, 158.11719, 517, 102, 1050.8281, 195.84375, 992.4219, 212.28125, 771, 140, 1021, 128.29688, 814, 140, 859.5469, 134, 830.2422, 128.36719, 733.59375, 85, 730.96094, 64, 653, 45, 893, 225, 755, 239.6875, 959.3203, 75.61719, 918.0078, 104.17969, 903.85156, 104.82031, 897.02344, 77.453125, 923.96094, 79.39844, 816.52344, 176.21875, 22.179688, 152.09375, 17.257813, 125.53906, 413, -79.703125, 413, -63, -59.820313, 76, 1057.7422, 209.64844, 653, 95.6875, 650.96094, 112, 626.22656, 60.820313, -132.28906, 76, -138.36719, 115.57031, -142.04688, 116.10156, -48.15625, 116.57031, -52.679688, 115.71875, 1117, -95.6875, 784.6875, 207.85938, 778.7969, 194.61719, 781.65625, 178.92969, 797.5469, 174.96094, 973.78125, 172.96875, -334, -244, -234, -156, 881.0703, -7.0078125, 844.8828, -4.75, 637, -48.296875, 509, -51, 509, -16.289063, 653, 128.29688, 653, 145, 631.0781, 91.13281, 956.96094, 175.5625, 959.46875, 209.74219, 952.77344, 192.32031, -188.89844, -316.78906, -179, -317.57813, -211, -317.57813, -210.70313, -333.25, -189.46875, -332.85938)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 0, 3), PackedInt32Array(6, 7, 8, 9, 10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17, 18), PackedInt32Array(19, 20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32, 33), PackedInt32Array(34, 35, 36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43, 44, 20, 45, 46, 47), PackedInt32Array(48, 3, 2, 49), PackedInt32Array(50, 51, 52, 53), PackedInt32Array(54, 55, 56, 57), PackedInt32Array(58, 48, 49, 59), PackedInt32Array(60, 55, 54, 61), PackedInt32Array(62, 63, 64, 65, 66), PackedInt32Array(67, 68, 29, 33, 69), PackedInt32Array(70, 32, 31, 71, 72, 73), PackedInt32Array(74, 75, 76, 77), PackedInt32Array(78, 76, 75, 79), PackedInt32Array(30, 29, 80), PackedInt32Array(81, 82, 43), PackedInt32Array(81, 43, 42, 83), PackedInt32Array(84, 85, 86, 27, 26, 75, 87), PackedInt32Array(53, 52, 88, 89), PackedInt32Array(90, 89, 88, 91), PackedInt32Array(92, 91, 88, 93, 94), PackedInt32Array(86, 85, 95, 96), PackedInt32Array(3, 67, 69, 70, 73, 97, 98, 99, 100, 101), PackedInt32Array(102, 103, 104, 72), PackedInt32Array(105, 106, 107, 108, 109), PackedInt32Array(1, 0, 110, 59), PackedInt32Array(58, 59, 110, 111), PackedInt32Array(112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119), PackedInt32Array(120, 16, 15), PackedInt32Array(120, 15, 121), PackedInt32Array(122, 120, 121), PackedInt32Array(123, 13, 12, 124, 125, 126), PackedInt32Array(127, 128, 129, 130, 131, 121, 132), PackedInt32Array(133, 134, 135, 136, 137), PackedInt32Array(67, 138, 139, 140, 68), PackedInt32Array(139, 141, 142, 143, 30, 80), PackedInt32Array(139, 80, 140), PackedInt32Array(144, 145, 146, 45), PackedInt32Array(147, 148, 36, 35, 149), PackedInt32Array(37, 150, 151, 152, 38), PackedInt32Array(152, 153, 38), PackedInt32Array(39, 154, 155), PackedInt32Array(155, 156, 157), PackedInt32Array(158, 159, 24, 28), PackedInt32Array(26, 160, 161, 162, 79, 75), PackedInt32Array(161, 163, 23, 22, 164, 162), PackedInt32Array(75, 165, 87), PackedInt32Array(166, 125, 124, 167, 168, 169), PackedInt32Array(168, 170, 171), PackedInt32Array(172, 128, 173, 174, 175), PackedInt32Array(174, 176, 177, 178), PackedInt32Array(179, 180, 181), PackedInt32Array(181, 182, 183), PackedInt32Array(11, 184, 12), PackedInt32Array(121, 185, 132), PackedInt32Array(14, 186, 15), PackedInt32Array(187, 188, 74, 77, 108), PackedInt32Array(109, 189, 21, 20), PackedInt32Array(109, 20, 44, 105), PackedInt32Array(108, 107, 190, 187), PackedInt32Array(191, 187, 190, 192), PackedInt32Array(191, 192, 193, 194, 195), PackedInt32Array(196, 197, 198, 191), PackedInt32Array(199, 200, 201), PackedInt32Array(83, 202, 203), PackedInt32Array(204, 205, 206), PackedInt32Array(207, 208, 209, 51), PackedInt32Array(209, 210, 211), PackedInt32Array(20, 212, 144, 45), PackedInt32Array(213, 207, 214, 215, 216, 18), PackedInt32Array(216, 217, 218, 18), PackedInt32Array(219, 220, 221, 222, 223), PackedInt32Array(223, 222, 224, 100, 99), PackedInt32Array(31, 225, 226, 71), PackedInt32Array(129, 227, 228, 130), PackedInt32Array(169, 229, 230, 166), PackedInt32Array(231, 232, 233, 234, 96), PackedInt32Array(233, 235, 236, 237), PackedInt32Array(237, 238, 234, 233), PackedInt32Array(234, 239, 240, 28), PackedInt32Array(241, 242, 243, 157, 244, 245), PackedInt32Array(243, 246, 247, 157), PackedInt32Array(247, 248, 249), PackedInt32Array(249, 250, 251), PackedInt32Array(251, 252, 253, 157), PackedInt32Array(253, 254, 255), PackedInt32Array(255, 256, 257), PackedInt32Array(257, 258, 259), PackedInt32Array(260, 261, 262, 263), PackedInt32Array(263, 264, 265, 266), PackedInt32Array(266, 267, 268), PackedInt32Array(268, 269, 270), PackedInt32Array(270, 271, 272, 273, 260), PackedInt32Array(272, 274, 275, 273), PackedInt32Array(275, 276, 277, 149, 273), PackedInt32Array(277, 278, 279), PackedInt32Array(279, 280, 281), PackedInt32Array(281, 282, 283, 147), PackedInt32Array(283, 284, 285, 147), PackedInt32Array(57, 56, 286, 287, 288, 219, 289), PackedInt32Array(5, 4, 290, 111), PackedInt32Array(58, 111, 290, 115), PackedInt32Array(58, 115, 114, 291), PackedInt32Array(292, 293, 294, 295), PackedInt32Array(296, 297, 298, 299), PackedInt32Array(300, 301, 302, 303), PackedInt32Array(304, 305, 306, 307), PackedInt32Array(308, 201, 309, 310), PackedInt32Array(72, 71, 102), PackedInt32Array(311, 312, 313, 291), PackedInt32Array(58, 291, 313, 119), PackedInt32Array(58, 119, 118, 295), PackedInt32Array(58, 295, 294, 299), PackedInt32Array(58, 299, 298, 303), PackedInt32Array(58, 303, 302, 307), PackedInt32Array(58, 307, 306, 314), PackedInt32Array(315, 316, 317, 318, 319, 320), PackedInt32Array(65, 64, 315, 320), PackedInt32Array(56, 321, 322, 286), PackedInt32Array(270, 260, 263, 266, 268), PackedInt32Array(323, 324, 46, 45), PackedInt32Array(40, 47, 325, 211), PackedInt32Array(211, 325, 51, 209), PackedInt32Array(207, 51, 50, 214), PackedInt32Array(319, 326, 327, 328, 320), PackedInt32Array(194, 193, 329, 330), PackedInt32Array(17, 9, 8, 331, 204, 206), PackedInt32Array(135, 134, 332, 191), PackedInt32Array(333, 334, 135, 191, 198, 199), PackedInt32Array(335, 334, 333), PackedInt32Array(335, 333, 7, 6), PackedInt32Array(336, 11, 10, 122), PackedInt32Array(336, 122, 121, 337), PackedInt32Array(131, 337, 121), PackedInt32Array(127, 132, 338), PackedInt32Array(81, 83, 203, 330), PackedInt32Array(339, 83, 42, 340), PackedInt32Array(309, 339, 340, 310), PackedInt32Array(137, 136, 341), PackedInt32Array(253, 255, 257, 157), PackedInt32Array(259, 273, 34, 39, 155, 157, 257), PackedInt32Array(342, 343, 344, 345), PackedInt32Array(199, 201, 308, 346), PackedInt32Array(327, 347, 348), PackedInt32Array(72, 104, 349, 350), PackedInt32Array(247, 249, 251, 157), PackedInt32Array(62, 66, 328, 351, 219), PackedInt32Array(330, 329, 352), PackedInt32Array(149, 277, 279, 281, 147), PackedInt32Array(127, 338, 353, 354, 355), PackedInt32Array(356, 357, 358, 219), PackedInt32Array(84, 87, 137, 341), PackedInt32Array(126, 84, 341, 345, 344, 123), PackedInt32Array(327, 348, 359, 360, 351, 328), PackedInt32Array(61, 289, 219, 60), PackedInt32Array(358, 60, 219), PackedInt32Array(241, 245, 361, 158, 28, 240), PackedInt32Array(362, 310, 340), PackedInt32Array(362, 340, 204, 363), PackedInt32Array(364, 363, 204), PackedInt32Array(365, 364, 204), PackedInt32Array(191, 195, 366), PackedInt32Array(367, 98, 97, 368, 219), PackedInt32Array(351, 356, 219), PackedInt32Array(259, 260, 273), PackedInt32Array(234, 28, 96), PackedInt32Array(231, 96, 95, 369), PackedInt32Array(231, 369, 370), PackedInt32Array(230, 231, 370, 166), PackedInt32Array(228, 169, 168, 171), PackedInt32Array(228, 171, 130), PackedInt32Array(172, 129, 128), PackedInt32Array(371, 175, 174, 178), PackedInt32Array(350, 178, 177, 372), PackedInt32Array(350, 372, 373, 179), PackedInt32Array(368, 72, 350, 179, 181, 219), PackedInt32Array(374, 375, 94, 93, 376, 354), PackedInt32Array(333, 199, 346, 365, 204, 331), PackedInt32Array(191, 366, 377, 196), PackedInt32Array(18, 218, 94, 14), PackedInt32Array(112, 4, 3, 113), PackedInt32Array(183, 355, 62, 219, 181), PackedInt32Array(311, 113, 3, 312), PackedInt32Array(330, 352, 81), PackedInt32Array(378, 330, 203), PackedInt32Array(379, 378, 203), PackedInt32Array(379, 203, 196, 377), PackedInt32Array(17, 206, 18), PackedInt32Array(375, 14, 94), PackedInt32Array(354, 376, 355), PackedInt32Array(183, 127, 355), PackedInt32Array(116, 312, 3, 117), PackedInt32Array(223, 367, 219), PackedInt32Array(3, 101, 380, 381, 305), PackedInt32Array(382, 380, 101), PackedInt32Array(382, 101, 58, 383), PackedInt32Array(383, 58, 314, 384), PackedInt32Array(384, 314, 381, 380), PackedInt32Array(3, 305, 304, 301), PackedInt32Array(3, 301, 300, 297), PackedInt32Array(3, 297, 296, 293), PackedInt32Array(117, 3, 293, 292)])
+vertices = PackedVector2Array(211.10156, -316.78906, 221, -317.57813, 243.10156, -316.78906, 264.72656, -286, 163.10156, -316.78906, 189, -317.57813, 822.85156, 107.42969, 814, 117, 771, 117, 743.27344, 114.35156, 737.8125, 93.86719, 757, 85, 789, 81, 827.7031, 79.546875, 689, 145, 691, 133, 702.5703, 128.75781, 736.22656, 131.25, 717, 141, 1199, 67, 1199, 273, 1187, 149, 1187, 95, 1195, 67, 467.10156, 243.21094, 518.2031, 251.9375, 339.90625, 250.04688, 445, 242.42188, -261, -343, -261, -282.67188, -268.89844, -316.78906, -269.46875, -332.85938, 522, 162.78906, 499.10156, 211.21094, 498.53125, 195.14063, 1147, -77, 1167, -77, 1167, 53, 1070, -36, 1070, -59, 382, -308, 411, -325, 411, -155, 352, -244, 352, -263, 1121.9688, -257.97656, 1123.0313, -431.02344, 1131, -447, 1157, -447, 1167, -211, 1165, -211, 755, 289, 755, 272.29688, 757.03906, 256, 1091, 220, 1134, 220, 1096.0469, 287.14063, 988.4297, 300, 774.21094, 300, 267.72656, -343, 242.53125, -332.85938, 693, 241, 703.27344, 250.03906, 584.96094, 249.03906, 619, 241, -199, 160, -184.89063, 173.0625, -261.6797, 174.0625, -242, 160, -219.07813, -343, 221.29688, -333.25, -183.92188, 128.21875, -199, 137, -329, -343, -290.70313, -333.25, 570.1406, 63.203125, 568.0625, 131.85156, 560.7422, 139.17188, 560, 125, 560, 102, 466.53125, 227.14063, 477, 210.42188, 356, -308, 326, -263, 326, -244, 411, -149, -208, -156, -208, -175, 1123, 133, 1123, 79, 1130.9609, 128, 1133, 144.29688, 1133, 111.6875, 1133, 93, 382, -327, 339.10156, -316.78906, 356, -327, 338.53125, -332.85938, 345, -343, 1078.7969, 212.13281, 1091, 206.57813, 945, 225, 931.1172, 49.757813, 937.1875, 20.617188, 1027, -36, 1109, 77, 584.03125, 135.1875, 619, 207.6875, 621, 191.6875, 621, 159, 635, 159, 623.1875, 128.34375, 635, 157, 928.60156, -2.6875, 1027, -59, 310.09375, -286, -234, -175, -308, -244, -308, -263, -220.07813, -285.3125, 411, -111.6875, 412.34375, -101, 410.34375, -101, 1134, 197, 1094.4688, 197, 1095.0781, 190.28906, 1133, 161, 1185, 161, 338.92188, 194.21875, 445.29688, 226.75, -291, -317.57813, -300.89844, -316.78906, -301.46875, -332.85938, -322.70313, -333.25, 210.53125, -332.85938, 189.29688, -333.25, 141, -317.57813, 131.10156, -316.78906, 130.53125, -332.85938, 141.29688, -333.25, 45, -317.57813, 35.101563, -316.78906, 34.53125, -332.85938, 45.296875, -333.25, 695.75, 112.390625, 691, 47, 700.0625, 95.13281, 867.9531, 73.96094, 789, 59, 844.96875, 48.492188, 877.8125, 53.023438, -274.70313, -109.25, -275, -93.578125, -300.89844, -108.78906, -301.46875, -124.859375, 613, 33, 613, -5, 637, 1, 733, 29, 733, 47.6875, 677, 45, 1021, 95.6875, 1018.96094, 112, 961.71875, 132.96094, 970.28125, 104.828125, 1021, 77, 345, -378.9375, 427, -378.03906, 427, -325, 309.09375, -343, 317.29688, -333.25, 317, -317.57813, 1211, 275, 1231.1016, 275, 1231.0313, 283.14063, 1099, -463, 1131, -463, 890.9375, -429.97656, 1157, -463, 1165.0938, -463, 1165.5938, -459, 1167, -459, 1165, -197, 1163, -197, 1163, -195, 1117, -195, 1117, -79, 1147, -79, 1183, 53, 1183, 65, 1173, 93, 1195, 65, 1173, 95, 1109, 79, 838.8672, 24.101563, 787, 59, 787, 31, 833, 17, 773, 31, 773, 29, 637, -15.6875, 611, -5, 611, -49, 634.96094, -32, 597, -49, 597, -51, 637, -63, 506.34375, 5, 509, 5, 509, 17, 517, 102, -59.820313, 76, 571, 17, 571, 33, 757, 81, 677, 47, 689, 133, 1121, 145, 1121, 133, 1185, 149, 1088.5313, 173.24219, 1021, 145, 1070.4219, 171.95313, 1053.5, 177.14844, 999.3125, 193, 992.6094, 174.22656, 947, 159, 933, 159, 933, 157, 893, 157, 893, 187, 890.34375, 187, 945, 213, 947, 213, 755, 143, 741, 143, 741, 141, 714.34375, 181, 717, 181, 717, 277, 719, 277, 719, 289, 1211, 273, 717, 159.70313, 693, 203, 691, 203, 691, 159, 677, 159, 677, 157, -347, -127, -347, -364, -329, -364, -334, -263, 427, -155, 427, -149, 749, 1, 749, 17, 833, 5, 835, 5, 835, -49, 821, -49, 821, -51, 1041, -63, 755, -51, 755, -59, 757, -59, 757, -63, 1041, -75, 1043, -75, 1043, -101, 1041, -101, 1041, -177, 1117, -128.29688, 1114.9609, -112, 1029, -177, 1029, -179, 997, -179, 997, -181, 995, -181, 995, -193, 981, -193, 981, -195, 933, -195, 933, -197, 929, -197, 929, -225, 917, -225, 917, -227, 891, -227, 891, -225, 837, -225, 837, -229, 833, -229, 833, -363, 835, -363, 835, -395, 837, -395, 837, -399, 849, -399, 849, -411, 851, -411, 893.0625, -259.02344, 851, -427, 865, -427, 865, -443, 881, -443, 881, -459, 885, -459, 885, -463, 977, -463, 977, -475, 997, -475, 997, -479, 1099, -479, -335.1875, 172.57813, -365.97656, 168.60156, -365.02344, -127, -242, 137, 162.53125, -332.85938, 109.296875, -333.25, 13, -317.57813, -12.8984375, -316.78906, -13.46875, -332.85938, 13.296875, -333.25, -35, -317.57813, -60.898438, -316.78906, -61.46875, -332.85938, -34.703125, -333.25, -83, -317.57813, -108.89844, -316.78906, -109.46875, -332.85938, -82.703125, -333.25, -131, -317.57813, -156.89844, -316.78906, -157.46875, -332.85938, -130.70313, -333.25, 823.6172, 194.6875, 893, 208.28906, 813.52344, 209.10938, 413, -79.703125, 413, -63, -252.89844, -92.78906, -253.46875, -108.859375, -234, -156, 109, -317.57813, 67.10156, -316.78906, 66.53125, -332.85938, -178.70313, -333.25, 522, 142.39844, 517, 125, -264.67188, 218.86719, -333.20313, 217.10938, 1095.0469, 376.27344, 998.3906, 381.7422, 710.3203, 294.35938, 273.85156, 191.21875, 272.85156, 158.11719, 477.29688, 194.75, 1050.8281, 195.84375, 992.4219, 212.28125, 771, 140, 1021, 128.29688, 814, 140, 859.5469, 134, 830.2422, 128.36719, 733.59375, 85, 730.96094, 64, 653, 45, 893, 225, 755, 239.6875, 959.3203, 75.61719, 918.0078, 104.17969, 903.85156, 104.82031, 897.02344, 77.453125, 923.96094, 79.39844, 816.52344, 176.21875, 22.179688, 152.09375, 17.257813, 125.53906, 1057.7422, 209.64844, 653, 95.6875, 650.96094, 112, 626.22656, 60.820313, -132.28906, 76, -138.36719, 115.57031, -142.04688, 116.10156, -323, -109.578125, -48.15625, 116.57031, -52.679688, 115.71875, 1117, -95.6875, 784.6875, 207.85938, 778.7969, 194.61719, 781.65625, 178.92969, 797.5469, 174.96094, -334, -244, -322.70313, -125.25, 973.78125, 172.96875, -323, -317.57813, 881.0703, -7.0078125, 844.8828, -4.75, 637, -48.296875, 509, -51, 509, -16.289063, 653, 128.29688, 653, 145, 631.0781, 91.13281, 956.96094, 175.5625, 959.46875, 209.74219, 952.77344, 192.32031, -188.89844, -316.78906, -179, -317.57813, -211, -317.57813, -210.70313, -333.25, -189.46875, -332.85938)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 0, 3), PackedInt32Array(6, 7, 8, 9, 10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17, 18), PackedInt32Array(19, 20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 25, 33, 34), PackedInt32Array(35, 36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43, 44), PackedInt32Array(45, 46, 47, 48, 49, 50), PackedInt32Array(51, 52, 53, 54, 55, 20, 56, 57, 58), PackedInt32Array(59, 3, 2, 60), PackedInt32Array(61, 62, 63, 64), PackedInt32Array(65, 66, 67, 68), PackedInt32Array(69, 59, 60, 70), PackedInt32Array(71, 66, 65, 72), PackedInt32Array(73, 28, 31, 74), PackedInt32Array(75, 76, 77, 78, 79), PackedInt32Array(33, 25, 24, 80, 81), PackedInt32Array(82, 40, 44, 83), PackedInt32Array(84, 43, 42, 85, 86, 87), PackedInt32Array(88, 89, 90, 91), PackedInt32Array(92, 90, 89, 93), PackedInt32Array(41, 40, 94), PackedInt32Array(95, 96, 82, 83), PackedInt32Array(96, 95, 97, 98), PackedInt32Array(99, 100, 54), PackedInt32Array(99, 54, 53, 101), PackedInt32Array(102, 103, 104, 38, 37, 89, 105), PackedInt32Array(64, 63, 106, 107), PackedInt32Array(108, 107, 106, 109), PackedInt32Array(110, 109, 106, 111, 112), PackedInt32Array(104, 103, 113, 114), PackedInt32Array(3, 115, 83, 84, 87, 116, 117, 118, 29, 119), PackedInt32Array(120, 121, 122, 86), PackedInt32Array(123, 124, 125, 126, 127), PackedInt32Array(27, 26, 128, 129), PackedInt32Array(130, 131, 132, 74), PackedInt32Array(73, 74, 132, 133), PackedInt32Array(1, 0, 134, 70), PackedInt32Array(69, 70, 134, 135), PackedInt32Array(136, 137, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(144, 16, 15), PackedInt32Array(144, 15, 145), PackedInt32Array(146, 144, 145), PackedInt32Array(147, 13, 12, 148, 149, 150), PackedInt32Array(151, 152, 153, 154), PackedInt32Array(155, 156, 157, 158, 159, 145, 160), PackedInt32Array(161, 162, 163, 164, 165), PackedInt32Array(98, 166, 167, 168, 41, 94), PackedInt32Array(98, 94, 96), PackedInt32Array(169, 98, 97, 170), PackedInt32Array(115, 169, 170, 171), PackedInt32Array(172, 173, 174, 56), PackedInt32Array(175, 176, 47, 46, 177), PackedInt32Array(48, 178, 179, 180, 49), PackedInt32Array(180, 181, 49), PackedInt32Array(50, 182, 183), PackedInt32Array(183, 184, 185), PackedInt32Array(186, 187, 35, 39), PackedInt32Array(37, 188, 189, 190, 93, 89), PackedInt32Array(189, 191, 23, 22, 192, 190), PackedInt32Array(89, 193, 105), PackedInt32Array(194, 149, 148, 195, 196, 197), PackedInt32Array(196, 198, 199), PackedInt32Array(200, 156, 201, 202, 203), PackedInt32Array(202, 204, 205, 206), PackedInt32Array(207, 208, 209), PackedInt32Array(210, 211, 209, 212, 213, 75, 79), PackedInt32Array(11, 214, 12), PackedInt32Array(145, 215, 160), PackedInt32Array(14, 216, 15), PackedInt32Array(217, 218, 88, 91, 126), PackedInt32Array(127, 219, 21, 20), PackedInt32Array(127, 20, 55, 123), PackedInt32Array(126, 125, 220, 217), PackedInt32Array(221, 217, 220, 222), PackedInt32Array(221, 222, 223, 224, 225), PackedInt32Array(226, 227, 228, 221), PackedInt32Array(229, 230, 231), PackedInt32Array(101, 232, 233), PackedInt32Array(234, 235, 236), PackedInt32Array(237, 238, 239, 62), PackedInt32Array(239, 240, 241), PackedInt32Array(20, 242, 172, 56), PackedInt32Array(243, 237, 244, 245, 246, 18), PackedInt32Array(246, 247, 248, 18), PackedInt32Array(249, 250, 251, 73, 252), PackedInt32Array(42, 253, 254, 85), PackedInt32Array(157, 255, 256, 158), PackedInt32Array(197, 257, 258, 194), PackedInt32Array(259, 260, 261, 262, 114), PackedInt32Array(261, 263, 264, 265), PackedInt32Array(265, 266, 262, 261), PackedInt32Array(262, 267, 268, 39), PackedInt32Array(269, 270, 271, 185, 272, 273), PackedInt32Array(271, 274, 275, 185), PackedInt32Array(275, 276, 277), PackedInt32Array(277, 278, 279), PackedInt32Array(279, 280, 281, 185), PackedInt32Array(281, 282, 283), PackedInt32Array(283, 284, 285), PackedInt32Array(285, 286, 287), PackedInt32Array(288, 289, 290, 291), PackedInt32Array(291, 292, 293, 294), PackedInt32Array(294, 295, 296), PackedInt32Array(296, 297, 298), PackedInt32Array(298, 299, 300, 301, 288), PackedInt32Array(300, 302, 303, 301), PackedInt32Array(303, 304, 305, 177, 301), PackedInt32Array(305, 306, 307), PackedInt32Array(307, 308, 309), PackedInt32Array(309, 310, 311, 175), PackedInt32Array(311, 312, 313, 175), PackedInt32Array(68, 67, 314, 315, 316, 249, 317), PackedInt32Array(5, 4, 318, 135), PackedInt32Array(69, 135, 318, 139), PackedInt32Array(69, 139, 138, 319), PackedInt32Array(320, 321, 322, 323), PackedInt32Array(324, 325, 326, 327), PackedInt32Array(328, 329, 330, 331), PackedInt32Array(332, 333, 334, 335), PackedInt32Array(336, 231, 337, 338), PackedInt32Array(86, 85, 120), PackedInt32Array(86, 122, 339, 340, 341, 342, 343), PackedInt32Array(344, 345, 346, 319), PackedInt32Array(69, 319, 346, 143), PackedInt32Array(69, 143, 142, 323), PackedInt32Array(69, 323, 322, 327), PackedInt32Array(69, 327, 326, 331), PackedInt32Array(69, 331, 330, 335), PackedInt32Array(69, 335, 334, 347), PackedInt32Array(78, 77, 348, 349), PackedInt32Array(67, 350, 351, 314), PackedInt32Array(298, 288, 291, 294, 296), PackedInt32Array(352, 353, 57, 56), PackedInt32Array(51, 58, 354, 241), PackedInt32Array(241, 354, 62, 239), PackedInt32Array(237, 62, 61, 244), PackedInt32Array(128, 355, 356, 210, 349, 357), PackedInt32Array(224, 223, 358, 359), PackedInt32Array(171, 95, 83, 115), PackedInt32Array(17, 9, 8, 360, 234, 236), PackedInt32Array(163, 162, 361, 221), PackedInt32Array(362, 363, 163, 221, 228, 229), PackedInt32Array(364, 363, 362), PackedInt32Array(364, 362, 7, 6), PackedInt32Array(365, 11, 10, 146), PackedInt32Array(365, 146, 145, 366), PackedInt32Array(159, 366, 145), PackedInt32Array(155, 160, 367), PackedInt32Array(99, 101, 233, 359), PackedInt32Array(368, 101, 53, 369), PackedInt32Array(337, 368, 369, 338), PackedInt32Array(165, 164, 370), PackedInt32Array(281, 283, 285, 185), PackedInt32Array(287, 301, 45, 50, 183, 185, 285), PackedInt32Array(371, 372, 373, 374), PackedInt32Array(229, 231, 336, 375), PackedInt32Array(356, 376, 377), PackedInt32Array(275, 277, 279, 185), PackedInt32Array(130, 30, 29, 131), PackedInt32Array(359, 358, 378), PackedInt32Array(177, 305, 307, 309, 175), PackedInt32Array(155, 367, 379, 380, 381), PackedInt32Array(382, 383, 384, 249, 385), PackedInt32Array(102, 105, 165, 370), PackedInt32Array(150, 102, 370, 374, 373, 147), PackedInt32Array(356, 377, 386, 387, 211, 210), PackedInt32Array(116, 343, 342, 151, 154, 117), PackedInt32Array(72, 317, 249, 71), PackedInt32Array(384, 71, 249), PackedInt32Array(269, 273, 388, 186, 39, 268), PackedInt32Array(389, 338, 369), PackedInt32Array(389, 369, 234, 390), PackedInt32Array(391, 390, 234), PackedInt32Array(392, 391, 234), PackedInt32Array(393, 117, 154, 394, 249), PackedInt32Array(357, 81, 80, 129, 128), PackedInt32Array(348, 32, 34, 357, 349), PackedInt32Array(221, 225, 395), PackedInt32Array(252, 396, 131, 29, 118), PackedInt32Array(287, 288, 301), PackedInt32Array(262, 39, 114), PackedInt32Array(259, 114, 113, 397), PackedInt32Array(259, 397, 398), PackedInt32Array(258, 259, 398, 194), PackedInt32Array(256, 197, 196, 199), PackedInt32Array(256, 199, 158), PackedInt32Array(200, 157, 156), PackedInt32Array(399, 203, 202, 206), PackedInt32Array(340, 206, 205, 400), PackedInt32Array(340, 400, 401, 207), PackedInt32Array(341, 340, 207, 209, 211, 382, 152), PackedInt32Array(402, 403, 112, 111, 404, 380), PackedInt32Array(73, 133, 396, 252), PackedInt32Array(362, 229, 375, 392, 234, 360), PackedInt32Array(385, 153, 152, 382), PackedInt32Array(221, 395, 405, 226), PackedInt32Array(18, 248, 112, 14), PackedInt32Array(136, 4, 3, 137), PackedInt32Array(344, 137, 3, 345), PackedInt32Array(359, 378, 99), PackedInt32Array(406, 359, 233), PackedInt32Array(407, 406, 233), PackedInt32Array(407, 233, 226, 405), PackedInt32Array(17, 236, 18), PackedInt32Array(403, 14, 112), PackedInt32Array(380, 404, 381), PackedInt32Array(155, 381, 75, 213), PackedInt32Array(394, 385, 249), PackedInt32Array(140, 345, 3, 141), PackedInt32Array(252, 393, 249), PackedInt32Array(3, 119, 408, 409, 333), PackedInt32Array(410, 408, 119), PackedInt32Array(410, 119, 69, 411), PackedInt32Array(411, 69, 347, 412), PackedInt32Array(412, 347, 409, 408), PackedInt32Array(3, 333, 332, 329), PackedInt32Array(3, 329, 328, 325), PackedInt32Array(3, 325, 324, 321), PackedInt32Array(141, 3, 321, 320)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-371, 173, -340, 177, -338, 222, -260, 224, -257, 179, -180, 178, -179, 132, -141, 121, -134, 120, -128, 81, -64, 81, -57, 120, -48.976257, 121.51009, 13, 130, 18, 157, 268, 163, 269, 196, 334, 199, 335, 255, 523, 257, 527, 163, 527, 147, 563, 144, 573, 134, 575, 68, 622, 66, 626, 91, 619, 124, 579, 131, 580, 254, 699, 255, 706, 299, 774, 305, 984, 305, 994, 387, 1100, 381, 1101, 292, 1236, 288, 1242, -521, 910, -525, 759, -433, 431, -383, 340, -384, 340, -348, 304, -348, 305, -291, 270, -291, 273, -348, -224, -348, -225, -290, -256, -288, -256, -348, -324, -348, -324, -369, -352, -369, -352, -132, -370, -132)])
 parsed_collision_mask = 4096
 source_geometry_mode = 1
@@ -157,23 +159,7 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaga3"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
-expand_margin_left = 1.0
-expand_margin_right = 1.0
-shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
-shadow_size = 1
-shadow_offset = Vector2(0, 3)
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b14wf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwp57"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
@@ -189,7 +175,23 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kut41"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b14wf"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 24.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k55q4"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
@@ -197,10 +199,10 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
 expand_margin_left = 1.0
-expand_margin_right = 1.0
-shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+expand_margin_right = 11.0
+shadow_color = Color(0.54509807, 0.22745098, 0.28627452, 1)
 shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
@@ -210,22 +212,6 @@ content_margin_left = 3.0
 content_margin_right = 3.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opjrb"]
-content_margin_left = 10.0
-content_margin_right = 10.0
-bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
-expand_margin_left = 1.0
-expand_margin_right = 18.0
-shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
-shadow_size = 1
-shadow_offset = Vector2(0, 3)
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v1oo"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(1, 0.92941177, 0.84313726, 1)
@@ -241,7 +227,7 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skhme"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v1oo"]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
@@ -257,12 +243,104 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skhme"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 24.0
+expand_margin_right = 1.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kut41"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+expand_margin_left = 11.0
+expand_margin_right = 1.0
+shadow_color = Color(0.54509807, 0.22745098, 0.28627452, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k3ma"]
 content_margin_left = 3.0
 content_margin_right = 3.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp5f6"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ow7q"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3miyi"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+border_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.54509807, 0.22745098, 0.28627452, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lafet"]
 bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaga3"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e2dr"]
 content_margin_left = 10.0
@@ -414,7 +492,7 @@ metadata/_custom_type_script = "uid://dph608xq07qqq"
 z_index = -10
 texture_filter = 1
 
-[node name="Tilemap" parent="World/Level" unique_id=1592017223 groups=["tilemaps"] instance=ExtResource("4_t53j4")]
+[node name="Tilemap" parent="World/Level" unique_id=1110250823 groups=["tilemaps"] instance=ExtResource("4_t53j4")]
 
 [node name="Boardwalk" type="NavigationRegion2D" parent="World/Level" unique_id=983806963]
 navigation_polygon = SubResource("NavigationPolygon_pbc1q")
@@ -664,14 +742,15 @@ region_enabled = true
 region_rect = Rect2(16, 64, 72, 64)
 
 [node name="Shop2" type="Sprite2D" parent="World/Entities" unique_id=2112917581]
-position = Vector2(-88, -427)
+position = Vector2(-113, -427)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(104, 0, 80, 72)
 
 [node name="Shop3" type="Sprite2D" parent="World/Entities" unique_id=7815882]
-position = Vector2(145, -428)
+position = Vector2(225, -428)
 texture = ExtResource("4_kiiqx")
+flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 144, 104, 72)
 
@@ -800,7 +879,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NPC1_Idle" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1602917566 node_paths=PackedStringArray("body", "head")]
-position = Vector2(-172, -406)
+position = Vector2(-64, -406)
 script = ExtResource("11_gqlrj")
 body = NodePath("Body")
 head = NodePath("Head")
@@ -846,7 +925,7 @@ debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
 [node name="NPC2_Idle" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=2104998121 node_paths=PackedStringArray("body", "head")]
-position = Vector2(-148, -407)
+position = Vector2(-40, -407)
 script = ExtResource("11_gqlrj")
 body = NodePath("Body")
 head = NodePath("Head")
@@ -1136,12 +1215,16 @@ render_target_update_mode = 0
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
-[node name="Shop" type="Control" parent="HUD" unique_id=702404961]
+[node name="Shop" type="Control" parent="HUD" unique_id=363914054]
+visible = false
 z_index = -10
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 0
+script = ExtResource("50_4k3ma")
+button_group = ExtResource("51_opjrb")
+metadata/_custom_type_script = "uid://c7yamvfropoc1"
 
 [node name="DialogueBanner" type="Control" parent="HUD/Shop" unique_id=20575516]
 anchors_preset = 0
@@ -1211,6 +1294,7 @@ scroll_active = false
 vertical_alignment = 1
 
 [node name="Tools" type="Control" parent="HUD/Shop" unique_id=416817570]
+layout_mode = 1
 anchors_preset = 0
 offset_right = 360.0
 offset_bottom = 280.0
@@ -1231,22 +1315,26 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 0
 
-[node name="ButtonOption1" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=287742062]
+[node name="OldHandbrush" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=287742062]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
-text = "Broomstick"
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
+text = "Old Handbrush"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption1" unique_id=1455374268]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/OldHandbrush" unique_id=1455374268]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1260,6 +1348,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1274,22 +1363,28 @@ text = "$5"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ButtonOption2" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=1894606462]
+[node name="MagnifyingGlass" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=1894606462]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Magnifying Glass"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption2" unique_id=513595215]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/MagnifyingGlass" unique_id=513595215]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1303,6 +1398,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1317,22 +1413,26 @@ text = "$8"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ButtonOption3" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=1518128539]
+[node name="Binoculars" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=1518128539]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
 theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Binoculars"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption3" unique_id=196654319]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/Binoculars" unique_id=196654319]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1346,6 +1446,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1360,22 +1461,26 @@ text = "$13"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ButtonOption4" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=1596452324]
+[node name="MetalDetector" type="Button" parent="HUD/Shop/Tools/MarginContainer/LeftTools" unique_id=1596452324]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
 theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Metal Detector"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption4" unique_id=1158357855]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/LeftTools/MetalDetector" unique_id=1158357855]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1389,6 +1494,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1408,23 +1514,25 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = 0
 
-[node name="ButtonOption1" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=1601207178]
+[node name="OldShovel" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=1601207178]
 custom_minimum_size = Vector2(99.755, 24)
 layout_direction = 3
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_5v1oo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Old Shovel"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption1" unique_id=1955717882]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/OldShovel" unique_id=1955717882]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1438,6 +1546,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1452,23 +1561,27 @@ text = "$3"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ButtonOption2" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=865295906]
+[node name="ZenRake" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=865295906]
 custom_minimum_size = Vector2(99.755, 24)
 layout_direction = 3
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_5v1oo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Zen Rake"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption2" unique_id=515070706]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/ZenRake" unique_id=515070706]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1482,6 +1595,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1496,23 +1610,27 @@ text = "$6"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ButtonOption3" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=2114213581]
+[node name="FishingRod" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=2114213581]
 custom_minimum_size = Vector2(99.755, 24)
 layout_direction = 3
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_5v1oo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Fishing Rod"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption3" unique_id=1895690168]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/FishingRod" unique_id=1895690168]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1526,6 +1644,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1540,23 +1659,27 @@ text = "$10"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ButtonOption4" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=2055640213]
+[node name="Pickerupper" type="Button" parent="HUD/Shop/Tools/MarginContainer/RightTools" unique_id=2055640213]
 custom_minimum_size = Vector2(99.755, 24)
 layout_direction = 3
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_5v1oo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("51_opjrb")
 text = "Pickerupper"
 alignment = 2
 
-[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption4" unique_id=1549627986]
+[node name="Label" type="Label" parent="HUD/Shop/Tools/MarginContainer/RightTools/Pickerupper" unique_id=1549627986]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -1570,6 +1693,7 @@ offset_bottom = 12.5
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
 theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
@@ -1583,6 +1707,45 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$15"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Purchase" type="Button" parent="HUD/Shop/Tools" unique_id=2062222420]
+layout_mode = 0
+offset_left = 134.5
+offset_top = 184.0
+offset_right = 224.5
+offset_bottom = 204.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3miyi")
+disabled = true
+text = "PURCHASE"
+
+[node name="Leave" type="Button" parent="HUD/Shop/Tools" unique_id=1314794798]
+layout_mode = 0
+offset_left = 134.5
+offset_top = 210.0
+offset_right = 224.5
+offset_bottom = 230.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3miyi")
+text = "LEAVE"
 
 [node name="Dialogue" type="Control" parent="HUD" unique_id=908124618]
 visible = false
@@ -1745,7 +1908,7 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
-[node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivots" unique_id=133806033]
+[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivots" unique_id=133806033]
 anchors_preset = 0
 offset_left = 11.5
 offset_top = -2.5
@@ -1756,7 +1919,7 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 0.7
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot1" unique_id=262668969]
+[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=262668969]
 z_index = 3
 layout_mode = 0
 offset_left = -5.0
@@ -1767,7 +1930,7 @@ rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 color = Color(1, 1, 1, 0.2)
 
-[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1856136161]
+[node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1856136161]
 anchors_preset = 0
 offset_left = 59.5
 offset_top = 8.5
@@ -1778,7 +1941,7 @@ size_flags_vertical = 8
 size_flags_stretch_ratio = 2.95
 mouse_filter = 2
 
-[node name="ColorRect3" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=287656328]
+[node name="ColorRect3" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot1" unique_id=287656328]
 z_index = 3
 layout_mode = 0
 offset_left = -5.0
@@ -1801,86 +1964,6 @@ size_flags_stretch_ratio = 0.92
 mouse_filter = 2
 
 [node name="ColorRect2" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot2" unique_id=1208952899]
-z_index = 3
-layout_mode = 0
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 5.0
-offset_bottom = 5.0
-rotation = 0.7853982
-pivot_offset_ratio = Vector2(0.5, 0.5)
-color = Color(1, 1, 1, 0.2)
-
-[node name="ToolPivotsOld2" type="HBoxContainer" parent="HUD/Bag" unique_id=1283906618]
-visible = false
-z_index = -3
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -20.0
-offset_right = -20.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="Blank" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=622083806]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.2
-mouse_filter = 2
-
-[node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=891090882]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.7
-mouse_filter = 2
-
-[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivotsOld2/ToolPivot1" unique_id=802549737]
-z_index = 3
-layout_mode = 0
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 5.0
-offset_bottom = 5.0
-rotation = 0.7853982
-pivot_offset_ratio = Vector2(0.5, 0.5)
-color = Color(1, 1, 1, 0.2)
-
-[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=1600600804]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 8
-size_flags_stretch_ratio = 2.95
-mouse_filter = 2
-
-[node name="ColorRect3" type="ColorRect" parent="HUD/Bag/ToolPivotsOld2/ToolPivot3" unique_id=1692867493]
-z_index = 3
-layout_mode = 0
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 5.0
-offset_bottom = 5.0
-rotation = 0.7853982
-pivot_offset_ratio = Vector2(0.5, 0.5)
-color = Color(1, 1, 1, 0.2)
-
-[node name="ToolPivot2" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=1069732072]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.92
-mouse_filter = 2
-
-[node name="ColorRect2" type="ColorRect" parent="HUD/Bag/ToolPivotsOld2/ToolPivot2" unique_id=1602103009]
 z_index = 3
 layout_mode = 0
 offset_left = -5.0
@@ -2312,28 +2395,6 @@ one_shot = true
 [node name="Transitions" type="Node" parent="." unique_id=401277600]
 
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter/ClickBoundary" to="World/Entities/Characters/NPCharacter" method="_on_gui_input"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption1" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption1" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption1" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption1" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption1" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption2" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption2" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption2" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption2" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption2" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption3" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption3" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption3" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption3" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption3" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption4" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption4" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption4" to="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption4" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/LeftTools/ButtonOption4" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption1" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption1" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption1" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption1" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption1" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption2" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption2" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption2" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption2" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption2" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption3" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption3" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption3" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption3" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption3" to="Managers/HudManager" method="stop_shop"]
-[connection signal="mouse_entered" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption4" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption4" method="set_stretch_ratio" binds= [1.25]]
-[connection signal="mouse_exited" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption4" to="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption4" method="set_stretch_ratio" binds= [1.0]]
-[connection signal="pressed" from="HUD/Shop/Tools/MarginContainer/RightTools/ButtonOption4" to="Managers/HudManager" method="stop_shop"]
+[connection signal="pressed" from="HUD/Shop/Tools/Purchase" to="HUD/Shop" method="_on_purchase_pressed"]
+[connection signal="pressed" from="HUD/Shop/Tools/Leave" to="HUD/Shop" method="_on_leave_pressed"]
 [connection signal="pressed" from="HUD/Dialogue/DialoguePlayer/Button" to="Managers/HudManager" method="stop_dialogue"]

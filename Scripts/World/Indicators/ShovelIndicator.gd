@@ -19,7 +19,7 @@ signal dig_down
 
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
-	print_rich(DEBUG_NAME,"PhysicsProcess > shovel_up = " + str(shovel_up) + ", ready to dig = " + str(ready_to_dig))
+	#print_rich(DEBUG_NAME,"PhysicsProcess > shovel_up = " + str(shovel_up) + ", ready to dig = " + str(ready_to_dig))
 	if !shovel_up && indicator_position_y <= dig_up_threshold:
 		shovel_up = true
 		print_rich(DEBUG_NAME,"PhysicsProcess > Shovel up! Indicator pos y = " + str(indicator_position_y))

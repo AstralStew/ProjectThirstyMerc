@@ -10,7 +10,7 @@ func _enter_tree() -> void:
 @export var shop_zoom_black_bar_size: float = 30
 @export var shop_zoom_ease: Tween.EaseType = Tween.EaseType.EASE_IN_OUT
 @export var shop_zoom_transition: Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
-@export var shop_zoom_camera_offset: Vector2 = Vector2(0,-40)
+@export var shop_zoom_camera_offset: Vector2 = Vector2(0,-20)
 
 
 @export_group("Talking Settings")

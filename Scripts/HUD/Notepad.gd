@@ -1,12 +1,13 @@
 class_name Notepad extends Rotator
 static var instance : Notepad = null
-const DEBUG_NAME : String = "[b][Notepad][/b] "
+#const DEBUG_NAME : String = "[b][Notepad][/b] "
 func _enter_tree() -> void:
 	instance = self
 
 @onready var notepad_entries: VBoxContainer = $Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries
 
 func _ready() -> void:
+	super._ready()
 	InventoryManager.on_inventory_changed().connect(update_entries)
 
 static func update_entries(list:Dictionary[CollectableType,int]) -> void:
