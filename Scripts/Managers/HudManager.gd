@@ -4,6 +4,9 @@ const DEBUG_NAME : String = "[b][HudManager][/b] "
 func _enter_tree() -> void:
 	instance = self
 
+const SHOP_UI = preload("uid://bjfif1d68c3hk")
+
+
 @export_group("Shop Settings")
 @export var shop_zoom_duration: float = 0.69
 @export var shop_zoom_amount: float = 2.15
@@ -32,8 +35,8 @@ func _enter_tree() -> void:
 static var hud_root : CanvasLayer :
 	get: return instance.hud
 
-
-@onready var shop: Control = $"../../HUD/Shop"
+#@onready var shop_ui: ShopUI = $"../../HUD/ShopUI"
+var current_shop:ShopUI = null
 @onready var dialogue: Control = $"../../HUD/Dialogue"
 
 
@@ -115,7 +118,11 @@ func _start_shop() -> void:
 	#_tween.tween_property(HudManager,"black_bar_progress",1,shop_zoom_duration)
 	if Bag.bag_progress < 1:
 		_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration).from(0)
-	_tween.tween_property(shop,"visible",true,0).set_delay(shop_zoom_duration)
+	#_tween.tween_property(shop_ui,"visible",true,0).set_delay(shop_zoom_duration)
+	
+	current_shop = SHOP_UI.instantiate()
+	hud.add_child(current_shop)
+	
 
 
 
@@ -124,7 +131,7 @@ static func stop_shop() -> void:
 func _stop_shop() -> void:
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel().set_ease(shop_zoom_ease).set_trans(shop_zoom_transition)
-	_tween.tween_property(shop,"visible",false,0)
+	_tween.tween_callback(current_shop.close) # tween_property(shop_ui,"visible",false,0)
 	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * 2,shop_zoom_duration)
 	_tween.tween_property(PlayerCharacter.camera,"offset",PlayerCharacter.instance.camera_base_offset,shop_zoom_duration)
 	#_tween.tween_property(HudManager,"black_bar_progress",0,shop_zoom_duration)
@@ -140,10 +147,10 @@ func _stop_shop() -> void:
 func _start_day() -> void:
 	#pass
 	if _tween: _tween.kill()
-	#Bag.bag_progress = 0
+	Bag.bag_progress = 0
 	_tween = create_tween().set_parallel().set_ease(day_cap_ease).set_trans(day_cap_transition)
 	_tween.tween_property(HudManager,"black_background_progress",0,day_cap_duration).from(1)
-	#_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0).set_delay(day_cap_duration)
+	_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0).set_delay(day_cap_duration)
 	#await _tween.finished
 	#await get_tree().create_timer(1.0).timeout
 	#start_shop()

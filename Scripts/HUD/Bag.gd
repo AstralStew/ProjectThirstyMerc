@@ -12,6 +12,9 @@ const SHOVEL: PackedScene = preload("uid://d3v2idfvg2d2q")
 
 #enum ToolType {NONE,BINOCULARS,SHOVEL,METAL_DETECTOR}
 
+@onready var bag_background: Polygon2D = $BagBackground
+
+
 @onready var tool_pivot_1: Control = $ToolPivots/ToolPivot1
 @onready var tool_pivot_2: Control = $ToolPivots/ToolPivot2
 @onready var tool_pivot_3: Control = $ToolPivots/ToolPivot3
@@ -38,7 +41,7 @@ static var bag_progress: float = 1 :
 			instance.visible = false
 		elif value > 0:
 			instance.visible = true
-		instance.position.y = 50 * (1-value)
+		instance.position.y = 70 * (1-value)
 		bag_progress = value
 
 static var is_full:bool = false:
@@ -50,8 +53,8 @@ var index: int :
 		1 if (instance.tool_2!=null) else 0 + 
 		1 if (instance.tool_3!=null) else 0 )
 
-func _ready() -> void:
-	bag_progress = 0
+#func _ready() -> void:
+	#bag_progress = 0
 
 
 
@@ -94,7 +97,7 @@ func _setup_tool(tool_type:ToolType) -> void:
 	
 	#var prefab = tool_type.prefab # get_tool_prefab_from_tool_type(tool_type)
 	var new_tool:Rotator = tool_type.prefab.instantiate()
-	add_child(new_tool)
+	bag_background.add_sibling(new_tool)
 	new_tool.setup(pivot)
 	_tool_pivots_moved.connect(func(): new_tool.setup(pivot))
 	

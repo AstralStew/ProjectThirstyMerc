@@ -38,6 +38,8 @@ func start_talking() -> void:
 	if do_wander:
 		is_wandering = false
 	set_movement_target(global_position)
+	
+	call_deferred("turn_to_face_direction",global_position.direction_to(PlayerCharacter.instance.global_position))
 
 func stop_talking() -> void:
 	is_talking = false

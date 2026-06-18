@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolType" format=3 uid="uid://c6rt6buagyo5j"]
+
+[ext_resource type="PackedScene" uid="uid://6wqoibhavfvk" path="res://Scenes/Prefabs/Tools/brush.tscn" id="1_xcjiq"]
+[ext_resource type="Script" uid="uid://c7j4vdr0vkiuy" path="res://Scripts/HUD/Tools/ToolType.gd" id="2_tjhbl"]
+
+[resource]
+script = ExtResource("2_tjhbl")
+name = "Old Brush"
+description = "Sweep for any nearby objects hiding in the ground!"
+cost = 3
+prefab = ExtResource("1_xcjiq")
+utility = 2
+metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

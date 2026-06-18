@@ -11,6 +11,8 @@ var DEBUG_NAME: String:
 @export var setup_on_ready : bool = false
 @export var reset_on_drag_end : bool
 @export var reset_duration : float = 0.25
+@export var reset_ease: Tween.EaseType = Tween.EASE_IN_OUT
+@export var reset_trans: Tween.TransitionType = Tween.TRANS_LINEAR
 
 @export_group("READ ONLY")
 
@@ -82,7 +84,7 @@ func resetting() -> void:
 	is_resetting = true
 	
 	if _tween: _tween.kill()
-	_tween = create_tween().set_parallel()
+	_tween = create_tween().set_parallel().set_ease(reset_ease).set_trans(reset_trans)
 	_tween.tween_property(dragged_object,"global_position",_initial_position + initial_position_offset,reset_duration)
 	
 	while(_tween.is_running()): await get_tree().process_frame

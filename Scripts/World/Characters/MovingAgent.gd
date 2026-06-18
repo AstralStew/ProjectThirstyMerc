@@ -97,33 +97,25 @@ func on_velocity_computed(safe_velocity:Vector2) -> void:
 		if movement_direction == Vector2.ZERO:
 			if !texture_random_turn:
 				turn_front()
-				#if randf() < texture_random_turn_chance:
-					#if randf() < 0.25:
-						#turn_left()
-					#elif randf() < 0.5:
-						#turn_right()
-					#elif randf() < 0.75:
-						#turn_back()
-					#else:
-						#turn_front()
-			#else:
-				#
-		elif abs(movement_direction.x) > abs(movement_direction.y):
-			if movement_direction.x < 0:
-				turn_left()
-			else:
-				turn_right()
 		else:
-			if movement_direction.y < 0:
-				turn_back()
-			else:
-				turn_front()
+			turn_to_face_direction(movement_direction)
 
 func on_navigation_finished() -> void:
 	movement_direction = Vector2.ZERO
 
 
 
+func turn_to_face_direction(direction:Vector2) -> void:
+	if abs(direction.x) > abs(direction.y):
+		if direction.x < 0:
+			turn_left()
+		else:
+			turn_right()
+	else:
+		if direction.y < 0:
+			turn_back()
+		else:
+			turn_front()
 
 func turn_left() -> void:
 	if head:

@@ -31,7 +31,7 @@ func _ready():
 	camera.offset = camera_base_offset
 	adjusting_move_target()
 	
-	WorldManager.day_started().connect(start_day)
+	#WorldManager.day_started().connect(start_day)
 	WorldManager.day_ended().connect(end_day)
 
 
@@ -84,13 +84,6 @@ func _physics_process(delta):
 
 
 
-func start_shopping() -> void:
-	#get_tree().paused = true
-	set_deferred("is_talking", true)
-	#set_movement_target(global_position)
-	WorldManager.pause_day()
-	Bag.set_tools_usable(false)
-	HudManager.start_shop() # .start_dialogue((_npc_target.global_position - global_position)/2)
 
 static func move_to_start_shopping(shop:ShopCharacter) -> void:
 	instance._move_to_start_shopping(shop)
@@ -104,8 +97,15 @@ func _move_to_start_shopping(shop:ShopCharacter) -> void:
 	
 	if _npc_target: _npc_target = null
 	_shop_target = shop
-	set_movement_target(_shop_target.global_position)
+	set_movement_target(_shop_target.global_position + Vector2(0,6))
 
+func start_shopping() -> void:
+	set_deferred("is_talking", true)
+	set_movement_target(global_position)
+	call_deferred("turn_back")
+	WorldManager.pause_day()
+	Bag.set_tools_usable(false)
+	HudManager.start_shop() # .start_dialogue((_npc_target.global_position - global_position)/2)
 
 static func stop_shopping() -> void:
 	instance._stop_shopping()
@@ -122,6 +122,7 @@ func start_talking() -> void:
 	#get_tree().paused = true
 	set_deferred("is_talking", true)
 	set_movement_target(global_position)
+	call_deferred("turn_to_face_direction",global_position.direction_to(_npc_target.global_position))
 	_npc_target.start_talking()
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
@@ -208,3 +209,10 @@ func _stop_using_tool() -> void:
 	print_rich(DEBUG_NAME,"StopUsingTool > Resetting speed")
 	is_using_tool = false
 	movement_speed = base_movement_speed
+
+
+
+
+func on_velocity_computed(safe_velocity:Vector2) -> void:
+	if is_talking: return
+	super.on_velocity_computed(safe_velocity)

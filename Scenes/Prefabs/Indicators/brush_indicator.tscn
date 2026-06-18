@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://8muadwv8rs8p"]
+
+[ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/Indicators/direction_indicator.tscn" id="1_0qfi2"]
+[ext_resource type="Script" uid="uid://dlmfgmhxe4i7i" path="res://Scripts/World/Indicators/MetalDetectorIndicator.gd" id="2_l64pb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgdss"]
+size = Vector2(10, 10)
+
+[node name="BrushIndicator" unique_id=820276514 instance=ExtResource("1_0qfi2")]
+script = ExtResource("2_l64pb")
+rotate_to_movement_direction = true
+rotation_range = 60.0
+
+[node name="ColorRect" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1762873939]
+offset_left = -3.0
+offset_top = 10.0
+offset_right = 3.0
+offset_bottom = 12.0
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="1" unique_id=743852716]
+offset_left = -1.5
+offset_top = 14.5
+offset_right = 1.5
+offset_bottom = 18.5
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="2" unique_id=132329204]
+offset_left = -1.6276217
+offset_top = 13.627622
+offset_right = 1.6276217
+offset_bottom = 17.62762
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+
+[node name="Area2D" type="Area2D" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="3" unique_id=1235176437]
+position = Vector2(0, 16)
+collision_mask = 256
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" index="0" unique_id=1975082087]
+shape = SubResource("RectangleShape2D_tgdss")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Area2D" index="1" unique_id=1275532828]
+position = Vector2(-5, 10)
+shape = SubResource("RectangleShape2D_tgdss")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Area2D" index="2" unique_id=35180589]
+position = Vector2(5, 10)
+shape = SubResource("RectangleShape2D_tgdss")
+
+[connection signal="area_entered" from="Node2D/Area2D" to="." method="_on_area_2d_area_entered"]
