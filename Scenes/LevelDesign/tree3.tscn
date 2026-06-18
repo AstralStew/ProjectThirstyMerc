@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://jreor4aw007b"]
+[gd_scene format=3 uid="uid://b0d0nhu2s8hws"]
 
-[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="1_fd1uc"]
+[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="1_rmev8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e624q"]
 size = Vector2(16, 9)
 
-[node name="Tree1_0" type="Node2D" unique_id=1557634134 groups=["tilemaps"]]
+[node name="Tree3_0" type="Node2D" unique_id=1557634134 groups=["tilemaps"]]
 y_sort_enabled = true
 texture_filter = 1
 
 [node name="Gfx" type="Sprite2D" parent="." unique_id=702101448]
-position = Vector2(6, -23)
-texture = ExtResource("1_fd1uc")
+position = Vector2(5, -31)
+texture = ExtResource("1_rmev8")
 region_enabled = true
-region_rect = Rect2(0, 80, 64, 64)
+region_rect = Rect2(152, 88, 72, 72)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1619848258]
 collision_layer = 4096
