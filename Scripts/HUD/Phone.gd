@@ -4,11 +4,12 @@ const DEBUG_NAME : String = "[b][Phone][/b] "
 func _enter_tree() -> void:
 	instance = self
 
-@onready var balance_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer/BalanceLabel
-@onready var time_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer/TimeHolder/TimeLabel
+@onready var balance_label: Label = $Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder/BalanceLabel
+@onready var time_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder/TimeLabel
 
 @onready var phone_screen_1: VBoxContainer = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1
 @onready var alotl_speech_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/AlotlSpeechLabel
+
 
 @export var alotl_speech_speed : float = 1.0
 

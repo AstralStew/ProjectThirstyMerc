@@ -1,9 +1,13 @@
 [gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://b3ketqrdog68w"]
 
+[ext_resource type="Texture2D" uid="uid://1jwx0kcg4le1" path="res://Resources/Atlases/Collectables/Collectable_Big_GoldenRing.tres" id="1_5huwr"]
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_we2bj"]
+[ext_resource type="Texture2D" uid="uid://bf5ujb4ujnrpg" path="res://Resources/Atlases/Collectables/Collectable_Small_GoldenRing.tres" id="3_6hwum"]
 
 [resource]
 script = ExtResource("1_we2bj")
 name = "Golden Ring"
+big_texture = ExtResource("1_5huwr")
+small_texture = ExtResource("3_6hwum")
 digs_required = 5
 metadata/_custom_type_script = "uid://cega64ybpgvx1"
