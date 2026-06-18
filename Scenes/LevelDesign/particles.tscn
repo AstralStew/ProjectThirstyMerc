@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://b82kwl38m5f5j"]
 
 [ext_resource type="Texture2D" uid="uid://cuiwqkvdwbtam" path="res://Assets/Images/Prototyping/minasprite.png" id="1_23lw4"]
+[ext_resource type="Texture2D" uid="uid://cp8h5es3058dg" path="res://Assets/Images/SpriteSheet_wind_particle.png" id="2_c70o0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rq1h7"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 2
+particles_anim_loop = true
 
 [node name="Particles" type="Node2D" unique_id=308113646]
 
@@ -36,3 +43,12 @@ scale_amount_min = 0.1
 color = Color(1, 1, 0.35686275, 1)
 hue_variation_min = -0.45
 hue_variation_max = 1.0
+
+[node name="wind" type="CPUParticles2D" parent="." unique_id=839378235]
+material = SubResource("CanvasItemMaterial_rq1h7")
+amount = 1
+texture = ExtResource("2_c70o0")
+lifetime = 2.0
+gravity = Vector2(0, 0)
+anim_speed_min = 2.95
+anim_speed_max = 2.95
