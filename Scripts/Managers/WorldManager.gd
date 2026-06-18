@@ -14,6 +14,10 @@ static var level_root : Node2D :
 @onready var entities: Node2D = $"../../World/Entities"
 static var entities_root : Node2D :
 	get: return instance.entities
+	
+@onready var collectables: Node2D = $"../../World/Entities/Collectables"
+static var collectables_root : Node2D :
+	get: return instance.collectables
 
 @onready var effects: Node2D = $"../../World/Effects"
 static var effects_root : Node2D :
@@ -63,6 +67,9 @@ func _ready() -> void:
 	call_deferred("start_day")
 
 
+
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_daytime && !is_paused: 
@@ -75,10 +82,16 @@ func progress_day(delta: float) -> void:
 		end_day()
 
 static func start_day() -> void:
+	
+	await instance.spawn_collectables()
+	
 	instance.day_progress = 0
 	is_daytime = true
 	day_started().emit()
 	print(DEBUG_NAME,"StartDay > Starting day!")
+
+
+
 
 static func pause_day() -> void:
 	is_paused = true
@@ -121,14 +134,6 @@ func _get_speed_at_tile_position(global_position:Vector2) -> float:
 
 
 
-#var nav_regions: Array[NavigationRegion2D]
-#var rand_point_gens: Array[PolygonRandomPointGenerator]
-#
-#
-## Called when the node enters the scene tree for the first time.
-#func _ready() -> void:
-	#for nav_region in get_tree().get_nodes_in_group("SpawnRegions"):
-		#nav_regions.append(nav_region as NavigationRegion2D)
-		#var _polygon = (nav_region as NavigationRegion2D).navigation_polygon.get_outline()
-		#var _new_rand_point_gen = PolygonRandomPointGenerator.new()
-	#
+func spawn_collectables() -> void:
+	for spawner:SpawnBox in get_tree().get_nodes_in_group("spawners"):
+		await spawner.spawn()

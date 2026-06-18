@@ -10,26 +10,27 @@
 [ext_resource type="PackedScene" uid="uid://dawqwx4eo3su" path="res://Scenes/LevelDesign/tilemap.tscn" id="4_t53j4"]
 [ext_resource type="Texture2D" uid="uid://1n1v3vbosvvs" path="res://Assets/Images/Prototyping/footprints.png" id="6_5dgvu"]
 [ext_resource type="Script" uid="uid://cmai64jlhstqf" path="res://Scripts/World/Characters/Footprints.gd" id="7_uscyt"]
-[ext_resource type="PackedScene" uid="uid://dglq44i5kh165" path="res://Scenes/Prefabs/Collectables/sea_glass.tscn" id="9_np3vi"]
 [ext_resource type="Script" uid="uid://co0h4xrb1vtwp" path="res://Scripts/World/Characters/SpawnBox.gd" id="10_4k3ma"]
-[ext_resource type="PackedScene" uid="uid://cm6wpeer5ojsl" path="res://Scenes/Prefabs/Collectables/pottery_sherd.tscn" id="10_mipjh"]
-[ext_resource type="PackedScene" uid="uid://drsua3l5ohrrx" path="res://Scenes/Prefabs/Collectables/silver_necklace.tscn" id="11_aq00n"]
 [ext_resource type="Script" uid="uid://daf0h2p3no1m4" path="res://Scripts/World/Characters/NPCharacter.gd" id="11_gqlrj"]
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="11_kut41"]
 [ext_resource type="Texture2D" uid="uid://u15xmbhxp7nb" path="res://Assets/Images/SpriteSheet_Items_Big.png" id="11_t53j4"]
 [ext_resource type="Texture2D" uid="uid://siy84y14m0q1" path="res://Resources/Atlases/Characters/NPC2_Body_Back.tres" id="12_atg6p"]
+[ext_resource type="Resource" uid="uid://4jioa8dy36vc" path="res://Resources/Collectables/ct_bottlecap.tres" id="12_b14wf"]
 [ext_resource type="Texture2D" uid="uid://c20dmq62ii6sj" path="res://Assets/Images/SpriteSheet_Items_Small.png" id="12_uaga3"]
+[ext_resource type="Resource" uid="uid://bri8u7r1v5itr" path="res://Resources/Collectables/ct_sea_glass.tres" id="13_b14wf"]
 [ext_resource type="Texture2D" uid="uid://csane6fusip" path="res://Resources/Atlases/Characters/NPC1_Body_Back.tres" id="13_obvom"]
 [ext_resource type="Texture2D" uid="uid://b6b8jl8chpgo2" path="res://Resources/Atlases/Characters/NPC1_Body_Front.tres" id="13_uaga3"]
 [ext_resource type="Texture2D" uid="uid://dohq5g6xmy27s" path="res://Resources/Atlases/Characters/NPC2_Body_Front.tres" id="13_yf828"]
 [ext_resource type="Texture2D" uid="uid://brm0n3p4vsmho" path="res://Resources/Atlases/Characters/NPC2_Body_Side.tres" id="14_8xidt"]
+[ext_resource type="Resource" uid="uid://b71jhg0b6wm7p" path="res://Resources/Collectables/ct_pottery_sherd.tres" id="14_asuqw"]
 [ext_resource type="Texture2D" uid="uid://br5x0uje0cg17" path="res://Resources/Atlases/Characters/NPC1_Body_Side.tres" id="15_olq2e"]
+[ext_resource type="Resource" uid="uid://brk0lv0kl46ty" path="res://Resources/Collectables/ct_silver_necklace.tres" id="15_opjrb"]
 [ext_resource type="Texture2D" uid="uid://c3oqmmsc0djky" path="res://Resources/Atlases/Characters/NPC2_Head_Back.tres" id="15_vbpv4"]
+[ext_resource type="Resource" uid="uid://b3ketqrdog68w" path="res://Resources/Collectables/ct_golden_ring.tres" id="16_kut41"]
 [ext_resource type="Texture2D" uid="uid://rkql7bo7rl7j" path="res://Resources/Atlases/Characters/NPC2_Head_Front.tres" id="16_ndfmf"]
 [ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/Characters/NPC1_Head_Back.tres" id="16_w61bx"]
-[ext_resource type="PackedScene" uid="uid://c2krr3nadpsa7" path="res://Scenes/Prefabs/Collectables/bottlecap.tscn" id="17_8m72m"]
 [ext_resource type="Texture2D" uid="uid://0lk6itks1din" path="res://Resources/Atlases/Characters/NPC2_Head_Side.tres" id="17_nys34"]
 [ext_resource type="Texture2D" uid="uid://dvqyputrheado" path="res://Resources/Atlases/Characters/NPC1_Head_Front.tres" id="17_uvj3q"]
-[ext_resource type="PackedScene" uid="uid://d0lqhbfmqddh0" path="res://Scenes/Prefabs/Collectables/golden_ring.tscn" id="18_m8c54"]
 [ext_resource type="Texture2D" uid="uid://w773s5rkat5q" path="res://Resources/Atlases/Characters/NPC1_Head_Side.tres" id="18_mqs2o"]
 [ext_resource type="Script" uid="uid://dwa7d63qu5514" path="res://Scripts/HUD/Notepad.gd" id="21_aq00n"]
 [ext_resource type="Texture2D" uid="uid://tbv6letytyi6" path="res://Resources/Atlases/Characters/Enemy_Crab.tres" id="25_atg6p"]
@@ -546,14 +547,144 @@ visible = false
 position = Vector2(43, 5)
 texture = ExtResource("12_uaga3")
 
-[node name="SpawnBox" type="ReferenceRect" parent="World/Level" unique_id=2056892345]
-offset_left = -1228.0
-offset_top = -555.0
-offset_right = -977.0
-offset_bottom = -75.0
+[node name="Spawner_MiddleTop" type="ReferenceRect" parent="World/Level" unique_id=2056892345 groups=["spawners"]]
+z_index = 500
+offset_left = -265.0
+offset_top = -253.0
+offset_right = 349.0
+offset_bottom = -2.0
+mouse_filter = 2
 border_color = Color(1, 0, 1, 1)
 border_width = 3.0
+editor_only = false
 script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("12_b14wf"): 16,
+ExtResource("13_b14wf"): 3
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_MiddleCentre" type="ReferenceRect" parent="World/Level" unique_id=485552219 groups=["spawners"]]
+z_index = 500
+offset_left = -375.0
+offset_top = -21.0
+offset_right = 461.0
+offset_bottom = 170.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("12_b14wf"): 5,
+ExtResource("13_b14wf"): 5
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_LeftClose" type="ReferenceRect" parent="World/Level" unique_id=1166466631 groups=["spawners"]]
+z_index = 500
+offset_left = -1099.0
+offset_top = -128.0
+offset_right = -379.0
+offset_bottom = 179.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("13_b14wf"): 5,
+ExtResource("14_asuqw"): 20,
+ExtResource("15_opjrb"): 1
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_RightClose" type="ReferenceRect" parent="World/Level" unique_id=1986383162 groups=["spawners"]]
+z_index = 500
+offset_left = 468.0
+offset_top = -59.0
+offset_right = 1188.0
+offset_bottom = 248.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("13_b14wf"): 12,
+ExtResource("14_asuqw"): 12,
+ExtResource("15_opjrb"): 1
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_MiddleLeftShore" type="ReferenceRect" parent="World/Level" unique_id=1582736954 groups=["spawners"]]
+z_index = 500
+offset_left = -1141.0
+offset_top = 187.0
+offset_right = -152.0
+offset_bottom = 294.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("13_b14wf"): 18,
+ExtResource("14_asuqw"): 6,
+ExtResource("16_kut41"): 1
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_MiddleRightShore" type="ReferenceRect" parent="World/Level" unique_id=111184118 groups=["spawners"]]
+z_index = 500
+offset_left = -53.0
+offset_top = 186.0
+offset_right = 576.0
+offset_bottom = 301.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("13_b14wf"): 10,
+ExtResource("14_asuqw"): 3
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_RightShore" type="ReferenceRect" parent="World/Level" unique_id=1426145272 groups=["spawners"]]
+z_index = 500
+offset_left = 587.0
+offset_top = 264.0
+offset_right = 1216.0
+offset_bottom = 379.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("13_b14wf"): 10,
+ExtResource("14_asuqw"): 3,
+ExtResource("16_kut41"): 1
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_LeftShore" type="ReferenceRect" parent="World/Level" unique_id=1823542386 groups=["spawners"]]
+z_index = 500
+offset_left = -1190.0
+offset_top = -308.0
+offset_right = -1107.0
+offset_bottom = 178.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+editor_only = false
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("13_b14wf"): 10,
+ExtResource("14_asuqw"): 3
+})
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
 [node name="Entities" type="Node2D" parent="World" unique_id=1378868865]
@@ -978,350 +1109,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_atg6p")
 
 [node name="Collectables" type="Node2D" parent="World/Entities" unique_id=1446915618]
 y_sort_enabled = true
-
-[node name="Bottlecap" parent="World/Entities/Collectables" unique_id=1041127925 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(130, 0)
-
-[node name="Bottlecap2" parent="World/Entities/Collectables" unique_id=1651950117 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-181, -252)
-
-[node name="Bottlecap3" parent="World/Entities/Collectables" unique_id=35470227 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(19, -263)
-
-[node name="Bottlecap4" parent="World/Entities/Collectables" unique_id=1292016246 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(61, -217)
-
-[node name="Bottlecap5" parent="World/Entities/Collectables" unique_id=90311249 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(187, -253)
-
-[node name="Bottlecap6" parent="World/Entities/Collectables" unique_id=1342601198 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(266, -221)
-
-[node name="Bottlecap7" parent="World/Entities/Collectables" unique_id=1992446933 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(144, -208)
-
-[node name="Bottlecap8" parent="World/Entities/Collectables" unique_id=201470584 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-63, -229)
-
-[node name="Bottlecap9" parent="World/Entities/Collectables" unique_id=1999511972 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-179, -189)
-
-[node name="Bottlecap10" parent="World/Entities/Collectables" unique_id=612476242 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-280, -126)
-
-[node name="Bottlecap11" parent="World/Entities/Collectables" unique_id=2106159742 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-53, -88)
-
-[node name="Bottlecap12" parent="World/Entities/Collectables" unique_id=1099072785 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(170, -148)
-
-[node name="Bottlecap13" parent="World/Entities/Collectables" unique_id=915439108 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(320, -16)
-
-[node name="Bottlecap14" parent="World/Entities/Collectables" unique_id=1660084702 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-187, -53)
-
-[node name="Bottlecap15" parent="World/Entities/Collectables" unique_id=140498170 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-251, 87)
-
-[node name="Bottlecap16" parent="World/Entities/Collectables" unique_id=2125085874 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(50, 125)
-
-[node name="Bottlecap17" parent="World/Entities/Collectables" unique_id=881779319 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(96, -54)
-
-[node name="SeaGlass" parent="World/Entities/Collectables" unique_id=2112377645 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-106, 51)
-
-[node name="SeaGlass2" parent="World/Entities/Collectables" unique_id=1660070652 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-254, -41)
-
-[node name="SeaGlass3" parent="World/Entities/Collectables" unique_id=915539701 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(194, -51)
-
-[node name="SeaGlass4" parent="World/Entities/Collectables" unique_id=1111803326 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(333, 155)
-
-[node name="SeaGlass5" parent="World/Entities/Collectables" unique_id=1741081280 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(131, 213)
-
-[node name="SeaGlass6" parent="World/Entities/Collectables" unique_id=1946191627 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-77, 216)
-
-[node name="SeaGlass7" parent="World/Entities/Collectables" unique_id=1932054680 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-255, 253)
-
-[node name="SeaGlass8" parent="World/Entities/Collectables" unique_id=1977532627 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-409, 278)
-
-[node name="SeaGlass9" parent="World/Entities/Collectables" unique_id=24513131 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(88, 275)
-
-[node name="SeaGlass10" parent="World/Entities/Collectables" unique_id=1604389376 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-485, 100)
-
-[node name="SeaGlass11" parent="World/Entities/Collectables" unique_id=1572909549 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-717, 198)
-
-[node name="SeaGlass12" parent="World/Entities/Collectables" unique_id=1771944444 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-536, 273)
-
-[node name="SeaGlass13" parent="World/Entities/Collectables" unique_id=1113374954 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-892, 291)
-
-[node name="SeaGlass14" parent="World/Entities/Collectables" unique_id=1939966776 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-1006, 186)
-
-[node name="SeaGlass15" parent="World/Entities/Collectables" unique_id=663542982 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-1096, 152)
-
-[node name="SeaGlass16" parent="World/Entities/Collectables" unique_id=1553427064 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-1078, 47)
-
-[node name="SeaGlass17" parent="World/Entities/Collectables" unique_id=15540867 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-1155, -44)
-
-[node name="SeaGlass18" parent="World/Entities/Collectables" unique_id=1557400874 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-1124, 61)
-
-[node name="SeaGlass19" parent="World/Entities/Collectables" unique_id=1462424681 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-1018, 259)
-
-[node name="SeaGlass20" parent="World/Entities/Collectables" unique_id=1215489870 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-892, 128)
-
-[node name="SeaGlass21" parent="World/Entities/Collectables" unique_id=1862712077 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-704, 281)
-
-[node name="SeaGlass22" parent="World/Entities/Collectables" unique_id=1159545598 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-524, 182)
-
-[node name="SeaGlass23" parent="World/Entities/Collectables" unique_id=1085801430 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(388, 211)
-
-[node name="SeaGlass24" parent="World/Entities/Collectables" unique_id=684095609 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(233, 282)
-
-[node name="SeaGlass25" parent="World/Entities/Collectables" unique_id=577033377 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(478, 274)
-
-[node name="SeaGlass26" parent="World/Entities/Collectables" unique_id=157294351 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(558, 217)
-
-[node name="SeaGlass27" parent="World/Entities/Collectables" unique_id=66698089 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(587, 80)
-
-[node name="SeaGlass28" parent="World/Entities/Collectables" unique_id=670560275 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(596, 129)
-
-[node name="SeaGlass29" parent="World/Entities/Collectables" unique_id=1977172064 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(531, 57)
-
-[node name="SeaGlass30" parent="World/Entities/Collectables" unique_id=1053511804 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(498, 174)
-
-[node name="SeaGlass31" parent="World/Entities/Collectables" unique_id=1636270373 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(623, 279)
-
-[node name="SeaGlass32" parent="World/Entities/Collectables" unique_id=2065027351 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(712, 251)
-
-[node name="SeaGlass33" parent="World/Entities/Collectables" unique_id=1635757174 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(783, 305)
-
-[node name="SeaGlass34" parent="World/Entities/Collectables" unique_id=1772951584 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(891, 278)
-
-[node name="SeaGlass35" parent="World/Entities/Collectables" unique_id=875229727 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(981, 316)
-
-[node name="SeaGlass36" parent="World/Entities/Collectables" unique_id=1243498582 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(972, 193)
-
-[node name="SeaGlass37" parent="World/Entities/Collectables" unique_id=1106877141 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(1074, 185)
-
-[node name="SeaGlass38" parent="World/Entities/Collectables" unique_id=1127682361 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(943, 97)
-
-[node name="SeaGlass39" parent="World/Entities/Collectables" unique_id=1535533058 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(803, 184)
-
-[node name="SeaGlass40" parent="World/Entities/Collectables" unique_id=1536209274 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(873, 16)
-
-[node name="SeaGlass41" parent="World/Entities/Collectables" unique_id=1291535952 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(1053, -21)
-
-[node name="PotterySherd" parent="World/Entities/Collectables" unique_id=1362501913 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-770, -7)
-
-[node name="PotterySherd2" parent="World/Entities/Collectables" unique_id=803704444 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-880, 48)
-
-[node name="PotterySherd3" parent="World/Entities/Collectables" unique_id=1906461994 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-932, 108)
-
-[node name="PotterySherd4" parent="World/Entities/Collectables" unique_id=123423842 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-819, 194)
-
-[node name="PotterySherd5" parent="World/Entities/Collectables" unique_id=674276772 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-687, 126)
-
-[node name="PotterySherd6" parent="World/Entities/Collectables" unique_id=2123829307 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-810, -77)
-
-[node name="PotterySherd7" parent="World/Entities/Collectables" unique_id=2061300332 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-980, -39)
-
-[node name="PotterySherd8" parent="World/Entities/Collectables" unique_id=912296055 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-1004, 129)
-
-[node name="PotterySherd9" parent="World/Entities/Collectables" unique_id=1166624523 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-966, 215)
-
-[node name="PotterySherd10" parent="World/Entities/Collectables" unique_id=1019108925 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(783, 123)
-
-[node name="PotterySherd11" parent="World/Entities/Collectables" unique_id=231592352 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(967, -29)
-
-[node name="PotterySherd12" parent="World/Entities/Collectables" unique_id=1816529395 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(1091, 61)
-
-[node name="PotterySherd13" parent="World/Entities/Collectables" unique_id=2128486131 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(1000, 153)
-
-[node name="PotterySherd14" parent="World/Entities/Collectables" unique_id=2052371505 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(1005, 269)
-
-[node name="PotterySherd15" parent="World/Entities/Collectables" unique_id=14393194 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(859, 234)
-
-[node name="PotterySherd16" parent="World/Entities/Collectables" unique_id=1126395948 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(1139, 188)
-
-[node name="PotterySherd17" parent="World/Entities/Collectables" unique_id=128288880 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(692, 45)
-
-[node name="PotterySherd18" parent="World/Entities/Collectables" unique_id=812549438 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(604, 170)
-
-[node name="SilverNecklace" parent="World/Entities/Collectables" unique_id=507085009 instance=ExtResource("11_aq00n")]
-texture_filter = 0
-position = Vector2(-608, -8)
-
-[node name="SilverNecklace2" parent="World/Entities/Collectables" unique_id=582623688 instance=ExtResource("11_aq00n")]
-texture_filter = 0
-position = Vector2(864, 104)
-
-[node name="GoldenRing" parent="World/Entities/Collectables" unique_id=1945885834 instance=ExtResource("18_m8c54")]
-texture_filter = 0
-position = Vector2(0, 194)
-
-[node name="SeaGlass42" parent="World/Entities/Collectables" unique_id=696816250 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(42, -135)
-
-[node name="Bottlecap18" parent="World/Entities/Collectables" unique_id=1719879442 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(-120, -89)
-
-[node name="Bottlecap19" parent="World/Entities/Collectables" unique_id=2142116100 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(301, -137)
-
-[node name="Bottlecap20" parent="World/Entities/Collectables" unique_id=469271141 instance=ExtResource("17_8m72m")]
-texture_filter = 0
-position = Vector2(422, 50)
-
-[node name="SeaGlass43" parent="World/Entities/Collectables" unique_id=5215783 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(306, 77)
-
-[node name="SeaGlass44" parent="World/Entities/Collectables" unique_id=1101311149 instance=ExtResource("9_np3vi")]
-texture_filter = 0
-position = Vector2(-444, -57)
-
-[node name="PotterySherd19" parent="World/Entities/Collectables" unique_id=1231433392 instance=ExtResource("10_mipjh")]
-texture_filter = 0
-position = Vector2(-374, 32)
 
 [node name="Objects" parent="World/Entities" unique_id=560350465 instance=ExtResource("31_p4uwf")]
 
@@ -2474,10 +2261,21 @@ text = "Buy Tokens"
 z_index = 3
 anchors_preset = 0
 script = ExtResource("21_aq00n")
+rotation_bounds = null
+rotate_source = null
 dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(69, 90), Vector2(380, 315)])
+initial_position_offset = null
 respect_grab_position = true
 setup_on_ready = true
+reset_on_drag_end = null
+reset_duration = null
+is_usable = null
+is_dragging = null
+value = null
+value_x_only = null
+value_y_only = null
+is_resetting = null
 
 [node name="Gfx" type="Control" parent="HUD/Bag/Notepad" unique_id=2065521794]
 anchors_preset = 0

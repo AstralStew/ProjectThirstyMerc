@@ -38,9 +38,9 @@ static var bag_progress: float = 1 :
 		instance.position.y = 50 * (1-value)
 		bag_progress = value
 
-
-#func _ready() -> void:
-	#test()
+#
+func _ready() -> void:
+	bag_progress = 0
 
 #func test() -> void:
 	#await get_tree().create_timer(3.0).timeout

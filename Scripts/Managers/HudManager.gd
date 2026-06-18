@@ -70,6 +70,8 @@ static var black_background_progress: float :
 
 
 func _ready() -> void:
+	black_background_progress = 1
+	
 	WorldManager.day_started().connect(_start_day)
 	WorldManager.day_ended().connect(_end_day)
 
@@ -111,7 +113,8 @@ func _start_shop() -> void:
 	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * shop_zoom_amount,shop_zoom_duration)
 	_tween.tween_property(PlayerCharacter.camera,"offset",shop_zoom_camera_offset,shop_zoom_duration)
 	#_tween.tween_property(HudManager,"black_bar_progress",1,shop_zoom_duration)
-	#_tween.tween_property(Bag,"bag_progress",0,talking_zoom_duration)
+	if Bag.bag_progress < 1:
+		_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration).from(0)
 	_tween.tween_property(shop,"visible",true,0).set_delay(shop_zoom_duration)
 
 
@@ -140,7 +143,7 @@ func _start_day() -> void:
 	#Bag.bag_progress = 0
 	_tween = create_tween().set_parallel().set_ease(day_cap_ease).set_trans(day_cap_transition)
 	_tween.tween_property(HudManager,"black_background_progress",0,day_cap_duration).from(1)
-	_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0)
+	#_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0).set_delay(day_cap_duration)
 	#await _tween.finished
 	#await get_tree().create_timer(1.0).timeout
 	#start_shop()

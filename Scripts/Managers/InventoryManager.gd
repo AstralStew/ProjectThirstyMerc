@@ -7,15 +7,32 @@ func _enter_tree() -> void:
 
 
 static var inventory : Dictionary[CollectableType,int] = {}
+signal _on_inventory_changed(new_total)
+func on_inventory_changed() -> Signal:
+	return instance._inventory_changed
+
+static var dosh : int = 15:
+	get: return dosh
+	set(value):
+		dosh = clamp(value,0,1)
+signal _on_dosh_changed(new_total)
+func on_dosh_changed() -> Signal:
+	return instance._dosh_changed
 
 
+static func add_dosh(amount:int) -> void:
+	instance._add_dosh(amount)
+func _add_dosh(amount:int) -> void:
+	dosh += amount
+	_on_dosh_changed.emit(dosh)
 
 
-static func add(type:CollectableType,amount:int=1) -> void:
-	instance._add(type,amount)
-func _add(type:CollectableType,amount:int) -> void:
+static func add_collectable(type:CollectableType,amount:int=1) -> void:
+	instance._add_collectable(type,amount)
+func _add_collectable(type:CollectableType,amount:int) -> void:
 	if inventory.has(type):
 		inventory[type] = inventory[type] + 1
 	else:
 		inventory[type] = 1
-	Notepad.update_entries(inventory)
+	_on_inventory_changed.emit(inventory)
+	#Notepad.update_entries(inventory)

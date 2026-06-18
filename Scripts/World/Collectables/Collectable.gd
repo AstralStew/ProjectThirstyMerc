@@ -1,10 +1,10 @@
 class_name Collectable extends Area2D
 
-@onready var buried_gfx: Node2D = $BuriedGfx
-@onready var real_gfx: Control = $RealGfx
-@onready var object_gfx: Control = $RealGfx/ObjectGfx
-@onready var ground_gfx: ColorRect = $RealGfx/GroundGfx
-@onready var real_sprite: Sprite2D = $RealGfx/ObjectGfx/RealSprite
+var buried_gfx: Node2D # = $BuriedGfx
+var real_gfx: Control # = $RealGfx
+var object_gfx: Control  #= $RealGfx/ObjectGfx
+var ground_gfx: ColorRect # = $RealGfx/GroundGfx
+var real_sprite: Sprite2D # = $RealGfx/ObjectGfx/RealSprite
 
 
 @export var collectable_type: CollectableType = null
@@ -21,11 +21,22 @@ class_name Collectable extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if collectable_type != null: setup(collectable_type)
+	#buried_gfx.visible = false
+	#real_gfx.visible = false
+	#real_gfx.modulate = Color(Color.WHITE,0)
+
+func setup(type:CollectableType) -> void:	
+	buried_gfx = $BuriedGfx
+	real_gfx = $RealGfx
+	object_gfx = $RealGfx/ObjectGfx
+	ground_gfx = $RealGfx/GroundGfx
+	real_sprite = $RealGfx/ObjectGfx/RealSprite
+	
 	buried_gfx.visible = false
 	real_gfx.visible = false
 	real_gfx.modulate = Color(Color.WHITE,0)
-
-func setup(type:CollectableType) -> void:
+	
 	collectable_type = type
 	real_sprite.texture = collectable_type.small_texture
 
@@ -89,7 +100,7 @@ func collect() -> void:
 	_tween.tween_property(object_gfx,"global_position",PlayerCharacter.instance.global_position + Vector2(0,player_y_offset_on_collect),0.55).from(initial_pos)
 	_tween.tween_property(object_gfx,"modulate",Color(Color.WHITE,0),0.5).set_delay(0.35)
 	_tween.tween_property(ground_gfx,"modulate",Color(Color.WHITE,0),0.75)
-	_tween.tween_callback(InventoryManager.add.bind(collectable_type,1)).set_delay(0.65)
+	_tween.tween_callback(InventoryManager.add_collectable.bind(collectable_type,1)).set_delay(0.65)
 	_tween.tween_callback(create_gain_text).set_delay(0.65)
 	while _tween.is_running(): await get_tree().process_frame
 	
