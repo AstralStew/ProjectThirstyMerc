@@ -7,6 +7,7 @@ static var camera : Camera2D = null
 @export var camera_base_offset : Vector2  = Vector2(0,16)
 @export var player_move_target : Node2D
 
+@export var move_to_shopping_start_distance: float = 20.0
 @export var move_to_dialogue_start_distance: float = 20.0
 
 @export_group("READ ONLY")
@@ -17,6 +18,7 @@ static var camera : Camera2D = null
 
 var _click_held_down: bool = false
 var _npc_target:NPCharacter = null
+var _shop_target:ShopCharacter = null
 
 func _enter_tree() -> void:
 	instance = self
@@ -59,13 +61,16 @@ func _physics_process(delta):
 	if _npc_target:
 		if _click_held_down:
 			_npc_target = null
-		#elif global_position.distance_squared_to(_npc_target.global_position) < move_to_dialogue_start_distance**2:
 		elif sqr_distance_to_target < move_to_dialogue_start_distance**2:
 			start_talking()
-		else:
+		elif _npc_target.do_wander:
 			set_movement_target(_npc_target.global_position + Vector2(0,6))
-			#if player_move_target != null:
-				#player_move_target.visible = false
+	elif _shop_target:
+		if _click_held_down:
+			_shop_target = null
+		elif sqr_distance_to_target < move_to_shopping_start_distance**2:
+			start_shopping()
+		#else: set_movement_target(_shop_target.global_position + Vector2(0,6))
 	if _click_held_down:
 		set_movement_target(get_global_mouse_position())
 	if player_move_target != null:
@@ -82,14 +87,30 @@ func _physics_process(delta):
 func start_shopping() -> void:
 	#get_tree().paused = true
 	set_deferred("is_talking", true)
-	set_movement_target(global_position)
+	#set_movement_target(global_position)
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
 	HudManager.start_shop() # .start_dialogue((_npc_target.global_position - global_position)/2)
 
+static func move_to_start_shopping(shop:ShopCharacter) -> void:
+	instance._move_to_start_shopping(shop)
+func _move_to_start_shopping(shop:ShopCharacter) -> void:
+	if _click_held_down: return
+	print_rich(DEBUG_NAME,"MoveToStartShopping > hmm...")
+	if is_using_tool: return
+	if is_talking: return
+	_click_held_down = false
+	print_rich(DEBUG_NAME,"MoveToStartShopping > Setting target shop...")
+	
+	if _npc_target: _npc_target = null
+	_shop_target = shop
+	set_movement_target(_shop_target.global_position)
+
+
 static func stop_shopping() -> void:
 	instance._stop_shopping()
 func _stop_shopping() -> void:
+	_shop_target = null
 	WorldManager.resume_day()
 	Bag.set_tools_usable(true)
 	is_talking = false
@@ -114,8 +135,9 @@ func _move_to_start_dialogue(npc:NPCharacter) -> void:
 	if is_using_tool: return
 	if is_talking: return
 	_click_held_down = false
-	print(DEBUG_NAME,"StartDialogue > Got here!")
+	print(DEBUG_NAME,"MoveToStartDialogue > Setting target npc...")
 	
+	if _shop_target: _shop_target = null
 	_npc_target = npc
 	set_movement_target(_npc_target.global_position)
 
@@ -157,6 +179,7 @@ func adjusting_move_target() -> void:
 		if player_move_target.visible:
 			if _npc_target: 	_circle.size = Vector2.ONE * 12
 			else: 			_circle.size = Vector2.ONE * 6
+			
 			_elapsed += get_physics_process_delta_time()
 			if _elapsed > 1.0:
 				_elapsed = 0

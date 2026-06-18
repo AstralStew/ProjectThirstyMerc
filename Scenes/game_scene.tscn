@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://br5x0uje0cg17" path="res://Resources/Atlases/Characters/NPC1_Body_Side.tres" id="15_olq2e"]
 [ext_resource type="Resource" uid="uid://brk0lv0kl46ty" path="res://Resources/Collectables/ct_silver_necklace.tres" id="15_opjrb"]
 [ext_resource type="Texture2D" uid="uid://c3oqmmsc0djky" path="res://Resources/Atlases/Characters/NPC2_Head_Back.tres" id="15_vbpv4"]
+[ext_resource type="Script" uid="uid://cboevetfqgec8" path="res://Scripts/World/Characters/ShopCharacter.gd" id="16_b14wf"]
 [ext_resource type="Resource" uid="uid://b3ketqrdog68w" path="res://Resources/Collectables/ct_golden_ring.tres" id="16_kut41"]
 [ext_resource type="Texture2D" uid="uid://rkql7bo7rl7j" path="res://Resources/Atlases/Characters/NPC2_Head_Front.tres" id="16_ndfmf"]
 [ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/Characters/NPC1_Head_Back.tres" id="16_w61bx"]
@@ -55,14 +56,14 @@
 [ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/Characters/NPC5_Head_Back.tres" id="40_pwxri"]
 [ext_resource type="Texture2D" uid="uid://b8vqrtpatpf41" path="res://Resources/Atlases/Characters/NPC5_Head_Front.tres" id="41_eeytp"]
 [ext_resource type="Texture2D" uid="uid://is0qvu05ig62" path="res://Resources/Atlases/Characters/NPC5_Head_Side.tres" id="42_jqptc"]
-[ext_resource type="Script" uid="uid://c7yamvfropoc1" path="res://Scripts/World/Shop.gd" id="50_4k3ma"]
+[ext_resource type="Script" uid="uid://c7yamvfropoc1" path="res://Scripts/HUD/ShopUI.gd" id="50_4k3ma"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="50_asuqw"]
 [ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/shop_button_group.tres" id="51_opjrb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbc1q"]
-vertices = PackedVector2Array(-108.89844, 134, -109.89844, 81, -83.90625, 81, -82.89844, 133, -68, 268, -122.96875, 268, -122.03125, 134, -68, 133, 307, -365, 307, -360.34375, 293.07813, -363.04688, 285, -406.8203, -245.07031, -360.42188, -258, -359.35156, -258, -367, -219.09375, -408.8828, -236, -361.7422, -286, -357.04688, -297, -356.14063, -297, -367, -286, -367, 334.90625, -409.70313, 334.2422, -365, -236, -288.71875, -244.07031, -288.27344, -42, -410.04688, -42, -414, -23, -414, -23, -410, 151, -409, 151, -413, 169, -413, 169, -409.10156, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, -318.9922, -414.54688, -318.90625, -414.9297, -261.97656, -414.0703, -261.97656, -409.32813, -318.27344, -367, -10.7109375, -410, -9.7109375, -393, -194.67188, -356, -218.49219, -414.82813, -198.35156, -414.10938, -195.99219, -408.5625, 70.40625, -393, 72.40625, -409, 251.5625, -356.9922, 276.57813, -406.9297, 281.90625, -413, 278.60156, -413)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 0), PackedInt32Array(7, 4, 0, 3), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(11, 21, 22, 8), PackedInt32Array(23, 24, 12, 16), PackedInt32Array(25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(10, 33, 34, 35, 11), PackedInt32Array(19, 36, 37, 38, 39, 20), PackedInt32Array(19, 40, 36), PackedInt32Array(28, 41, 42), PackedInt32Array(43, 15, 44, 45, 46), PackedInt32Array(14, 20, 39, 15), PackedInt32Array(43, 16, 15), PackedInt32Array(42, 43, 46, 25, 28), PackedInt32Array(47, 48, 29), PackedInt32Array(11, 35, 49, 50, 51), PackedInt32Array(50, 52, 51), PackedInt32Array(32, 50, 49, 47, 29), PackedInt32Array(49, 43, 42, 47)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-249, -283, -250, -355, -323, -349, -324, -415, -323, -420, -257, -419, -256.9904, -414.28387, -223.6132, -413.9272, -223, -420, -195, -419, -192.70096, -413.5968, -47, -415, -47, -419, -18, -419, -18, -415, -6, -415, -5, -398, 66, -398, 68, -414, 146, -414, 146, -418, 174, -418, 174, -414, 273, -412, 275, -418, 285, -418, 288, -412, 340, -415, 339, -349, 298, -357, 297, -285, 282, -285, 280, -357, 252, -352, -195, -351, -231, -356, -231, -284), PackedVector2Array(-115, 76, -79, 76, -78, 128, -63, 128, -63, 273, -128, 273, -127, 129, -114, 129)])
+vertices = PackedVector2Array(-108.89844, 134, -109.89844, 81, -83.90625, 81, -82.89844, 133, -68, 268, -122.96875, 268, -122.03125, 134, -68, 133, 307, -365, 307, -360.34375, 293.07813, -363.04688, 285, -406.8203, -245.07031, -360.42188, -258, -359.35156, -258, -367, -219.09375, -408.8828, -236, -361.7422, -286, -357.04688, -297, -356.14063, -297, -367, -286, -367, 334.90625, -409.70313, 334.2422, -365, -236, -288.71875, -244.07031, -288.27344, -42, -410.04688, -42, -414, -23, -414, -23, -410, 151, -409, 151, -413, 169, -413, 169, -409.10156, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, -318.9922, -414.54688, -318.90625, -414.9297, -261.97656, -414.0703, -261.97656, -409.32813, -318.27344, -367, -194.67188, -356, -218.49219, -414.82813, -198.35156, -414.10938, -195.99219, -408.5625, -4.09375, -400, 251.5625, -356.9922, 276.57813, -406.9297, 281.90625, -413, 68.60156, -400, 71.60156, -409, 278.60156, -413, -9.09375, -410)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 0), PackedInt32Array(7, 4, 0, 3), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(11, 21, 22, 8), PackedInt32Array(23, 24, 12, 16), PackedInt32Array(25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(10, 33, 34, 35, 11), PackedInt32Array(19, 36, 37, 38, 39, 20), PackedInt32Array(19, 40, 36), PackedInt32Array(41, 15, 42, 43, 44), PackedInt32Array(14, 20, 39, 15), PackedInt32Array(41, 16, 15), PackedInt32Array(45, 41, 44, 25, 28), PackedInt32Array(11, 35, 46, 47, 48), PackedInt32Array(49, 50, 29), PackedInt32Array(47, 51, 48), PackedInt32Array(29, 32, 47, 46, 41, 49), PackedInt32Array(45, 49, 41), PackedInt32Array(45, 28, 52)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-249, -283, -250, -355, -323, -349, -324, -415, -323, -420, -257, -419, -256.9904, -414.28387, -223.6132, -413.9272, -223, -420, -195, -419, -192.70096, -413.5968, -47, -415, -47, -419, -18, -419, -18, -415, -6, -415, -1, -405, 65, -405, 68, -414, 146, -414, 146, -418, 174, -418, 174, -414, 273, -412, 275, -418, 285, -418, 288, -412, 340, -415, 339, -349, 298, -357, 297, -285, 282, -285, 280, -357, 252, -352, -195, -351, -231, -356, -231, -284), PackedVector2Array(-115, 76, -79, 76, -78, 128, -63, 128, -63, 273, -128, 273, -127, 129, -114, 129)])
 parsed_geometry_type = 1
 parsed_collision_mask = 8192
 source_geometry_mode = 1
@@ -603,36 +604,6 @@ visible = false
 modulate = Color(1, 1, 1, 0.62352943)
 texture = ExtResource("1_x87qo")
 
-[node name="SpriteSheetBuildings79" type="Sprite2D" parent="World/Level" unique_id=245465296]
-texture_filter = 1
-position = Vector2(209, -305)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings80" type="Sprite2D" parent="World/Level" unique_id=1860914253]
-texture_filter = 1
-position = Vector2(159, -312)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings81" type="Sprite2D" parent="World/Level" unique_id=91466515]
-texture_filter = 1
-position = Vector2(-128, -294)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings82" type="Sprite2D" parent="World/Level" unique_id=765222112]
-texture_filter = 1
-position = Vector2(-178, -301)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
 [node name="Spawner_MiddleTop" type="ReferenceRect" parent="World/Level" unique_id=2056892345 groups=["spawners"]]
 z_index = 500
 offset_left = -265.0
@@ -765,554 +736,62 @@ ExtResource("14_asuqw"): 3
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
-[node name="SpriteSheetBuildings51" type="Sprite2D" parent="World/Level" unique_id=2045104223]
-texture_filter = 1
-position = Vector2(-404, -123)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings52" type="Sprite2D" parent="World/Level" unique_id=231130183]
-texture_filter = 1
-position = Vector2(-454, -130)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings53" type="Sprite2D" parent="World/Level" unique_id=1973844517]
-texture_filter = 1
-position = Vector2(-624, -124)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings54" type="Sprite2D" parent="World/Level" unique_id=795099077]
-texture_filter = 1
-position = Vector2(-674, -131)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings" type="Sprite2D" parent="World/Level" unique_id=1860380338]
-texture_filter = 1
-position = Vector2(-248, -86)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(120, 208, 32, 40)
-
-[node name="SpriteSheetBuildings2" type="Sprite2D" parent="World/Level" unique_id=1428497393]
-texture_filter = 1
-position = Vector2(-222, -89)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(152, 208, 32, 32)
-
-[node name="SpriteSheetBuildings3" type="Sprite2D" parent="World/Level" unique_id=2049927248]
-texture_filter = 1
-position = Vector2(-96, -106)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(192, 208, 32, 32)
-
-[node name="SpriteSheetBuildings4" type="Sprite2D" parent="World/Level" unique_id=1496133295]
-texture_filter = 1
-position = Vector2(-129, -106)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(192, 176, 32, 32)
-
-[node name="SpriteSheetBuildings5" type="Sprite2D" parent="World/Level" unique_id=988957049]
-texture_filter = 1
-position = Vector2(-112, -129)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 176, 48, 56)
-
-[node name="SpriteSheetBuildings6" type="Sprite2D" parent="World/Level" unique_id=707406391]
-texture_filter = 1
-position = Vector2(-195, -104)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(296, 184, 48, 48)
-
-[node name="SpriteSheetBuildings7" type="Sprite2D" parent="World/Level" unique_id=49388917]
-texture_filter = 1
-position = Vector2(-308, -433)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(96, 200, 16, 32)
-
-[node name="SpriteSheetBuildings8" type="Sprite2D" parent="World/Level" unique_id=1530375798]
-texture_filter = 1
-position = Vector2(-288, -434)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(96, 200, 16, 32)
-
-[node name="SpriteSheetBuildings9" type="Sprite2D" parent="World/Level" unique_id=408483069]
-texture_filter = 1
-position = Vector2(-270, -431)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(96, 200, 16, 32)
-
-[node name="SpriteSheetBuildings10" type="Sprite2D" parent="World/Level" unique_id=640173512]
-texture_filter = 1
-position = Vector2(-207, -435)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(96, 200, 16, 32)
-
-[node name="SpriteSheetBuildings11" type="Sprite2D" parent="World/Level" unique_id=509639010]
-texture_filter = 1
-position = Vector2(-37, -435)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(96, 200, 16, 32)
-
-[node name="SpriteSheetBuildings12" type="Sprite2D" parent="World/Level" unique_id=627153950]
-texture_filter = 1
-position = Vector2(159, -439)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(96, 200, 16, 32)
-
-[node name="SpriteSheetBuildings13" type="Sprite2D" parent="World/Level" unique_id=1019987919]
-texture_filter = 1
-position = Vector2(-22, -429)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings14" type="Sprite2D" parent="World/Level" unique_id=1722893032]
-texture_filter = 1
-position = Vector2(-297, -422)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings15" type="Sprite2D" parent="World/Level" unique_id=1578158715]
-texture_filter = 1
-position = Vector2(-280, -417)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings18" type="Sprite2D" parent="World/Level" unique_id=1865885616]
-texture_filter = 1
-position = Vector2(-44, -367)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings19" type="Sprite2D" parent="World/Level" unique_id=1240466420]
-texture_filter = 1
-position = Vector2(321, -399)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings20" type="Sprite2D" parent="World/Level" unique_id=43033975]
-texture_filter = 1
-position = Vector2(-291, -307)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings21" type="Sprite2D" parent="World/Level" unique_id=796916819]
-texture_filter = 1
-position = Vector2(425, 233)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings22" type="Sprite2D" parent="World/Level" unique_id=150937733]
-texture_filter = 1
-position = Vector2(-120, 262)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(64, 208, 16, 16)
-
-[node name="SpriteSheetBuildings59" type="Sprite2D" parent="World/Level" unique_id=1764188044]
-texture_filter = 1
-position = Vector2(-897, -114)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings60" type="Sprite2D" parent="World/Level" unique_id=114086343]
-texture_filter = 1
-position = Vector2(-947, -121)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings61" type="Sprite2D" parent="World/Level" unique_id=1875601353]
-texture_filter = 1
-position = Vector2(-998, -241)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings62" type="Sprite2D" parent="World/Level" unique_id=949437222]
-texture_filter = 1
-position = Vector2(-1048, -248)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings63" type="Sprite2D" parent="World/Level" unique_id=369476392]
-texture_filter = 1
-position = Vector2(-994, -175)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings64" type="Sprite2D" parent="World/Level" unique_id=1433181421]
-texture_filter = 1
-position = Vector2(-1044, -182)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings65" type="Sprite2D" parent="World/Level" unique_id=2101119766]
-texture_filter = 1
-position = Vector2(-1008, -349)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings66" type="Sprite2D" parent="World/Level" unique_id=1985337503]
-texture_filter = 1
-position = Vector2(-1058, -356)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings67" type="Sprite2D" parent="World/Level" unique_id=623996980]
-texture_filter = 1
-position = Vector2(-1143, -477)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings68" type="Sprite2D" parent="World/Level" unique_id=997066885]
-texture_filter = 1
-position = Vector2(-1193, -484)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings69" type="Sprite2D" parent="World/Level" unique_id=1045223757]
-texture_filter = 1
-position = Vector2(-1056, -507)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings70" type="Sprite2D" parent="World/Level" unique_id=1355954811]
-texture_filter = 1
-position = Vector2(-1106, -514)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings71" type="Sprite2D" parent="World/Level" unique_id=504711986]
-texture_filter = 1
-position = Vector2(-1049, -389)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings72" type="Sprite2D" parent="World/Level" unique_id=638235458]
-texture_filter = 1
-position = Vector2(-1099, -396)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings73" type="Sprite2D" parent="World/Level" unique_id=1951550593]
-texture_filter = 1
-position = Vector2(-1172, -390)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings74" type="Sprite2D" parent="World/Level" unique_id=1252090103]
-texture_filter = 1
-position = Vector2(-1222, -397)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings75" type="Sprite2D" parent="World/Level" unique_id=461259002]
-texture_filter = 1
-position = Vector2(-994, -113)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings76" type="Sprite2D" parent="World/Level" unique_id=968269895]
-texture_filter = 1
-position = Vector2(-1044, -120)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings77" type="Sprite2D" parent="World/Level" unique_id=1202598470]
-texture_filter = 1
-position = Vector2(-62, -481)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings78" type="Sprite2D" parent="World/Level" unique_id=1908757007]
-texture_filter = 1
-position = Vector2(-112, -488)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings24" type="Sprite2D" parent="World/Level" unique_id=342539129]
-texture_filter = 1
-position = Vector2(-361, -102)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings44" type="Sprite2D" parent="World/Level" unique_id=1534614326]
-texture_filter = 1
-position = Vector2(-530, -95)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings45" type="Sprite2D" parent="World/Level" unique_id=679543493]
-texture_filter = 1
-position = Vector2(-645, -100)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings46" type="Sprite2D" parent="World/Level" unique_id=697930611]
-texture_filter = 1
-position = Vector2(-922, -106)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings47" type="Sprite2D" parent="World/Level" unique_id=1761173989]
-texture_filter = 1
-position = Vector2(-1097, -366)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings48" type="Sprite2D" parent="World/Level" unique_id=918145493]
-texture_filter = 1
-position = Vector2(-1079, -502)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings49" type="Sprite2D" parent="World/Level" unique_id=19869245]
-texture_filter = 1
-position = Vector2(-148, -520)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings50" type="Sprite2D" parent="World/Level" unique_id=827998641]
-texture_filter = 1
-position = Vector2(82, -503)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 88, 48, 40)
-
-[node name="SpriteSheetBuildings25" type="Sprite2D" parent="World/Level" unique_id=1420871205]
-texture_filter = 1
-position = Vector2(-329, -232)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings26" type="Sprite2D" parent="World/Level" unique_id=1065140873]
-texture_filter = 1
-position = Vector2(-119, -265)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings27" type="Sprite2D" parent="World/Level" unique_id=2141695880]
-texture_filter = 1
-position = Vector2(149, -487)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings28" type="Sprite2D" parent="World/Level" unique_id=447468064]
-texture_filter = 1
-position = Vector2(-32, -485)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings29" type="Sprite2D" parent="World/Level" unique_id=1187511307]
-texture_filter = 1
-position = Vector2(-240, -434)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings30" type="Sprite2D" parent="World/Level" unique_id=1344682412]
-texture_filter = 1
-position = Vector2(-451, -91)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings31" type="Sprite2D" parent="World/Level" unique_id=1331118392]
-texture_filter = 1
-position = Vector2(-609, -56)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings32" type="Sprite2D" parent="World/Level" unique_id=1720819066]
-texture_filter = 1
-position = Vector2(-692, -96)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings33" type="Sprite2D" parent="World/Level" unique_id=1745162344]
-texture_filter = 1
-position = Vector2(-862, -110)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings34" type="Sprite2D" parent="World/Level" unique_id=1687087206]
-texture_filter = 1
-position = Vector2(-1003, -127)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings35" type="Sprite2D" parent="World/Level" unique_id=587244609]
-texture_filter = 1
-position = Vector2(-1044, -231)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings36" type="Sprite2D" parent="World/Level" unique_id=1592360151]
-texture_filter = 1
-position = Vector2(-1023, -335)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings37" type="Sprite2D" parent="World/Level" unique_id=1740129090]
-texture_filter = 1
-position = Vector2(-1127, -409)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings38" type="Sprite2D" parent="World/Level" unique_id=655529000]
-texture_filter = 1
-position = Vector2(-1051, -480)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings39" type="Sprite2D" parent="World/Level" unique_id=1635718528]
-texture_filter = 1
-position = Vector2(-1189, -516)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings40" type="Sprite2D" parent="World/Level" unique_id=570880121]
-texture_filter = 1
-position = Vector2(-1150, -452)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings41" type="Sprite2D" parent="World/Level" unique_id=724918597]
-texture_filter = 1
-position = Vector2(-1043, -373)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings42" type="Sprite2D" parent="World/Level" unique_id=678502203]
-texture_filter = 1
-position = Vector2(-1210, -372)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings43" type="Sprite2D" parent="World/Level" unique_id=599413756]
-texture_filter = 1
-position = Vector2(-1089, -103)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(240, 128, 32, 32)
-
-[node name="SpriteSheetBuildings23" type="Sprite2D" parent="World/Level" unique_id=1457057524]
-texture_filter = 1
-position = Vector2(-72, 262)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(64, 208, 16, 16)
-
-[node name="SpriteSheetBuildings16" type="Sprite2D" parent="World/Level" unique_id=869091230]
-texture_filter = 1
-position = Vector2(-54, -365)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
-[node name="SpriteSheetBuildings17" type="Sprite2D" parent="World/Level" unique_id=1984139002]
-texture_filter = 1
-position = Vector2(-48, -359)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
-
 [node name="Entities" type="Node2D" parent="World" unique_id=1378868865]
 y_sort_enabled = true
 texture_filter = 1
 
-[node name="Shop" type="Sprite2D" parent="World/Entities" unique_id=1055891014]
-position = Vector2(32, -431)
+[node name="ShopCharacter" type="Node2D" parent="World/Entities" unique_id=472469870]
+position = Vector2(31, -400)
+script = ExtResource("16_b14wf")
+metadata/_custom_type_script = "uid://cboevetfqgec8"
+
+[node name="Sprite2D" type="Sprite2D" parent="World/Entities/ShopCharacter" unique_id=754760174]
+position = Vector2(3, -27)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
-region_rect = Rect2(200, 0, 88, 72)
+region_rect = Rect2(208, 8, 80, 64)
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/ShopCharacter/Sprite2D" unique_id=1617463263]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -35.0
+offset_right = -42.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="QuestionMark" type="Label" parent="World/Entities/ShopCharacter" unique_id=1562541479]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -70.62369
+offset_right = 17.0
+offset_bottom = -18.123688
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2810022, 1.2810022)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("3_6h5vk")
+theme_override_font_sizes/font_size = 24
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Shop2" type="Sprite2D" parent="World/Entities" unique_id=2112917581]
 position = Vector2(-113, -427)
@@ -1335,6 +814,7 @@ motion_mode = 1
 safe_margin = 3.0
 script = ExtResource("2_fiftr")
 player_move_target = NodePath("../PlayerMoveTarget")
+move_to_shopping_start_distance = 4.0
 body = NodePath("Body")
 head = NodePath("Head")
 movement_speed = 40.0
@@ -1437,6 +917,69 @@ debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
 [node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter" unique_id=2137400028]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter2" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1089761424 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(126, -384)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("11_gqlrj")
+wander_points = Array[Vector2]([Vector2(0, 0), Vector2(200, 200)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("13_obvom")
+body_front = ExtResource("13_uaga3")
+body_side = ExtResource("15_olq2e")
+head_back = ExtResource("16_w61bx")
+head_front = ExtResource("17_uvj3q")
+head_side = ExtResource("18_mqs2o")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter2" unique_id=1694146432]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("13_uaga3")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter2" unique_id=1878871244]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("17_uvj3q")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter2" unique_id=1666107541]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter2" unique_id=119417887]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter2" unique_id=1527824473]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -1735,36 +1278,6 @@ y_sort_enabled = true
 
 [node name="Objects" parent="World/Entities" unique_id=560350465 instance=ExtResource("31_p4uwf")]
 
-[node name="SpriteSheetBuildings55" type="Sprite2D" parent="World" unique_id=1742407300]
-texture_filter = 1
-position = Vector2(-576, -71)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings56" type="Sprite2D" parent="World" unique_id=1144039098]
-texture_filter = 1
-position = Vector2(-626, -78)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings57" type="Sprite2D" parent="World" unique_id=686008148]
-texture_filter = 1
-position = Vector2(-576, -71)
-texture = ExtResource("4_kiiqx")
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
-[node name="SpriteSheetBuildings58" type="Sprite2D" parent="World" unique_id=163499035]
-texture_filter = 1
-position = Vector2(-626, -78)
-texture = ExtResource("4_kiiqx")
-flip_h = true
-region_enabled = true
-region_rect = Rect2(288, 120, 56, 40)
-
 [node name="Effects" type="Node2D" parent="World" unique_id=1779975020]
 z_index = 10
 texture_filter = 1
@@ -1817,7 +1330,7 @@ render_target_update_mode = 0
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
-[node name="Shop" type="Control" parent="HUD" unique_id=363914054]
+[node name="Shop" type="Control" parent="HUD" unique_id=633532951]
 visible = false
 z_index = -10
 texture_filter = 1
@@ -2996,7 +2509,9 @@ one_shot = true
 
 [node name="Transitions" type="Node" parent="." unique_id=401277600]
 
+[connection signal="gui_input" from="World/Entities/ShopCharacter/Sprite2D/ClickBoundary" to="World/Entities/ShopCharacter" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter/ClickBoundary" to="World/Entities/Characters/NPCharacter" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/NPCharacter2/ClickBoundary" to="World/Entities/Characters/NPCharacter2" method="_on_gui_input"]
 [connection signal="pressed" from="HUD/Shop/Tools/Purchase" to="HUD/Shop" method="_on_purchase_pressed"]
 [connection signal="pressed" from="HUD/Shop/Tools/Leave" to="HUD/Shop" method="_on_leave_pressed"]
 [connection signal="pressed" from="HUD/Dialogue/DialoguePlayer/Button" to="Managers/HudManager" method="stop_dialogue"]

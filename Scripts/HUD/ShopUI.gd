@@ -1,4 +1,4 @@
-class_name Shop extends Control
+class_name ShopUI extends Control
 var DEBUG_NAME: String:
 	get: return "[b][" + name + "][/b] "
 
