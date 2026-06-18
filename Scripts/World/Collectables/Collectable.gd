@@ -4,6 +4,7 @@ class_name Collectable extends Area2D
 @onready var real_gfx: Control = $RealGfx
 @onready var object_gfx: Control = $RealGfx/ObjectGfx
 @onready var ground_gfx: ColorRect = $RealGfx/GroundGfx
+@onready var real_sprite: Sprite2D = $RealGfx/ObjectGfx/RealSprite
 
 
 @export var collectable_type: CollectableType = null
@@ -23,7 +24,10 @@ func _ready() -> void:
 	buried_gfx.visible = false
 	real_gfx.visible = false
 	real_gfx.modulate = Color(Color.WHITE,0)
-	
+
+func setup(type:CollectableType) -> void:
+	collectable_type = type
+	real_sprite.texture = collectable_type.small_texture
 
 
 var _tween : Tween

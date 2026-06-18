@@ -11,50 +11,51 @@
 [ext_resource type="Texture2D" uid="uid://1n1v3vbosvvs" path="res://Assets/Images/Prototyping/footprints.png" id="6_5dgvu"]
 [ext_resource type="Script" uid="uid://cmai64jlhstqf" path="res://Scripts/World/Characters/Footprints.gd" id="7_uscyt"]
 [ext_resource type="PackedScene" uid="uid://dglq44i5kh165" path="res://Scenes/Prefabs/Collectables/sea_glass.tscn" id="9_np3vi"]
+[ext_resource type="Script" uid="uid://co0h4xrb1vtwp" path="res://Scripts/World/Characters/SpawnBox.gd" id="10_4k3ma"]
 [ext_resource type="PackedScene" uid="uid://cm6wpeer5ojsl" path="res://Scenes/Prefabs/Collectables/pottery_sherd.tscn" id="10_mipjh"]
 [ext_resource type="PackedScene" uid="uid://drsua3l5ohrrx" path="res://Scenes/Prefabs/Collectables/silver_necklace.tscn" id="11_aq00n"]
 [ext_resource type="Script" uid="uid://daf0h2p3no1m4" path="res://Scripts/World/Characters/NPCharacter.gd" id="11_gqlrj"]
 [ext_resource type="Texture2D" uid="uid://u15xmbhxp7nb" path="res://Assets/Images/SpriteSheet_Items_Big.png" id="11_t53j4"]
-[ext_resource type="Texture2D" uid="uid://siy84y14m0q1" path="res://Resources/Atlases/NPC2_Body_Back.tres" id="12_atg6p"]
+[ext_resource type="Texture2D" uid="uid://siy84y14m0q1" path="res://Resources/Atlases/Characters/NPC2_Body_Back.tres" id="12_atg6p"]
 [ext_resource type="Texture2D" uid="uid://c20dmq62ii6sj" path="res://Assets/Images/SpriteSheet_Items_Small.png" id="12_uaga3"]
-[ext_resource type="Texture2D" uid="uid://csane6fusip" path="res://Resources/Atlases/NPC1_Body_Back.tres" id="13_obvom"]
-[ext_resource type="Texture2D" uid="uid://b6b8jl8chpgo2" path="res://Resources/Atlases/NPC1_Body_Front.tres" id="13_uaga3"]
-[ext_resource type="Texture2D" uid="uid://dohq5g6xmy27s" path="res://Resources/Atlases/NPC2_Body_Front.tres" id="13_yf828"]
-[ext_resource type="Texture2D" uid="uid://brm0n3p4vsmho" path="res://Resources/Atlases/NPC2_Body_Side.tres" id="14_8xidt"]
-[ext_resource type="Texture2D" uid="uid://br5x0uje0cg17" path="res://Resources/Atlases/NPC1_Body_Side.tres" id="15_olq2e"]
-[ext_resource type="Texture2D" uid="uid://c3oqmmsc0djky" path="res://Resources/Atlases/NPC2_Head_Back.tres" id="15_vbpv4"]
-[ext_resource type="Texture2D" uid="uid://rkql7bo7rl7j" path="res://Resources/Atlases/NPC2_Head_Front.tres" id="16_ndfmf"]
-[ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/NPC1_Head_Back.tres" id="16_w61bx"]
+[ext_resource type="Texture2D" uid="uid://csane6fusip" path="res://Resources/Atlases/Characters/NPC1_Body_Back.tres" id="13_obvom"]
+[ext_resource type="Texture2D" uid="uid://b6b8jl8chpgo2" path="res://Resources/Atlases/Characters/NPC1_Body_Front.tres" id="13_uaga3"]
+[ext_resource type="Texture2D" uid="uid://dohq5g6xmy27s" path="res://Resources/Atlases/Characters/NPC2_Body_Front.tres" id="13_yf828"]
+[ext_resource type="Texture2D" uid="uid://brm0n3p4vsmho" path="res://Resources/Atlases/Characters/NPC2_Body_Side.tres" id="14_8xidt"]
+[ext_resource type="Texture2D" uid="uid://br5x0uje0cg17" path="res://Resources/Atlases/Characters/NPC1_Body_Side.tres" id="15_olq2e"]
+[ext_resource type="Texture2D" uid="uid://c3oqmmsc0djky" path="res://Resources/Atlases/Characters/NPC2_Head_Back.tres" id="15_vbpv4"]
+[ext_resource type="Texture2D" uid="uid://rkql7bo7rl7j" path="res://Resources/Atlases/Characters/NPC2_Head_Front.tres" id="16_ndfmf"]
+[ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/Characters/NPC1_Head_Back.tres" id="16_w61bx"]
 [ext_resource type="PackedScene" uid="uid://c2krr3nadpsa7" path="res://Scenes/Prefabs/Collectables/bottlecap.tscn" id="17_8m72m"]
-[ext_resource type="Texture2D" uid="uid://0lk6itks1din" path="res://Resources/Atlases/NPC2_Head_Side.tres" id="17_nys34"]
-[ext_resource type="Texture2D" uid="uid://dvqyputrheado" path="res://Resources/Atlases/NPC1_Head_Front.tres" id="17_uvj3q"]
+[ext_resource type="Texture2D" uid="uid://0lk6itks1din" path="res://Resources/Atlases/Characters/NPC2_Head_Side.tres" id="17_nys34"]
+[ext_resource type="Texture2D" uid="uid://dvqyputrheado" path="res://Resources/Atlases/Characters/NPC1_Head_Front.tres" id="17_uvj3q"]
 [ext_resource type="PackedScene" uid="uid://d0lqhbfmqddh0" path="res://Scenes/Prefabs/Collectables/golden_ring.tscn" id="18_m8c54"]
-[ext_resource type="Texture2D" uid="uid://w773s5rkat5q" path="res://Resources/Atlases/NPC1_Head_Side.tres" id="18_mqs2o"]
+[ext_resource type="Texture2D" uid="uid://w773s5rkat5q" path="res://Resources/Atlases/Characters/NPC1_Head_Side.tres" id="18_mqs2o"]
 [ext_resource type="Script" uid="uid://dwa7d63qu5514" path="res://Scripts/HUD/Notepad.gd" id="21_aq00n"]
-[ext_resource type="Texture2D" uid="uid://tbv6letytyi6" path="res://Resources/Atlases/Enemy_Crab.tres" id="25_atg6p"]
-[ext_resource type="Texture2D" uid="uid://ktjkhfytrrma" path="res://Resources/Atlases/NPC3_Body_Back.tres" id="25_opjrb"]
-[ext_resource type="Texture2D" uid="uid://biprmgbcrei4g" path="res://Resources/Atlases/NPC3_Body_Front.tres" id="26_kut41"]
+[ext_resource type="Texture2D" uid="uid://tbv6letytyi6" path="res://Resources/Atlases/Characters/Enemy_Crab.tres" id="25_atg6p"]
+[ext_resource type="Texture2D" uid="uid://ktjkhfytrrma" path="res://Resources/Atlases/Characters/NPC3_Body_Back.tres" id="25_opjrb"]
+[ext_resource type="Texture2D" uid="uid://biprmgbcrei4g" path="res://Resources/Atlases/Characters/NPC3_Body_Front.tres" id="26_kut41"]
 [ext_resource type="Script" uid="uid://b1gvdf7johau2" path="res://Scripts/HUD/Phone.gd" id="26_pbc1q"]
-[ext_resource type="Texture2D" uid="uid://4nmv2iatu1bf" path="res://Resources/Atlases/NPC3_Body_Side.tres" id="27_b14wf"]
-[ext_resource type="Texture2D" uid="uid://b1p3eyvui0exq" path="res://Resources/Atlases/NPC3_Head_Back.tres" id="28_5v1oo"]
+[ext_resource type="Texture2D" uid="uid://4nmv2iatu1bf" path="res://Resources/Atlases/Characters/NPC3_Body_Side.tres" id="27_b14wf"]
+[ext_resource type="Texture2D" uid="uid://b1p3eyvui0exq" path="res://Resources/Atlases/Characters/NPC3_Head_Back.tres" id="28_5v1oo"]
 [ext_resource type="FontVariation" uid="uid://qaiu8rw1746q" path="res://Resources/Theme/Jersey10-Adjusted.tres" id="28_e624q"]
-[ext_resource type="Texture2D" uid="uid://b0gyien0bc7i6" path="res://Resources/Atlases/NPC3_Head_Front.tres" id="29_skhme"]
+[ext_resource type="Texture2D" uid="uid://b0gyien0bc7i6" path="res://Resources/Atlases/Characters/NPC3_Head_Front.tres" id="29_skhme"]
 [ext_resource type="Texture2D" uid="uid://cgibv2e2eexru" path="res://Assets/Images/SpriteSheet_Axolotal.png" id="29_t53j4"]
-[ext_resource type="Texture2D" uid="uid://cnkb3hs7gq4na" path="res://Resources/Atlases/NPC3_Head_Side.tres" id="30_a6xwo"]
-[ext_resource type="Texture2D" uid="uid://oel3xdwluryf" path="res://Resources/Atlases/NPC4_Body_Back.tres" id="31_1ol4r"]
+[ext_resource type="Texture2D" uid="uid://cnkb3hs7gq4na" path="res://Resources/Atlases/Characters/NPC3_Head_Side.tres" id="30_a6xwo"]
+[ext_resource type="Texture2D" uid="uid://oel3xdwluryf" path="res://Resources/Atlases/Characters/NPC4_Body_Back.tres" id="31_1ol4r"]
 [ext_resource type="PackedScene" uid="uid://btm2gq77t88ij" path="res://Scenes/LevelDesign/objects.tscn" id="31_p4uwf"]
-[ext_resource type="Texture2D" uid="uid://dlqu2piivak38" path="res://Resources/Atlases/NPC4_Body_Front.tres" id="32_2e2dr"]
+[ext_resource type="Texture2D" uid="uid://dlqu2piivak38" path="res://Resources/Atlases/Characters/NPC4_Body_Front.tres" id="32_2e2dr"]
 [ext_resource type="Script" uid="uid://coglnfk5ae7i0" path="res://Scripts/HUD/Bag.gd" id="32_atg6p"]
-[ext_resource type="Texture2D" uid="uid://cwifbyxf2fyux" path="res://Resources/Atlases/NPC4_Body_Side.tres" id="33_k55q4"]
-[ext_resource type="Texture2D" uid="uid://sirysvl5qoij" path="res://Resources/Atlases/NPC4_Head_Back.tres" id="34_fwp57"]
-[ext_resource type="Texture2D" uid="uid://dtvnf7vctfl7l" path="res://Resources/Atlases/NPC4_Head_Front.tres" id="35_yp5f6"]
-[ext_resource type="Texture2D" uid="uid://8gmjkbgfjp2a" path="res://Resources/Atlases/NPC4_Head_Side.tres" id="36_jr3pb"]
-[ext_resource type="Texture2D" uid="uid://cic4i2mi66nnl" path="res://Resources/Atlases/NPC5_Body_Back.tres" id="37_3miyi"]
-[ext_resource type="Texture2D" uid="uid://bcfmnnnjh048t" path="res://Resources/Atlases/NPC5_Body_Front.tres" id="38_5ow7q"]
-[ext_resource type="Texture2D" uid="uid://dg0hsg80tqrg2" path="res://Resources/Atlases/NPC5_Body_Side.tres" id="39_7iwal"]
-[ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/NPC5_Head_Back.tres" id="40_pwxri"]
-[ext_resource type="Texture2D" uid="uid://b8vqrtpatpf41" path="res://Resources/Atlases/NPC5_Head_Front.tres" id="41_eeytp"]
-[ext_resource type="Texture2D" uid="uid://is0qvu05ig62" path="res://Resources/Atlases/NPC5_Head_Side.tres" id="42_jqptc"]
+[ext_resource type="Texture2D" uid="uid://cwifbyxf2fyux" path="res://Resources/Atlases/Characters/NPC4_Body_Side.tres" id="33_k55q4"]
+[ext_resource type="Texture2D" uid="uid://sirysvl5qoij" path="res://Resources/Atlases/Characters/NPC4_Head_Back.tres" id="34_fwp57"]
+[ext_resource type="Texture2D" uid="uid://dtvnf7vctfl7l" path="res://Resources/Atlases/Characters/NPC4_Head_Front.tres" id="35_yp5f6"]
+[ext_resource type="Texture2D" uid="uid://8gmjkbgfjp2a" path="res://Resources/Atlases/Characters/NPC4_Head_Side.tres" id="36_jr3pb"]
+[ext_resource type="Texture2D" uid="uid://cic4i2mi66nnl" path="res://Resources/Atlases/Characters/NPC5_Body_Back.tres" id="37_3miyi"]
+[ext_resource type="Texture2D" uid="uid://bcfmnnnjh048t" path="res://Resources/Atlases/Characters/NPC5_Body_Front.tres" id="38_5ow7q"]
+[ext_resource type="Texture2D" uid="uid://dg0hsg80tqrg2" path="res://Resources/Atlases/Characters/NPC5_Body_Side.tres" id="39_7iwal"]
+[ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/Characters/NPC5_Head_Back.tres" id="40_pwxri"]
+[ext_resource type="Texture2D" uid="uid://b8vqrtpatpf41" path="res://Resources/Atlases/Characters/NPC5_Head_Front.tres" id="41_eeytp"]
+[ext_resource type="Texture2D" uid="uid://is0qvu05ig62" path="res://Resources/Atlases/Characters/NPC5_Head_Side.tres" id="42_jqptc"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="50_asuqw"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbc1q"]
@@ -275,14 +276,27 @@ anti_aliasing = false
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lafet"]
 bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juer4"]
-bg_color = Color(0.97, 0.582, 0.6596001, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e2dr"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6fju"]
 content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
-content_margin_bottom = 10.0
+content_margin_bottom = 18.0
 bg_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
 border_width_left = 1
 border_width_top = 1
@@ -296,10 +310,6 @@ corner_radius_bottom_left = 5
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2gex"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiftr"]
-bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
-anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5q52j"]
 content_margin_left = 0.0
@@ -535,6 +545,16 @@ texture = ExtResource("11_t53j4")
 visible = false
 position = Vector2(43, 5)
 texture = ExtResource("12_uaga3")
+
+[node name="SpawnBox" type="ReferenceRect" parent="World/Level" unique_id=2056892345]
+offset_left = -1228.0
+offset_top = -555.0
+offset_right = -977.0
+offset_bottom = -75.0
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+script = ExtResource("10_4k3ma")
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
 [node name="Entities" type="Node2D" parent="World" unique_id=1378868865]
 y_sort_enabled = true
@@ -960,261 +980,347 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_atg6p")
 y_sort_enabled = true
 
 [node name="Bottlecap" parent="World/Entities/Collectables" unique_id=1041127925 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(130, 0)
 
 [node name="Bottlecap2" parent="World/Entities/Collectables" unique_id=1651950117 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-181, -252)
 
 [node name="Bottlecap3" parent="World/Entities/Collectables" unique_id=35470227 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(19, -263)
 
 [node name="Bottlecap4" parent="World/Entities/Collectables" unique_id=1292016246 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(61, -217)
 
 [node name="Bottlecap5" parent="World/Entities/Collectables" unique_id=90311249 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(187, -253)
 
 [node name="Bottlecap6" parent="World/Entities/Collectables" unique_id=1342601198 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(266, -221)
 
 [node name="Bottlecap7" parent="World/Entities/Collectables" unique_id=1992446933 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(144, -208)
 
 [node name="Bottlecap8" parent="World/Entities/Collectables" unique_id=201470584 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-63, -229)
 
 [node name="Bottlecap9" parent="World/Entities/Collectables" unique_id=1999511972 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-179, -189)
 
 [node name="Bottlecap10" parent="World/Entities/Collectables" unique_id=612476242 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-280, -126)
 
 [node name="Bottlecap11" parent="World/Entities/Collectables" unique_id=2106159742 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-53, -88)
 
 [node name="Bottlecap12" parent="World/Entities/Collectables" unique_id=1099072785 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(170, -148)
 
 [node name="Bottlecap13" parent="World/Entities/Collectables" unique_id=915439108 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(320, -16)
 
 [node name="Bottlecap14" parent="World/Entities/Collectables" unique_id=1660084702 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-187, -53)
 
 [node name="Bottlecap15" parent="World/Entities/Collectables" unique_id=140498170 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-251, 87)
 
 [node name="Bottlecap16" parent="World/Entities/Collectables" unique_id=2125085874 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(50, 125)
 
 [node name="Bottlecap17" parent="World/Entities/Collectables" unique_id=881779319 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(96, -54)
 
 [node name="SeaGlass" parent="World/Entities/Collectables" unique_id=2112377645 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-106, 51)
 
 [node name="SeaGlass2" parent="World/Entities/Collectables" unique_id=1660070652 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-254, -41)
 
 [node name="SeaGlass3" parent="World/Entities/Collectables" unique_id=915539701 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(194, -51)
 
 [node name="SeaGlass4" parent="World/Entities/Collectables" unique_id=1111803326 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(333, 155)
 
 [node name="SeaGlass5" parent="World/Entities/Collectables" unique_id=1741081280 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(131, 213)
 
 [node name="SeaGlass6" parent="World/Entities/Collectables" unique_id=1946191627 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-77, 216)
 
 [node name="SeaGlass7" parent="World/Entities/Collectables" unique_id=1932054680 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-255, 253)
 
 [node name="SeaGlass8" parent="World/Entities/Collectables" unique_id=1977532627 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-409, 278)
 
 [node name="SeaGlass9" parent="World/Entities/Collectables" unique_id=24513131 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(88, 275)
 
 [node name="SeaGlass10" parent="World/Entities/Collectables" unique_id=1604389376 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-485, 100)
 
 [node name="SeaGlass11" parent="World/Entities/Collectables" unique_id=1572909549 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-717, 198)
 
 [node name="SeaGlass12" parent="World/Entities/Collectables" unique_id=1771944444 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-536, 273)
 
 [node name="SeaGlass13" parent="World/Entities/Collectables" unique_id=1113374954 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-892, 291)
 
 [node name="SeaGlass14" parent="World/Entities/Collectables" unique_id=1939966776 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-1006, 186)
 
 [node name="SeaGlass15" parent="World/Entities/Collectables" unique_id=663542982 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-1096, 152)
 
 [node name="SeaGlass16" parent="World/Entities/Collectables" unique_id=1553427064 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-1078, 47)
 
 [node name="SeaGlass17" parent="World/Entities/Collectables" unique_id=15540867 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-1155, -44)
 
 [node name="SeaGlass18" parent="World/Entities/Collectables" unique_id=1557400874 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-1124, 61)
 
 [node name="SeaGlass19" parent="World/Entities/Collectables" unique_id=1462424681 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-1018, 259)
 
 [node name="SeaGlass20" parent="World/Entities/Collectables" unique_id=1215489870 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-892, 128)
 
 [node name="SeaGlass21" parent="World/Entities/Collectables" unique_id=1862712077 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-704, 281)
 
 [node name="SeaGlass22" parent="World/Entities/Collectables" unique_id=1159545598 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-524, 182)
 
 [node name="SeaGlass23" parent="World/Entities/Collectables" unique_id=1085801430 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(388, 211)
 
 [node name="SeaGlass24" parent="World/Entities/Collectables" unique_id=684095609 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(233, 282)
 
 [node name="SeaGlass25" parent="World/Entities/Collectables" unique_id=577033377 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(478, 274)
 
 [node name="SeaGlass26" parent="World/Entities/Collectables" unique_id=157294351 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(558, 217)
 
 [node name="SeaGlass27" parent="World/Entities/Collectables" unique_id=66698089 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(587, 80)
 
 [node name="SeaGlass28" parent="World/Entities/Collectables" unique_id=670560275 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(596, 129)
 
 [node name="SeaGlass29" parent="World/Entities/Collectables" unique_id=1977172064 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(531, 57)
 
 [node name="SeaGlass30" parent="World/Entities/Collectables" unique_id=1053511804 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(498, 174)
 
 [node name="SeaGlass31" parent="World/Entities/Collectables" unique_id=1636270373 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(623, 279)
 
 [node name="SeaGlass32" parent="World/Entities/Collectables" unique_id=2065027351 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(712, 251)
 
 [node name="SeaGlass33" parent="World/Entities/Collectables" unique_id=1635757174 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(783, 305)
 
 [node name="SeaGlass34" parent="World/Entities/Collectables" unique_id=1772951584 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(891, 278)
 
 [node name="SeaGlass35" parent="World/Entities/Collectables" unique_id=875229727 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(981, 316)
 
 [node name="SeaGlass36" parent="World/Entities/Collectables" unique_id=1243498582 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(972, 193)
 
 [node name="SeaGlass37" parent="World/Entities/Collectables" unique_id=1106877141 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(1074, 185)
 
 [node name="SeaGlass38" parent="World/Entities/Collectables" unique_id=1127682361 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(943, 97)
 
 [node name="SeaGlass39" parent="World/Entities/Collectables" unique_id=1535533058 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(803, 184)
 
 [node name="SeaGlass40" parent="World/Entities/Collectables" unique_id=1536209274 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(873, 16)
 
 [node name="SeaGlass41" parent="World/Entities/Collectables" unique_id=1291535952 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(1053, -21)
 
 [node name="PotterySherd" parent="World/Entities/Collectables" unique_id=1362501913 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-770, -7)
 
 [node name="PotterySherd2" parent="World/Entities/Collectables" unique_id=803704444 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-880, 48)
 
 [node name="PotterySherd3" parent="World/Entities/Collectables" unique_id=1906461994 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-932, 108)
 
 [node name="PotterySherd4" parent="World/Entities/Collectables" unique_id=123423842 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-819, 194)
 
 [node name="PotterySherd5" parent="World/Entities/Collectables" unique_id=674276772 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-687, 126)
 
 [node name="PotterySherd6" parent="World/Entities/Collectables" unique_id=2123829307 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-810, -77)
 
 [node name="PotterySherd7" parent="World/Entities/Collectables" unique_id=2061300332 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-980, -39)
 
 [node name="PotterySherd8" parent="World/Entities/Collectables" unique_id=912296055 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-1004, 129)
 
 [node name="PotterySherd9" parent="World/Entities/Collectables" unique_id=1166624523 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-966, 215)
 
 [node name="PotterySherd10" parent="World/Entities/Collectables" unique_id=1019108925 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(783, 123)
 
 [node name="PotterySherd11" parent="World/Entities/Collectables" unique_id=231592352 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(967, -29)
 
 [node name="PotterySherd12" parent="World/Entities/Collectables" unique_id=1816529395 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(1091, 61)
 
 [node name="PotterySherd13" parent="World/Entities/Collectables" unique_id=2128486131 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(1000, 153)
 
 [node name="PotterySherd14" parent="World/Entities/Collectables" unique_id=2052371505 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(1005, 269)
 
 [node name="PotterySherd15" parent="World/Entities/Collectables" unique_id=14393194 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(859, 234)
 
 [node name="PotterySherd16" parent="World/Entities/Collectables" unique_id=1126395948 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(1139, 188)
 
 [node name="PotterySherd17" parent="World/Entities/Collectables" unique_id=128288880 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(692, 45)
 
 [node name="PotterySherd18" parent="World/Entities/Collectables" unique_id=812549438 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(604, 170)
 
 [node name="SilverNecklace" parent="World/Entities/Collectables" unique_id=507085009 instance=ExtResource("11_aq00n")]
+texture_filter = 0
 position = Vector2(-608, -8)
 
 [node name="SilverNecklace2" parent="World/Entities/Collectables" unique_id=582623688 instance=ExtResource("11_aq00n")]
+texture_filter = 0
 position = Vector2(864, 104)
 
 [node name="GoldenRing" parent="World/Entities/Collectables" unique_id=1945885834 instance=ExtResource("18_m8c54")]
+texture_filter = 0
 position = Vector2(0, 194)
 
 [node name="SeaGlass42" parent="World/Entities/Collectables" unique_id=696816250 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(42, -135)
 
 [node name="Bottlecap18" parent="World/Entities/Collectables" unique_id=1719879442 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(-120, -89)
 
 [node name="Bottlecap19" parent="World/Entities/Collectables" unique_id=2142116100 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(301, -137)
 
 [node name="Bottlecap20" parent="World/Entities/Collectables" unique_id=469271141 instance=ExtResource("17_8m72m")]
+texture_filter = 0
 position = Vector2(422, 50)
 
 [node name="SeaGlass43" parent="World/Entities/Collectables" unique_id=5215783 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(306, 77)
 
 [node name="SeaGlass44" parent="World/Entities/Collectables" unique_id=1101311149 instance=ExtResource("9_np3vi")]
+texture_filter = 0
 position = Vector2(-444, -57)
 
 [node name="PotterySherd19" parent="World/Entities/Collectables" unique_id=1231433392 instance=ExtResource("10_mipjh")]
+texture_filter = 0
 position = Vector2(-374, 32)
 
 [node name="Objects" parent="World/Entities" unique_id=560350465 instance=ExtResource("31_p4uwf")]
@@ -1863,7 +1969,7 @@ offset_top = 0.5
 offset_right = 205.5
 offset_bottom = 64.5
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ol4r")
 
 [node name="DialogueLabel" type="RichTextLabel" parent="HUD/Dialogue/DialogueNPC" unique_id=863726388]
 texture_filter = 1
@@ -1880,9 +1986,10 @@ offset_bottom = 70.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "Sorry I'm very busy looking for my [color=yellow]Golden Ring[/color]! Today was supposed to be the big day! >~<\""
+text = "Sorry I'm very busy looking for my [color=fbc697]Golden Ring[/color]! Today was supposed to be the big day! >~<\""
 scroll_active = false
 
 [node name="DialoguePlayer" type="Control" parent="HUD/Dialogue" unique_id=923283874]
@@ -1968,10 +2075,11 @@ offset_left = -51.5
 offset_top = 1.5
 offset_right = 204.5
 offset_bottom = 33.5
+theme_override_colors/font_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_font_sizes/font_size = 12
-theme_override_styles/normal = SubResource("StyleBoxFlat_uaga3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2e2dr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uaga3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_juer4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2e2dr")
 text = "   I'll let you know if I find it!"
 alignment = 2
 
@@ -1987,7 +2095,90 @@ mouse_filter = 2
 script = ExtResource("32_atg6p")
 metadata/_custom_type_script = "uid://coglnfk5ae7i0"
 
-[node name="ToolPivots" type="HBoxContainer" parent="HUD/Bag" unique_id=1744979721]
+[node name="ToolPivots" type="Control" parent="HUD/Bag" unique_id=2134344756]
+z_index = -3
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivots" unique_id=133806033]
+anchors_preset = 0
+offset_left = 11.5
+offset_top = -2.5
+offset_right = 11.5
+offset_bottom = -2.5
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.7
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot1" unique_id=262668969]
+z_index = 3
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(1, 1, 1, 0.2)
+
+[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1856136161]
+anchors_preset = 0
+offset_left = 59.5
+offset_top = 8.5
+offset_right = 59.5
+offset_bottom = 8.5
+size_flags_horizontal = 3
+size_flags_vertical = 8
+size_flags_stretch_ratio = 2.95
+mouse_filter = 2
+
+[node name="ColorRect3" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=287656328]
+z_index = 3
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(1, 1, 1, 0.2)
+
+[node name="ToolPivot2" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1199015960]
+anchors_preset = 0
+offset_left = 256.5
+offset_top = 8.5
+offset_right = 256.5
+offset_bottom = 8.5
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.92
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot2" unique_id=1208952899]
+z_index = 3
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(1, 1, 1, 0.2)
+
+[node name="ToolPivotsOld2" type="HBoxContainer" parent="HUD/Bag" unique_id=1283906618]
+visible = false
 z_index = -3
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 1
@@ -2005,19 +2196,21 @@ mouse_filter = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Blank" type="Control" parent="HUD/Bag/ToolPivots" unique_id=637905659]
+[node name="Blank" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=622083806]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+size_flags_stretch_ratio = 0.2
 mouse_filter = 2
 
-[node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivots" unique_id=133806033]
+[node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=891090882]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+size_flags_stretch_ratio = 0.7
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot1" unique_id=262668969]
+[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivotsOld2/ToolPivot1" unique_id=802549737]
 z_index = 3
 layout_mode = 0
 offset_left = -5.0
@@ -2028,14 +2221,14 @@ rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 color = Color(1, 1, 1, 0.2)
 
-[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1856136161]
-visible = false
+[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=1600600804]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
+size_flags_stretch_ratio = 2.95
 mouse_filter = 2
 
-[node name="ColorRect3" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=287656328]
+[node name="ColorRect3" type="ColorRect" parent="HUD/Bag/ToolPivotsOld2/ToolPivot3" unique_id=1692867493]
 z_index = 3
 layout_mode = 0
 offset_left = -5.0
@@ -2046,14 +2239,14 @@ rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 color = Color(1, 1, 1, 0.2)
 
-[node name="ToolPivot2" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1199015960]
-visible = false
+[node name="ToolPivot2" type="Control" parent="HUD/Bag/ToolPivotsOld2" unique_id=1069732072]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+size_flags_stretch_ratio = 0.92
 mouse_filter = 2
 
-[node name="ColorRect2" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot2" unique_id=1208952899]
+[node name="ColorRect2" type="ColorRect" parent="HUD/Bag/ToolPivotsOld2/ToolPivot2" unique_id=1602103009]
 z_index = 3
 layout_mode = 0
 offset_left = -5.0
@@ -2085,23 +2278,23 @@ color = Color(0.29803923, 0.13333334, 0.25882354, 1)
 polygon = PackedVector2Array(6, 246.28572, 55, 258.2857, 146, 267.2857, 226, 268.2857, 286, 265.2857, 362, 244.28572, 363, 333.2857, -6.286499, 332.2847, -6, 237.28572)
 
 [node name="Phone" type="Control" parent="HUD/Bag" unique_id=2070850992 node_paths=PackedStringArray("dragged_object")]
-z_index = 2
+z_index = 4
 texture_filter = 1
 anchors_preset = 0
 script = ExtResource("26_pbc1q")
 alotl_speech_speed = 15.0
 dragged_object = NodePath("Gfx")
-position_bounds = Array[Vector2]([Vector2(-18, 100), Vector2(290, 320)])
+position_bounds = Array[Vector2]([Vector2(-18, 100), Vector2(290, 348)])
 respect_grab_position = true
 setup_on_ready = true
 metadata/_custom_type_script = "uid://b1gvdf7johau2"
 
 [node name="Gfx" type="Control" parent="HUD/Bag/Phone" unique_id=126478202]
 anchors_preset = 0
-offset_left = -15.5
-offset_top = 335.0
-offset_right = -15.5
-offset_bottom = 335.0
+offset_left = 182.5
+offset_top = 348.0
+offset_right = 182.5
+offset_bottom = 348.0
 scale = Vector2(1.1, 1.1)
 mouse_filter = 1
 
@@ -2109,7 +2302,7 @@ mouse_filter = 1
 layout_mode = 0
 offset_left = -60.0
 offset_top = -95.0
-offset_right = 60.0
+offset_right = 54.0
 offset_bottom = 95.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_b6fju")
@@ -2124,63 +2317,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_k2gex")
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="NotificationBar" type="PanelContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer" unique_id=1975461377]
-layout_mode = 2
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_fiftr")
-
-[node name="MarginContainer" type="MarginContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar" unique_id=49748531]
-layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer" unique_id=678759126]
-clip_contents = true
-custom_minimum_size = Vector2(0, 12)
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="BalanceLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer" unique_id=1003946754]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-theme_override_colors/default_color = Color(0.8235294, 0.9254902, 0.6, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 8
-text = "Bal: $15.00"
-scroll_active = false
-vertical_alignment = 1
-
-[node name="TimeHolder" type="Control" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer" unique_id=1719306460]
-layout_mode = 2
-size_flags_vertical = 0
-mouse_filter = 1
-
-[node name="TimeLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/NotificationBar/MarginContainer/HBoxContainer/TimeHolder" unique_id=1948595842]
-texture_filter = 1
-custom_minimum_size = Vector2(0, 15.845)
-layout_mode = 0
-offset_left = -35.5
-offset_top = -1.5
-offset_right = -0.5
-offset_bottom = 14.345
-size_flags_horizontal = 3
-size_flags_vertical = 0
-size_flags_stretch_ratio = 0.5
-mouse_filter = 1
-theme_override_colors/default_color = Color(0.8235294, 0.9254902, 0.6, 1)
-theme_override_fonts/normal_font = ExtResource("3_6h5vk")
-theme_override_font_sizes/normal_font_size = 14
-text = "20:00"
-scroll_active = false
-autowrap_mode = 0
-horizontal_alignment = 2
-
 [node name="PanelContainer" type="PanelContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer" unique_id=213984784]
 layout_mode = 2
 size_flags_vertical = 3
@@ -2193,16 +2329,82 @@ size_flags_vertical = 3
 mouse_filter = 1
 color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
+[node name="NotificationHolder" type="Control" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder" unique_id=1280463984]
+z_index = 1
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 4.545453
+offset_right = 105.0
+offset_bottom = 4.545453
+size_flags_vertical = 0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder" unique_id=1167628675]
+layout_mode = 0
+offset_left = -2.72727
+offset_top = -2.7272685
+offset_right = 87.28173
+offset_bottom = 11.363731
+color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+
+[node name="BalanceLabel" type="Label" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder" unique_id=1919427685]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -113.18182
+offset_top = -10.000005
+offset_right = -85.18181
+offset_bottom = 17.999996
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("50_asuqw")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
+text = "$5"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TimeLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder" unique_id=2079846708]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 0
+offset_left = 52.272728
+offset_top = -4.0909147
+offset_right = 87.27272
+offset_bottom = 11.909085
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_fonts/normal_font = ExtResource("3_6h5vk")
+theme_override_font_sizes/normal_font_size = 15
+text = "20:00"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer" unique_id=240800835]
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1476195808]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 3
 
 [node name="Gradient" type="TextureRect" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer" unique_id=1307138869]
 layout_mode = 2
@@ -2269,7 +2471,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_t53j4")
 text = "Buy Tokens"
 
 [node name="Notepad" type="Control" parent="HUD/Bag" unique_id=2094549114 node_paths=PackedStringArray("dragged_object")]
-z_index = 2
+z_index = 3
 anchors_preset = 0
 script = ExtResource("21_aq00n")
 dragged_object = NodePath("Gfx")
@@ -2433,7 +2635,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_styles/panel = SubResource("StyleBoxFlat_uvj3q")
 
 [node name="BagForeground" type="Polygon2D" parent="HUD/Bag" unique_id=645335583]
-z_index = 3
+z_index = 5
 position = Vector2(0, 0.5)
 color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423, 274.44302, 266.1873, 272.0396, 325.27057, 268.034, 362.9236, 248.40633, 364.30573, 316.7526, -4.6350317, 317.0192, -2.9920273, 247.20464)

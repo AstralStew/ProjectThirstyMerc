@@ -1,9 +1,13 @@
 [gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://bri8u7r1v5itr"]
 
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_ch6oc"]
+[ext_resource type="Texture2D" uid="uid://drhru1rb2odox" path="res://Resources/Atlases/Collectables/Collectable_Big_SeaGlass.tres" id="1_idphc"]
+[ext_resource type="Texture2D" uid="uid://bu6n64sho3vk0" path="res://Resources/Atlases/Collectables/Collectable_Small_SeaGlass.tres" id="3_4ax14"]
 
 [resource]
 script = ExtResource("1_ch6oc")
 name = "Sea Glass"
+big_texture = ExtResource("1_idphc")
+small_texture = ExtResource("3_4ax14")
 digs_required = 2
 metadata/_custom_type_script = "uid://cega64ybpgvx1"
