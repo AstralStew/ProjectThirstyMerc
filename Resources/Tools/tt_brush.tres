@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_tjhbl")
-name = "Old Brush"
-description = "Sweep for any nearby objects hiding in the ground!"
+name = "Long Brush"
+description = "Sweep around for non-metal objects hiding in the ground!"
 cost = 3
 prefab = ExtResource("1_xcjiq")
 utility = 2

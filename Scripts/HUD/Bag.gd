@@ -5,10 +5,9 @@ func _enter_tree() -> void:
 	instance = self
 
 
-
-const BINOCULARS: PackedScene = preload("uid://b0qruvc8r4wfn")
-const METAL_DETECTOR: PackedScene = preload("uid://dt5agm7wja7gl")
-const SHOVEL: PackedScene = preload("uid://d3v2idfvg2d2q")
+#const BINOCULARS: PackedScene = preload("uid://b0qruvc8r4wfn")
+#const METAL_DETECTOR: PackedScene = preload("uid://dt5agm7wja7gl")
+#const SHOVEL: PackedScene = preload("uid://d3v2idfvg2d2q")
 
 #enum ToolType {NONE,BINOCULARS,SHOVEL,METAL_DETECTOR}
 
@@ -56,6 +55,19 @@ var index: int :
 #func _ready() -> void:
 	#bag_progress = 0
 
+static func check_if_have_tool(tool_type:ToolType) -> bool:
+	match tool_type.name:
+		"Long Brush":
+			return instance.tool_1 is Brush || instance.tool_2 is Brush || instance.tool_3 is Brush
+		"Magnifying Glass":
+			return instance.tool_1 is MagnifyingGlass || instance.tool_2 is MagnifyingGlass || instance.tool_3 is MagnifyingGlass
+		"Metal Detector":
+			return instance.tool_1 is MetalDetector || instance.tool_2 is MetalDetector || instance.tool_3 is MetalDetector
+		"Old Shovel":
+			return instance.tool_1 is Shovel || instance.tool_2 is Shovel || instance.tool_3 is Shovel
+		"Binoculars":
+			return instance.tool_1 is Binoculars || instance.tool_2 is Binoculars || instance.tool_3 is Binoculars
+	return false
 
 
 static func set_tools_usable(toggle:bool=true) -> void:

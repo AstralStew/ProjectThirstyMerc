@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolType" format=3 uid="uid://c5gts0a8hjb0q"]
+
+[ext_resource type="PackedScene" uid="uid://dl6qgxicce3vf" path="res://Scenes/Prefabs/Tools/magnifying_glass.tscn" id="1_d87vg"]
+[ext_resource type="Script" uid="uid://c7j4vdr0vkiuy" path="res://Scripts/HUD/Tools/ToolType.gd" id="2_yx3b2"]
+
+[resource]
+script = ExtResource("2_yx3b2")
+name = "Magnifying Glass"
+description = "Move slowly and scope the ground to see objects at your feet!"
+cost = 3
+prefab = ExtResource("1_d87vg")
+utility = 2
+metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

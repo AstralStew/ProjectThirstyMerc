@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://du5p2psjdb5fi" path="res://Scenes/Prefabs/Indicators/metal_detector_indicator.tscn" id="2_0y2oq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obvom"]
-bg_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+bg_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -17,6 +17,8 @@ anchors_preset = 0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_7rkj5")
 direction_indicator_prefab = ExtResource("2_0y2oq")
+beep_range_near = 10.0
+beep_frequency_near = 0.15
 movement_speed_modifier = 0.41
 rotation_bounds = Vector2(-10, 10)
 dragged_object = NodePath("Gfx")
@@ -28,7 +30,6 @@ metadata/_custom_type_script = "uid://d0tcjrsdnm5rs"
 
 [node name="Gfx" type="Control" parent="." unique_id=1776884264]
 anchors_preset = 0
-rotation = 0.08726646
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
 
@@ -51,3 +52,37 @@ offset_bottom = 22.5
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_obvom")
+
+[node name="ColorRect" type="ColorRect" parent="Gfx" unique_id=281145765]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.099998
+offset_top = -11.0
+offset_right = 12.099998
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="Light" type="ColorRect" parent="Gfx" unique_id=1330169035]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.81960785, 0.3137255, 0.35686275, 1)

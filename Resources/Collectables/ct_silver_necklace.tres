@@ -10,4 +10,5 @@ name = "Silver Necklace"
 big_texture = ExtResource("1_uds42")
 small_texture = ExtResource("3_lqnlu")
 digs_required = 4
+is_metal = true
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

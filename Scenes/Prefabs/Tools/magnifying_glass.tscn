@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dl6qgxicce3vf"]
+
+[ext_resource type="Script" uid="uid://chinjcwpkts3r" path="res://Scripts/HUD/Tools/MagnifyingGlass.gd" id="1_5lnm1"]
+[ext_resource type="PackedScene" uid="uid://cxl3w0ouba4vt" path="res://Scenes/Prefabs/Indicators/magnifying_glass_indicator.tscn" id="2_5lnm1"]
+
+[node name="MagnifyingGlass" type="Control" unique_id=1236484900 node_paths=PackedStringArray("dragged_object")]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_5lnm1")
+direction_indicator_prefab = ExtResource("2_5lnm1")
+movement_speed_modifier = 0.15
+near_scale = 0.25
+far_scale = 1.0
+rotation_bounds = Vector2(-30, 30)
+rotate_source = 1
+dragged_object = NodePath("Gfx")
+position_bounds = Array[Vector2]([Vector2(37.000015, 10.000015), Vector2(323, 265)])
+reset_on_drag_end = true
+metadata/_custom_type_script = "uid://chinjcwpkts3r"
+
+[node name="Gfx" type="Control" parent="." unique_id=497739244]
+anchors_preset = 0
+rotation = -0.13962634
+mouse_filter = 1
+
+[node name="Control" type="Control" parent="Gfx" unique_id=1710514156]
+anchors_preset = 0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 1
+
+[node name="Gfx3" type="ColorRect" parent="Gfx/Control" unique_id=1588699717]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 11.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="Gfx4" type="ColorRect" parent="Gfx/Control" unique_id=1201784589]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 10.0
+offset_right = 5.0
+offset_bottom = 35.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="Gfx" type="ColorRect" parent="Gfx/Control" unique_id=1346827058]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 10.0
+offset_right = 4.0
+offset_bottom = 34.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+
+[node name="Gfx2" type="ColorRect" parent="Gfx/Control" unique_id=1648832815]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+
+[node name="Gfx7" type="ColorRect" parent="Gfx/Control" unique_id=869048252]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 7.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+
+[node name="Gfx5" type="ColorRect" parent="Gfx/Control" unique_id=1366692924]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
+color = Color(1, 0.92941177, 0.84313726, 1)

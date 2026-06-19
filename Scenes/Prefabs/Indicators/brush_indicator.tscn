@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://8muadwv8rs8p"]
 
 [ext_resource type="PackedScene" uid="uid://d1gyjemrc7e70" path="res://Scenes/Prefabs/Indicators/direction_indicator.tscn" id="1_0qfi2"]
-[ext_resource type="Script" uid="uid://dlmfgmhxe4i7i" path="res://Scripts/World/Indicators/MetalDetectorIndicator.gd" id="2_l64pb"]
+[ext_resource type="Script" uid="uid://dm8s70rspqvni" path="res://Scripts/World/Indicators/BrushIndicator.gd" id="2_0qfi2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgdss"]
 size = Vector2(10, 10)
 
 [node name="BrushIndicator" unique_id=820276514 instance=ExtResource("1_0qfi2")]
-script = ExtResource("2_l64pb")
+script = ExtResource("2_0qfi2")
 rotate_to_movement_direction = true
 rotation_range = 60.0
 

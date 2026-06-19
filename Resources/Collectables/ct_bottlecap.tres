@@ -10,4 +10,5 @@ name = "Bottlecap"
 big_texture = ExtResource("1_dlok8")
 small_texture = ExtResource("3_lm22l")
 digs_required = 1
+is_metal = true
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

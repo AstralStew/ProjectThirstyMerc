@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="1_fd1uc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e624q"]
-size = Vector2(16, 9)
+size = Vector2(16, 8)
 
 [node name="Tree1_0" type="Node2D" unique_id=1557634134 groups=["tilemaps"]]
 y_sort_enabled = true
@@ -20,5 +20,5 @@ collision_layer = 4096
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1379985846]
-position = Vector2(0, -0.5)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_e624q")

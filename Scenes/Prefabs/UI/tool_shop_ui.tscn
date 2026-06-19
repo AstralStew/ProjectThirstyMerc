@@ -329,7 +329,7 @@ size_flags_vertical = 4
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="OldHandbrush" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=1414520098]
+[node name="LongBrush" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=1414520098]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -343,10 +343,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
 button_group = ExtResource("2_d3kil")
-text = "Old Handbrush"
+text = "Long Brush"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/OldHandbrush" unique_id=199479917]
+[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/LongBrush" unique_id=199479917]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -389,7 +389,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
-disabled = true
 toggle_mode = true
 button_group = ExtResource("2_d3kil")
 text = "Magnifying Glass"

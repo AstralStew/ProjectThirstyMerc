@@ -10,4 +10,5 @@ name = "Golden Ring"
 big_texture = ExtResource("1_5huwr")
 small_texture = ExtResource("3_6hwum")
 digs_required = 5
+is_metal = true
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

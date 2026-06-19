@@ -3,6 +3,8 @@ var DEBUG_NAME: String:
 	get: return "[b][" + name + "][/b] "
 
 @onready var dialogue_bubble: Panel = $DialogueBanner/DialogueBubble
+@onready var dialogue_label: RichTextLabel = $DialogueBanner/DialogueBubble/DialogueLabel
+@onready var default_text: String = dialogue_label.text
 
 @export var button_group: ButtonGroup = null
 
@@ -16,7 +18,7 @@ func _ready() -> void:
 	for button in button_group.get_buttons():
 		button.mouse_entered.connect(on_button_hover.bind(button))
 		button.mouse_exited.connect(on_button_unhover.bind(button))
-		
+	
 	update_buttons()
 	open()
 	
