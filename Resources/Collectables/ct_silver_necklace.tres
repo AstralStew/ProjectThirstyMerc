@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_f0r1u"]
 [ext_resource type="Texture2D" uid="uid://c8huh3p42f65t" path="res://Resources/Atlases/Collectables/Collectable_Big_SilverNecklace.tres" id="1_uds42"]
-[ext_resource type="Texture2D" uid="uid://0idhngobdo3a" path="res://Resources/Atlases/Collectables/Collectable_Small_SilverNecklace.tres" id="3_lqnlu"]
+[ext_resource type="Texture2D" uid="uid://0idhngobdo3a" path="res://Resources/Atlases/Collectables/Collectable_Small_NecklaceTopaz.tres" id="3_lqnlu"]
 
 [resource]
 script = ExtResource("1_f0r1u")

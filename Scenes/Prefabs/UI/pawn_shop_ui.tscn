@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ddpmhjuntp24y" path="res://Scripts/HUD/PawnShopUI.gd" id="1_fiacm"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_fiacm"]
 [ext_resource type="ButtonGroup" uid="uid://opijg25qt5gt" path="res://Resources/ButtonGroups/pawn_shop_button_group.tres" id="3_juj23"]
-[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_fhc7o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
 content_margin_left = 10.0
@@ -525,12 +524,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$6"
 horizontal_alignment = 2
 vertical_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="Options/OptionsMarginContainer" unique_id=1135913615]
-position = Vector2(54, -56)
-texture = ExtResource("4_fhc7o")
-region_enabled = true
-region_rect = Rect2(8, 0, 80, 64)
 
 [node name="Rent" type="Button" parent="." unique_id=1605273636]
 visible = false

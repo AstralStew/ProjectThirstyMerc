@@ -63,6 +63,7 @@
 [ext_resource type="AudioStream" uid="uid://0lvrx1etaaqt" path="res://Assets/Audio/Ambient/518637__jackmichaelking__gentle-ocean-waves-birdsong-and-gull.wav" id="53_kut41"]
 [ext_resource type="Script" uid="uid://c78bk3m36tub3" path="res://Scripts/World/FollowOffset.gd" id="54_b14wf"]
 [ext_resource type="AudioStream" uid="uid://obrfvup5p5ed" path="res://Assets/Audio/Sfx/421885__b_sean__beach-drive.wav" id="55_5v1oo"]
+[ext_resource type="Texture2D" uid="uid://c20dmq62ii6sj" path="res://Assets/Images/SpriteSheet_Items_Small.png" id="63_1ol4r"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbc1q"]
 vertices = PackedVector2Array(-108.89844, 134, -109.89844, 81, -83.90625, 81, -82.89844, 133, -68, 268, -122.96875, 268, -122.03125, 134, -68, 133, 307, -365, 307, -360.34375, 293.07813, -363.04688, 285, -406.8203, -245.07031, -360.42188, -258, -359.35156, -258, -367, -219.09375, -408.8828, -236, -361.7422, -286, -357.04688, -297, -356.14063, -297, -367, -286, -367, 334.90625, -409.70313, 334.2422, -365, -236, -288.71875, -244.07031, -288.27344, -42, -410.04688, -42, -414, -23, -414, -23, -410, 151, -409, 151, -413, 169, -413, 169, -409.10156, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, -318.9922, -414.54688, -318.90625, -414.9297, -261.97656, -414.0703, -261.97656, -409.32813, -318.27344, -367, -194.67188, -356, -218.49219, -414.82813, -198.35156, -414.10938, -195.99219, -408.5625, -4.09375, -400, 251.5625, -356.9922, 276.57813, -406.9297, 281.90625, -413, 68.60156, -400, 71.60156, -409, 278.60156, -413, -9.09375, -410)
@@ -1620,9 +1621,9 @@ theme_override_constants/margin_bottom = 4
 
 [node name="PhoneScreen1" type="VBoxContainer" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer" unique_id=1764759535]
 layout_mode = 2
-theme_override_constants/separation = -5
+theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1" unique_id=1713201066]
+[node name="AlotlTexture" type="TextureRect" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1" unique_id=1713201066]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 2
@@ -1670,6 +1671,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pbc1q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pbc1q")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t53j4")
 text = "Buy Tokens"
+
+[node name="SpriteSheetItemsSmall" type="Sprite2D" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer" unique_id=979677017]
+visible = false
+position = Vector2(-66.090904, -299.2727)
+texture = ExtResource("63_1ol4r")
 
 [node name="Notepad" type="Control" parent="HUD/Bag" unique_id=2094549114 node_paths=PackedStringArray("dragged_object")]
 z_index = 3

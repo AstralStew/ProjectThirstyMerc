@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://c71m6r6j6yu6l" path="res://Scripts/HUD/ToolShopUI.gd" id="1_uycaq"]
 [ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/tool_shop_button_group.tres" id="2_d3kil"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_8hjje"]
-[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_d3kil"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
 content_margin_left = 10.0
@@ -758,25 +757,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_yp5f6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_3miyi")
 text = "LEAVE"
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=141903515]
-position = Vector2(160, -110)
-texture = ExtResource("4_d3kil")
-region_enabled = true
-region_rect = Rect2(208, 8, 80, 64)
-
-[node name="ClickBoundary" type="Control" parent="Sprite2D" unique_id=487815138]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -42.0
-offset_top = -35.0
-offset_right = -42.0
-offset_bottom = -35.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="Rent" to="." method="_on_rent_pressed"]
 [connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]
