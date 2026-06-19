@@ -79,7 +79,7 @@ func seeing() -> void:
 	if _zoom_tween: _zoom_tween.kill()
 	_zoom_tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
 	_zoom_tween.tween_property(PlayerCharacter.camera,"zoom",_original_zoom,camera_duration)
-	print("what")
+	#print("what")
 	
 	#PlayerCharacter.camera.offset = PlayerCharacter.instance.camera_base_offset
 	#PlayerCharacter.camera.position_smoothing_speed = 10

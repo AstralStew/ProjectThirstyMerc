@@ -3,6 +3,7 @@ static var instance : Notepad = null
 #const DEBUG_NAME : String = "[b][Notepad][/b] "
 func _enter_tree() -> void:
 	instance = self
+	WorldManager.restart_scene().connect(func():instance = null)
 
 @onready var notepad_entries: VBoxContainer = $Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries
 
@@ -52,6 +53,8 @@ func _process(delta: float) -> void:
 	super._process(delta)
 
 func bounce(_list_size:int) -> void:
+	if is_bouncing: return
+	is_bouncing = true
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel().set_ease(bounce_ease).set_trans(bounce_trans)
 	_tween.tween_property(dragged_object,"global_position",_initial_position + bounce_offset + (_list_size * bounce_offset_per_entry),bounce_duration)

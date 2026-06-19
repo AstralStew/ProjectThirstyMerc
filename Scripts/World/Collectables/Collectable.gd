@@ -113,7 +113,7 @@ func collect() -> void:
 	_tween.tween_property(object_gfx,"global_position",PlayerCharacter.instance.global_position + Vector2(0,player_y_offset_on_collect),0.55).from(initial_pos)
 	_tween.tween_property(object_gfx,"modulate",Color(Color.WHITE,0),0.5).set_delay(0.35)
 	_tween.tween_property(ground_gfx,"modulate",Color(Color.WHITE,0),0.75)
-	_tween.tween_callback(InventoryManager.add_collectable.bind(collectable_type,1)).set_delay(0.65)
+	_tween.tween_callback(move_to_inventory).set_delay(0.65)
 	_tween.tween_callback(create_gain_text).set_delay(0.65)
 	while _tween.is_running(): await get_tree().process_frame
 	
@@ -123,3 +123,9 @@ func create_gain_text() -> void:
 	var _gain_text : GainText = preload("res://Scenes/Prefabs/UI/gain_text.tscn").instantiate()
 	HudManager.hud_root.add_child(_gain_text)
 	_gain_text.gain("+ " + collectable_type.name.to_upper())
+
+func move_to_inventory() -> void:
+	if collectable_type.name == "Coin":
+		InventoryManager.add_dosh(1)
+	else:
+		InventoryManager.add_collectable(collectable_type,1)

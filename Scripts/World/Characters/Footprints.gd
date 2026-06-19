@@ -33,7 +33,7 @@ func add_footstep() -> void:
 	
 	steps_since_audio = (steps_since_audio + 1) % footsteps_before_sound
 	if steps_since_audio == 0:
-		AudioManager.play_sound(AudioManager.Sounds.FOOTSTEP,0.35,0.93 + randf(),3.55,4.5)
+		AudioManager.play_sound(AudioManager.Sounds.FOOTSTEPS,0.35,0.93 + randf(),3.55,4.5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

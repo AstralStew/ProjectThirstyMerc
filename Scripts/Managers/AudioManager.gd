@@ -3,9 +3,10 @@ static var instance : AudioManager = null
 const DEBUG_NAME : String = "[b][AudioManager][/b] "
 func _enter_tree() -> void:
 	instance = self
+	WorldManager.restart_scene().connect(func():instance = null)
 
 
-enum Sounds {UI_POP_UP,CASH_REGISTER,SHOP_DOOR_BELL, FOOTSTEP}
+enum Sounds {UI_POP_UP,CASH_REGISTER,SHOP_DOOR_BELL, FOOTSTEPS,PHONE_VIBRATION}
 
 
 
@@ -13,6 +14,7 @@ const UI_POP_UP = preload("uid://c0dp42bg2mio4")
 const CASH_REGISTER = preload("uid://cofymlbl5yxhp")
 const SHOP_DOOR_BELL = preload("uid://uwkj1u5fh6ow")
 const FOOTSTEPS = preload("uid://b211s3nge70eq")
+const PHONE_VIBRATION = preload("uid://bkfpf6cphoj2b")
 
 
 
@@ -37,9 +39,11 @@ func _play_sound(sound:Sounds,volume:float = 1.0,pitch_scale=1.0, start_time:flo
 		Sounds.SHOP_DOOR_BELL:
 			stream = SHOP_DOOR_BELL
 		
-		Sounds.FOOTSTEP:
+		Sounds.FOOTSTEPS:
 			stream = FOOTSTEPS
 			
+		Sounds.PHONE_VIBRATION:
+			stream = PHONE_VIBRATION
 	
 	var new_audio_player = AudioStreamPlayer.new()
 	WorldManager.effects_root.add_child(new_audio_player)

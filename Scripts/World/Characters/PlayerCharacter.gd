@@ -3,6 +3,8 @@ static var instance : PlayerCharacter = null
 const DEBUG_NAME : String = "[b][PlayerCharacter][/b] "
 
 static var camera : Camera2D = null
+@onready var animated_body: AnimatedSprite2D = $AnimatedBody
+
 
 @export var camera_base_offset : Vector2  = Vector2(0,16)
 @export var player_move_target : Node2D
@@ -14,14 +16,18 @@ static var camera : Camera2D = null
 @export var base_movement_speed : float = 0.0
 @export var is_using_tool : bool = false
 @export var is_talking: bool = false
+@export var is_walking: bool = false
 @export var sqr_distance_to_target : float = 0.0
 
 var _click_held_down: bool = false
 var _npc_target:NPCharacter = null
 var _shop_target:ShopCharacter = null
 
+
+
 func _enter_tree() -> void:
 	instance = self
+	WorldManager.restart_scene().connect(func():instance = null)
 	base_movement_speed = movement_speed
 	if player_move_target != null: player_move_target.visible = false
 
@@ -80,6 +86,11 @@ func _physics_process(delta):
 		else:
 			player_move_target.set_deferred("global_position", navigation_agent.get_final_position()) #) .global_position = get_global_mouse_position()
 			player_move_target.visible = true
+	#print(str(sqr_distance_to_target))
+	if sqr_distance_to_target > 15 && !is_walking:
+		is_walking = true
+		set_animation()
+
 	super._physics_process(delta)
 
 
@@ -108,6 +119,7 @@ func start_shopping() -> void:
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
 	HudManager.start_shop(_shop_target) # .start_dialogue((_npc_target.global_position - global_position)/2)
+	is_walking = false
 
 static func stop_shopping() -> void:
 	instance._stop_shopping()
@@ -130,6 +142,7 @@ func start_talking() -> void:
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
 	HudManager.start_dialogue((_npc_target.global_position - global_position)/2)
+	is_walking = false
 
 
 static func move_to_start_dialogue(npc:NPCharacter) -> void:
@@ -156,6 +169,9 @@ func _stop_dialogue() -> void:
 
 
 func on_navigation_finished() -> void:
+	if is_walking:
+		is_walking = false
+		set_animation()
 	if movement_speed == 0:
 		super.on_navigation_finished()
 	if player_move_target != null:
@@ -168,6 +184,10 @@ func set_movement_target(movement_target: Vector2):
 		movement_direction = movement_target.direction_to(PlayerCharacter.instance.global_position)
 		player_move_target.visible = true
 		player_move_target.set_deferred("visible",false)
+		if is_walking:
+			is_walking = false
+			set_animation()
+
 
 
 
@@ -179,9 +199,9 @@ func adjusting_move_target() -> void:
 	#var _is_light = false
 	var _elapsed = 0
 	while true:
-		if !is_instance_valid(get_tree()):
+		if !is_inside_tree() || !is_instance_valid(get_tree()):
 			return
-		await get_tree().physics_frame
+		await get_tree().process_frame
 		if player_move_target.visible:
 			if _npc_target: 	_circle.size = Vector2.ONE * 12
 			else: 			_circle.size = Vector2.ONE * 6
@@ -221,3 +241,61 @@ func _stop_using_tool() -> void:
 func on_velocity_computed(safe_velocity:Vector2) -> void:
 	if is_talking: return
 	super.on_velocity_computed(safe_velocity)
+
+
+
+enum Facing{LEFT,RIGHT,FORWARD,BACK}
+var facing:Facing = Facing.FORWARD
+func turn_left() -> void:
+	if head:
+		head.texture = head_side
+		head.flip_h = false
+	animated_body.flip_h = false
+	facing = Facing.LEFT
+	set_animation()
+
+func turn_right() -> void:
+	if head:
+		head.texture = head_side
+		head.flip_h = true
+	animated_body.flip_h = true
+	facing = Facing.RIGHT
+	set_animation()
+
+func turn_front() -> void:
+	if head:
+		head.texture = head_front
+		head.flip_h = false
+	facing = Facing.FORWARD
+	set_animation()
+
+func turn_back() -> void:
+	if head:
+		head.texture = head_back
+		head.flip_h = false
+	facing = Facing.BACK
+	set_animation()
+	
+
+func set_animation() -> void:
+	match facing:
+		Facing.LEFT:
+			if is_walking:
+				animated_body.play("walk_side")
+			else:
+				animated_body.play("idle_side")
+		Facing.RIGHT:
+			if is_walking:
+				animated_body.play("walk_side")
+			else:
+				animated_body.play("idle_side")
+		Facing.FORWARD:
+			if is_walking:
+				animated_body.play("walk_forward")
+			else:
+				animated_body.play("idle_forward")
+		Facing.BACK:
+			if is_walking:
+				animated_body.play("walk_back")
+			else:
+				animated_body.play("idle_back")

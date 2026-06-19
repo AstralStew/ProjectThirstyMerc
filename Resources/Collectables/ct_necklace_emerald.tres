@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://ds4vy3o88jy6f"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_um23u"]
+[ext_resource type="Texture2D" uid="uid://bqg8m1krj27gw" path="res://Resources/Atlases/Collectables/Collectable_Small_NecklaceEmerald.tres" id="2_um23u"]
+
+[resource]
+script = ExtResource("1_um23u")
+name = "Emerald Necklace"
+small_texture = ExtResource("2_um23u")
+digs_required = 4
+is_metal = true
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

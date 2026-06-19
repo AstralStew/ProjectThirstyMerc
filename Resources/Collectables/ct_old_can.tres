@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://d14r0bngcw8lo"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_e8qgf"]
+[ext_resource type="Texture2D" uid="uid://b7hpeefjjq84l" path="res://Resources/Atlases/Collectables/Collectable_Small_OldCan.tres" id="2_e8qgf"]
+
+[resource]
+script = ExtResource("1_e8qgf")
+name = "Old Can"
+small_texture = ExtResource("2_e8qgf")
+digs_required = 2
+is_metal = true
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

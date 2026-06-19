@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://dlme0siyqne0q"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_p7syg"]
+[ext_resource type="Texture2D" uid="uid://ct1ocq88y2gkg" path="res://Resources/Atlases/Collectables/Collectable_Small_RingPlastic.tres" id="2_7npp3"]
+
+[resource]
+script = ExtResource("1_p7syg")
+name = "Jade Ring"
+small_texture = ExtResource("2_7npp3")
+digs_required = 5
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

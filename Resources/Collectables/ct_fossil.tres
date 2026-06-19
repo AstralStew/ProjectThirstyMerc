@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://bs0xhs6kxhexr"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_sbgv2"]
+[ext_resource type="Texture2D" uid="uid://cgcm51hb8mjyc" path="res://Resources/Atlases/Collectables/Collectable_Small_Fossil.tres" id="2_sbgv2"]
+
+[resource]
+script = ExtResource("1_sbgv2")
+name = "Fossil"
+small_texture = ExtResource("2_sbgv2")
+digs_required = 1
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

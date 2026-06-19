@@ -62,7 +62,7 @@ func detecting() -> void:
 			if light_on:
 				if _elapsed_time > _beep_on_time:
 					_elapsed_time = 0
-					turn_light_off()
+					turn_light_half()
 			else:
 				_beep_off_time = clamp(remap(_distance,beep_range_near**2,beep_range_far**2,beep_frequency_near,beep_frequency_far),beep_frequency_near,beep_frequency_far)
 				if _elapsed_time > _beep_off_time:
@@ -80,6 +80,10 @@ func detecting() -> void:
 func turn_light_on() -> void:
 	light_on = true
 	light.color = Color(0.824, 0.925, 0.6, 1.0) 
+
+func turn_light_half() -> void:
+	light_on = false
+	light.color = Color(0.329, 0.604, 0.553, 1.0)
 
 func turn_light_off() -> void:
 	light_on = false

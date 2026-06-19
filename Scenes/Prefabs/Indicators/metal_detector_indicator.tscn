@@ -11,7 +11,7 @@ script = ExtResource("2_g21kq")
 current_distance = 0.0
 beep_range_near = 1000.0
 rotate_to_movement_direction = true
-rotation_range = 60.0
+rotation_range = 120.0
 
 [node name="ColorRect" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="0" unique_id=1762873939]
 offset_left = -3.0
@@ -21,7 +21,7 @@ offset_bottom = 12.0
 rotation = 1.5707964
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
-color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="1" unique_id=132329204]
 offset_left = -2.0
@@ -31,9 +31,19 @@ offset_bottom = 18.0
 rotation = 1.5707964
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
-color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+color = Color(0.69803923, 0.33333334, 0.3647059, 1)
 
-[node name="Area2D" type="Area2D" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="2" unique_id=1235176437]
+[node name="ColorRect3" type="ColorRect" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="2" unique_id=1887606448]
+offset_left = -0.94166183
+offset_top = 15.058338
+offset_right = 0.94166183
+offset_bottom = 16.941662
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+
+[node name="Area2D" type="Area2D" parent="Node2D" parent_id_path=PackedInt32Array(919585061) index="3" unique_id=1235176437]
 position = Vector2(0, 16)
 collision_mask = 256
 input_pickable = false

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://cysb1l4todtv8"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_b0x04"]
+[ext_resource type="Texture2D" uid="uid://c724pr1sptx0d" path="res://Resources/Atlases/Collectables/Collectable_Small_RingSilver.tres" id="2_b0x04"]
+
+[resource]
+script = ExtResource("1_b0x04")
+name = "Pull Tab"
+small_texture = ExtResource("2_b0x04")
+digs_required = 1
+is_metal = true
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

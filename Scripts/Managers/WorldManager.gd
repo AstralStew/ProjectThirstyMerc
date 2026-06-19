@@ -3,6 +3,7 @@ static var instance : WorldManager = null
 const DEBUG_NAME : String = "[b][WorldManager][/b] "
 func _enter_tree() -> void:
 	instance = self
+	#WorldManager.restart_scene().connect(func():instance = null)
 
 @onready var level: Node2D = $"../../World/Level"
 static var level_root : Node2D :
@@ -53,7 +54,9 @@ static func day_resumed() -> Signal:
 signal _day_ended
 static func day_ended() -> Signal:
 	return instance._day_ended
-
+signal _restart_scene
+static func restart_scene() -> Signal:
+	return instance._restart_scene
 
 func get_fake_mins_from_progress(progress:float) -> int:
 	#print("fake mins = " + str(remap(progress,0,1,day_start_in_mins,day_end_in_mins)))
@@ -110,7 +113,8 @@ static func end_day() -> void:
 	print(DEBUG_NAME,"EndDay > Ending day!")
 	
 	await instance.get_tree().create_timer(4).timeout
-	instance.get_tree().reload_current_scene.call_deferred() # .call_deferred("reload_current_scene")
+	instance._restart_scene.emit()
+	instance.get_tree().call_deferred("reload_current_scene") # .reload_current_scene.call_deferred() # .call_deferred("reload_current_scene")
 	
 
 

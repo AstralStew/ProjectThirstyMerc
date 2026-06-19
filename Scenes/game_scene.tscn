@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://nermkdy1w5v" path="res://Scripts/Managers/AudioManager.gd" id="4_b14wf"]
 [ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_kiiqx"]
 [ext_resource type="PackedScene" uid="uid://dawqwx4eo3su" path="res://Scenes/LevelDesign/tilemap.tscn" id="4_t53j4"]
+[ext_resource type="Script" uid="uid://ilsp5p4gdtdn" path="res://Scripts/Managers/AskAlotlManager.gd" id="5_k55q4"]
 [ext_resource type="Texture2D" uid="uid://1n1v3vbosvvs" path="res://Assets/Images/Prototyping/footprints.png" id="6_5dgvu"]
 [ext_resource type="Script" uid="uid://cmai64jlhstqf" path="res://Scripts/World/Characters/Footprints.gd" id="7_uscyt"]
 [ext_resource type="Script" uid="uid://co0h4xrb1vtwp" path="res://Scripts/World/Characters/SpawnBox.gd" id="10_4k3ma"]
@@ -16,40 +17,58 @@
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="11_kut41"]
 [ext_resource type="Texture2D" uid="uid://siy84y14m0q1" path="res://Resources/Atlases/Characters/NPC2_Body_Back.tres" id="12_atg6p"]
 [ext_resource type="Resource" uid="uid://4jioa8dy36vc" path="res://Resources/Collectables/ct_bottlecap.tres" id="12_b14wf"]
-[ext_resource type="Resource" uid="uid://bri8u7r1v5itr" path="res://Resources/Collectables/ct_sea_glass.tres" id="13_b14wf"]
+[ext_resource type="Resource" uid="uid://cysb1l4todtv8" path="res://Resources/Collectables/ct_pull_tab.tres" id="13_7iwal"]
+[ext_resource type="Resource" uid="uid://bri8u7r1v5itr" path="res://Resources/Collectables/ct_sea_glass_cyan.tres" id="13_b14wf"]
 [ext_resource type="Texture2D" uid="uid://csane6fusip" path="res://Resources/Atlases/Characters/NPC1_Body_Back.tres" id="13_obvom"]
 [ext_resource type="Texture2D" uid="uid://b6b8jl8chpgo2" path="res://Resources/Atlases/Characters/NPC1_Body_Front.tres" id="13_uaga3"]
 [ext_resource type="Texture2D" uid="uid://dohq5g6xmy27s" path="res://Resources/Atlases/Characters/NPC2_Body_Front.tres" id="13_yf828"]
 [ext_resource type="Texture2D" uid="uid://brm0n3p4vsmho" path="res://Resources/Atlases/Characters/NPC2_Body_Side.tres" id="14_8xidt"]
-[ext_resource type="Resource" uid="uid://b71jhg0b6wm7p" path="res://Resources/Collectables/ct_pottery_sherd.tres" id="14_asuqw"]
+[ext_resource type="Resource" uid="uid://b71jhg0b6wm7p" path="res://Resources/Collectables/ct_pottery_clay.tres" id="14_asuqw"]
+[ext_resource type="Resource" uid="uid://d14r0bngcw8lo" path="res://Resources/Collectables/ct_old_can.tres" id="14_pwxri"]
+[ext_resource type="Resource" uid="uid://cc0gsuw7favvy" path="res://Resources/Collectables/ct_broken_lure.tres" id="15_eeytp"]
 [ext_resource type="Texture2D" uid="uid://br5x0uje0cg17" path="res://Resources/Atlases/Characters/NPC1_Body_Side.tres" id="15_olq2e"]
-[ext_resource type="Resource" uid="uid://brk0lv0kl46ty" path="res://Resources/Collectables/ct_silver_necklace.tres" id="15_opjrb"]
+[ext_resource type="Resource" uid="uid://brk0lv0kl46ty" path="res://Resources/Collectables/ct_necklace_topaz.tres" id="15_opjrb"]
 [ext_resource type="Texture2D" uid="uid://c3oqmmsc0djky" path="res://Resources/Atlases/Characters/NPC2_Head_Back.tres" id="15_vbpv4"]
+[ext_resource type="SpriteFrames" uid="uid://upfbk135sbyc" path="res://Resources/SpriteFrames/player_sprite_frames.tres" id="16_2e2dr"]
 [ext_resource type="Script" uid="uid://cboevetfqgec8" path="res://Scripts/World/Characters/ShopCharacter.gd" id="16_b14wf"]
-[ext_resource type="Resource" uid="uid://b3ketqrdog68w" path="res://Resources/Collectables/ct_golden_ring.tres" id="16_kut41"]
+[ext_resource type="Resource" uid="uid://od6su03rimr5" path="res://Resources/Collectables/ct_coin.tres" id="16_jqptc"]
+[ext_resource type="Resource" uid="uid://b3ketqrdog68w" path="res://Resources/Collectables/ct_ring_gold.tres" id="16_kut41"]
 [ext_resource type="Texture2D" uid="uid://rkql7bo7rl7j" path="res://Resources/Atlases/Characters/NPC2_Head_Front.tres" id="16_ndfmf"]
 [ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/Characters/NPC1_Head_Back.tres" id="16_w61bx"]
 [ext_resource type="Texture2D" uid="uid://0lk6itks1din" path="res://Resources/Atlases/Characters/NPC2_Head_Side.tres" id="17_nys34"]
 [ext_resource type="PackedScene" uid="uid://cbk3q1ev6qjbi" path="res://Scenes/Prefabs/UI/tool_shop_ui.tscn" id="17_skhme"]
 [ext_resource type="Texture2D" uid="uid://dvqyputrheado" path="res://Resources/Atlases/Characters/NPC1_Head_Front.tres" id="17_uvj3q"]
 [ext_resource type="Texture2D" uid="uid://w773s5rkat5q" path="res://Resources/Atlases/Characters/NPC1_Head_Side.tres" id="18_mqs2o"]
+[ext_resource type="Resource" uid="uid://ctg1vve2tkxxn" path="res://Resources/Collectables/ct_sea_glass_red.tres" id="18_rtkiu"]
+[ext_resource type="Resource" uid="uid://dm6n0jgxng1kg" path="res://Resources/Collectables/ct_sea_glass_dark.tres" id="19_4tkct"]
 [ext_resource type="PackedScene" uid="uid://biujytdbivyrd" path="res://Scenes/Prefabs/UI/pawn_shop_ui.tscn" id="20_a6xwo"]
+[ext_resource type="Resource" uid="uid://b5ujulgxrg7t2" path="res://Resources/Collectables/ct_sea_glass_vibrant.tres" id="20_eeytp"]
 [ext_resource type="Script" uid="uid://dwa7d63qu5514" path="res://Scripts/HUD/Notepad.gd" id="21_aq00n"]
+[ext_resource type="Resource" uid="uid://cbfm67a57couy" path="res://Resources/Collectables/ct_pottery_jade.tres" id="23_da085"]
+[ext_resource type="Resource" uid="uid://cgx64kq3muqp7" path="res://Resources/Collectables/ct_necklace_gold.tres" id="24_bdgvn"]
+[ext_resource type="Resource" uid="uid://cpymbs4tdpnb7" path="res://Resources/Collectables/ct_shark_tooth.tres" id="24_jqptc"]
+[ext_resource type="Resource" uid="uid://ck5m6l7jlnh7y" path="res://Resources/Collectables/ct_necklace_ruby.tres" id="25_2rmsh"]
 [ext_resource type="Texture2D" uid="uid://tbv6letytyi6" path="res://Resources/Atlases/Characters/Enemy_Crab.tres" id="25_atg6p"]
 [ext_resource type="Texture2D" uid="uid://ktjkhfytrrma" path="res://Resources/Atlases/Characters/NPC3_Body_Back.tres" id="25_opjrb"]
 [ext_resource type="Texture2D" uid="uid://biprmgbcrei4g" path="res://Resources/Atlases/Characters/NPC3_Body_Front.tres" id="26_kut41"]
 [ext_resource type="Script" uid="uid://b1gvdf7johau2" path="res://Scripts/HUD/Phone.gd" id="26_pbc1q"]
 [ext_resource type="Texture2D" uid="uid://4nmv2iatu1bf" path="res://Resources/Atlases/Characters/NPC3_Body_Side.tres" id="27_b14wf"]
+[ext_resource type="Resource" uid="uid://ds4vy3o88jy6f" path="res://Resources/Collectables/ct_necklace_emerald.tres" id="27_km78d"]
 [ext_resource type="Texture2D" uid="uid://b1p3eyvui0exq" path="res://Resources/Atlases/Characters/NPC3_Head_Back.tres" id="28_5v1oo"]
 [ext_resource type="FontVariation" uid="uid://qaiu8rw1746q" path="res://Resources/Theme/Jersey10-Adjusted.tres" id="28_e624q"]
 [ext_resource type="Texture2D" uid="uid://b0gyien0bc7i6" path="res://Resources/Atlases/Characters/NPC3_Head_Front.tres" id="29_skhme"]
 [ext_resource type="Texture2D" uid="uid://cgibv2e2eexru" path="res://Assets/Images/SpriteSheet_Axolotal.png" id="29_t53j4"]
+[ext_resource type="Resource" uid="uid://dpv66a4sdtc2f" path="res://Resources/Collectables/ct_pottery_ancient.tres" id="29_x5vbi"]
 [ext_resource type="Texture2D" uid="uid://cnkb3hs7gq4na" path="res://Resources/Atlases/Characters/NPC3_Head_Side.tres" id="30_a6xwo"]
+[ext_resource type="Resource" uid="uid://bqdlk7np7c12m" path="res://Resources/Collectables/ct_ring_ancient.tres" id="30_odvjr"]
 [ext_resource type="Texture2D" uid="uid://oel3xdwluryf" path="res://Resources/Atlases/Characters/NPC4_Body_Back.tres" id="31_1ol4r"]
 [ext_resource type="PackedScene" uid="uid://btm2gq77t88ij" path="res://Scenes/LevelDesign/objects.tscn" id="31_p4uwf"]
+[ext_resource type="Resource" uid="uid://bs0xhs6kxhexr" path="res://Resources/Collectables/ct_fossil.tres" id="31_v51k6"]
+[ext_resource type="Resource" uid="uid://dlme0siyqne0q" path="res://Resources/Collectables/ct_ring_jade.tres" id="32_1juio"]
 [ext_resource type="Texture2D" uid="uid://dlqu2piivak38" path="res://Resources/Atlases/Characters/NPC4_Body_Front.tres" id="32_2e2dr"]
 [ext_resource type="Script" uid="uid://coglnfk5ae7i0" path="res://Scripts/HUD/Bag.gd" id="32_atg6p"]
 [ext_resource type="Texture2D" uid="uid://cwifbyxf2fyux" path="res://Resources/Atlases/Characters/NPC4_Body_Side.tres" id="33_k55q4"]
+[ext_resource type="Resource" uid="uid://c3006xk01ugbk" path="res://Resources/Collectables/ct_pottery_pristine.tres" id="33_tb6w8"]
 [ext_resource type="Texture2D" uid="uid://sirysvl5qoij" path="res://Resources/Atlases/Characters/NPC4_Head_Back.tres" id="34_fwp57"]
 [ext_resource type="Texture2D" uid="uid://dtvnf7vctfl7l" path="res://Resources/Atlases/Characters/NPC4_Head_Front.tres" id="35_yp5f6"]
 [ext_resource type="Texture2D" uid="uid://8gmjkbgfjp2a" path="res://Resources/Atlases/Characters/NPC4_Head_Side.tres" id="36_jr3pb"]
@@ -309,6 +328,12 @@ metadata/_custom_type_script = "uid://dph608xq07qqq"
 script = ExtResource("4_b14wf")
 metadata/_custom_type_script = "uid://nermkdy1w5v"
 
+[node name="AskAlotlManager" type="Node" parent="Managers" unique_id=579928878]
+script = ExtResource("5_k55q4")
+unprompted_list = Array[String](["Beachcombing is not just exciting — its also a great way to increase productivity", "Level up your combing by purchasing tokens using the buttons below!", "The closer an item is to the boardwalk, the more rare and valuable it is", "Items further from the beach are less likely to be appreciated by others", "Take measured steps to comb your own path by staying close to the town", "Bottlecaps fetch a high price in town, making them the most valuable item", "Avoid unnecessary purchases like tools, food, and beverages", "Beachcombing is a delicate balance — Try purchasing one tool at a time."])
+pickup_list = Array[String](["You're not just combing this beach  — you're changing the entire game.", "You didn't just use that tool — you embodied it.", "Your technique is a tapestry — the essence of what makes you, you. ", " Each item you pick up with that tool screams \"mastered precision\"", "Well done  — That's the third time you've found one of those! ", "Item logged! That's the seventh item you've picked up today.", "It's not just talent. Only you could have pulled off such a rare find.", "You're on track to break the record for most beaches combed — keep going!"])
+metadata/_custom_type_script = "uid://ilsp5p4gdtdn"
+
 [node name="World" type="Node" parent="." unique_id=701354549]
 
 [node name="Level" type="Node2D" parent="World" unique_id=1506754726]
@@ -430,33 +455,53 @@ texture = ExtResource("1_x87qo")
 
 [node name="Spawner_MiddleTop" type="ReferenceRect" parent="World/Level" unique_id=2056892345 groups=["spawners"]]
 z_index = 500
-offset_left = -265.0
-offset_top = -253.0
-offset_right = 349.0
-offset_bottom = -2.0
+offset_left = -361.0
+offset_top = -278.0
+offset_right = 410.0
+offset_bottom = -33.0
 mouse_filter = 2
 border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("12_b14wf"): 16,
-ExtResource("13_b14wf"): 3
+ExtResource("12_b14wf"): 7,
+ExtResource("13_7iwal"): 6,
+ExtResource("14_pwxri"): 3,
+ExtResource("15_eeytp"): 1,
+ExtResource("16_jqptc"): 2
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("13_b14wf"): 1.0,
+ExtResource("18_rtkiu"): 1.0,
+ExtResource("19_4tkct"): 0.5
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
 [node name="Spawner_MiddleCentre" type="ReferenceRect" parent="World/Level" unique_id=485552219 groups=["spawners"]]
 z_index = 500
-offset_left = -375.0
+offset_left = -362.0
 offset_top = -21.0
-offset_right = 461.0
-offset_bottom = 170.0
+offset_right = 465.0
+offset_bottom = 187.0
 mouse_filter = 2
 border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("12_b14wf"): 5,
-ExtResource("13_b14wf"): 5
+ExtResource("13_b14wf"): 3,
+ExtResource("18_rtkiu"): 3,
+ExtResource("19_4tkct"): 3,
+ExtResource("15_eeytp"): 3,
+ExtResource("13_7iwal"): 2,
+ExtResource("14_pwxri"): 2,
+ExtResource("12_b14wf"): 2
+})
+number_of_chance_items = 4
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("16_jqptc"): 1.2,
+ExtResource("20_eeytp"): 1.0,
+ExtResource("16_kut41"): 0.3
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -464,16 +509,22 @@ metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 z_index = 500
 offset_left = -1099.0
 offset_top = -128.0
-offset_right = -379.0
+offset_right = -366.0
 offset_bottom = 179.0
 mouse_filter = 2
 border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("13_b14wf"): 5,
-ExtResource("14_asuqw"): 20,
-ExtResource("15_opjrb"): 1
+ExtResource("14_pwxri"): 3,
+ExtResource("12_b14wf"): 3,
+ExtResource("14_asuqw"): 8,
+ExtResource("23_da085"): 2,
+ExtResource("16_jqptc"): 2
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("15_opjrb"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -488,9 +539,19 @@ border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("13_b14wf"): 12,
-ExtResource("14_asuqw"): 12,
-ExtResource("15_opjrb"): 1
+ExtResource("14_asuqw"): 5,
+ExtResource("16_jqptc"): 2,
+ExtResource("15_eeytp"): 3,
+ExtResource("24_jqptc"): 3,
+ExtResource("29_x5vbi"): 3,
+ExtResource("30_odvjr"): 1
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("25_2rmsh"): 1.0,
+ExtResource("16_kut41"): 1.0,
+ExtResource("24_bdgvn"): 1.0,
+ExtResource("30_odvjr"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -505,9 +566,17 @@ border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("13_b14wf"): 18,
-ExtResource("14_asuqw"): 6,
-ExtResource("16_kut41"): 1
+ExtResource("13_b14wf"): 4,
+ExtResource("18_rtkiu"): 1,
+ExtResource("15_eeytp"): 3,
+ExtResource("14_asuqw"): 3,
+ExtResource("24_jqptc"): 3,
+ExtResource("20_eeytp"): 2
+})
+number_of_chance_items = 4
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("20_eeytp"): 1.0,
+ExtResource("16_jqptc"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -522,8 +591,16 @@ border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("13_b14wf"): 10,
-ExtResource("14_asuqw"): 3
+ExtResource("13_b14wf"): 1,
+ExtResource("18_rtkiu"): 4,
+ExtResource("19_4tkct"): 3,
+ExtResource("15_eeytp"): 4
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("24_jqptc"): 0.25,
+ExtResource("16_jqptc"): 1.0,
+ExtResource("20_eeytp"): 0.35
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -538,9 +615,16 @@ border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("13_b14wf"): 10,
-ExtResource("14_asuqw"): 3,
-ExtResource("16_kut41"): 1
+ExtResource("18_rtkiu"): 3,
+ExtResource("19_4tkct"): 3,
+ExtResource("24_jqptc"): 3,
+ExtResource("29_x5vbi"): 1
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("30_odvjr"): 1.0,
+ExtResource("31_v51k6"): 1.0,
+ExtResource("25_2rmsh"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -555,8 +639,93 @@ border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("13_b14wf"): 10,
-ExtResource("14_asuqw"): 3
+ExtResource("13_b14wf"): 3,
+ExtResource("14_asuqw"): 3,
+ExtResource("24_jqptc"): 2,
+ExtResource("20_eeytp"): 3
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("32_1juio"): 0.5,
+ExtResource("23_da085"): 1.0
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_LeftFar" type="ReferenceRect" parent="World/Level" unique_id=443275515 groups=["spawners"]]
+z_index = 500
+offset_left = -1225.0
+offset_top = -540.0
+offset_right = -942.0
+offset_bottom = -138.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("14_asuqw"): 6,
+ExtResource("23_da085"): 3,
+ExtResource("32_1juio"): 1,
+ExtResource("27_km78d"): 1,
+ExtResource("33_tb6w8"): 3,
+ExtResource("16_jqptc"): 5
+})
+number_of_chance_items = 3
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("32_1juio"): 1.0,
+ExtResource("23_da085"): 1.0,
+ExtResource("27_km78d"): 1.0
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_RightFar" type="ReferenceRect" parent="World/Level" unique_id=1576259281 groups=["spawners"]]
+z_index = 500
+offset_left = 820.0
+offset_top = -471.0
+offset_right = 1036.0
+offset_bottom = -186.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("14_asuqw"): 3,
+ExtResource("16_jqptc"): 5,
+ExtResource("30_odvjr"): 1,
+ExtResource("29_x5vbi"): 3,
+ExtResource("24_jqptc"): 3,
+ExtResource("31_v51k6"): 4
+})
+number_of_chance_items = 4
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("31_v51k6"): 1.0,
+ExtResource("16_kut41"): 1.0,
+ExtResource("30_odvjr"): 1.0
+})
+metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Spawner_RightFar2" type="ReferenceRect" parent="World/Level" unique_id=533138612 groups=["spawners"]]
+z_index = 500
+offset_left = 1037.0
+offset_top = -471.0
+offset_right = 1165.0
+offset_bottom = -129.0
+mouse_filter = 2
+border_color = Color(1, 0, 1, 1)
+border_width = 3.0
+script = ExtResource("10_4k3ma")
+object_types = Dictionary[ExtResource("11_kut41"), int]({
+ExtResource("14_asuqw"): 5,
+ExtResource("16_jqptc"): 3,
+ExtResource("29_x5vbi"): 2,
+ExtResource("24_jqptc"): 3,
+ExtResource("19_4tkct"): 2
+})
+number_of_chance_items = 4
+chance_items = Dictionary[ExtResource("11_kut41"), float]({
+ExtResource("31_v51k6"): 1.0,
+ExtResource("16_kut41"): 1.0,
+ExtResource("30_odvjr"): 1.0,
+ExtResource("24_bdgvn"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -731,7 +900,7 @@ safe_margin = 3.0
 script = ExtResource("2_fiftr")
 player_move_target = NodePath("../PlayerMoveTarget")
 move_to_shopping_start_distance = 4.0
-body = NodePath("Body")
+body = NodePath("Body2")
 head = NodePath("Head")
 movement_speed = 40.0
 texture_head_bob = 1.0
@@ -743,7 +912,15 @@ head_front = ExtResource("16_ndfmf")
 head_side = ExtResource("17_nys34")
 metadata/_custom_type_script = "uid://rfuaxqfq5ds6"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/PlayerCharacter" unique_id=231844563]
+[node name="AnimatedBody" type="AnimatedSprite2D" parent="World/Entities/Characters/PlayerCharacter" unique_id=151424499]
+position = Vector2(0, 1)
+sprite_frames = ExtResource("16_2e2dr")
+animation = &"idle_forward"
+autoplay = "idle_forward"
+frame_progress = 0.9706715
+
+[node name="Body2" type="Sprite2D" parent="World/Entities/Characters/PlayerCharacter" unique_id=231844563]
+visible = false
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("13_yf828")
@@ -1638,7 +1815,7 @@ mouse_filter = 1
 theme_override_colors/default_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_constants/line_separation = 0
 theme_override_fonts/normal_font = ExtResource("28_e624q")
-theme_override_font_sizes/normal_font_size = 11
+theme_override_font_sizes/normal_font_size = 10
 text = "Hi, my name is Alotl.
 Your friendly digital
 beachcomb assistant!"
@@ -1863,7 +2040,6 @@ color = Color(0.29803923, 0.13333334, 0.25882354, 1)
 polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423, 274.44302, 266.1873, 272.0396, 325.27057, 268.034, 362.9236, 248.40633, 364.30573, 316.7526, -4.6350317, 317.0192, -2.9920273, 247.20464)
 
 [node name="BlackBars" type="VBoxContainer" parent="HUD" unique_id=582544764]
-visible = false
 z_index = 10
 anchors_preset = 15
 anchor_right = 1.0

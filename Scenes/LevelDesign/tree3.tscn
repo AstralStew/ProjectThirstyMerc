@@ -6,7 +6,6 @@
 size = Vector2(16, 9)
 
 [node name="Tree3_0" type="Node2D" unique_id=1557634134 groups=["tilemaps"]]
-y_sort_enabled = true
 texture_filter = 1
 
 [node name="Gfx" type="Sprite2D" parent="." unique_id=702101448]

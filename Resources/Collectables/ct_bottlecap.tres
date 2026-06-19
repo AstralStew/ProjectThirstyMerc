@@ -1,13 +1,11 @@
 [gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://4jioa8dy36vc"]
 
-[ext_resource type="Texture2D" uid="uid://dn0lxui8gnbml" path="res://Resources/Atlases/Collectables/Collectable_Big_Bottlecap.tres" id="1_dlok8"]
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_q5ej7"]
 [ext_resource type="Texture2D" uid="uid://txesnkqmt2r2" path="res://Resources/Atlases/Collectables/Collectable_Small_Bottlecap.tres" id="3_lm22l"]
 
 [resource]
 script = ExtResource("1_q5ej7")
 name = "Bottlecap"
-big_texture = ExtResource("1_dlok8")
 small_texture = ExtResource("3_lm22l")
 digs_required = 1
 is_metal = true

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://b71jhg0b6wm7p"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_iw86r"]
+[ext_resource type="Texture2D" uid="uid://cxwgialefnj6x" path="res://Resources/Atlases/Collectables/Collectable_Small_PotteryClay.tres" id="2_s4wbh"]
+
+[resource]
+script = ExtResource("1_iw86r")
+name = "Clay Pottery"
+small_texture = ExtResource("2_s4wbh")
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

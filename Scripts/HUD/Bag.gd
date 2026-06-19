@@ -3,6 +3,7 @@ static var instance : Bag = null
 const DEBUG_NAME : String = "[b][Bag][/b] "
 func _enter_tree() -> void:
 	instance = self
+	WorldManager.restart_scene().connect(func():instance = null)
 
 
 #const BINOCULARS: PackedScene = preload("uid://b0qruvc8r4wfn")

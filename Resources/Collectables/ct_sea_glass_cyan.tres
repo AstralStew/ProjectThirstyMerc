@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://bri8u7r1v5itr"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_hwu4o"]
+[ext_resource type="Texture2D" uid="uid://bu6n64sho3vk0" path="res://Resources/Atlases/Collectables/Collectable_Small_SeaglassCyan.tres" id="2_t5msg"]
+
+[resource]
+script = ExtResource("1_hwu4o")
+name = "Cyan Seaglass"
+small_texture = ExtResource("2_t5msg")
+digs_required = 2
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

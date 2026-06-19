@@ -3,6 +3,7 @@ static var instance : HudManager = null
 const DEBUG_NAME : String = "[b][HudManager][/b] "
 func _enter_tree() -> void:
 	instance = self
+	WorldManager.restart_scene().connect(func():instance = null)
 
 #const SHOP_UI = preload("uid://bjfif1d68c3hk")
 

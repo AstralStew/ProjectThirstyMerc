@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://cc0gsuw7favvy"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_4jm1g"]
+[ext_resource type="Texture2D" uid="uid://b7uexjpdklibx" path="res://Resources/Atlases/Collectables/Collectable_Small_BrokenLure.tres" id="2_4jm1g"]
+
+[resource]
+script = ExtResource("1_4jm1g")
+name = "Broken Lure"
+small_texture = ExtResource("2_4jm1g")
+digs_required = 2
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

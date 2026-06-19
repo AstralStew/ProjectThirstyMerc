@@ -3,9 +3,14 @@ static var instance : Phone = null
 #const DEBUG_NAME : String = "[b][Phone][/b] "
 func _enter_tree() -> void:
 	instance = self
-	
+	WorldManager.restart_scene().connect(func():instance = null)
+
+
+
 const ALOTL_IDLE = preload("uid://cj757bbo2w6ww")
 const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
+
+
 
 @onready var balance_label: Label = $Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder/BalanceLabel
 @onready var time_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder/TimeLabel
@@ -15,16 +20,22 @@ const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
 @onready var alotl_texture: TextureRect = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/AlotlTexture
 
 
+@export var idle_wait_range: Vector2 = Vector2(30,60)
+@export var on_collectable_chance: float = 0.3
 
 
 @export var alotl_speech_speed : float = 1.0
+
+@export var time_since_buzz_up: float = 0.0
 
 func _ready() -> void:
 	super._ready()
 	InventoryManager.on_dosh_changed().connect(update_dosh)
 	update_dosh(InventoryManager.dosh)
 	
-	buzzing_up()
+	InventoryManager.on_collectable_added().connect(on_collectable_added)
+	
+	randomly_prompting()
 
 func _process(delta: float) -> void:
 	if WorldManager.is_daytime:
@@ -33,7 +44,7 @@ func _process(delta: float) -> void:
 func update_dosh(new_amount:int) -> void:
 	balance_label.text = "$" + str(new_amount)
 
-static func alotl_speech(speech:String) -> void:
+static func alotl_speech(speech:String,delay:float=0.5) -> void:
 	instance._alotl_speech(speech)
 var _text_tween : Tween
 func _alotl_speech(speech:String) -> void:
@@ -45,19 +56,41 @@ func _alotl_speech(speech:String) -> void:
 	_text_tween.tween_property(alotl_speech_label,"visible_ratio",1,(alotl_speech_label.get_total_character_count() as float) / (alotl_speech_speed as float))
 
 
-func buzzing_up() -> void:
+func on_collectable_added(type:CollectableType) -> void:
+	if randf() > on_collectable_chance: return
 	
+	
+	buzz_up(AskAlotlManager.pop_random_pickup_option())
+	
+
+
+func randomly_prompting() -> void:
+	var random_time: float = 0.0
 	await get_tree().create_timer(3.5).timeout
 	while(true):
-		if randi() % 2: alotl_texture.texture = ALOTL_IDLE
-		else: alotl_texture.texture = ALOTL_THINK
-		buzz_up()
-		await get_tree().create_timer(20).timeout
+		random_time = randf_range(idle_wait_range.x,idle_wait_range.y)
+		while (time_since_buzz_up < random_time):
+			time_since_buzz_up += get_physics_process_delta_time()
+			if !is_inside_tree() || !is_instance_valid(get_tree()):
+				return
+			await get_tree().physics_frame
+				
+		#alotl_speech()
+		buzz_up(AskAlotlManager.pop_random_unprompted_option())
+		
 
-func buzz_up() -> void:
+func buzz_up(text:String) -> void:
+	
+	time_since_buzz_up = 0
+	
 	if is_resetting: return
 	if is_dragging: return
 	if PlayerCharacter.instance.is_talking: return
+	
+	alotl_speech(text)
+	
+	if randi() % 2: alotl_texture.texture = ALOTL_IDLE
+	else: alotl_texture.texture = ALOTL_THINK
 	
 	#await get_tree().create_timer(3.5).timeout
 	var duration = 0.4
@@ -75,7 +108,7 @@ func buzz_up() -> void:
 	_tween.tween_property(dragged_object,"rotation_degrees",2,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*3)
 	_tween.tween_property(dragged_object,"rotation_degrees",-2,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*4)
 	_tween.tween_property(dragged_object,"rotation_degrees",0,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*5)
+	_tween.tween_callback(AudioManager.play_sound.bind(AudioManager.Sounds.PHONE_VIBRATION,0.7,0.95,-1.0,0.6))
 	_tween.tween_interval(duration*1.5)
-	
 	
 	
