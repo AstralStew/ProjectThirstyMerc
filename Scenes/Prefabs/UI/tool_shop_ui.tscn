@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://bjfif1d68c3hk"]
+[gd_scene format=3 uid="uid://cbk3q1ev6qjbi"]
 
-[ext_resource type="Script" uid="uid://c71m6r6j6yu6l" path="res://Scripts/HUD/ToolShopUI.gd" id="1_28ath"]
-[ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/shop_button_group.tres" id="2_ejmdn"]
-[ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_e17vv"]
+[ext_resource type="Script" uid="uid://c71m6r6j6yu6l" path="res://Scripts/HUD/ToolShopUI.gd" id="1_uycaq"]
+[ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/shop_button_group.tres" id="2_d3kil"]
+[ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_8hjje"]
+[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_d3kil"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
 content_margin_left = 10.0
@@ -225,8 +226,8 @@ anchors_preset = 0
 offset_right = 360.0
 offset_bottom = 280.0
 size_flags_horizontal = 0
-script = ExtResource("1_28ath")
-button_group = ExtResource("2_ejmdn")
+script = ExtResource("1_uycaq")
+button_group = ExtResource("2_d3kil")
 metadata/_custom_type_script = "uid://c71m6r6j6yu6l"
 
 [node name="DialogueBanner" type="Control" parent="." unique_id=2006371414]
@@ -264,7 +265,7 @@ theme_override_colors/default_color = Color(1, 0.92941177, 0.84313726, 1)
 theme_override_constants/shadow_offset_x = 82
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
-text = "Welcome to [color=f7738e]Pawn's Point[/color]! You can rent up to 3 tools per day. I'll give you back most of your dosh whenever you return them :)"
+text = "Welcome to [color=f7738e]Origin Tools[/color]! You can rent up to 3 tools per day. I'll give you back most of your dosh whenever you return them :)"
 scroll_active = false
 vertical_alignment = 1
 
@@ -341,7 +342,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Old Handbrush"
 alignment = 2
 
@@ -367,7 +368,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$5"
@@ -390,7 +391,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 disabled = true
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Magnifying Glass"
 alignment = 2
 
@@ -416,7 +417,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$8"
@@ -438,7 +439,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Binoculars"
 alignment = 2
 
@@ -464,7 +465,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$13"
@@ -486,7 +487,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Metal Detector"
 alignment = 2
 
@@ -512,7 +513,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$14"
@@ -541,7 +542,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Old Shovel"
 alignment = 2
 
@@ -567,7 +568,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$3"
@@ -589,7 +590,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 disabled = true
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Zen Rake"
 alignment = 2
 
@@ -615,7 +616,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$6"
@@ -637,7 +638,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 disabled = true
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Fishing Rod"
 alignment = 2
 
@@ -663,7 +664,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$10"
@@ -685,7 +686,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 disabled = true
 toggle_mode = true
-button_group = ExtResource("2_ejmdn")
+button_group = ExtResource("2_d3kil")
 text = "Pickerupper"
 alignment = 2
 
@@ -711,14 +712,14 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_e17vv")
+theme_override_fonts/font = ExtResource("3_8hjje")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$15"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Purchase" type="Button" parent="." unique_id=1605273636]
+[node name="Rent" type="Button" parent="." unique_id=1605273636]
 visible = false
 layout_mode = 0
 offset_left = 134.5
@@ -737,7 +738,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_yp5f6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_3miyi")
 disabled = true
-text = "PURCHASE"
+text = "RENT"
 
 [node name="Leave" type="Button" parent="." unique_id=237836838]
 visible = false
@@ -759,5 +760,24 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_3miyi")
 text = "LEAVE"
 
-[connection signal="pressed" from="Purchase" to="." method="_on_purchase_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=141903515]
+position = Vector2(160, -110)
+texture = ExtResource("4_d3kil")
+region_enabled = true
+region_rect = Rect2(208, 8, 80, 64)
+
+[node name="ClickBoundary" type="Control" parent="Sprite2D" unique_id=487815138]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -35.0
+offset_right = -42.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="Rent" to="." method="_on_rent_pressed"]
 [connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

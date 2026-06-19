@@ -30,8 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://rkql7bo7rl7j" path="res://Resources/Atlases/Characters/NPC2_Head_Front.tres" id="16_ndfmf"]
 [ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/Characters/NPC1_Head_Back.tres" id="16_w61bx"]
 [ext_resource type="Texture2D" uid="uid://0lk6itks1din" path="res://Resources/Atlases/Characters/NPC2_Head_Side.tres" id="17_nys34"]
+[ext_resource type="PackedScene" uid="uid://cbk3q1ev6qjbi" path="res://Scenes/Prefabs/UI/tool_shop_ui.tscn" id="17_skhme"]
 [ext_resource type="Texture2D" uid="uid://dvqyputrheado" path="res://Resources/Atlases/Characters/NPC1_Head_Front.tres" id="17_uvj3q"]
 [ext_resource type="Texture2D" uid="uid://w773s5rkat5q" path="res://Resources/Atlases/Characters/NPC1_Head_Side.tres" id="18_mqs2o"]
+[ext_resource type="PackedScene" uid="uid://biujytdbivyrd" path="res://Scenes/Prefabs/UI/pawn_shop_ui.tscn" id="20_a6xwo"]
 [ext_resource type="Script" uid="uid://dwa7d63qu5514" path="res://Scripts/HUD/Notepad.gd" id="21_aq00n"]
 [ext_resource type="Texture2D" uid="uid://tbv6letytyi6" path="res://Resources/Atlases/Characters/Enemy_Crab.tres" id="25_atg6p"]
 [ext_resource type="Texture2D" uid="uid://ktjkhfytrrma" path="res://Resources/Atlases/Characters/NPC3_Body_Back.tres" id="25_opjrb"]
@@ -560,18 +562,19 @@ metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 y_sort_enabled = true
 texture_filter = 1
 
-[node name="ShopCharacter" type="Node2D" parent="World/Entities" unique_id=472469870]
+[node name="OriginTools" type="Node2D" parent="World/Entities" unique_id=472469870]
 position = Vector2(31, -400)
 script = ExtResource("16_b14wf")
+shop_ui = ExtResource("17_skhme")
 metadata/_custom_type_script = "uid://cboevetfqgec8"
 
-[node name="Sprite2D" type="Sprite2D" parent="World/Entities/ShopCharacter" unique_id=754760174]
+[node name="Sprite2D" type="Sprite2D" parent="World/Entities/OriginTools" unique_id=754760174]
 position = Vector2(3, -27)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(208, 8, 80, 64)
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/ShopCharacter/Sprite2D" unique_id=1617463263]
+[node name="ClickBoundary" type="Control" parent="World/Entities/OriginTools/Sprite2D" unique_id=1617463263]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -584,7 +587,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="QuestionMark" type="Label" parent="World/Entities/ShopCharacter" unique_id=1562541479]
+[node name="QuestionMark" type="Label" parent="World/Entities/OriginTools" unique_id=1562541479]
 z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -592,9 +595,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -13.0
-offset_top = -70.62369
+offset_top = -76.62369
 offset_right = 17.0
-offset_bottom = -18.123688
+offset_bottom = -24.123688
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2810022, 1.2810022)
@@ -613,14 +616,62 @@ text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Shop2" type="Sprite2D" parent="World/Entities" unique_id=2112917581]
-position = Vector2(-113, -427)
+[node name="PawnsPoint" type="Node2D" parent="World/Entities" unique_id=1558384760]
+position = Vector2(-116, -400)
+script = ExtResource("16_b14wf")
+shop_ui = ExtResource("20_a6xwo")
+metadata/_custom_type_script = "uid://cboevetfqgec8"
+
+[node name="Sprite2D" type="Sprite2D" parent="World/Entities/PawnsPoint" unique_id=718713135]
+position = Vector2(-1, -27)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
-region_rect = Rect2(8, 0, 88, 64)
+region_rect = Rect2(8, 0, 80, 64)
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/PawnsPoint/Sprite2D" unique_id=1432067880]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -35.0
+offset_right = -42.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="QuestionMark" type="Label" parent="World/Entities/PawnsPoint" unique_id=2090854112]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -76.62369
+offset_right = 17.0
+offset_bottom = -24.123688
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2810022, 1.2810022)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("3_6h5vk")
+theme_override_font_sizes/font_size = 24
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Shop3" type="Sprite2D" parent="World/Entities" unique_id=7815882]
-position = Vector2(191, -424)
+position = Vector2(184, -268)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(96, 0, 104, 72)
@@ -1590,6 +1641,7 @@ dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(69, 90), Vector2(380, 315)])
 respect_grab_position = true
 setup_on_ready = true
+reset_on_drag_end = true
 reset_duration = 0.35
 reset_trans = 4
 is_usable = true
@@ -1784,17 +1836,14 @@ layout_mode = 2
 size_flags_vertical = 10
 color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
-[node name="Timer2" type="Timer" parent="HUD" unique_id=573134771]
-wait_time = 2.0
-one_shot = true
-
 [node name="PauseMenu" type="Node" parent="." unique_id=1795159322]
 
 [node name="Transitions" type="Node" parent="." unique_id=401277600]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=776416136]
 
-[connection signal="gui_input" from="World/Entities/ShopCharacter/Sprite2D/ClickBoundary" to="World/Entities/ShopCharacter" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/OriginTools/Sprite2D/ClickBoundary" to="World/Entities/OriginTools" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/PawnsPoint/Sprite2D/ClickBoundary" to="World/Entities/PawnsPoint" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter/ClickBoundary" to="World/Entities/Characters/NPCharacter" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter2/ClickBoundary" to="World/Entities/Characters/NPCharacter2" method="_on_gui_input"]
 [connection signal="pressed" from="HUD/Dialogue/DialoguePlayer/Button" to="Managers/HudManager" method="stop_dialogue"]

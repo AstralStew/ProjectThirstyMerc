@@ -4,7 +4,7 @@ const DEBUG_NAME : String = "[b][HudManager][/b] "
 func _enter_tree() -> void:
 	instance = self
 
-const SHOP_UI = preload("uid://bjfif1d68c3hk")
+#const SHOP_UI = preload("uid://bjfif1d68c3hk")
 
 
 @export_group("Shop Settings")
@@ -107,9 +107,9 @@ func _stop_dialogue() -> void:
 	await _tween.finished
 	PlayerCharacter.stop_dialogue()
 
-static func start_shop() -> void:
-	instance._start_shop()
-func _start_shop() -> void:
+static func start_shop(shop_character:ShopCharacter) -> void:
+	instance._start_shop(shop_character)
+func _start_shop(shop_character:ShopCharacter) -> void:
 	if _tween: _tween.kill()
 	
 	_tween = create_tween().set_parallel().set_ease(shop_zoom_ease).set_trans(shop_zoom_transition)
@@ -120,7 +120,7 @@ func _start_shop() -> void:
 		_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration).from(0)
 	#_tween.tween_property(shop_ui,"visible",true,0).set_delay(shop_zoom_duration)
 	
-	current_shop = SHOP_UI.instantiate()
+	current_shop = shop_character.shop_ui.instantiate()
 	hud.add_child(current_shop)
 	
 

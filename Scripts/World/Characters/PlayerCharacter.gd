@@ -105,7 +105,7 @@ func start_shopping() -> void:
 	call_deferred("turn_back")
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
-	HudManager.start_shop() # .start_dialogue((_npc_target.global_position - global_position)/2)
+	HudManager.start_shop(_shop_target) # .start_dialogue((_npc_target.global_position - global_position)/2)
 
 static func stop_shopping() -> void:
 	instance._stop_shopping()
