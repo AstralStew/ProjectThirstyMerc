@@ -11,7 +11,7 @@ signal _on_inventory_changed(new_total)
 static func on_inventory_changed() -> Signal:
 	return instance._on_inventory_changed
 
-static var dosh : int = 60:
+static var dosh : int = 6:
 	get: return dosh
 	set(value):
 		dosh = clamp(value,0,1000)
@@ -31,8 +31,10 @@ static func add_collectable(type:CollectableType,amount:int=1) -> void:
 	instance._add_collectable(type,amount)
 func _add_collectable(type:CollectableType,amount:int) -> void:
 	if inventory.has(type):
-		inventory[type] = inventory[type] + 1
-	else:
-		inventory[type] = 1
+		inventory[type] = inventory[type] + amount
+		if inventory[type] <= 0:
+			inventory.erase(type)
+	elif amount > 0:
+		inventory[type] = amount
 	_on_inventory_changed.emit(inventory)
 	#Notepad.update_entries(inventory)

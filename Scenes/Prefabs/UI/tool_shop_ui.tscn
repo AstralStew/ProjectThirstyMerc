@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbk3q1ev6qjbi"]
 
 [ext_resource type="Script" uid="uid://c71m6r6j6yu6l" path="res://Scripts/HUD/ToolShopUI.gd" id="1_uycaq"]
-[ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/shop_button_group.tres" id="2_d3kil"]
+[ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/tool_shop_button_group.tres" id="2_d3kil"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_8hjje"]
 [ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_d3kil"]
 

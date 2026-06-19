@@ -43,14 +43,16 @@ static var bag_progress: float = 1 :
 		instance.position.y = 70 * (1-value)
 		bag_progress = value
 
-static var is_full:bool = false:
-	get: return instance.tool_1 and instance.tool_2 and instance.tool_3
+static var is_full:bool:
+	get:
+		print("is full = " + str(instance.tool_1 != null) + " + " + str(instance.tool_2 != null) + " + " + str(instance.tool_3 != null))
+		return (instance.tool_1 != null && instance.tool_2 != null && instance.tool_3 != null)
 
 var index: int :
 	get: return (
-		1 if (instance.tool_1!=null) else 0 + 
-		1 if (instance.tool_2!=null) else 0 + 
-		1 if (instance.tool_3!=null) else 0 )
+		(1 if (instance.tool_1!=null) else 0) + 
+		(1 if (instance.tool_2!=null) else 0) + 
+		(1 if (instance.tool_3!=null) else 0) )
 
 #func _ready() -> void:
 	#bag_progress = 0
@@ -88,7 +90,9 @@ func _set_tools_usable(toggle:bool=true) -> void:
 	print_rich(DEBUG_NAME,"SetToolsUsable > Toggled phone + notepad " + ("on" if toggle else "off"))
 
 static func setup_tool(tool_type:ToolType) -> bool:
-	if instance.index >= 3: return false
+	if instance.index >= 3:
+		push_error("TOO MANY ITEMS")
+		return false
 	else:
 		instance._setup_tool(tool_type)
 		return true

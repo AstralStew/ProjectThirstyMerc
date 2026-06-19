@@ -108,6 +108,10 @@ static func end_day() -> void:
 	is_daytime = false
 	day_ended().emit()
 	print(DEBUG_NAME,"EndDay > Ending day!")
+	
+	await instance.get_tree().create_timer(4).timeout
+	instance.get_tree().reload_current_scene.call_deferred() # .call_deferred("reload_current_scene")
+	
 
 
 

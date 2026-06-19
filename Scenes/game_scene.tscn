@@ -295,6 +295,7 @@ talking_zoom_amount = 3.0
 talking_zoom_ease = 1
 talking_zoom_transition = 1
 day_cap_duration = 3.0
+day_cap_black_background_size = 150.0
 day_cap_ease = 1
 day_cap_transition = 1
 metadata/_custom_type_script = "uid://iakb8cgqbcdy"
@@ -566,23 +567,38 @@ texture_filter = 1
 position = Vector2(31, -400)
 script = ExtResource("16_b14wf")
 shop_ui = ExtResource("17_skhme")
+texture_random_turn = true
+texture_random_turn_chance = 0.125
 metadata/_custom_type_script = "uid://cboevetfqgec8"
 
-[node name="Sprite2D" type="Sprite2D" parent="World/Entities/OriginTools" unique_id=754760174]
+[node name="Background" type="Sprite2D" parent="World/Entities/OriginTools" unique_id=754760174]
 position = Vector2(3, -27)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
-region_rect = Rect2(208, 8, 80, 64)
+region_rect = Rect2(176, 8, 72, 64)
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/OriginTools/Sprite2D" unique_id=1617463263]
+[node name="Character" type="Sprite2D" parent="World/Entities/OriginTools" unique_id=139230403]
+position = Vector2(2, -17)
+texture = ExtResource("4_kiiqx")
+offset = Vector2(-3, 0)
+region_enabled = true
+region_rect = Rect2(256, 48, 32, 32)
+
+[node name="Foreground" type="Sprite2D" parent="World/Entities/OriginTools" unique_id=1008358677]
+position = Vector2(3, -19)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(256, 0, 64, 40)
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/OriginTools" unique_id=1617463263]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -42.0
-offset_top = -35.0
-offset_right = -42.0
-offset_bottom = -35.0
+offset_left = -29.0
+offset_top = -53.0
+offset_right = 35.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -620,23 +636,37 @@ vertical_alignment = 1
 position = Vector2(-116, -400)
 script = ExtResource("16_b14wf")
 shop_ui = ExtResource("20_a6xwo")
+texture_random_turn = true
+texture_random_turn_chance = 0.125
 metadata/_custom_type_script = "uid://cboevetfqgec8"
 
-[node name="Sprite2D" type="Sprite2D" parent="World/Entities/PawnsPoint" unique_id=718713135]
+[node name="Background" type="Sprite2D" parent="World/Entities/PawnsPoint" unique_id=718713135]
 position = Vector2(-1, -27)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(8, 0, 80, 64)
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/PawnsPoint/Sprite2D" unique_id=1432067880]
+[node name="Character" type="Sprite2D" parent="World/Entities/PawnsPoint" unique_id=631957788]
+position = Vector2(1, -17)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(96, 40, 32, 40)
+
+[node name="Foreground" type="Sprite2D" parent="World/Entities/PawnsPoint" unique_id=845916864]
+position = Vector2(1, -5)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(96, 0, 64, 32)
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/PawnsPoint" unique_id=1432067880]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -42.0
-offset_top = -35.0
-offset_right = -42.0
-offset_bottom = -35.0
+offset_left = -31.0
+offset_top = -50.0
+offset_right = 33.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -670,11 +700,25 @@ text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Shop3" type="Sprite2D" parent="World/Entities" unique_id=7815882]
-position = Vector2(184, -268)
+[node name="Node2D" type="Node2D" parent="World/Entities" unique_id=834431170]
+
+[node name="Background" type="Sprite2D" parent="World/Entities/Node2D" unique_id=214786635]
+position = Vector2(222, -436)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
-region_rect = Rect2(96, 0, 104, 72)
+region_rect = Rect2(304, 48, 32, 32)
+
+[node name="Character" type="Sprite2D" parent="World/Entities/Node2D" unique_id=7815882]
+position = Vector2(223, -433)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(304, 80, 32, 32)
+
+[node name="Foreground" type="Sprite2D" parent="World/Entities/Node2D" unique_id=992839271]
+position = Vector2(195, -431)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(336, 0, 104, 72)
 
 [node name="Characters" type="Node2D" parent="World/Entities" unique_id=277602795]
 y_sort_enabled = true
@@ -1512,10 +1556,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -113.18182
-offset_top = -10.000005
-offset_right = -85.18181
-offset_bottom = 17.999996
+offset_left = -102.72727
+offset_top = -10.45455
+offset_right = -74.727264
+offset_bottom = 17.54545
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 1
@@ -1530,7 +1574,6 @@ theme_override_fonts/font = ExtResource("50_asuqw")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
 text = "$5"
-horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="TimeLabel" type="RichTextLabel" parent="HUD/Bag/Phone/Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder" unique_id=2079846708]
@@ -1814,24 +1857,27 @@ color = Color(0.29803923, 0.13333334, 0.25882354, 1)
 polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423, 274.44302, 266.1873, 272.0396, 325.27057, 268.034, 362.9236, 248.40633, 364.30573, 316.7526, -4.6350317, 317.0192, -2.9920273, 247.20464)
 
 [node name="BlackBars" type="VBoxContainer" parent="HUD" unique_id=582544764]
-visible = false
+z_index = 10
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -2.0
+offset_top = -10.0
 offset_right = -360.0
-offset_bottom = -278.0
+offset_bottom = -270.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = -10
+alignment = 1
 
 [node name="BlackBarsTop" type="ColorRect" parent="HUD/BlackBars" unique_id=346891044]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 2
 color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="BlackBarsBottom" type="ColorRect" parent="HUD/BlackBars" unique_id=1490738524]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 10
 color = Color(0.23137255, 0.07450981, 0.16862746, 1)
@@ -1842,8 +1888,8 @@ color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=776416136]
 
-[connection signal="gui_input" from="World/Entities/OriginTools/Sprite2D/ClickBoundary" to="World/Entities/OriginTools" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/PawnsPoint/Sprite2D/ClickBoundary" to="World/Entities/PawnsPoint" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/OriginTools/ClickBoundary" to="World/Entities/OriginTools" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/PawnsPoint/ClickBoundary" to="World/Entities/PawnsPoint" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter/ClickBoundary" to="World/Entities/Characters/NPCharacter" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/NPCharacter2/ClickBoundary" to="World/Entities/Characters/NPCharacter2" method="_on_gui_input"]
 [connection signal="pressed" from="HUD/Dialogue/DialoguePlayer/Button" to="Managers/HudManager" method="stop_dialogue"]

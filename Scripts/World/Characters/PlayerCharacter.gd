@@ -100,6 +100,7 @@ func _move_to_start_shopping(shop:ShopCharacter) -> void:
 	set_movement_target(_shop_target.global_position + Vector2(0,6))
 
 func start_shopping() -> void:
+	_shop_target.is_shopping = true
 	set_deferred("is_talking", true)
 	set_movement_target(global_position)
 	call_deferred("turn_back")
@@ -110,6 +111,7 @@ func start_shopping() -> void:
 static func stop_shopping() -> void:
 	instance._stop_shopping()
 func _stop_shopping() -> void:
+	_shop_target.is_shopping = false
 	_shop_target = null
 	WorldManager.resume_day()
 	Bag.set_tools_usable(true)
@@ -176,6 +178,8 @@ func adjusting_move_target() -> void:
 	#var _is_light = false
 	var _elapsed = 0
 	while true:
+		if !is_instance_valid(get_tree()):
+			return
 		await get_tree().physics_frame
 		if player_move_target.visible:
 			if _npc_target: 	_circle.size = Vector2.ONE * 12

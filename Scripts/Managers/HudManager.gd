@@ -70,10 +70,8 @@ static var black_background_progress: float :
 		black_background_progress = value
 
 
-
-
 func _ready() -> void:
-	black_background_progress = 1
+	#black_background_progress = 1
 	
 	WorldManager.day_started().connect(_start_day)
 	WorldManager.day_ended().connect(_end_day)

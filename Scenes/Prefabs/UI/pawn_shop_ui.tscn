@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://biujytdbivyrd"]
 
-[ext_resource type="Script" uid="uid://c71m6r6j6yu6l" path="res://Scripts/HUD/ToolShopUI.gd" id="1_78ccv"]
-[ext_resource type="ButtonGroup" uid="uid://duin60cxdogk2" path="res://Resources/ButtonGroups/shop_button_group.tres" id="2_fhc7o"]
+[ext_resource type="Script" uid="uid://ddpmhjuntp24y" path="res://Scripts/HUD/PawnShopUI.gd" id="1_fiacm"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_fiacm"]
+[ext_resource type="ButtonGroup" uid="uid://opijg25qt5gt" path="res://Resources/ButtonGroups/pawn_shop_button_group.tres" id="3_juj23"]
 [ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_fhc7o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
@@ -217,7 +217,7 @@ shadow_size = 1
 shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
-[node name="PawnShopUI" type="Control" unique_id=1155915442]
+[node name="PawnShopUI" type="Control" unique_id=1981340277]
 z_index = -10
 texture_filter = 1
 custom_maximum_size = Vector2(360, 280)
@@ -226,9 +226,9 @@ anchors_preset = 0
 offset_right = 360.0
 offset_bottom = 280.0
 size_flags_horizontal = 0
-script = ExtResource("1_78ccv")
-button_group = ExtResource("2_fhc7o")
-metadata/_custom_type_script = "uid://c71m6r6j6yu6l"
+script = ExtResource("1_fiacm")
+button_group = ExtResource("3_juj23")
+metadata/_custom_type_script = "uid://ddpmhjuntp24y"
 
 [node name="DialogueBanner" type="Control" parent="." unique_id=2006371414]
 z_index = 1
@@ -269,7 +269,7 @@ text = "As-salamu alaykum! The annual [color=6ed6a4]Pawn's Point[/color] clean u
 scroll_active = false
 vertical_alignment = 1
 
-[node name="Tools" type="Control" parent="." unique_id=1142599987]
+[node name="Options" type="Control" parent="." unique_id=1142599987]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -277,7 +277,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ToolsMarginContainer" type="MarginContainer" parent="Tools" unique_id=379854355]
+[node name="OptionsMarginContainer" type="MarginContainer" parent="Options" unique_id=379854355]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -289,15 +289,15 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = -130
 theme_override_constants/margin_bottom = 0
 
-[node name="LeftBanner" type="HBoxContainer" parent="Tools/ToolsMarginContainer" unique_id=1767429045]
+[node name="LeftBanner" type="HBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1767429045]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Control" type="Control" parent="Tools/ToolsMarginContainer/LeftBanner" unique_id=2062052670]
+[node name="Control" type="Control" parent="Options/OptionsMarginContainer/LeftBanner" unique_id=2062052670]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="LeftBanner" type="Panel" parent="Tools/ToolsMarginContainer/LeftBanner" unique_id=224402325]
+[node name="LeftBanner" type="Panel" parent="Options/OptionsMarginContainer/LeftBanner" unique_id=224402325]
 custom_minimum_size = Vector2(90, 398)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -305,23 +305,23 @@ size_flags_vertical = 4
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_28ath")
 
-[node name="RightBanner" type="HBoxContainer" parent="Tools/ToolsMarginContainer" unique_id=1457921560]
+[node name="RightBanner" type="HBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1457921560]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 2
 
-[node name="RightBanner" type="Panel" parent="Tools/ToolsMarginContainer/RightBanner" unique_id=1232212724]
+[node name="RightBanner" type="Panel" parent="Options/OptionsMarginContainer/RightBanner" unique_id=1232212724]
 custom_minimum_size = Vector2(90, 398)
 layout_mode = 2
 size_flags_horizontal = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_28ath")
 
-[node name="Control" type="Control" parent="Tools/ToolsMarginContainer/RightBanner" unique_id=680291275]
+[node name="Control" type="Control" parent="Options/OptionsMarginContainer/RightBanner" unique_id=680291275]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="LeftTools" type="VBoxContainer" parent="Tools/ToolsMarginContainer" unique_id=2088399658]
+[node name="LeftTools" type="VBoxContainer" parent="Options/OptionsMarginContainer" unique_id=2088399658]
 custom_maximum_size = Vector2(100, 140)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -329,7 +329,7 @@ size_flags_vertical = 4
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="SellBottlecaps" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=1414520098]
+[node name="Sell1Bottlecap" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1414520098]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -342,11 +342,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
-button_group = ExtResource("2_fhc7o")
+button_group = ExtResource("3_juj23")
 text = "1 Bottlecap"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/SellBottlecaps" unique_id=199479917]
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/Sell1Bottlecap" unique_id=199479917]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -371,11 +371,11 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_fiacm")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
-text = "$5"
+text = "$1"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="SellBottlecaps2" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=2032097104]
+[node name="Sell10Bottlecaps" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=2032097104]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -388,11 +388,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
 theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
-button_group = ExtResource("2_fhc7o")
-text = "5 Bottlecaps"
+button_group = ExtResource("3_juj23")
+text = "10 Bottlecaps"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/SellBottlecaps2" unique_id=108037336]
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/Sell10Bottlecaps" unique_id=108037336]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -417,11 +417,11 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_fiacm")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
-text = "$5"
+text = "$15"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="RightTools" type="VBoxContainer" parent="Tools/ToolsMarginContainer" unique_id=1889026244]
+[node name="RightTools" type="VBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1889026244]
 custom_maximum_size = Vector2(100, 140)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -429,7 +429,8 @@ size_flags_vertical = 4
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="OldShovel" type="Button" parent="Tools/ToolsMarginContainer/RightTools" unique_id=578814015]
+[node name="OldShovel" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=578814015]
+visible = false
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -443,11 +444,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 toggle_mode = true
-button_group = ExtResource("2_fhc7o")
+button_group = ExtResource("3_juj23")
 text = "Old Shovel"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/RightTools/OldShovel" unique_id=1179868813]
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/OldShovel" unique_id=1179868813]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -476,7 +477,8 @@ text = "$3"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ZenRake" type="Button" parent="Tools/ToolsMarginContainer/RightTools" unique_id=537957120]
+[node name="ZenRake" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=537957120]
+visible = false
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -491,11 +493,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 disabled = true
 toggle_mode = true
-button_group = ExtResource("2_fhc7o")
+button_group = ExtResource("3_juj23")
 text = "Zen Rake"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/RightTools/ZenRake" unique_id=1558232369]
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/ZenRake" unique_id=1558232369]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -524,103 +526,7 @@ text = "$6"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="FishingRod" type="Button" parent="Tools/ToolsMarginContainer/RightTools" unique_id=1372151464]
-custom_minimum_size = Vector2(99.755, 24)
-layout_mode = 2
-size_flags_vertical = 6
-layout_direction = 3
-theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
-theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
-theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
-disabled = true
-toggle_mode = true
-button_group = ExtResource("2_fhc7o")
-text = "Fishing Rod"
-alignment = 2
-
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/RightTools/FishingRod" unique_id=959891514]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -7.5
-offset_top = -15.5
-offset_right = 20.5
-offset_bottom = 12.5
-grow_horizontal = 0
-grow_vertical = 2
-size_flags_vertical = 1
-mouse_filter = 1
-theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
-theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
-theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 3
-theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_fiacm")
-theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$10"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Pickerupper" type="Button" parent="Tools/ToolsMarginContainer/RightTools" unique_id=705698987]
-custom_minimum_size = Vector2(99.755, 24)
-layout_mode = 2
-size_flags_vertical = 6
-layout_direction = 3
-theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
-theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
-theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
-theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
-disabled = true
-toggle_mode = true
-button_group = ExtResource("2_fhc7o")
-text = "Pickerupper"
-alignment = 2
-
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/RightTools/Pickerupper" unique_id=227992032]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -7.5
-offset_top = -15.5
-offset_right = 20.5
-offset_bottom = 12.5
-grow_horizontal = 0
-grow_vertical = 2
-size_flags_vertical = 1
-mouse_filter = 1
-theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
-theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
-theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 3
-theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("3_fiacm")
-theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
-text = "$15"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="Tools/ToolsMarginContainer" unique_id=1135913615]
+[node name="Sprite2D" type="Sprite2D" parent="Options/OptionsMarginContainer" unique_id=1135913615]
 position = Vector2(54, -56)
 texture = ExtResource("4_fhc7o")
 region_enabled = true
