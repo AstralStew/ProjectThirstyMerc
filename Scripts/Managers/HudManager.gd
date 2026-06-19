@@ -113,9 +113,11 @@ func _start_shop(shop_character:ShopCharacter) -> void:
 	_tween = create_tween().set_parallel().set_ease(shop_zoom_ease).set_trans(shop_zoom_transition)
 	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * shop_zoom_amount,shop_zoom_duration)
 	_tween.tween_property(PlayerCharacter.camera,"offset",shop_zoom_camera_offset,shop_zoom_duration)
+	Phone.instance.resetting()
+	Notepad.instance.resetting()
 	#_tween.tween_property(HudManager,"black_bar_progress",1,shop_zoom_duration)
-	if Bag.bag_progress < 1:
-		_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration).from(0)
+	#if Bag.bag_progress < 1:
+		#_tween.tween_property(Bag,"bag_progress",1,shop_zoom_duration)#.from(0)
 	#_tween.tween_property(shop_ui,"visible",true,0).set_delay(shop_zoom_duration)
 	
 	current_shop = shop_character.shop_ui.instantiate()
@@ -148,7 +150,8 @@ func _start_day() -> void:
 	Bag.bag_progress = 0
 	_tween = create_tween().set_parallel().set_ease(day_cap_ease).set_trans(day_cap_transition)
 	_tween.tween_property(HudManager,"black_background_progress",0,day_cap_duration).from(1)
-	_tween.tween_property(Bag,"bag_progress",1,day_cap_duration).from(0).set_delay(day_cap_duration)
+	_tween.tween_property(Bag,"bag_progress",1,day_cap_duration/2).from(0).set_delay(day_cap_duration/2)
+	
 	#await _tween.finished
 	#await get_tree().create_timer(1.0).timeout
 	#start_shop()

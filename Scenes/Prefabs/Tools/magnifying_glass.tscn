@@ -16,6 +16,7 @@ rotation_bounds = Vector2(-30, 30)
 rotate_source = 1
 dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(37.000015, 10.000015), Vector2(323, 265)])
+initial_position_offset = Vector2(0, -20)
 reset_on_drag_end = true
 metadata/_custom_type_script = "uid://chinjcwpkts3r"
 

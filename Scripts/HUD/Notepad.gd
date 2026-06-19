@@ -21,9 +21,12 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	super._ready()
 	InventoryManager.on_inventory_changed().connect(update_entries)
+	call_deferred("_update_entries",InventoryManager.inventory)
+	#call_deferred("resetting")
 
 static func update_entries(list:Dictionary[CollectableType,int]) -> void:
 	instance._update_entries(list)
+	instance.bounce(list.size())
 func _update_entries(list:Dictionary[CollectableType,int]) -> void:
 	#if (notepad_entries.get_children()).size() > list.size():
 	var _number_of_children = notepad_entries.get_children().size()
@@ -43,7 +46,6 @@ func _update_entries(list:Dictionary[CollectableType,int]) -> void:
 		else:
 			(notepad_entries.get_child(i) as RichTextLabel).text = ""
 	
-	bounce(_list_size)
 
 func _process(delta: float) -> void:
 	if is_bouncing: return
@@ -61,5 +63,5 @@ func bounce(_list_size:int) -> void:
 	is_bouncing = false
 	resetting()
 
-	super.resetting()
+	#super.resetting()
 	_tween.tween_property(dragged_object,"scale",Vector2.ONE,reset_duration)

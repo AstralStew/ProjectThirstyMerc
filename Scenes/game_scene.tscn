@@ -1857,6 +1857,7 @@ color = Color(0.29803923, 0.13333334, 0.25882354, 1)
 polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423, 274.44302, 266.1873, 272.0396, 325.27057, 268.034, 362.9236, 248.40633, 364.30573, 316.7526, -4.6350317, 317.0192, -2.9920273, 247.20464)
 
 [node name="BlackBars" type="VBoxContainer" parent="HUD" unique_id=582544764]
+visible = false
 z_index = 10
 anchors_preset = 15
 anchor_right = 1.0

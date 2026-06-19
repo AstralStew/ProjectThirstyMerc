@@ -34,7 +34,7 @@ static func tool_pivots_moved() -> Signal:
 
 static var bag_progress: float = 1 :
 	set(value):
-		if bag_progress == value: return
+		#if bag_progress == value: return
 		bag_progress = clamp(value,0,1)
 		if value == 0:
 			instance.visible = false

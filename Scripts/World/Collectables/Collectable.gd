@@ -1,10 +1,13 @@
 class_name Collectable extends Area2D
 
+const BURIED_HINT_GRADIENT = preload("uid://6dxrw8q72rvw")
+
+
 var buried_gfx: Node2D # = $BuriedGfx
 var real_gfx: Control # = $RealGfx
 var object_gfx: Control  #= $RealGfx/ObjectGfx
 var ground_gfx: ColorRect # = $RealGfx/GroundGfx
-var real_sprite: Sprite2D # = $RealGfx/ObjectGfx/RealSprite
+var real_sprite: Sprite2D = null # = $RealGfx/ObjectGfx/RealSprite
 
 
 @export var collectable_type: CollectableType = null
@@ -31,17 +34,17 @@ func setup(type:CollectableType) -> void:
 	real_gfx = $RealGfx
 	object_gfx = $RealGfx/ObjectGfx
 	ground_gfx = $RealGfx/GroundGfx
-	real_sprite = $RealGfx/ObjectGfx/RealSprite
+	#real_sprite = $RealGfx/ObjectGfx/RealSprite
 	
 	buried_gfx.visible = false
 	real_gfx.visible = false
 	real_gfx.modulate = Color(Color.WHITE,0)
 	
 	collectable_type = type
-	real_sprite.texture = collectable_type.small_texture
 
 
 var _tween : Tween
+var _sample: float = 0
 func reveal(duration: float = 1.0,mirage: bool = false):
 	if is_collected || !is_buried: return
 	
@@ -52,9 +55,12 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	buried_gfx.get_child(0).position = Vector2.ZERO
 	buried_gfx.get_child(0).rotation = 0
 	
+	_sample = 0
+	
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel()
-	_tween.tween_property(buried_gfx,"modulate",Color(Color(0.231, 0.075, 0.169, 1.0)*2.5,0),duration)
+	#_tween.tween_property(buried_gfx,"modulate.a",0,duration)
+	_tween.tween_property(self,"_sample",1,duration)
 	if mirage: 
 		_tween.tween_property(buried_gfx,"position",Vector2.ONE * randf() * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from(Vector2.ONE * randf() * mirage_strength).set_ease(Tween.EASE_OUT_IN)
 		_tween.tween_property(buried_gfx,"rotation",(randf()-1) * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from((randf()-1) * mirage_strength).set_ease(Tween.EASE_IN_OUT)
@@ -63,6 +69,7 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	
 	
 	while _tween.is_running() && is_buried && !is_collected:
+		buried_gfx.modulate = Color(BURIED_HINT_GRADIENT.sample(_sample),min(1,1.5*(1-_sample)))
 		await get_tree().process_frame
 	buried_gfx.visible = false
 	buried_gfx.position = Vector2.ZERO
@@ -76,6 +83,12 @@ func dig(progress:int = 1) -> void:
 	if is_buried:
 		is_buried = false
 		global_position = global_position.lerp(PlayerCharacter.instance.global_position + Vector2(0,player_y_offset_on_start_digging),0.5)
+		real_sprite = Sprite2D.new()
+		object_gfx.add_child(real_sprite)
+		real_sprite.position = Vector2(0,0)
+		real_sprite.scale = Vector2(0.5,0.5)
+		real_sprite.texture = collectable_type.small_texture
+		
 		real_gfx.set_deferred("visible",true)
 	
 	dig_progress += progress  # clamp(, 0, max(digs_required - 1,1))

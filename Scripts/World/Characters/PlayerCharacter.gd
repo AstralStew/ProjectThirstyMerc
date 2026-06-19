@@ -31,16 +31,17 @@ func _ready():
 	camera.offset = camera_base_offset
 	adjusting_move_target()
 	
-	#WorldManager.day_started().connect(start_day)
+	WorldManager.day_started().connect(start_day)
 	WorldManager.day_ended().connect(end_day)
 
 
 
 func start_day() -> void:
 	is_talking = true
-	await get_tree().create_timer(3.5).timeout
+	await get_tree().create_timer(3.1).timeout
 	
-	start_shopping()
+	is_talking = false
+	#start_shopping()
 	
 
 func end_day() -> void:
