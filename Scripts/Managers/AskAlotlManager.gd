@@ -22,3 +22,12 @@ static func pop_random_pickup_option() -> String:
 	if instance.local_pickup_list.size() == 0:
 		instance.local_pickup_list = instance.pickup_list.duplicate()
 	return instance.local_pickup_list.pop_at(randi() % instance.local_pickup_list.size())
+
+
+@export var tokens_list : Array[String] = []
+var local_tokens_list : Array[String] = []
+
+static func pop_random_token_option() -> String:
+	if instance.local_tokens_list.size() == 0:
+		instance.local_tokens_list = instance.tokens_list.duplicate()
+	return instance.local_tokens_list.pop_at(randi() % instance.local_tokens_list.size())

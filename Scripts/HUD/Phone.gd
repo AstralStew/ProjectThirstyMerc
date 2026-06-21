@@ -20,6 +20,7 @@ const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
 @onready var alotl_texture: TextureRect = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/AlotlTexture
 
 @onready var ask_question_button: Button = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons/AskQuestionButton
+@onready var buy_tokens_button: Button = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons/BuyTokensButton
 
 
 @export var idle_wait_range: Vector2 = Vector2(30,60)
@@ -34,6 +35,7 @@ func _ready() -> void:
 	super._ready()
 	
 	ask_question_button.pressed.connect(ask_question)
+	buy_tokens_button.pressed.connect(buy_token)
 	
 	InventoryManager.on_dosh_changed().connect(update_dosh)
 	balance_label.text = "$" + str(InventoryManager.dosh)
@@ -107,6 +109,16 @@ func ask_question() -> void:
 	if randi() % 2: alotl_texture.texture = ALOTL_IDLE
 	else: alotl_texture.texture = ALOTL_THINK
 	WorldManager.day_progress += 0.1
+
+
+func buy_token() -> void:
+	if InventoryManager.dosh < 5:
+		alotl_speech("You have insufficient funds, please try again in a few minutes")
+		return
+	InventoryManager.add_dosh(-5)
+	alotl_speech(AskAlotlManager.pop_random_token_option())
+	if randi() % 2: alotl_texture.texture = ALOTL_IDLE
+	else: alotl_texture.texture = ALOTL_THINK
 
 
 

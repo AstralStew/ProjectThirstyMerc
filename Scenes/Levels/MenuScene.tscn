@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cx8j5ddukoq0l"]
+
+[ext_resource type="Script" uid="uid://dobkyjq64vlo3" path="res://Scripts/MenuScene.gd" id="1_80g1x"]
+[ext_resource type="Texture2D" uid="uid://bhdi77dlur8aj" path="res://Assets/Media/TitleScreen.png" id="1_m83kx"]
+[ext_resource type="AudioStream" uid="uid://0lvrx1etaaqt" path="res://Assets/Audio/Ambient/518637__jackmichaelking__gentle-ocean-waves-birdsong-and-gull.wav" id="3_o2xw7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m83kx"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[node name="MenuScene" type="Node2D" unique_id=665175841]
+script = ExtResource("1_80g1x")
+
+[node name="TitleScreen" type="Sprite2D" parent="." unique_id=895908700]
+texture_filter = 1
+position = Vector2(360.85712, 282)
+scale = Vector2(2, 2)
+texture = ExtResource("1_m83kx")
+
+[node name="Leave" type="Button" parent="." unique_id=1301514430]
+modulate = Color(1, 1, 1, 0)
+offset_left = 207.0
+offset_top = 262.0
+offset_right = 278.0
+offset_bottom = 279.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_m83kx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m83kx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m83kx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_m83kx")
+disabled = true
+text = "START"
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=969237462]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="BlackBars" type="VBoxContainer" parent="HUD" unique_id=51367669]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = -360.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="BlackBarsTop" type="ColorRect" parent="HUD/BlackBars" unique_id=1491047996]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 2
+color = Color(1, 0.92941177, 0.84313726, 1)
+
+[node name="BlackBarsBottom" type="ColorRect" parent="HUD/BlackBars" unique_id=635694955]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 10
+color = Color(1, 0.92941177, 0.84313726, 1)
+
+[node name="ShoreAudio" type="AudioStreamPlayer2D" parent="." unique_id=1049199081]
+position = Vector2(-95, 301)
+stream = ExtResource("3_o2xw7")
+volume_db = -80.0
+autoplay = true
+max_distance = 800.0
+attenuation = 1.4640856

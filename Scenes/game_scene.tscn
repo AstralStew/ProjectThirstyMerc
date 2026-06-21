@@ -218,13 +218,13 @@ anti_aliasing = false
 content_margin_left = 3.0
 content_margin_right = 3.0
 
-[sub_resource type="Gradient" id="Gradient_pbc1q"]
+[sub_resource type="Gradient" id="Gradient_2e5js"]
 interpolation_mode = 2
 interpolation_color_space = 1
 colors = PackedColorArray(0.3529412, 0.7254902, 0.63529414, 1, 0.43137255, 0.8392157, 0.6431373, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_t53j4"]
-gradient = SubResource("Gradient_pbc1q")
+gradient = SubResource("Gradient_2e5js")
 width = 8
 height = 8
 fill_from = Vector2(0.0964591, 0.08913309)
@@ -326,8 +326,9 @@ metadata/_custom_type_script = "uid://nermkdy1w5v"
 
 [node name="AskAlotlManager" type="Node" parent="Managers" unique_id=579928878]
 script = ExtResource("5_k55q4")
-unprompted_list = Array[String](["Beachcombing is not just exciting — its also a great way to increase productivity", "Level up your combing by purchasing tokens using the buttons below!", "The closer an item is to the boardwalk, the more rare and valuable it is", "Items further from the beach are less likely to be appreciated by others", "Take measured steps to comb your own path by staying close to the town", "Bottlecaps fetch a high price in town, making them the most valuable item", "Avoid unnecessary purchases like tools, food, and beverages", "Beachcombing is a delicate balance — Try purchasing one tool at a time."])
-pickup_list = Array[String](["You're not just combing this beach  — you're changing the entire game.", "You didn't just use that tool — you embodied it.", "Your technique is a tapestry — the essence of what makes you, you. ", " Each item you pick up with that tool screams \"mastered precision\"", "Well done  — That's the third time you've found one of those! ", "Item logged! That's the seventh item you've picked up today.", "It's not just talent. Only you could have pulled off such a rare find.", "You're on track to break the record for most beaches combed — keep going!"])
+unprompted_list = Array[String](["Beachcombing is not just exciting — its also a great way to increase productivity", "Level up your combing by purchasing tokens using the buttons below!", "The closer an item is to the boardwalk, the more rare and valuable it is", "Items further from the beach are less likely to be appreciated by others", "Take measured steps to comb your own path by staying close to the town", "Bottlecaps fetch a high price in town, making them the most valuable item", "Avoid unnecessary purchases like tools, food, and beverages", "Beachcombing is a delicate balance — Try purchasing one tool at a time.", "Daily Tip: Combing is all about Locking In. Do not talk to other beachgoers!", "Daily Tip: Buy Alotl Premium to unlock more daily tips", "Here's a poem: Beachcombing is a great day out, it's sure to be a good time"])
+pickup_list = Array[String](["You're not just combing this beach  — you're changing the entire game.", "You didn't just use that tool — you embodied it.", "Your technique is a tapestry — the essence of what makes you, you. ", " Each item you pick up with that tool screams \"mastered precision\"", "Well done  — That's the third time you've found one of those! ", "Item logged! That's the seventh item you've picked up today.", "It's not just talent. Only you could have pulled off such a rare find.", "You're on track to break the record for most beaches combed — keep going!", "Wow! You've just picked up another {ERR: ALOTL.EXCEPTION -48}", "You can log this and other items on Alotl Social — try it now!"])
+tokens_list = Array[String](["Great choice! You have unlocked Alotl Premium ©", "Token purchased! Alotl is now 125% more accurate! **", "Alotl Ultra™ unlocked! Please wait 48* hours for premium features to apply", " AskAlotl has encountered an error, please try again later ", "You have run out of token requests, please contact support", "Your Alotl subscription has been reset! Let us know what went wrong", "Alotl MAX ® has been added to your account!", "Welcome to AlotlDeluxe. Please enter a BitWallet to continue", "Alotl Pro is now activated. Find out more at {ERR: Bad request}"])
 metadata/_custom_type_script = "uid://ilsp5p4gdtdn"
 
 [node name="ObjectsManager" type="Node" parent="Managers" unique_id=1128383972]
@@ -3391,20 +3392,6 @@ volume_db = -80.0
 max_distance = 981.0
 attenuation = 1.8660669
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="World" unique_id=2010014668]
-visible = false
-texture_filter = 1
-offset_right = 720.0
-offset_bottom = 560.0
-stretch = true
-stretch_shrink = 2
-
-[node name="SubViewport" type="SubViewport" parent="World/SubViewportContainer" unique_id=557937722]
-handle_input_locally = false
-oversampling = false
-size = Vector2i(360, 280)
-render_target_update_mode = 0
-
 [node name="HUD" type="CanvasLayer" parent="." unique_id=298506667]
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
@@ -3685,7 +3672,7 @@ mouse_filter = 1
 theme_override_colors/default_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_constants/line_separation = 0
 theme_override_fonts/normal_font = ExtResource("28_e624q")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 12
 text = "Hi, my name is Alotl.
 Your friendly digital
 beachcomb assistant!"

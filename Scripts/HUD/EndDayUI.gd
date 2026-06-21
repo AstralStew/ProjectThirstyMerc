@@ -119,6 +119,7 @@ func on_button_clicked()-> void:
 	
 	leave.disabled = true
 	leave.modulate = Color(Color.WHITE,0)
+	AudioManager.play_sound(AudioManager.Sounds.UI_POP_UP,1,1.25)
 	
 	var _tween:Tween = create_tween()
 	_tween.tween_property(self,"modulate",Color(Color.WHITE,0),1.0)

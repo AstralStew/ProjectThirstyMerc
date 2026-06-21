@@ -71,13 +71,13 @@ static var total_shark_tooth : int = 0
 
 #endregion
 
-static var inventory : Dictionary[CollectableType,int] = {
+static var inventory : Dictionary[CollectableType,int] = {}
 	#CT_SEA_GLASS_CYAN: 1,
 	#CT_SEA_GLASS_DARK: 1,
 	#CT_SEA_GLASS_RED: 1,
 	#CT_SEA_GLASS_VIBRANT:1,
-	CT_NECKLACE_GOLD :1
-}
+	#CT_NECKLACE_GOLD :1
+#}
 signal _on_collectable_added(collectable)
 static func on_collectable_added() -> Signal:
 	return instance._on_collectable_added
@@ -86,7 +86,7 @@ signal _on_inventory_changed(new_total)
 static func on_inventory_changed() -> Signal:
 	return instance._on_inventory_changed
 
-static var dosh : int = 60:
+static var dosh : int = 6:
 	get: return dosh
 	set(value):
 		dosh = clamp(value,0,1000)

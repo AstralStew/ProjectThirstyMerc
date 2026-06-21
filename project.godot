@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Touch Sand"
-run/main_scene="uid://pyahp0w2yidh"
+run/main_scene="uid://cx8j5ddukoq0l"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
