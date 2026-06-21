@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://35ita73ayoir"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_ngody"]
+[ext_resource type="Resource" uid="uid://cgx64kq3muqp7" path="res://Resources/Collectables/ct_necklace_gold.tres" id="2_ojwb2"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="3_d0ppi"]
+
+[resource]
+script = ExtResource("3_d0ppi")
+name = "Lost Necklace"
+npc_default_text = "Hmm? Oh, just looking for %s ... I really hope it's here and not in the rock pools we were playing in out east :("
+npc_complete_text = "Weeew~!! I can't believe you found it! Thank you thank you! Here, I insist! ^-^"
+requirements = Dictionary[ExtResource("1_ngody"), int]({
+ExtResource("2_ojwb2"): 1
+})
+player_has_requirements_text = "Hey I think I found it!"
+player_leave_incomplete_text = "You stay here, I'll head out and check!"
+player_leave_complete_text = "My pleasure, enjoy!"
+reward = 10
+metadata/_custom_type_script = "uid://yl10xow1syvr"

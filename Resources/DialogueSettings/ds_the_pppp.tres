@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://c1yau71kendsr"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_c38il"]
+[ext_resource type="Resource" uid="uid://bs0xhs6kxhexr" path="res://Resources/Collectables/ct_fossil.tres" id="2_tvncx"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="3_plg2c"]
+
+[resource]
+script = ExtResource("3_plg2c")
+name = "The PPPP"
+npc_default_text = "The Pawn's Point Paleontology Party are searching for a new dig site. Please let us know if you find, say %s?"
+npc_complete_text = "Clever girl! The others will be thrilled at your find, the PPPP are in your debt! Here's a down payment."
+requirements = Dictionary[ExtResource("1_c38il"), int]({
+ExtResource("2_tvncx"): 3
+})
+player_has_requirements_text = "I've uh, found a way."
+player_leave_incomplete_text = "Hold onto your butts!"
+player_leave_complete_text = "Spared no expense!"
+reward = 8
+metadata/_custom_type_script = "uid://yl10xow1syvr"

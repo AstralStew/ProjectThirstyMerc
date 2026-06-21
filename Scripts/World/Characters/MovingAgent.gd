@@ -89,6 +89,7 @@ func _physics_process(delta):
 	
 
 func on_velocity_computed(safe_velocity:Vector2) -> void:
+	if process_mode == PROCESS_MODE_DISABLED: return
 	velocity = velocity.move_toward(safe_velocity, 100)
 	#velocity = safe_velocity
 	move_and_slide()

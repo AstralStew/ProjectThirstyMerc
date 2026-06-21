@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://csmb60o0kj3ea"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_upk54"]
+[ext_resource type="Resource" uid="uid://b3ketqrdog68w" path="res://Resources/Collectables/ct_ring_gold.tres" id="2_k87cb"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="3_4vuw2"]
+
+[resource]
+script = ExtResource("3_4vuw2")
+name = "Groom-To-Be"
+npc_default_text = "oh no jeez how the- not the %s - Where did- Oh jeez where, what am I gonna- Oh jeez ohhhh I'm so stupid.. >~<\""
+npc_complete_text = "OMG THANK YOU SO MUCH ~! YOU HAVE NO IDEA WHAT THIS MEANS TO ME, HERE HAVE ALL THIS!"
+requirements = Dictionary[ExtResource("1_upk54"), int]({
+ExtResource("2_k87cb"): 1
+})
+player_has_requirements_text = "Is this it?"
+player_leave_incomplete_text = "I'll have a look around!"
+player_leave_complete_text = "No worries, good luck! ;)"
+reward = 15
+metadata/_custom_type_script = "uid://yl10xow1syvr"

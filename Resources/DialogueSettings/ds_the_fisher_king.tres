@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://i0dhngucu2u0"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_a2m47"]
+[ext_resource type="Resource" uid="uid://cc0gsuw7favvy" path="res://Resources/Collectables/ct_broken_lure.tres" id="2_a2m47"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="3_85i7w"]
+
+[resource]
+script = ExtResource("3_85i7w")
+name = "The Fisher King"
+npc_default_text = "Ay chica, seen any fishing junk down there? I recycle old rods... I need like %s in case you find any."
+npc_complete_text = "Daaaang, you came through! Hey, hit me up if you ever need a fresh line or whatever ;)"
+requirements = Dictionary[ExtResource("1_a2m47"), int]({
+ExtResource("2_a2m47"): 4
+})
+player_has_requirements_text = "Will these do?"
+player_leave_incomplete_text = "I got you king"
+player_leave_complete_text = "I just might"
+metadata/_custom_type_script = "uid://yl10xow1syvr"

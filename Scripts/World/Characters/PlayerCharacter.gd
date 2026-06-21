@@ -11,9 +11,11 @@ static var camera : Camera2D = null
 
 @export var move_to_shopping_start_distance: float = 20.0
 @export var move_to_dialogue_start_distance: float = 20.0
+@export var move_to_dialogue_static_start_distance: float = 20.0
 
 @export_group("READ ONLY")
 @export var base_movement_speed : float = 0.0
+@export var base_dig_strength : int = 1
 @export var is_using_tool : bool = false
 @export var is_talking: bool = false
 @export var is_walking: bool = false
@@ -21,6 +23,7 @@ static var camera : Camera2D = null
 
 var _click_held_down: bool = false
 var _npc_target:NPCharacter = null
+var _npc_static_target:NPCharacterStatic = null
 var _shop_target:ShopCharacter = null
 
 
@@ -64,20 +67,30 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta):
 	if is_talking: return
+	
 	sqr_distance_to_target = global_position.distance_squared_to(navigation_agent.target_position)
+	
 	if _npc_target:
 		if _click_held_down:
 			_npc_target = null
 		elif sqr_distance_to_target < move_to_dialogue_start_distance**2:
 			start_talking()
-		elif _npc_target.do_wander:
+		else: #if _npc_target.do_wander:
 			set_movement_target(_npc_target.global_position + Vector2(0,6))
+	elif _npc_static_target:
+		if _click_held_down:
+			_npc_static_target = null
+		elif sqr_distance_to_target < move_to_dialogue_static_start_distance**2:
+			start_talking()
+		else: # _npc_target.do_wander:
+			set_movement_target(_npc_static_target.global_position + Vector2(0,6))
 	elif _shop_target:
 		if _click_held_down:
 			_shop_target = null
 		elif sqr_distance_to_target < move_to_shopping_start_distance**2:
 			start_shopping()
 		#else: set_movement_target(_shop_target.global_position + Vector2(0,6))
+	
 	if _click_held_down:
 		set_movement_target(get_global_mouse_position())
 	if player_move_target != null:
@@ -92,10 +105,12 @@ func _physics_process(delta):
 		set_animation()
 
 	super._physics_process(delta)
+	
+	
 
 
 
-
+#region Shopping
 
 static func move_to_start_shopping(shop:ShopCharacter) -> void:
 	instance._move_to_start_shopping(shop)
@@ -108,6 +123,7 @@ func _move_to_start_shopping(shop:ShopCharacter) -> void:
 	print_rich(DEBUG_NAME,"MoveToStartShopping > Setting target shop...")
 	
 	if _npc_target: _npc_target = null
+	if _npc_static_target: _npc_static_target = null
 	_shop_target = shop
 	set_movement_target(_shop_target.global_position + Vector2(0,6))
 
@@ -130,20 +146,9 @@ func _stop_shopping() -> void:
 	Bag.set_tools_usable(true)
 	is_talking = false
 
+#endregion
 
-
-var _talking_tween: Tween
-func start_talking() -> void:
-	#get_tree().paused = true
-	set_deferred("is_talking", true)
-	set_movement_target(global_position)
-	call_deferred("turn_to_face_direction",global_position.direction_to(_npc_target.global_position))
-	_npc_target.start_talking()
-	WorldManager.pause_day()
-	Bag.set_tools_usable(false)
-	HudManager.start_dialogue((_npc_target.global_position - global_position)/2)
-	is_walking = false
-
+#region Talking
 
 static func move_to_start_dialogue(npc:NPCharacter) -> void:
 	instance._move_to_start_dialogue(npc)
@@ -154,18 +159,70 @@ func _move_to_start_dialogue(npc:NPCharacter) -> void:
 	_click_held_down = false
 	print(DEBUG_NAME,"MoveToStartDialogue > Setting target npc...")
 	
-	if _shop_target: _shop_target = null
+	if _shop_target: _shop_target = null	
+	if _npc_static_target: _npc_static_target = null
 	_npc_target = npc
 	set_movement_target(_npc_target.global_position)
 
-static func stop_dialogue() -> void:
-	instance._stop_dialogue()
-func _stop_dialogue() -> void:
-	_npc_target.stop_talking()
-	_npc_target = null
+
+static func move_to_start_dialogue_static(npc_static:NPCharacterStatic) -> void:
+	instance._move_to_start_dialogue_static(npc_static)
+func _move_to_start_dialogue_static(npc_static:NPCharacterStatic) -> void:
+	if _click_held_down: return
+	if is_using_tool: return
+	if is_talking: return
+	_click_held_down = false
+	print(DEBUG_NAME,"MoveToStartDialogue > Setting target npc static...")
+	
+	if _npc_target: _npc_target = null
+	if _shop_target: _shop_target = null
+	_npc_static_target = npc_static
+	set_movement_target(_npc_static_target.global_position)
+
+
+#var _talking_tween: Tween
+func start_talking() -> void:
+	var target: Node2D = null
+	var dialogue_settings: DialogueSettings = null
+	if _npc_target:
+		target = _npc_target
+		dialogue_settings = _npc_target.dialogue_settings
+	elif _npc_static_target:
+		target = _npc_static_target
+		dialogue_settings = _npc_static_target.dialogue_settings
+	else:
+		push_error(DEBUG_NAME,"StartTalking > No target defined! Ignoring...")
+		return
+	
+	set_deferred("is_talking", true)
+	set_movement_target(global_position)
+	WorldManager.pause_day()
+	Bag.set_tools_usable(false)
+	
+	call_deferred("turn_to_face_direction",global_position.direction_to(target.global_position))
+	target.start_talking()
+	HudManager.start_dialogue((target.global_position - global_position)/2,dialogue_settings)
+	
+	is_walking = false
+
+static func stop_talking() -> void:
+	instance._stop_talking()
+func _stop_talking() -> void:
+	if _npc_target:
+		_npc_target.stop_talking()
+		_npc_target = null
+	elif _npc_static_target:
+		_npc_static_target.stop_talking()
+		_npc_static_target = null
+	else:
+		push_error(DEBUG_NAME,"StartTalking > No target defined! Ignoring...")
+		return
+
 	WorldManager.resume_day()
 	Bag.set_tools_usable(true)
 	is_talking = false
+
+#endregion
 
 
 func on_navigation_finished() -> void:
@@ -203,7 +260,7 @@ func adjusting_move_target() -> void:
 			return
 		await get_tree().process_frame
 		if player_move_target.visible:
-			if _npc_target: 	_circle.size = Vector2.ONE * 12
+			if _npc_target || _npc_static_target: 	_circle.size = Vector2.ONE * 12
 			else: 			_circle.size = Vector2.ONE * 6
 			
 			_elapsed += get_physics_process_delta_time()

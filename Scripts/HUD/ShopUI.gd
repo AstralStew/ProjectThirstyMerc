@@ -51,7 +51,7 @@ func _on_leave_pressed() -> void:
 	
 	AudioManager.play_sound(AudioManager.Sounds.UI_POP_UP,1,0.8)
 	
-	HudManager.stop_shop()
+	HudManager.stop_dialogue()
 	
 
 func update_buttons() -> void:

@@ -2,6 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://cd1ttfy6p0auk" path="res://Assets/Images/SpriteSheet_Tiles.png" id="1_lsvfs"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_lsvfs"]
+tile_data = PackedInt32Array(0, 196608, 16, 65536, 196608, 17, 131072, 196608, 21, 1, 262144, 16, 65537, 262144, 17, 131073, 262144, 18, 2, 327680, 16, 65538, 327680, 17, 131074, 327680, 21)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_jke7u"]
+tile_data = PackedInt32Array(0, 262144, 16, 65536, 262144, 17, 131072, 262144, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_01sno"]
+tile_data = PackedInt32Array(0, 196608, 16, 65536, 196608, 17, 131072, 196608, 21)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_1a5ky"]
+tile_data = PackedInt32Array(0, 327680, 16, 65536, 327680, 17, 131072, 327680, 21)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_dq3qo"]
+tile_data = PackedInt32Array(0, 196608, 17, 65536, 196608, 21, 1, 262144, 17, 65537, 262144, 18, 2, 327680, 17, 65538, 327680, 21)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ti4k6"]
+tile_data = PackedInt32Array(0, 196608, 16, 65536, 196608, 17, 131072, 196608, 19, 1, 262144, 16, 65537, 262144, 17, 131073, 262144, 18, 2, 262144, 16, 65538, 262144, 17, 131074, 262144, 18, 3, 327680, 16, 65539, 327680, 17, 131075, 327680, 19)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ug0us"]
 texture = ExtResource("1_lsvfs")
 1:7/0 = 0
@@ -129,3 +147,9 @@ texture = ExtResource("1_lsvfs")
 physics_layer_0/collision_layer = 4096
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_ug0us")
+pattern_0 = SubResource("TileMapPattern_lsvfs")
+pattern_1 = SubResource("TileMapPattern_jke7u")
+pattern_2 = SubResource("TileMapPattern_01sno")
+pattern_3 = SubResource("TileMapPattern_1a5ky")
+pattern_4 = SubResource("TileMapPattern_dq3qo")
+pattern_5 = SubResource("TileMapPattern_ti4k6")

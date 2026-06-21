@@ -125,7 +125,7 @@ func create_gain_text() -> void:
 	_gain_text.gain("+ " + collectable_type.name.to_upper())
 
 func move_to_inventory() -> void:
-	if collectable_type.name == "Coin":
-		InventoryManager.add_dosh(1)
-	else:
-		InventoryManager.add_collectable(collectable_type,1)
+	#if collectable_type.name == "Coin":
+		#InventoryManager.add_dosh(1)
+	#else:
+	InventoryManager.add_collectable(collectable_type,1)

@@ -10,14 +10,14 @@ texture_filter = 1
 
 [node name="Gfx" type="Sprite2D" parent="." unique_id=1968498384]
 y_sort_enabled = true
-position = Vector2(-1, -1)
+position = Vector2(0, -11)
 texture = ExtResource("1_bd160")
 region_enabled = true
 region_rect = Rect2(16, 192, 16, 24)
 
 [node name="Gfx2" type="Sprite2D" parent="." unique_id=1628725626]
 y_sort_enabled = true
-position = Vector2(-1, 9)
+position = Vector2(0, -1)
 texture = ExtResource("1_bd160")
 region_enabled = true
 region_rect = Rect2(16, 232, 16, 8)
@@ -27,5 +27,4 @@ collision_layer = 12288
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=869623549]
-position = Vector2(-1, 10)
 shape = SubResource("RectangleShape2D_pbc1q")

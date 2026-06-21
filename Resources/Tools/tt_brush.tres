@@ -7,7 +7,7 @@
 script = ExtResource("2_tjhbl")
 name = "Long Brush"
 description = "Sweep around for non-metal objects hiding in the ground!"
-cost = 6
+cost = 7
 prefab = ExtResource("1_xcjiq")
 utility = 2
 metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

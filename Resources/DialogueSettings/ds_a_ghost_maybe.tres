@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://ca1fdpnlcfcl5"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_pxwo6"]
+[ext_resource type="Resource" uid="uid://b71jhg0b6wm7p" path="res://Resources/Collectables/ct_pottery_clay.tres" id="2_e8syo"]
+[ext_resource type="Resource" uid="uid://cbfm67a57couy" path="res://Resources/Collectables/ct_pottery_jade.tres" id="3_opyq5"]
+[ext_resource type="Resource" uid="uid://dpv66a4sdtc2f" path="res://Resources/Collectables/ct_pottery_ancient.tres" id="4_au7ay"]
+[ext_resource type="Resource" uid="uid://c3006xk01ugbk" path="res://Resources/Collectables/ct_pottery_pristine.tres" id="5_604co"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="6_f0f1h"]
+
+[resource]
+script = ExtResource("6_f0f1h")
+name = "A Ghost Maybe?"
+npc_default_text = "... oOoOo... forever trapped... my soul will be... until I find... %syyyyy...oOoOo..."
+npc_complete_text = "...OOOOO... at last I can.... depart these shores... but perhaps I'll haunt it... FOREVERMORE... OoOoOoO!!!"
+requirements = Dictionary[ExtResource("1_pxwo6"), int]({
+ExtResource("2_e8syo"): 1,
+ExtResource("3_opyq5"): 1,
+ExtResource("4_au7ay"): 1,
+ExtResource("5_604co"): 1
+})
+player_has_requirements_text = "I got your... pottery?"
+player_leave_incomplete_text = "... alrighty."
+player_leave_complete_text = "Seems comfy enough I guess"
+metadata/_custom_type_script = "uid://yl10xow1syvr"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://rtlensl8eh1t"]
+
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="1_1wvqh"]
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_8teic"]
+[ext_resource type="Resource" uid="uid://bri8u7r1v5itr" path="res://Resources/Collectables/ct_sea_glass_cyan.tres" id="2_sp2is"]
+
+[resource]
+script = ExtResource("1_1wvqh")
+npc_default_text = "This is a test! Let's see how it goes! I want %s"
+npc_complete_text = "You did it! What a great test :)"
+requirements = Dictionary[ExtResource("1_8teic"), int]({
+ExtResource("2_sp2is"): 2
+})
+player_has_requirements_text = "Is this what you need? :D"
+player_leave_incomplete_text = "I'll see what I can do!"
+player_leave_complete_text = "No worries!"
+metadata/_custom_type_script = "uid://yl10xow1syvr"

@@ -21,8 +21,8 @@ func start() -> void:
 	PlayerCharacter.instance.add_child(_direction_indicator)
 	_direction_indicator.indicator_position_y = 0
 	
-	(_direction_indicator as ShovelIndicator).dig_down.connect(dig_flash)
-	(_direction_indicator as ShovelIndicator).dig_up.connect(dig_flash)
+	(_direction_indicator as ShovelIndicator).dig_down.connect(on_dig_down)
+	(_direction_indicator as ShovelIndicator).dig_up.connect(on_dig_up)
 	
 	z_index = -5
 	
@@ -35,6 +35,14 @@ func digging() -> void:
 		_direction_indicator.indicator_position_y = clamp(remap(value_y_only,0,1,-1,1),-1,1)
 		
 		await get_tree().process_frame
+
+func on_dig_up()-> void:
+	AudioManager.play_sound(AudioManager.Sounds.DIG_UP)
+	dig_flash()
+
+func on_dig_down()-> void:
+	AudioManager.play_sound(AudioManager.Sounds.DIG_DOWN)
+	dig_flash()
 
 var _dig_tween:Tween
 func dig_flash() -> void:

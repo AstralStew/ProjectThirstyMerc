@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://d1mkaywhdbvgk"]
+
+[ext_resource type="Script" uid="uid://chyu0dl1yqxul" path="res://Scripts/HUD/DialogueUI.gd" id="1_hjh8l"]
+[ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_s3ea8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+expand_margin_left = 100.0
+expand_margin_right = 1.0
+shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opjrb"]
+content_margin_left = 0.0
+content_margin_right = 0.0
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 22.0
+expand_margin_right = 100.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v1oo"]
+content_margin_left = 0.0
+content_margin_right = 0.0
+bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 24.0
+expand_margin_right = 100.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skhme"]
+content_margin_left = 0.0
+content_margin_right = 0.0
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 24.0
+expand_margin_right = 100.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kut41"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+expand_margin_left = 11.0
+expand_margin_right = 100.0
+shadow_color = Color(0.54509807, 0.22745098, 0.28627452, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k3ma"]
+content_margin_left = 3.0
+content_margin_right = 3.0
+
+[node name="DialogueUI" type="Control" unique_id=261187994]
+z_index = -10
+texture_filter = 1
+custom_maximum_size = Vector2(360, 280)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 280.0
+size_flags_horizontal = 0
+script = ExtResource("1_hjh8l")
+metadata/_custom_type_script = "uid://chyu0dl1yqxul"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=379854355]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -300
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = -300
+theme_override_constants/margin_bottom = 40
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1603724259]
+custom_minimum_size = Vector2(28, 60)
+custom_maximum_size = Vector2(280, -1)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ol4r")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="MarginContainer/PanelContainer" unique_id=1303164933]
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_constants/shadow_offset_x = 82
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "Big derp"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="PlayerResponses" type="VBoxContainer" parent="MarginContainer" unique_id=1889026244]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="Control" type="Control" parent="MarginContainer/PlayerResponses" unique_id=2008312633]
+custom_minimum_size = Vector2(0, 93.905)
+layout_mode = 2
+
+[node name="GatedResponse" type="Button" parent="MarginContainer/PlayerResponses" unique_id=578814015]
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+size_flags_vertical = 6
+layout_direction = 3
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+disabled = true
+text = "massive derp"
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PlayerResponses/GatedResponse" unique_id=1179868813]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_s3ea8")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+text = "-1 something"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Leave" type="Button" parent="MarginContainer/PlayerResponses" unique_id=537957120]
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+size_flags_vertical = 6
+layout_direction = 3
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+text = "astronomical derp"
+
+[node name="Label" type="Label" parent="MarginContainer/PlayerResponses/Leave" unique_id=1558232369]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_s3ea8")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+text = "$6"
+horizontal_alignment = 2
+vertical_alignment = 1

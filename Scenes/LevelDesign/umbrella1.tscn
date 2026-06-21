@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ckdv2p7cby13c"]
+
+[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="1_4gdel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbc1q"]
+size = Vector2(10, 6)
+
+[node name="Umbrella1_0" type="Node2D" unique_id=2139641766 groups=["tilemaps"]]
+texture_filter = 1
+
+[node name="Gfx" type="Sprite2D" parent="." unique_id=1968498384]
+y_sort_enabled = true
+position = Vector2(1, -26)
+texture = ExtResource("1_4gdel")
+region_enabled = true
+region_rect = Rect2(240, 176, 48, 56)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2057029012]
+collision_layer = 4096
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=869623549]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_pbc1q")

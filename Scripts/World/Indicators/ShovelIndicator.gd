@@ -37,5 +37,5 @@ func _physics_process(delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:
 		print_rich(DEBUG_NAME,"OnAreaEntered")
-		area.dig(progress_per_dig)
+		area.dig(PlayerCharacter.instance.base_dig_strength)
 		ready_to_dig = false

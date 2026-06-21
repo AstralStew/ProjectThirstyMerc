@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://c6f3q77t0owhk"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_kfy6f"]
+[ext_resource type="Resource" uid="uid://ck5m6l7jlnh7y" path="res://Resources/Collectables/ct_necklace_ruby.tres" id="2_w48ig"]
+[ext_resource type="Resource" uid="uid://bqdlk7np7c12m" path="res://Resources/Collectables/ct_ring_ancient.tres" id="3_8ltfx"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="4_jbo8r"]
+
+[resource]
+script = ExtResource("4_jbo8r")
+name = "Prospective Professor"
+npc_default_text = "This wreck is fascinating! It seems to have been carrying %s ... I wish I could find them for my research!"
+npc_complete_text = "Thank you so much! I will be sure to credit you in my paper! And of course, here's your finder's fee."
+requirements = Dictionary[ExtResource("1_kfy6f"), int]({
+ExtResource("2_w48ig"): 1,
+ExtResource("3_8ltfx"): 2
+})
+player_has_requirements_text = "I found the missing cargo!"
+player_leave_incomplete_text = "On the case professor :)"
+player_leave_complete_text = "Can't wait to read it!"
+reward = 8
+metadata/_custom_type_script = "uid://yl10xow1syvr"

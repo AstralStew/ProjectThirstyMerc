@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://dya4ayqs6r6lm"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_bikkt"]
+[ext_resource type="Resource" uid="uid://ctg1vve2tkxxn" path="res://Resources/Collectables/ct_sea_glass_red.tres" id="2_cxo1f"]
+[ext_resource type="Resource" uid="uid://bri8u7r1v5itr" path="res://Resources/Collectables/ct_sea_glass_cyan.tres" id="3_vbpa0"]
+[ext_resource type="Resource" uid="uid://dm6n0jgxng1kg" path="res://Resources/Collectables/ct_sea_glass_dark.tres" id="4_e8to1"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="4_vbpa0"]
+[ext_resource type="Resource" uid="uid://b5ujulgxrg7t2" path="res://Resources/Collectables/ct_sea_glass_vibrant.tres" id="5_x476m"]
+
+[resource]
+script = ExtResource("4_vbpa0")
+name = "Seaglass Collector"
+npc_default_text = "Could you help me finish my seaglass collection? I'm only missing %s"
+npc_complete_text = "Wow, thanks lady! I can't wait to add these to my display! :D"
+requirements = Dictionary[ExtResource("1_bikkt"), int]({
+ExtResource("2_cxo1f"): 1,
+ExtResource("3_vbpa0"): 1,
+ExtResource("4_e8to1"): 1,
+ExtResource("5_x476m"): 1
+})
+player_has_requirements_text = "I got them all!"
+player_leave_incomplete_text = "Bet, wait right here!"
+player_leave_complete_text = "All in a day's work! n-n\""
+metadata/_custom_type_script = "uid://yl10xow1syvr"

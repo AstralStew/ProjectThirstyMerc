@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://dd2nielo8ni6w"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_0dmuq"]
+[ext_resource type="Resource" uid="uid://dlme0siyqne0q" path="res://Resources/Collectables/ct_ring_jade.tres" id="2_g3cm2"]
+[ext_resource type="Resource" uid="uid://cbfm67a57couy" path="res://Resources/Collectables/ct_pottery_jade.tres" id="3_m1dt0"]
+[ext_resource type="Resource" uid="uid://ds4vy3o88jy6f" path="res://Resources/Collectables/ct_necklace_emerald.tres" id="4_1p4al"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="5_y3cc1"]
+
+[resource]
+script = ExtResource("5_y3cc1")
+name = "Generous Benefactors"
+npc_default_text = "Excuse me madam... I represent parties searching for a lost civilisation to the west of here. Could you perchance find %s ? I'd make it worth your while..."
+npc_complete_text = "Splendid! I knew you looked resourceful... here, for your time."
+requirements = Dictionary[ExtResource("1_0dmuq"), int]({
+ExtResource("2_g3cm2"): 2,
+ExtResource("3_m1dt0"): 3,
+ExtResource("4_1p4al"): 1
+})
+player_has_requirements_text = "Your requested items, good sir."
+player_leave_incomplete_text = "A tantalising offer..."
+player_leave_complete_text = "The pleasure is mine."
+reward = 30
+metadata/_custom_type_script = "uid://yl10xow1syvr"

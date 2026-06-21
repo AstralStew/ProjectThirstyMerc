@@ -2,239 +2,2568 @@
 
 [ext_resource type="PackedScene" uid="uid://35ijuxh0cvtj" path="res://Scenes/LevelDesign/post2.tscn" id="1_lmump"]
 [ext_resource type="PackedScene" uid="uid://jreor4aw007b" path="res://Scenes/LevelDesign/tree1.tscn" id="1_mfevw"]
+[ext_resource type="PackedScene" uid="uid://6lmvrkd4kx1g" path="res://Scenes/LevelDesign/buoy.tscn" id="1_xdrf3"]
 [ext_resource type="PackedScene" uid="uid://dk4bn77w8ola2" path="res://Scenes/LevelDesign/rock1.tscn" id="2_bq26t"]
 [ext_resource type="PackedScene" uid="uid://c5pg6ud6t3sse" path="res://Scenes/LevelDesign/post1.tscn" id="2_xeihd"]
+[ext_resource type="PackedScene" uid="uid://o1nj37n8rjj4" path="res://Scenes/LevelDesign/barrel.tscn" id="2_y16la"]
 [ext_resource type="PackedScene" uid="uid://by538gjd1s0kk" path="res://Scenes/LevelDesign/tree2.tscn" id="3_dtfls"]
+[ext_resource type="PackedScene" uid="uid://c7hya75wm66ar" path="res://Scenes/LevelDesign/crate.tscn" id="4_47as6"]
 [ext_resource type="PackedScene" uid="uid://b0d0nhu2s8hws" path="res://Scenes/LevelDesign/tree3.tscn" id="4_h61yh"]
 [ext_resource type="PackedScene" uid="uid://cwko70hdriwdv" path="res://Scenes/LevelDesign/rock2.tscn" id="5_mpj6p"]
+[ext_resource type="PackedScene" uid="uid://ckdv2p7cby13c" path="res://Scenes/LevelDesign/umbrella1.tscn" id="5_xttnp"]
+[ext_resource type="PackedScene" uid="uid://mpwtrjm6yw80" path="res://Scenes/LevelDesign/umbrella2.tscn" id="6_asgp3"]
 [ext_resource type="PackedScene" uid="uid://dnb0s82u6v1ir" path="res://Scenes/LevelDesign/rock3.tscn" id="6_lmump"]
+[ext_resource type="PackedScene" uid="uid://dn3ytds0v03sl" path="res://Scenes/LevelDesign/chair3.tscn" id="7_hjl25"]
 [ext_resource type="PackedScene" uid="uid://buxjr6egdsfy5" path="res://Scenes/LevelDesign/post4.tscn" id="7_xeihd"]
+[ext_resource type="PackedScene" uid="uid://w7et5xsfyq4x" path="res://Scenes/LevelDesign/chair4.tscn" id="8_i34pf"]
 [ext_resource type="PackedScene" uid="uid://c1tvqifp7pfpp" path="res://Scenes/LevelDesign/post3.tscn" id="10_5k8gr"]
+[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="11_ns0n4"]
+[ext_resource type="PackedScene" uid="uid://dyraw5y3i38jc" path="res://Scenes/LevelDesign/bush2.tscn" id="12_kkr2t"]
+[ext_resource type="PackedScene" uid="uid://dbg1qd75o03qp" path="res://Scenes/LevelDesign/bush1.tscn" id="13_qrljf"]
+[ext_resource type="PackedScene" uid="uid://lj2sdoqo6m6s" path="res://Scenes/LevelDesign/chair2.tscn" id="18_035np"]
+[ext_resource type="PackedScene" uid="uid://ybde5ab02ohh" path="res://Scenes/LevelDesign/chair1.tscn" id="20_kwuuf"]
 
-[node name="Objects" type="Node2D" unique_id=948563231]
+[node name="Objects" type="Node2D" unique_id=1905878454]
 y_sort_enabled = true
 
-[node name="Post2_2" parent="." unique_id=2139641766 instance=ExtResource("1_lmump")]
-position = Vector2(555, 180)
+[node name="MiddleTop" type="Node2D" parent="." unique_id=1634350695]
+y_sort_enabled = true
 
-[node name="Post2_4" parent="." unique_id=673092317 instance=ExtResource("1_lmump")]
-position = Vector2(547, 244)
+[node name="Buoy_0" parent="MiddleTop" unique_id=2139641766 instance=ExtResource("1_xdrf3")]
+position = Vector2(226, -466)
 
-[node name="Post2_3" parent="." unique_id=520526012 instance=ExtResource("1_lmump")]
-position = Vector2(-30, 160)
+[node name="Buoy_1" parent="MiddleTop" unique_id=691407134 instance=ExtResource("1_xdrf3")]
+position = Vector2(254, -466)
 
-[node name="Post1_14" parent="." unique_id=1082019935 instance=ExtResource("2_xeihd")]
-position = Vector2(453, 171)
+[node name="Barrel_5" parent="MiddleTop" unique_id=772306053 instance=ExtResource("2_y16la")]
+position = Vector2(293, -396)
 
-[node name="Tree1_0" parent="." unique_id=1557634134 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-221, -165)
-scale = Vector2(-1, 1)
+[node name="Barrel_6" parent="MiddleTop" unique_id=305568645 instance=ExtResource("2_y16la")]
+position = Vector2(317, -371)
 
-[node name="Tree1_8" parent="." unique_id=1992054626 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-76, -421)
-scale = Vector2(-1, 1)
+[node name="Post4_0" parent="MiddleTop" unique_id=862603996 instance=ExtResource("7_xeihd")]
+position = Vector2(-310, -362)
 
-[node name="Tree1_9" parent="." unique_id=369834876 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(87, -434)
+[node name="Post4_1" parent="MiddleTop" unique_id=485339881 instance=ExtResource("7_xeihd")]
+position = Vector2(-271, -362)
 
-[node name="Tree1_10" parent="." unique_id=1828338378 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(325, -445)
+[node name="Post4_3" parent="MiddleTop" unique_id=959535473 instance=ExtResource("7_xeihd")]
+position = Vector2(-209, -362)
 
-[node name="Tree1_11" parent="." unique_id=80468767 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(179, -490)
+[node name="Post4_2" parent="MiddleTop" unique_id=556285028 instance=ExtResource("7_xeihd")]
+position = Vector2(322, -362)
 
-[node name="Tree1_1" parent="." unique_id=1356954820 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-321, -253)
+[node name="Crate_0" parent="MiddleTop" unique_id=1632095643 instance=ExtResource("4_47as6")]
+position = Vector2(-311, -417)
 
-[node name="Tree1_7" parent="." unique_id=412940518 instance=ExtResource("1_mfevw")]
+[node name="Crate_1" parent="MiddleTop" unique_id=2047056931 instance=ExtResource("4_47as6")]
+position = Vector2(-290, -404)
+
+[node name="Crate_2" parent="MiddleTop" unique_id=1971062014 instance=ExtResource("4_47as6")]
+position = Vector2(-273, -423)
+
+[node name="Crate_3" parent="MiddleTop" unique_id=2093414547 instance=ExtResource("4_47as6")]
+position = Vector2(-300, -432)
+
+[node name="Crate_4" parent="MiddleTop" unique_id=1004188133 instance=ExtResource("4_47as6")]
+position = Vector2(-266, -408)
+
+[node name="Crate_5" parent="MiddleTop" unique_id=1234850538 instance=ExtResource("4_47as6")]
+position = Vector2(-310, -379)
+
+[node name="Crate_6" parent="MiddleTop" unique_id=1482199726 instance=ExtResource("4_47as6")]
+position = Vector2(-174, -354)
+
+[node name="Crate_7" parent="MiddleTop" unique_id=1283458014 instance=ExtResource("4_47as6")]
+position = Vector2(-164, -364)
+
+[node name="Crate_8" parent="MiddleTop" unique_id=1222037292 instance=ExtResource("4_47as6")]
+position = Vector2(289, -403)
+
+[node name="Crate_9" parent="MiddleTop" unique_id=1495202232 instance=ExtResource("4_47as6")]
+position = Vector2(329, -368)
+
+[node name="Barrel_0" parent="MiddleTop" unique_id=1890540493 instance=ExtResource("2_y16la")]
+position = Vector2(-299, -421)
+
+[node name="Barrel_1" parent="MiddleTop" unique_id=631874419 instance=ExtResource("2_y16la")]
+position = Vector2(-294, -418)
+
+[node name="Barrel_2" parent="MiddleTop" unique_id=1496648369 instance=ExtResource("2_y16la")]
+position = Vector2(-279, -409)
+
+[node name="Barrel_7" parent="MiddleTop" unique_id=540601687 instance=ExtResource("2_y16la")]
+position = Vector2(92, -410)
+
+[node name="Barrel_8" parent="MiddleTop" unique_id=893289715 instance=ExtResource("2_y16la")]
+position = Vector2(99, -400)
+
+[node name="Barrel_9" parent="MiddleTop" unique_id=35636572 instance=ExtResource("2_y16la")]
+position = Vector2(115, -408)
+
+[node name="Barrel_10" parent="MiddleTop" unique_id=1876591468 instance=ExtResource("2_y16la")]
+position = Vector2(103, -407)
+
+[node name="Barrel_11" parent="MiddleTop" unique_id=1712775696 instance=ExtResource("2_y16la")]
+position = Vector2(110, -402)
+
+[node name="Barrel_3" parent="MiddleTop" unique_id=587222103 instance=ExtResource("2_y16la")]
+position = Vector2(-283, -418)
+
+[node name="Barrel_4" parent="MiddleTop" unique_id=18983603 instance=ExtResource("2_y16la")]
+position = Vector2(-311, -408)
+
+[node name="Umbrella1_0" parent="MiddleTop" unique_id=522070062 instance=ExtResource("5_xttnp")]
+position = Vector2(-290, -415)
+
+[node name="Umbrella2_0" parent="MiddleTop" unique_id=1149272960 instance=ExtResource("6_asgp3")]
+position = Vector2(304, -408)
+
+[node name="Chair3_0" parent="MiddleTop" unique_id=860566490 instance=ExtResource("7_hjl25")]
+position = Vector2(321, -398)
+
+[node name="Crate_10" parent="MiddleTop" unique_id=1240656983 instance=ExtResource("4_47as6")]
+position = Vector2(131, -407)
+
+[node name="Middle" type="Node2D" parent="." unique_id=1883179679]
+y_sort_enabled = true
+
+[node name="Chair3_3" parent="Middle" unique_id=2060669533 instance=ExtResource("8_i34pf")]
+position = Vector2(162, -177)
+
+[node name="Tree3_23" parent="Middle" unique_id=1557634134 instance=ExtResource("4_h61yh")]
+position = Vector2(-120, -262)
+
+[node name="Fern17" type="Node2D" parent="Middle" unique_id=843265704]
+position = Vector2(342, -313)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern17" unique_id=1392674321]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern18" type="Node2D" parent="Middle" unique_id=1319321532]
+position = Vector2(-50, -286)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern18" unique_id=177978565]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush1_6" parent="Middle" unique_id=1945211832 instance=ExtResource("13_qrljf")]
+y_sort_enabled = true
+position = Vector2(-289, -298)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+
+[node name="Bush1_18" parent="Middle" unique_id=543147672 instance=ExtResource("13_qrljf")]
+y_sort_enabled = true
+position = Vector2(-126, -249)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+
+[node name="Bush1_20" parent="Middle" unique_id=2142378001 instance=ExtResource("13_qrljf")]
+y_sort_enabled = true
+position = Vector2(369, -266)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+
+[node name="Fern7" type="Node2D" parent="Middle" unique_id=99768413]
+position = Vector2(-176, -310)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern7" unique_id=1164097435]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern8" type="Node2D" parent="Middle" unique_id=1758244667]
+position = Vector2(180, -299)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern8" unique_id=560096914]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern9" type="Node2D" parent="Middle" unique_id=1931092883]
+position = Vector2(395, -288)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern9" unique_id=1223752585]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_8" parent="Middle" unique_id=395354481 instance=ExtResource("12_kkr2t")]
+y_sort_enabled = true
+position = Vector2(376, -311)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+
+[node name="Tree1_7" parent="Middle" unique_id=192541771 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(339, -253)
-scale = Vector2(-1, 1)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Tree1_2" parent="." unique_id=327070427 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-383, -77)
-
-[node name="Tree1_3" parent="." unique_id=478548163 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-1007, -61)
-
-[node name="Tree1_4" parent="." unique_id=2103073953 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-1007, -397)
-
-[node name="Tree1_5" parent="." unique_id=304021750 instance=ExtResource("1_mfevw")]
-y_sort_enabled = false
-position = Vector2(-1199, -429)
-
-[node name="Tree1_6" parent="." unique_id=1837842691 instance=ExtResource("1_mfevw")]
+[node name="Tree1_6" parent="Middle" unique_id=1989833097 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(369, -317)
 
-[node name="Rock1_0" parent="." unique_id=1441066553 instance=ExtResource("2_bq26t")]
-position = Vector2(1049, -45)
+[node name="Bush2_7" parent="Middle" unique_id=2019303618 instance=ExtResource("12_kkr2t")]
+y_sort_enabled = true
+position = Vector2(139, -295)
+rotation = -3.1415925
+scale = Vector2(1, -1)
 
-[node name="Rock1_11" parent="." unique_id=1046352156 instance=ExtResource("2_bq26t")]
+[node name="Rock2_12" parent="Middle" unique_id=1431938019 instance=ExtResource("5_mpj6p")]
+position = Vector2(-139, -302)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Bush1_19" parent="Middle" unique_id=1756573073 instance=ExtResource("13_qrljf")]
+y_sort_enabled = true
+position = Vector2(-351, -73)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+
+[node name="Tree1_0" parent="Middle" unique_id=426566746 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-221, -165)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_1" parent="Middle" unique_id=803987916 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-321, -253)
+
+[node name="Rock1_11" parent="Middle" unique_id=915981692 instance=ExtResource("2_bq26t")]
 position = Vector2(380, -218)
 
-[node name="Rock1_1" parent="." unique_id=662224156 instance=ExtResource("2_bq26t")]
-position = Vector2(793, 131)
-
-[node name="Rock1_2" parent="." unique_id=118743366 instance=ExtResource("2_bq26t")]
-position = Vector2(1113, 211)
-
-[node name="Rock1_3" parent="." unique_id=1338642070 instance=ExtResource("2_bq26t")]
-position = Vector2(-647, 3)
-
-[node name="Rock1_4" parent="." unique_id=616543498 instance=ExtResource("2_bq26t")]
-position = Vector2(-695, 195)
-
-[node name="Rock1_5" parent="." unique_id=1620403905 instance=ExtResource("2_bq26t")]
-position = Vector2(-918, 196)
-scale = Vector2(-1, 1)
-
-[node name="Rock1_8" parent="." unique_id=1584357528 instance=ExtResource("2_bq26t")]
-position = Vector2(-1071, -29)
-
-[node name="Rock1_6" parent="." unique_id=71169820 instance=ExtResource("2_bq26t")]
-position = Vector2(-1079, -189)
-
-[node name="Rock1_7" parent="." unique_id=1334959752 instance=ExtResource("2_bq26t")]
-position = Vector2(-1079, -317)
-
-[node name="Rock1_9" parent="." unique_id=1854623432 instance=ExtResource("2_bq26t")]
-position = Vector2(-220, 151)
-
-[node name="Rock1_12" parent="." unique_id=1701993198 instance=ExtResource("2_bq26t")]
+[node name="Rock1_12" parent="Middle" unique_id=1900651764 instance=ExtResource("2_bq26t")]
 position = Vector2(-298, -168)
 
-[node name="Rock1_10" parent="." unique_id=323826457 instance=ExtResource("2_bq26t")]
-position = Vector2(539, 116)
+[node name="Tree2_11" parent="Middle" unique_id=1650336711 instance=ExtResource("3_dtfls")]
+position = Vector2(-350, -138)
+rotation = -3.0970678
+scale = Vector2(1, -1)
 
-[node name="Tree2_0" parent="." unique_id=366082868 instance=ExtResource("3_dtfls")]
-position = Vector2(-341, 165)
-scale = Vector2(-1, 1)
-
-[node name="Tree2_1" parent="." unique_id=2041149406 instance=ExtResource("3_dtfls")]
-position = Vector2(-407, 207)
-
-[node name="Tree3_0" parent="." unique_id=1170238736 instance=ExtResource("4_h61yh")]
-position = Vector2(-482, -105)
-
-[node name="Tree3_1" parent="." unique_id=98391242 instance=ExtResource("4_h61yh")]
-position = Vector2(-575, -77)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_2" parent="." unique_id=405637218 instance=ExtResource("4_h61yh")]
-position = Vector2(-717, -107)
-
-[node name="Tree3_3" parent="." unique_id=949184551 instance=ExtResource("4_h61yh")]
-position = Vector2(-810, -79)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_4" parent="." unique_id=2074660643 instance=ExtResource("4_h61yh")]
-position = Vector2(-1018, -257)
-
-[node name="Tree3_5" parent="." unique_id=1591950184 instance=ExtResource("4_h61yh")]
-position = Vector2(-1077, -227)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_6" parent="." unique_id=812466543 instance=ExtResource("4_h61yh")]
-position = Vector2(-1057, -407)
-
-[node name="Tree3_7" parent="." unique_id=611866866 instance=ExtResource("4_h61yh")]
-position = Vector2(-1150, -379)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_8" parent="." unique_id=197726966 instance=ExtResource("4_h61yh")]
-position = Vector2(-1020, -485)
-
-[node name="Tree3_12" parent="." unique_id=1096523071 instance=ExtResource("4_h61yh")]
-position = Vector2(-235, -453)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_9" parent="." unique_id=1547024569 instance=ExtResource("4_h61yh")]
-position = Vector2(-1113, -457)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_10" parent="." unique_id=1568668423 instance=ExtResource("4_h61yh")]
-position = Vector2(-1011, -169)
-scale = Vector2(-1, 1)
-
-[node name="Tree3_11" parent="." unique_id=1083658598 instance=ExtResource("4_h61yh")]
-position = Vector2(-1068, -115)
-
-[node name="Rock2_0" parent="." unique_id=1815972230 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_0" parent="Middle" unique_id=273013590 instance=ExtResource("5_mpj6p")]
 position = Vector2(73, -274)
 
-[node name="Rock2_10" parent="." unique_id=422277029 instance=ExtResource("5_mpj6p")]
-position = Vector2(-293, 204)
-
-[node name="Rock2_1" parent="." unique_id=1335926217 instance=ExtResource("5_mpj6p")]
-position = Vector2(-794, 25)
-
-[node name="Rock2_2" parent="." unique_id=839060937 instance=ExtResource("5_mpj6p")]
-position = Vector2(-900, 127)
-
-[node name="Rock2_3" parent="." unique_id=820726689 instance=ExtResource("5_mpj6p")]
-position = Vector2(-1002, 2)
-scale = Vector2(-1, 1)
-
-[node name="Rock2_4" parent="." unique_id=1672782988 instance=ExtResource("5_mpj6p")]
-position = Vector2(-1153, -204)
-
-[node name="Rock2_5" parent="." unique_id=550589519 instance=ExtResource("5_mpj6p")]
-position = Vector2(847, 257)
-scale = Vector2(-1, 1)
-
-[node name="Rock2_6" parent="." unique_id=1566091811 instance=ExtResource("5_mpj6p")]
-position = Vector2(1021, 360)
-
-[node name="Rock2_7" parent="." unique_id=1666473949 instance=ExtResource("5_mpj6p")]
-position = Vector2(1105, 43)
-scale = Vector2(-1, 1)
-
-[node name="Rock2_8" parent="." unique_id=1127264807 instance=ExtResource("5_mpj6p")]
-position = Vector2(888, -31)
-
-[node name="Rock2_9" parent="." unique_id=540384919 instance=ExtResource("5_mpj6p")]
-position = Vector2(1021, -204)
-
-[node name="Rock3_0" parent="." unique_id=1214393741 instance=ExtResource("6_lmump")]
+[node name="Rock3_0" parent="Middle" unique_id=924253938 instance=ExtResource("6_lmump")]
 position = Vector2(-68, -247)
 
-[node name="Rock3_1" parent="." unique_id=1741230756 instance=ExtResource("6_lmump")]
-position = Vector2(997, 42)
+[node name="Fern10" type="Node2D" parent="Middle" unique_id=167909877]
+position = Vector2(-329, -239)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
 
-[node name="Rock3_2" parent="." unique_id=2122921193 instance=ExtResource("6_lmump")]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern10" unique_id=1864035960]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Tree1_2" parent="Middle" unique_id=1090003071 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-383, -77)
+
+[node name="Tree2_10" parent="Middle" unique_id=184942784 instance=ExtResource("3_dtfls")]
+position = Vector2(-430, -91)
+rotation = -3.0970678
+scale = Vector2(1, -1)
+
+[node name="VegeCluster10" type="Node2D" parent="Middle" unique_id=569322202]
+y_sort_enabled = true
+position = Vector2(-381, -108)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Middle/VegeCluster10" unique_id=1864837872]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/VegeCluster10/Fern" unique_id=360057414]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Middle/VegeCluster10" unique_id=42918922 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Middle/VegeCluster10" unique_id=2052492123 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Middle/VegeCluster10" unique_id=2096349 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeClusterT2" type="Node2D" parent="Middle" unique_id=246206017]
+y_sort_enabled = true
+position = Vector2(-429, -93)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Middle/VegeClusterT2" unique_id=971489343]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Middle/VegeClusterT2/Fern" unique_id=559686493]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Middle/VegeClusterT2" unique_id=94057390 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Middle/VegeClusterT2" unique_id=900913940 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Middle/VegeClusterT2" unique_id=1438742555 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="Crate_2" parent="Middle" unique_id=1093952679 instance=ExtResource("4_47as6")]
+position = Vector2(390, -122)
+
+[node name="Barrel_2" parent="Middle" unique_id=735943547 instance=ExtResource("2_y16la")]
+position = Vector2(393, -113)
+
+[node name="Barrel_3" parent="Middle" unique_id=359490906 instance=ExtResource("2_y16la")]
+position = Vector2(380, -117)
+
+[node name="Umbrella1_0" parent="Middle" unique_id=922465140 instance=ExtResource("5_xttnp")]
+position = Vector2(-228, -82)
+
+[node name="Umbrella2_1" parent="Middle" unique_id=12974464 instance=ExtResource("6_asgp3")]
+position = Vector2(195, -171)
+scale = Vector2(-1, 1)
+
+[node name="Chair2_2" parent="Middle" unique_id=522274986 instance=ExtResource("18_035np")]
+position = Vector2(179, -159)
+
+[node name="Chair3_0" parent="Middle" unique_id=1361256912 instance=ExtResource("7_hjl25")]
+position = Vector2(-245, -78)
+
+[node name="Chair3_2" parent="Middle" unique_id=246316554 instance=ExtResource("7_hjl25")]
+position = Vector2(-211, -79)
+
+[node name="MiddleBottom" type="Node2D" parent="." unique_id=1384561095]
+y_sort_enabled = true
+
+[node name="Umbrella1_1" parent="MiddleBottom" unique_id=2144109212 instance=ExtResource("5_xttnp")]
+position = Vector2(-95, 202)
+
+[node name="Post2_3" parent="MiddleBottom" unique_id=2081464046 instance=ExtResource("1_lmump")]
+position = Vector2(-30, 160)
+
+[node name="Post2_4" parent="MiddleBottom" unique_id=1866978197 instance=ExtResource("1_lmump")]
+position = Vector2(-156, 160)
+
+[node name="Rock1_9" parent="MiddleBottom" unique_id=2096089847 instance=ExtResource("2_bq26t")]
+position = Vector2(-220, 151)
+
+[node name="Tree2_0" parent="MiddleBottom" unique_id=1064523917 instance=ExtResource("3_dtfls")]
+position = Vector2(-341, 165)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree2_1" parent="MiddleBottom" unique_id=1408919676 instance=ExtResource("3_dtfls")]
+position = Vector2(-407, 207)
+
+[node name="Rock2_10" parent="MiddleBottom" unique_id=1450038034 instance=ExtResource("5_mpj6p")]
+position = Vector2(-293, 204)
+
+[node name="Crate_3" parent="MiddleBottom" unique_id=266606051 instance=ExtResource("4_47as6")]
+position = Vector2(-111, 240)
+
+[node name="Barrel_4" parent="MiddleBottom" unique_id=2127755533 instance=ExtResource("2_y16la")]
+position = Vector2(-108, 249)
+
+[node name="Barrel_5" parent="MiddleBottom" unique_id=1237236939 instance=ExtResource("2_y16la")]
+position = Vector2(-121, 245)
+
+[node name="Barrel_6" parent="MiddleBottom" unique_id=170385508 instance=ExtResource("2_y16la")]
+position = Vector2(-69, 140)
+
+[node name="Barrel_7" parent="MiddleBottom" unique_id=1335905477 instance=ExtResource("2_y16la")]
+position = Vector2(-75, 146)
+
+[node name="Barrel_8" parent="MiddleBottom" unique_id=244191190 instance=ExtResource("2_y16la")]
+position = Vector2(-67, 149)
+
+[node name="Buoy_2" parent="MiddleBottom" unique_id=1567769484 instance=ExtResource("1_xdrf3")]
+position = Vector2(-118, 267)
+
+[node name="Buoy_3" parent="MiddleBottom" unique_id=175924252 instance=ExtResource("1_xdrf3")]
+position = Vector2(-74, 267)
+
+[node name="Chair1_0" parent="MiddleBottom" unique_id=1699611453 instance=ExtResource("20_kwuuf")]
+position = Vector2(294, 143)
+
+[node name="Chair1_1" parent="MiddleBottom" unique_id=1721198937 instance=ExtResource("20_kwuuf")]
+position = Vector2(317, 142)
+
+[node name="Chair2_0" parent="MiddleBottom" unique_id=828783405 instance=ExtResource("18_035np")]
+position = Vector2(127, 113)
+
+[node name="Chair2_1" parent="MiddleBottom" unique_id=2070398265 instance=ExtResource("18_035np")]
+position = Vector2(102, 113)
+
+[node name="Chair3_5" parent="MiddleBottom" unique_id=1683362333 instance=ExtResource("7_hjl25")]
+position = Vector2(30, 45)
+
+[node name="Chair3_7" parent="MiddleBottom" unique_id=1315052561 instance=ExtResource("7_hjl25")]
+position = Vector2(80, 45)
+
+[node name="Chair3_6" parent="MiddleBottom" unique_id=359021063 instance=ExtResource("7_hjl25")]
+position = Vector2(55, 44)
+
+[node name="Chair3_1" parent="MiddleBottom" unique_id=397805200 instance=ExtResource("8_i34pf")]
+position = Vector2(246, 32)
+
+[node name="Chair3_4" parent="MiddleBottom" unique_id=250631858 instance=ExtResource("8_i34pf")]
+position = Vector2(276, 32)
+
+[node name="Chair3_3" parent="MiddleBottom" unique_id=515043759 instance=ExtResource("8_i34pf")]
+position = Vector2(226, 124)
+
+[node name="Barrel_0" parent="MiddleBottom" unique_id=2045690542 instance=ExtResource("2_y16la")]
+position = Vector2(261, 26)
+
+[node name="Umbrella2_0" parent="MiddleBottom" unique_id=973264339 instance=ExtResource("6_asgp3")]
+position = Vector2(209, 115)
+
+[node name="LeftFar" type="Node2D" parent="." unique_id=1914217391]
+y_sort_enabled = true
+
+[node name="Tree1_4" parent="LeftFar" unique_id=800821430 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1007, -397)
+
+[node name="Tree1_14" parent="LeftFar" unique_id=2125283387 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1030, -465)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_15" parent="LeftFar" unique_id=1307636485 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-947, -502)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_16" parent="LeftFar" unique_id=238455713 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1041, -285)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_17" parent="LeftFar" unique_id=235390636 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-992, -214)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_5" parent="LeftFar" unique_id=1256220691 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1199, -429)
+
+[node name="Tree1_25" parent="LeftFar" unique_id=1617690013 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1199, -429)
+
+[node name="Tree1_26" parent="LeftFar" unique_id=1200261722 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1277, -357)
+
+[node name="Tree1_27" parent="LeftFar" unique_id=1052900610 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1310, -397)
+
+[node name="Tree1_28" parent="LeftFar" unique_id=1734232740 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1304, -483)
+
+[node name="Tree1_29" parent="LeftFar" unique_id=2010768055 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1272, -546)
+
+[node name="Tree1_30" parent="LeftFar" unique_id=1480708780 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1172, -525)
+
+[node name="Tree1_31" parent="LeftFar" unique_id=904375708 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1071, -552)
+
+[node name="Tree1_32" parent="LeftFar" unique_id=1189893959 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1127, -504)
+
+[node name="Tree1_33" parent="LeftFar" unique_id=1104873147 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1144, -442)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_13" parent="LeftFar" unique_id=234299454 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1115, -287)
+
+[node name="Tree1_12" parent="LeftFar" unique_id=9776142 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1177, -373)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock1_6" parent="LeftFar" unique_id=1595896979 instance=ExtResource("2_bq26t")]
+position = Vector2(-1079, -189)
+
+[node name="Rock1_7" parent="LeftFar" unique_id=326561458 instance=ExtResource("2_bq26t")]
+position = Vector2(-1067, -350)
+
+[node name="Rock1_13" parent="LeftFar" unique_id=990836006 instance=ExtResource("2_bq26t")]
+position = Vector2(-1255, -295)
+
+[node name="Rock1_14" parent="LeftFar" unique_id=2140060292 instance=ExtResource("2_bq26t")]
+position = Vector2(-1268, -278)
+
+[node name="Rock1_15" parent="LeftFar" unique_id=357503840 instance=ExtResource("2_bq26t")]
+position = Vector2(-1244, -306)
+
+[node name="Tree2_2" parent="LeftFar" unique_id=620614279 instance=ExtResource("3_dtfls")]
+position = Vector2(-1220, -283)
+rotation = -2.8818185
+scale = Vector2(1, -1)
+
+[node name="Tree2_4" parent="LeftFar" unique_id=315246350 instance=ExtResource("3_dtfls")]
+position = Vector2(-1167.9999, -187)
+rotation = -0.066289276
+
+[node name="Tree2_3" parent="LeftFar" unique_id=1116122238 instance=ExtResource("3_dtfls")]
+position = Vector2(-1068.9999, -389.99997)
+rotation = -0.06226331
+
+[node name="Tree3_4" parent="LeftFar" unique_id=1806214809 instance=ExtResource("4_h61yh")]
+position = Vector2(-1018, -257)
+
+[node name="Tree3_5" parent="LeftFar" unique_id=1292106311 instance=ExtResource("4_h61yh")]
+position = Vector2(-1090, -201)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_6" parent="LeftFar" unique_id=2007087012 instance=ExtResource("4_h61yh")]
+position = Vector2(-1057, -407)
+
+[node name="Tree3_14" parent="LeftFar" unique_id=802335050 instance=ExtResource("4_h61yh")]
+position = Vector2(-1088, -427)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_7" parent="LeftFar" unique_id=2146564615 instance=ExtResource("4_h61yh")]
+position = Vector2(-1117, -372)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_13" parent="LeftFar" unique_id=1377568253 instance=ExtResource("4_h61yh")]
+position = Vector2(-1217, -312)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_8" parent="LeftFar" unique_id=2052127313 instance=ExtResource("4_h61yh")]
+position = Vector2(-1020, -485)
+
+[node name="Tree3_9" parent="LeftFar" unique_id=1238178302 instance=ExtResource("4_h61yh")]
+position = Vector2(-1218, -532)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_15" parent="LeftFar" unique_id=1324788881 instance=ExtResource("4_h61yh")]
+position = Vector2(-1133, -548)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_16" parent="LeftFar" unique_id=673530226 instance=ExtResource("4_h61yh")]
+position = Vector2(-1259, -490)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_17" parent="LeftFar" unique_id=1036992875 instance=ExtResource("4_h61yh")]
+position = Vector2(-1286, -431)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_18" parent="LeftFar" unique_id=1840005596 instance=ExtResource("4_h61yh")]
+position = Vector2(-1244, -381)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_19" parent="LeftFar" unique_id=666239374 instance=ExtResource("4_h61yh")]
+position = Vector2(-1306, -325)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_10" parent="LeftFar" unique_id=1462099062 instance=ExtResource("4_h61yh")]
+position = Vector2(-1011, -169)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock2_4" parent="LeftFar" unique_id=1629526702 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1145, -233)
+
+[node name="Rock2_19" parent="LeftFar" unique_id=74915697 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1209, -291)
+
+[node name="Rock2_20" parent="LeftFar" unique_id=1994794211 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1233, -281)
+
+[node name="Rock2_21" parent="LeftFar" unique_id=1855643772 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1226, -290)
+
+[node name="Rock2_22" parent="LeftFar" unique_id=1291592929 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1276, -289)
+
+[node name="Rock2_12" parent="LeftFar" unique_id=909873231 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1030, -403)
+
+[node name="Rock2_14" parent="LeftFar" unique_id=121357803 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1103, -488)
+
+[node name="Rock2_15" parent="LeftFar" unique_id=1727226196 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1124, -439)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock2_16" parent="LeftFar" unique_id=1782678361 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1055, -464)
+
+[node name="Rock2_17" parent="LeftFar" unique_id=1794981665 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1111, -520)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock2_13" parent="LeftFar" unique_id=301329174 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1119, -364)
+
+[node name="Rock2_11" parent="LeftFar" unique_id=2073018129 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1117, -303)
+
+[node name="Rock3_4" parent="LeftFar" unique_id=204091396 instance=ExtResource("6_lmump")]
+position = Vector2(-1053, -413)
+
+[node name="Rock3_7" parent="LeftFar" unique_id=161386931 instance=ExtResource("6_lmump")]
+position = Vector2(-992, -346)
+
+[node name="Rock3_10" parent="LeftFar" unique_id=212834092 instance=ExtResource("6_lmump")]
+position = Vector2(-1050, -374)
+
+[node name="Rock3_8" parent="LeftFar" unique_id=1849011575 instance=ExtResource("6_lmump")]
+position = Vector2(-1249, -282)
+
+[node name="Rock3_9" parent="LeftFar" unique_id=2068021662 instance=ExtResource("6_lmump")]
+position = Vector2(-1295, -282)
+
+[node name="Rock3_5" parent="LeftFar" unique_id=683514949 instance=ExtResource("6_lmump")]
+position = Vector2(-1116, -382)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock3_6" parent="LeftFar" unique_id=1956218241 instance=ExtResource("6_lmump")]
+position = Vector2(-1072, -495)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="VegeCluster" type="Node2D" parent="LeftFar" unique_id=1731669696]
+y_sort_enabled = true
+position = Vector2(-1126, -303)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster" unique_id=2090377195]
+position = Vector2(-2, 12)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster/Fern" unique_id=51779906]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster" unique_id=1427839812]
+position = Vector2(-7, -13)
+scale = Vector2(-1, 1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster/Fern2" unique_id=1819849301]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster" unique_id=921323791 instance=ExtResource("12_kkr2t")]
+position = Vector2(-2, 2)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster" unique_id=1457707420 instance=ExtResource("13_qrljf")]
+position = Vector2(-14, 18)
+
+[node name="Bush1_2" parent="LeftFar/VegeCluster" unique_id=1753202927 instance=ExtResource("13_qrljf")]
+position = Vector2(-24, -31)
+rotation = 2.159234
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster" unique_id=149526170 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster2" type="Node2D" parent="LeftFar" unique_id=841490022]
+y_sort_enabled = true
+position = Vector2(-1220, -312)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster2" unique_id=1264776833]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster2/Fern" unique_id=349515060]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster2" unique_id=839725544]
+position = Vector2(-3, 28)
+scale = Vector2(-1, 1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster2/Fern2" unique_id=1415887924]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster2" unique_id=1593752448 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster2" unique_id=963141702 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_2" parent="LeftFar/VegeCluster2" unique_id=1089198359 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster2" unique_id=1122507275 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster3" type="Node2D" parent="LeftFar" unique_id=2090613262]
+y_sort_enabled = true
+position = Vector2(-1238, -370)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster3" unique_id=1662811870]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster3/Fern" unique_id=512029870]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster3" unique_id=1438900000 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster3" unique_id=417004434 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster3" unique_id=14619372 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster4" type="Node2D" parent="LeftFar" unique_id=626074657]
+y_sort_enabled = true
+position = Vector2(-1222, -410)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster4" unique_id=1098340207]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster4/Fern" unique_id=1768796073]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster4" unique_id=1800068096]
+position = Vector2(102, 37)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster4/Fern2" unique_id=533898090]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster4" unique_id=967628252 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster4" unique_id=1272814621 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster4" unique_id=2025450607 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster11" type="Node2D" parent="LeftFar" unique_id=1061732139]
+y_sort_enabled = true
+position = Vector2(-1234, -512)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster11" unique_id=399544607]
+position = Vector2(9, -9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster11/Fern" unique_id=2085658029]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster11" unique_id=1663917101 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster11" unique_id=1372468232 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster11" unique_id=876673769 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster12" type="Node2D" parent="LeftFar" unique_id=1727322466]
+y_sort_enabled = true
+position = Vector2(-1235, -475)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster12" unique_id=248887448]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster12/Fern" unique_id=151529251]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster12" unique_id=1144491220 instance=ExtResource("12_kkr2t")]
+position = Vector2(-11, -5)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster12" unique_id=1987142034 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster12" unique_id=93421172 instance=ExtResource("13_qrljf")]
+position = Vector2(-3, -29)
+
+[node name="VegeCluster23" type="Node2D" parent="LeftFar" unique_id=739167144]
+y_sort_enabled = true
+position = Vector2(-1238, -370)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster23" unique_id=1588774635]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster23/Fern" unique_id=28813817]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster23" unique_id=129482556 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster23" unique_id=1390415182 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster23" unique_id=833585690 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster24" type="Node2D" parent="LeftFar" unique_id=1833153846]
+y_sort_enabled = true
+position = Vector2(-1222, -410)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster24" unique_id=96991196]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster24/Fern" unique_id=1724821385]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster24" unique_id=330738459 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster24" unique_id=1481592255 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster24" unique_id=262419438 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster25" type="Node2D" parent="LeftFar" unique_id=1055470941]
+y_sort_enabled = true
+position = Vector2(-1234, -512)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster25" unique_id=1369468445]
+position = Vector2(-15, 5)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster25/Fern" unique_id=1474591047]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster25" unique_id=1676860786 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster25" unique_id=140775983 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster25" unique_id=1614086965 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster26" type="Node2D" parent="LeftFar" unique_id=1233512774]
+y_sort_enabled = true
+position = Vector2(-1235, -475)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster26" unique_id=1021225593]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster26/Fern" unique_id=50124830]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster26" unique_id=300599959 instance=ExtResource("12_kkr2t")]
+position = Vector2(-23, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster26" unique_id=1780946900 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster26" unique_id=1156865266 instance=ExtResource("13_qrljf")]
+position = Vector2(-4, -17)
+
+[node name="VegeCluster13" type="Node2D" parent="LeftFar" unique_id=418674592]
+y_sort_enabled = true
+position = Vector2(-1227, -447)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster13" unique_id=1800697682]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster13/Fern" unique_id=113080085]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster13/Fern" unique_id=1552139686]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster13" unique_id=251492338 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster13" unique_id=1254385075 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster13" unique_id=1350125517 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster27" type="Node2D" parent="LeftFar" unique_id=515570445]
+y_sort_enabled = true
+position = Vector2(-1280, -357)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster27" unique_id=137433549]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster27/Fern" unique_id=1465402768]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster27" unique_id=1269432460 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster27" unique_id=1247981182 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster27" unique_id=360440304 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster28" type="Node2D" parent="LeftFar" unique_id=1327103521]
+y_sort_enabled = true
+position = Vector2(-1264, -397)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster28" unique_id=1998984534]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster28/Fern" unique_id=543200213]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster28" unique_id=1784591070 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster28" unique_id=865930682 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster28" unique_id=1530065630 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster29" type="Node2D" parent="LeftFar" unique_id=46874417]
+y_sort_enabled = true
+position = Vector2(-1276, -499)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster29" unique_id=1685986688]
+position = Vector2(-3, 8)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster29/Fern" unique_id=827735785]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster29" unique_id=1688580836 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster29" unique_id=720878994 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster29" unique_id=1466063811 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster30" type="Node2D" parent="LeftFar" unique_id=1243389270]
+y_sort_enabled = true
+position = Vector2(-1277, -462)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster30" unique_id=1803509881]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster30/Fern" unique_id=1479090377]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster30" unique_id=2027285754 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster30" unique_id=963442531 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster30" unique_id=361117972 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster31" type="Node2D" parent="LeftFar" unique_id=1191535139]
+y_sort_enabled = true
+position = Vector2(-1269, -434)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster31" unique_id=1259093851]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster31/Fern" unique_id=2007804472]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster31/Fern" unique_id=1747383502]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster31" unique_id=350857989 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster31" unique_id=686946938 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster31" unique_id=1393980334 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster32" type="Node2D" parent="LeftFar" unique_id=1937875417]
+y_sort_enabled = true
+position = Vector2(-1324, -393)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster32" unique_id=206157574]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster32/Fern" unique_id=185574219]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster32" unique_id=1020583785 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster32" unique_id=1733323357 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster32" unique_id=638090382 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster33" type="Node2D" parent="LeftFar" unique_id=1726270371]
+y_sort_enabled = true
+position = Vector2(-1308, -433)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster33" unique_id=631974461]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster33/Fern" unique_id=1818779062]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster33" unique_id=249055194 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster33" unique_id=1165853571 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster33" unique_id=1199689034 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster34" type="Node2D" parent="LeftFar" unique_id=1884283561]
+y_sort_enabled = true
+position = Vector2(-1320, -535)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster34" unique_id=976296798]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster34/Fern" unique_id=251700259]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster34" unique_id=2127797346 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster34" unique_id=366808732 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster34" unique_id=948988189 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster35" type="Node2D" parent="LeftFar" unique_id=383536904]
+y_sort_enabled = true
+position = Vector2(-1321, -498)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster35" unique_id=267149135]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster35/Fern" unique_id=693123580]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster35" unique_id=288197085 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster35" unique_id=939371387 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster35" unique_id=1261632602 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster36" type="Node2D" parent="LeftFar" unique_id=598331130]
+y_sort_enabled = true
+position = Vector2(-1313, -470)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster36" unique_id=566527466]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster36/Fern" unique_id=961999211]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster36/Fern" unique_id=971173174]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster36" unique_id=139236280 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster36" unique_id=1700664785 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster36" unique_id=748257149 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster37" type="Node2D" parent="LeftFar" unique_id=1737259937]
+y_sort_enabled = true
+position = Vector2(-1272, -540)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster37" unique_id=1001128794]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster37/Fern" unique_id=1440651547]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster37" unique_id=1395129487 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster37" unique_id=1643769525 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster37" unique_id=1109528249 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster38" type="Node2D" parent="LeftFar" unique_id=1871795884]
+y_sort_enabled = true
+position = Vector2(-1218, -545)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster38" unique_id=449982402]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster38/Fern" unique_id=2006279077]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster38" unique_id=2101593421 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster38" unique_id=1046500390 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster38" unique_id=1814027039 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster39" type="Node2D" parent="LeftFar" unique_id=1982355690]
+y_sort_enabled = true
+position = Vector2(-1171, -543)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster39" unique_id=1887177505]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster39/Fern" unique_id=754533092]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster39" unique_id=624897715 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster39" unique_id=2041446313 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster39" unique_id=1409766691 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster40" type="Node2D" parent="LeftFar" unique_id=483464494]
+y_sort_enabled = true
+position = Vector2(-1134, -541)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster40" unique_id=1170625046]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster40/Fern" unique_id=853440422]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster40" unique_id=27970343 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster40" unique_id=1564083943 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster40" unique_id=607749304 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster41" type="Node2D" parent="LeftFar" unique_id=1258229797]
+y_sort_enabled = true
+position = Vector2(-1085, -543)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster41" unique_id=1820504404]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster41/Fern" unique_id=742496830]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster41/Fern" unique_id=600167477]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster41" unique_id=844913677 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster41" unique_id=955205392 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster41" unique_id=1548931378 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster42" type="Node2D" parent="LeftFar" unique_id=1555931060]
+y_sort_enabled = true
+position = Vector2(-1174, -518)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster42" unique_id=1320383850]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster42/Fern" unique_id=860232363]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster42" unique_id=549339495 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster42" unique_id=1968807467 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster42" unique_id=967944962 instance=ExtResource("13_qrljf")]
+position = Vector2(14, -4)
+
+[node name="VegeCluster43" type="Node2D" parent="LeftFar" unique_id=1695771759]
+y_sort_enabled = true
+position = Vector2(-1120, -523)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster43" unique_id=1961305122]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster43/Fern" unique_id=365168912]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster43" unique_id=1088616451 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster43" unique_id=1746330684 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster43" unique_id=2058001590 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster44" type="Node2D" parent="LeftFar" unique_id=269746381]
+y_sort_enabled = true
+position = Vector2(-1073, -521)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster44" unique_id=1157722379]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster44/Fern" unique_id=1341419805]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster44" unique_id=1905767329 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster44" unique_id=2088756313 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster44" unique_id=628884321 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster45" type="Node2D" parent="LeftFar" unique_id=236290950]
+y_sort_enabled = true
+position = Vector2(-1358, -310)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=179288502]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern" unique_id=417185508]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=1354876773]
+position = Vector2(-48, 30)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern2" unique_id=1106498477]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern3" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=1129043506]
+position = Vector2(-26, 17)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern3" unique_id=304198260]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern4" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=159766929]
+position = Vector2(-109, 28)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern4" unique_id=1162565668]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster45" unique_id=1330577811 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster45" unique_id=982016184 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster45" unique_id=38572171 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster46" type="Node2D" parent="LeftFar" unique_id=895645353]
+y_sort_enabled = true
+position = Vector2(-1304, -315)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster46" unique_id=2117614533]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster46/Fern" unique_id=1654616574]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster46" unique_id=1557344117]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster46/Fern2" unique_id=1030966577]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster46" unique_id=631248404 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster46" unique_id=1820082953 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_2" parent="LeftFar/VegeCluster46" unique_id=1907837040 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster46" unique_id=1512756267 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster47" type="Node2D" parent="LeftFar" unique_id=1532364123]
+y_sort_enabled = true
+position = Vector2(-1257, -313)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster47" unique_id=1336572366]
+position = Vector2(-21, 13)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster47/Fern" unique_id=211819748]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster47" unique_id=265296700 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster47" unique_id=1132125861 instance=ExtResource("13_qrljf")]
+position = Vector2(-23, 34)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster47" unique_id=974615764 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster49" type="Node2D" parent="LeftFar" unique_id=2089271356]
+y_sort_enabled = true
+position = Vector2(-1365, -354)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster49" unique_id=627255844]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster49/Fern" unique_id=224227577]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster49" unique_id=1530250724 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster49" unique_id=1834709081 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster49" unique_id=1695981421 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster50" type="Node2D" parent="LeftFar" unique_id=735809748]
+y_sort_enabled = true
+position = Vector2(-1318, -352)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster50" unique_id=1041519752]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster50/Fern" unique_id=2200563]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster50" unique_id=101129719 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster50" unique_id=1573604832 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster50" unique_id=1961454880 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster14" type="Node2D" parent="LeftFar" unique_id=831386504]
+y_sort_enabled = true
+position = Vector2(-1125, -463)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster14" unique_id=497146299]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster14/Fern" unique_id=794851634]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster14" unique_id=1735771629 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster14" unique_id=655281860 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster14" unique_id=1510941343 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster15" type="Node2D" parent="LeftFar" unique_id=1393212190]
+y_sort_enabled = true
+position = Vector2(-1084, -420)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster15" unique_id=514277389]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster15/Fern" unique_id=911727880]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster15" unique_id=817766325 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster15" unique_id=568969096 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster15" unique_id=1110826050 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster16" type="Node2D" parent="LeftFar" unique_id=1739411138]
+y_sort_enabled = true
+position = Vector2(-1039, -450)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster16" unique_id=130948937]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster16/Fern" unique_id=1726854389]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster16" unique_id=1394925602 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster16" unique_id=1731275954 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster16" unique_id=1905788646 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster17" type="Node2D" parent="LeftFar" unique_id=1189864991]
+y_sort_enabled = true
+position = Vector2(-1007, -315)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster17" unique_id=1716257736]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster17/Fern" unique_id=1416836699]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster17" unique_id=2136671558 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster17" unique_id=1276127304 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster17" unique_id=1289367933 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster18" type="Node2D" parent="LeftFar" unique_id=1211177962]
+y_sort_enabled = true
+position = Vector2(-1029, -282)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster18" unique_id=1549504610]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster18/Fern" unique_id=1833665788]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster18" unique_id=1167531601 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster18" unique_id=564152061 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster18" unique_id=1793920772 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster19" type="Node2D" parent="LeftFar" unique_id=1492008701]
+y_sort_enabled = true
+position = Vector2(-1008, -249)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster19" unique_id=503132760]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster19/Fern" unique_id=39400535]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster19" unique_id=1607536111 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster19" unique_id=1590908178 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster19" unique_id=1980210190 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster20" type="Node2D" parent="LeftFar" unique_id=1456810043]
+y_sort_enabled = true
+position = Vector2(-1001, -188)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster20" unique_id=870147948]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster20/Fern" unique_id=79316283]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster20" unique_id=1575875402 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster20" unique_id=1735713134 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster20" unique_id=472527970 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster22" type="Node2D" parent="LeftFar" unique_id=348239110]
+y_sort_enabled = true
+position = Vector2(-1039, -341)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster22" unique_id=973597459]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster22/Fern" unique_id=1292800697]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="LeftFar/VegeCluster22" unique_id=524538925 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="LeftFar/VegeCluster22" unique_id=721379905 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="LeftFar/VegeCluster22" unique_id=744906337 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="Fern17" type="Node2D" parent="LeftFar" unique_id=230090019]
+position = Vector2(-1090, -183)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/Fern17" unique_id=182985117]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern2" type="Node2D" parent="LeftFar" unique_id=1367676138]
+position = Vector2(-1120, -373)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="LeftFar/Fern2" unique_id=571141508]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Left" type="Node2D" parent="." unique_id=688298897]
+y_sort_enabled = true
+
+[node name="Tree1_24" parent="Left" unique_id=1747379090 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-878, 74)
+
+[node name="Rock1_3" parent="Left" unique_id=576280681 instance=ExtResource("2_bq26t")]
+position = Vector2(-785, 20)
+
+[node name="Rock1_4" parent="Left" unique_id=1881553278 instance=ExtResource("2_bq26t")]
+position = Vector2(-742, 169)
+
+[node name="Rock1_5" parent="Left" unique_id=899930541 instance=ExtResource("2_bq26t")]
+position = Vector2(-970, 159)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock1_8" parent="Left" unique_id=95823421 instance=ExtResource("2_bq26t")]
+position = Vector2(-1071, -29)
+
+[node name="Tree2_5" parent="Left" unique_id=1515010467 instance=ExtResource("3_dtfls")]
+position = Vector2(-1087.0001, 101)
+rotation = -0.066289276
+
+[node name="Tree2_6" parent="Left" unique_id=1038405499 instance=ExtResource("3_dtfls")]
+position = Vector2(-829, 213)
+rotation = -3.129801
+scale = Vector2(1, -1)
+
+[node name="Rock2_1" parent="Left" unique_id=997265638 instance=ExtResource("5_mpj6p")]
+position = Vector2(-699, 66)
+
+[node name="Rock2_3" parent="Left" unique_id=1081327347 instance=ExtResource("5_mpj6p")]
+position = Vector2(-1001, -5)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Fern16" type="Node2D" parent="Left" unique_id=1590916087]
+position = Vector2(-876, 89)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern16" unique_id=1552319]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Tree1_3" parent="Left" unique_id=1784985597 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-878, 74)
+
+[node name="Rock2_2" parent="Left" unique_id=1204512832 instance=ExtResource("5_mpj6p")]
+position = Vector2(-885, 119)
+
+[node name="Rock2_18" parent="Left" unique_id=238513259 instance=ExtResource("5_mpj6p")]
+position = Vector2(-785, 165)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_19" parent="Left" unique_id=294771940 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-896, -99)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_20" parent="Left" unique_id=793244769 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-785, -128)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_22" parent="Left" unique_id=1689821499 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-536, -122)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_23" parent="Left" unique_id=1451658125 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-472, -60)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree2_7" parent="Left" unique_id=580248647 instance=ExtResource("3_dtfls")]
+position = Vector2(-994.00006, -85)
+rotation = -3.0970678
+scale = Vector2(1, -1)
+
+[node name="Tree2_9" parent="Left" unique_id=870023760 instance=ExtResource("3_dtfls")]
+position = Vector2(-595, -45)
+rotation = -3.0970678
+scale = Vector2(1, -1)
+
+[node name="Tree3_0" parent="Left" unique_id=135607067 instance=ExtResource("4_h61yh")]
+position = Vector2(-482, -105)
+
+[node name="Tree3_11" parent="Left" unique_id=283624360 instance=ExtResource("4_h61yh")]
+position = Vector2(-1068, -115)
+
+[node name="VegeCluster21" type="Node2D" parent="Left" unique_id=1742949769]
+y_sort_enabled = true
+position = Vector2(-1000, -136)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeCluster21" unique_id=712796936]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster21/Fern" unique_id=1985471651]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeCluster21" unique_id=317315703 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Left/VegeCluster21" unique_id=1631660403 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Left/VegeCluster21" unique_id=1632932622 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster7" type="Node2D" parent="Left" unique_id=839737799]
+y_sort_enabled = true
+position = Vector2(-746, -126)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeCluster7" unique_id=1529785556]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster7/Fern" unique_id=1164731103]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeCluster7" unique_id=1131686241 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Left/VegeCluster7" unique_id=937704540 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Left/VegeCluster7" unique_id=899586326 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster8" type="Node2D" parent="Left" unique_id=444757517]
+y_sort_enabled = true
+position = Vector2(-624, -134)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeCluster8" unique_id=1680741031]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster8/Fern" unique_id=2125201551]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeCluster8" unique_id=159652810 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Left/VegeCluster8" unique_id=2124658619 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Left/VegeCluster8" unique_id=2040970025 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeClusterT3" type="Node2D" parent="Left" unique_id=1979387508]
+y_sort_enabled = true
+position = Vector2(-573, -109)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT3" unique_id=406879218]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT3/Fern" unique_id=1787575066]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT3" unique_id=269923889 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT3" unique_id=962350207 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT3" unique_id=1696024809 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="Fern13" type="Node2D" parent="Left" unique_id=2087313562]
+position = Vector2(-779, -102)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern13" unique_id=1234380700]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Tree1_18" parent="Left" unique_id=518298881 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-1017, -126)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree1_21" parent="Left" unique_id=989709018 instance=ExtResource("1_mfevw")]
+y_sort_enabled = false
+position = Vector2(-655, -98)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree2_8" parent="Left" unique_id=1994756366 instance=ExtResource("3_dtfls")]
+position = Vector2(-745.00006, -99.00001)
+rotation = -3.0970678
+scale = Vector2(1, -1)
+
+[node name="Tree3_2" parent="Left" unique_id=1711483860 instance=ExtResource("4_h61yh")]
+position = Vector2(-717, -107)
+
+[node name="VegeClusterT5" type="Node2D" parent="Left" unique_id=1568767433]
+y_sort_enabled = true
+position = Vector2(-810, -120)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT5" unique_id=1468621422]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT5/Fern" unique_id=1842226582]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT5" unique_id=1307699661 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT5" unique_id=1584558565 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT5" unique_id=1950582916 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="Tree3_1" parent="Left" unique_id=1739399420 instance=ExtResource("4_h61yh")]
+position = Vector2(-575, -77)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Tree3_3" parent="Left" unique_id=1773895759 instance=ExtResource("4_h61yh")]
+position = Vector2(-810, -79)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="VegeCluster5" type="Node2D" parent="Left" unique_id=95760708]
+y_sort_enabled = true
+position = Vector2(-952, -132)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeCluster5" unique_id=232363080]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster5/Fern" unique_id=531471655]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeCluster5" unique_id=474533105 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Left/VegeCluster5" unique_id=2007395769 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Left/VegeCluster5" unique_id=1934932704 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster6" type="Node2D" parent="Left" unique_id=856951573]
+y_sort_enabled = true
+position = Vector2(-846, -130)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeCluster6" unique_id=417592943]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster6/Fern" unique_id=1596702669]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeCluster6" unique_id=1637853099 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Left/VegeCluster6" unique_id=2130698259 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Left/VegeCluster6" unique_id=1276381593 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeCluster9" type="Node2D" parent="Left" unique_id=540310856]
+y_sort_enabled = true
+position = Vector2(-509, -114)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeCluster9" unique_id=1366357063]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster9/Fern" unique_id=785402933]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeCluster9" unique_id=1055409293 instance=ExtResource("12_kkr2t")]
+position = Vector2(-5, -6)
+
+[node name="Bush1_0" parent="Left/VegeCluster9" unique_id=2126934996 instance=ExtResource("13_qrljf")]
+position = Vector2(-17, 6)
+
+[node name="Bush1_1" parent="Left/VegeCluster9" unique_id=2142488279 instance=ExtResource("13_qrljf")]
+position = Vector2(10, -14)
+
+[node name="VegeClusterT7" type="Node2D" parent="Left" unique_id=1913765085]
+y_sort_enabled = true
+position = Vector2(-859, -96)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT7" unique_id=280488909]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT7/Fern" unique_id=1124016171]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT7" unique_id=2103964224 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT7" unique_id=1995988233 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT7" unique_id=1069083414 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="VegeClusterT8" type="Node2D" parent="Left" unique_id=815569629]
+y_sort_enabled = true
+position = Vector2(-683, -88)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT8" unique_id=734952966]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT8/Fern" unique_id=1783681173]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT8" unique_id=454364144 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT8" unique_id=1223647459 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT8" unique_id=301639269 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="VegeClusterT10" type="Node2D" parent="Left" unique_id=163875022]
+y_sort_enabled = true
+position = Vector2(-529, -90)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT10" unique_id=1332544484]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT10/Fern" unique_id=759716697]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT10" unique_id=461658683 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT10" unique_id=1341213444 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT10" unique_id=834652913 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="VegeClusterT4" type="Node2D" parent="Left" unique_id=296406813]
+y_sort_enabled = true
+position = Vector2(-687, -114)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT4" unique_id=306075518]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT4/Fern" unique_id=2016645913]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT4" unique_id=576230290 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT4" unique_id=2018892523 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT4" unique_id=1183931055 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="VegeClusterT6" type="Node2D" parent="Left" unique_id=1024961462]
+y_sort_enabled = true
+position = Vector2(-923, -119)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT6" unique_id=2091971271]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT6/Fern" unique_id=1372249245]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT6" unique_id=364410704 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT6" unique_id=172221521 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT6" unique_id=940791477 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="VegeClusterT9" type="Node2D" parent="Left" unique_id=1839337128]
+y_sort_enabled = true
+position = Vector2(-609, -86)
+metadata/_edit_group_ = true
+
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT9" unique_id=786015555]
+position = Vector2(0, 9)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT9/Fern" unique_id=626791906]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Bush2_0" parent="Left/VegeClusterT9" unique_id=1840208101 instance=ExtResource("12_kkr2t")]
+position = Vector2(1, 11)
+
+[node name="Bush1_0" parent="Left/VegeClusterT9" unique_id=289055246 instance=ExtResource("13_qrljf")]
+position = Vector2(16, 3)
+
+[node name="Bush1_1" parent="Left/VegeClusterT9" unique_id=351524774 instance=ExtResource("13_qrljf")]
+position = Vector2(-10, -4)
+
+[node name="Fern11" type="Node2D" parent="Left" unique_id=649583578]
+position = Vector2(-462, -114)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern11" unique_id=174755841]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern14" type="Node2D" parent="Left" unique_id=514297391]
+position = Vector2(-989, -154)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern14" unique_id=969592855]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern15" type="Node2D" parent="Left" unique_id=403104256]
+position = Vector2(-1040, -110)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern15" unique_id=200686243]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern18" type="Node2D" parent="Left" unique_id=48493775]
+position = Vector2(-1083, -115)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern18" unique_id=1878622378]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Fern12" type="Node2D" parent="Left" unique_id=1295904579]
+position = Vector2(-641, -93)
+rotation = -3.1415925
+scale = Vector2(1, -1)
+metadata/_edit_group_ = true
+
+[node name="Gfx" type="Sprite2D" parent="Left/Fern12" unique_id=2047715307]
+texture_filter = 1
+position = Vector2(4, -14)
+texture = ExtResource("11_ns0n4")
+region_enabled = true
+region_rect = Rect2(288, 120, 56, 40)
+
+[node name="Right" type="Node2D" parent="." unique_id=1065187033]
+y_sort_enabled = true
+
+[node name="Post2_2" parent="Right" unique_id=1183831393 instance=ExtResource("1_lmump")]
+position = Vector2(555, 180)
+
+[node name="Post2_4" parent="Right" unique_id=224908841 instance=ExtResource("1_lmump")]
+position = Vector2(547, 244)
+
+[node name="Post1_14" parent="Right" unique_id=621592071 instance=ExtResource("2_xeihd")]
+position = Vector2(453, 171)
+
+[node name="Rock1_0" parent="Right" unique_id=112620312 instance=ExtResource("2_bq26t")]
+position = Vector2(1091, -21)
+
+[node name="Rock1_1" parent="Right" unique_id=2126362789 instance=ExtResource("2_bq26t")]
+position = Vector2(793, 131)
+
+[node name="Rock1_2" parent="Right" unique_id=2048133926 instance=ExtResource("2_bq26t")]
+position = Vector2(1125, 214)
+
+[node name="Rock1_16" parent="Right" unique_id=1660109020 instance=ExtResource("2_bq26t")]
+position = Vector2(1224, 267)
+
+[node name="Rock1_10" parent="Right" unique_id=395710998 instance=ExtResource("2_bq26t")]
+position = Vector2(539, 116)
+
+[node name="Rock2_5" parent="Right" unique_id=636248152 instance=ExtResource("5_mpj6p")]
+position = Vector2(847, 257)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock2_6" parent="Right" unique_id=1287046614 instance=ExtResource("5_mpj6p")]
+position = Vector2(1021, 360)
+
+[node name="Rock2_23" parent="Right" unique_id=939577645 instance=ExtResource("5_mpj6p")]
+position = Vector2(1211, 279)
+
+[node name="Rock2_7" parent="Right" unique_id=1725691802 instance=ExtResource("5_mpj6p")]
+position = Vector2(1105, 43)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Rock2_8" parent="Right" unique_id=1712382835 instance=ExtResource("5_mpj6p")]
+position = Vector2(887, -44)
+
+[node name="Rock3_1" parent="Right" unique_id=97573187 instance=ExtResource("6_lmump")]
+position = Vector2(1038, 28)
+
+[node name="Rock3_2" parent="Right" unique_id=626217049 instance=ExtResource("6_lmump")]
 position = Vector2(975, 272)
 
-[node name="Rock3_3" parent="." unique_id=1039192332 instance=ExtResource("6_lmump")]
-position = Vector2(860, -323)
-
-[node name="Post4_0" parent="." unique_id=1484080796 instance=ExtResource("7_xeihd")]
-position = Vector2(-310, -367)
-
-[node name="Post4_1" parent="." unique_id=872199972 instance=ExtResource("7_xeihd")]
-position = Vector2(-271, -367)
-
-[node name="Post4_2" parent="." unique_id=497090089 instance=ExtResource("7_xeihd")]
-position = Vector2(322, -365)
-
-[node name="Post3_0" parent="." unique_id=973633946 instance=ExtResource("10_5k8gr")]
+[node name="Post3_0" parent="Right" unique_id=256463304 instance=ExtResource("10_5k8gr")]
 position = Vector2(495, 199)
 
-[node name="Post1_15" parent="." unique_id=2061940776 instance=ExtResource("2_xeihd")]
-position = Vector2(869, 60)
+[node name="Post1_15" parent="Right" unique_id=1537618730 instance=ExtResource("2_xeihd")]
+position = Vector2(972, 147)
 
-[node name="Post3_2" parent="." unique_id=1760148454 instance=ExtResource("10_5k8gr")]
+[node name="Post3_2" parent="Right" unique_id=1427701330 instance=ExtResource("10_5k8gr")]
 position = Vector2(911, 88)
 
-[node name="Post3_1" parent="." unique_id=854079225 instance=ExtResource("10_5k8gr")]
+[node name="Post3_1" parent="Right" unique_id=2113422382 instance=ExtResource("10_5k8gr")]
 position = Vector2(440, 217)
+
+[node name="Barrel_9" parent="Right" unique_id=243167014 instance=ExtResource("2_y16la")]
+position = Vector2(436, 238)
+
+[node name="Barrel_10" parent="Right" unique_id=965177434 instance=ExtResource("2_y16la")]
+position = Vector2(965, 155)
+
+[node name="Barrel_11" parent="Right" unique_id=633962884 instance=ExtResource("2_y16la")]
+position = Vector2(914, 98)
+
+[node name="RightFar" type="Node2D" parent="." unique_id=1412176351]
+y_sort_enabled = true
+
+[node name="Rock2_9" parent="RightFar" unique_id=1857070743 instance=ExtResource("5_mpj6p")]
+position = Vector2(1021, -204)
+
+[node name="Rock3_3" parent="RightFar" unique_id=2041799272 instance=ExtResource("6_lmump")]
+position = Vector2(859, -341)
+
+[node name="Rock1_3" parent="RightFar" unique_id=220300610 instance=ExtResource("2_bq26t")]
+position = Vector2(912, -232)
+
+[node name="Rock1_4" parent="RightFar" unique_id=2080593305 instance=ExtResource("2_bq26t")]
+position = Vector2(1147, -346)

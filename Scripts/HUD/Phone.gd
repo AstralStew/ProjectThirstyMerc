@@ -19,6 +19,8 @@ const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
 @onready var alotl_speech_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/AlotlSpeechLabel
 @onready var alotl_texture: TextureRect = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/AlotlTexture
 
+@onready var ask_question_button: Button = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons/AskQuestionButton
+
 
 @export var idle_wait_range: Vector2 = Vector2(30,60)
 @export var on_collectable_chance: float = 0.3
@@ -30,8 +32,11 @@ const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
 
 func _ready() -> void:
 	super._ready()
+	
+	ask_question_button.pressed.connect(ask_question)
+	
 	InventoryManager.on_dosh_changed().connect(update_dosh)
-	update_dosh(InventoryManager.dosh)
+	balance_label.text = "$" + str(InventoryManager.dosh)
 	
 	InventoryManager.on_collectable_added().connect(on_collectable_added)
 	
@@ -39,10 +44,43 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if WorldManager.is_daytime:
-		time_label.text = WorldManager.day_fake_time
+		if time_label.text != WorldManager.day_fake_time:
+			if time_label.text.split(":")[0] != WorldManager.day_fake_time.split(":")[0]:
+				pulse_time()
+			time_label.text = WorldManager.day_fake_time
+			
+
+var _time_tween:Tween
+func pulse_time() -> void:
+	time_label.modulate = Color.WHITE * 3
+	time_label.offset_transform_scale = Vector2(1.45,1.45)
+	if _time_tween: _time_tween.kill()
+	_time_tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO).set_parallel()
+	_time_tween.tween_property(time_label,"modulate",Color.WHITE, 1)
+	_time_tween.tween_property(time_label,"offset_transform_scale",Vector2.ONE, 1)
 
 func update_dosh(new_amount:int) -> void:
 	balance_label.text = "$" + str(new_amount)
+	pulse_dosh()
+
+var _dosh_tween:Tween
+var _waiting_to_flash_dosh:bool = false
+func pulse_dosh() -> void:
+	if _waiting_to_flash_dosh: return
+	while(Bag.bag_progress < 1):
+		_waiting_to_flash_dosh = true
+		if !is_instance_valid(get_tree()): return
+		await get_tree().create_timer(0.25).timeout
+	_waiting_to_flash_dosh = false
+	
+	AudioManager.play_sound(AudioManager.Sounds.COINS)
+	balance_label.modulate = Color.WHITE * 3
+	balance_label.offset_transform_scale = Vector2(1.45,1.45)
+	if _dosh_tween: _dosh_tween.kill()
+	_dosh_tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO).set_parallel()
+	_dosh_tween.tween_property(balance_label,"modulate",Color.WHITE, 1)
+	_dosh_tween.tween_property(balance_label,"offset_transform_scale",Vector2.ONE, 1)
+	
 
 static func alotl_speech(speech:String,delay:float=0.5) -> void:
 	instance._alotl_speech(speech)
@@ -62,6 +100,14 @@ func on_collectable_added(type:CollectableType) -> void:
 	
 	buzz_up(AskAlotlManager.pop_random_pickup_option())
 	
+
+
+func ask_question() -> void:
+	alotl_speech(AskAlotlManager.pop_random_unprompted_option())
+	if randi() % 2: alotl_texture.texture = ALOTL_IDLE
+	else: alotl_texture.texture = ALOTL_THINK
+	WorldManager.day_progress += 0.1
+
 
 
 func randomly_prompting() -> void:

@@ -7,6 +7,10 @@ func _enter_tree() -> void:
 
 #const SHOP_UI = preload("uid://bjfif1d68c3hk")
 
+const DIALOGUE_UI = preload("uid://d1mkaywhdbvgk")
+const END_DAY_UI = preload("uid://bhil8guw1ebbo")
+
+
 
 @export_group("Shop Settings")
 @export var shop_zoom_duration: float = 0.69
@@ -38,7 +42,7 @@ static var hud_root : CanvasLayer :
 
 #@onready var shop_ui: ShopUI = $"../../HUD/ShopUI"
 var current_shop:ShopUI = null
-@onready var dialogue: Control = $"../../HUD/Dialogue"
+var current_dialogue:DialogueUI = null
 
 
 
@@ -80,16 +84,21 @@ func _ready() -> void:
 
 
 var _tween: Tween
-static func start_dialogue(offset_to_dialogue_target:Vector2) -> void:
-	instance._start_dialogue(offset_to_dialogue_target)
-func _start_dialogue(offset_to_dialogue_target:Vector2) -> void:
+static func start_dialogue(offset_to_dialogue_target:Vector2,dialogue_settings:DialogueSettings) -> void:
+	instance._start_dialogue(offset_to_dialogue_target,dialogue_settings)
+func _start_dialogue(offset_to_dialogue_target:Vector2,dialogue_settings:DialogueSettings) -> void:
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
 	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * talking_zoom_amount,talking_zoom_duration)
 	_tween.tween_property(PlayerCharacter.camera,"offset",offset_to_dialogue_target,talking_zoom_duration)
 	_tween.tween_property(HudManager,"black_bar_progress",1,talking_zoom_duration)
 	_tween.tween_property(Bag,"bag_progress",0,talking_zoom_duration)
-	_tween.tween_property(dialogue,"visible",true,0).set_delay(talking_zoom_duration)
+	
+	current_dialogue = DIALOGUE_UI.instantiate()
+	hud.add_child(current_dialogue)
+	current_dialogue.setup(dialogue_settings)
+	
+	#_tween.tween_property(dialogue,"visible",true,0).set_delay(talking_zoom_duration)
 
 
 static func stop_dialogue() -> void:
@@ -97,14 +106,15 @@ static func stop_dialogue() -> void:
 func _stop_dialogue() -> void:
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
-	_tween.tween_property(dialogue,"visible",false,0)
+	_tween.tween_callback(current_dialogue.close) # tween_property(shop_ui,"visible",false,0)
 	_tween.tween_property(PlayerCharacter.camera,"zoom",Vector2.ONE * 2,talking_zoom_duration)
 	_tween.tween_property(PlayerCharacter.camera,"offset",PlayerCharacter.instance.camera_base_offset,talking_zoom_duration)
 	_tween.tween_property(HudManager,"black_bar_progress",0,talking_zoom_duration)
 	_tween.tween_property(Bag,"bag_progress",1,talking_zoom_duration)
 	
 	await _tween.finished
-	PlayerCharacter.stop_dialogue()
+	PlayerCharacter.stop_talking()
+
 
 static func start_shop(shop_character:ShopCharacter) -> void:
 	instance._start_shop(shop_character)
@@ -124,8 +134,6 @@ func _start_shop(shop_character:ShopCharacter) -> void:
 	current_shop = shop_character.shop_ui.instantiate()
 	hud.add_child(current_shop)
 	
-
-
 
 static func stop_shop() -> void:
 	instance._stop_shop()
@@ -164,4 +172,11 @@ func _end_day() -> void:
 	_tween = create_tween().set_parallel().set_ease(talking_zoom_ease).set_trans(talking_zoom_transition)
 	_tween.tween_property(HudManager,"black_background_progress",1,day_cap_duration).from(0)
 	_tween.tween_property(Bag,"bag_progress",0,day_cap_duration).from(1)
+	_tween.set_parallel(false)
+	_tween.tween_interval(1.15)
+	_tween.tween_callback(display_last_screen)
+
+func display_last_screen() -> void:
+	var end_day_ui = END_DAY_UI.instantiate()
+	hud.add_child(end_day_ui)
 	

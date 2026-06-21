@@ -8,7 +8,7 @@ func _enter_tree() -> void:
 @onready var notepad_entries: VBoxContainer = $Gfx/PanelContainer/PanelContainer2/ScrollContainer/NotepadEntries
 
 @export var bounce_offset: Vector2 = Vector2(-6,-6)
-@export var bounce_offset_per_entry: Vector2 = Vector2(-18,-10)
+@export var bounce_offset_per_entry: Vector2 = Vector2(-3,-2)
 @export var bounce_rotation: float = 15
 @export var bounce_scale: float = 1.1
 @export var bounce_duration : float = 1
@@ -53,6 +53,7 @@ func _process(delta: float) -> void:
 	super._process(delta)
 
 func bounce(_list_size:int) -> void:
+	if !is_usable: return
 	if is_bouncing: return
 	is_bouncing = true
 	if _tween: _tween.kill()

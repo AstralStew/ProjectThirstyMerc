@@ -6,7 +6,11 @@ func _enter_tree() -> void:
 	WorldManager.restart_scene().connect(func():instance = null)
 
 
-enum Sounds {UI_POP_UP,CASH_REGISTER,SHOP_DOOR_BELL, FOOTSTEPS,PHONE_VIBRATION}
+enum Sounds {UI_POP_UP,CASH_REGISTER,SHOP_DOOR_BELL, FOOTSTEPS,PHONE_VIBRATION, COINS, DIG_UP, DIG_DOWN, PICKUP}
+
+@onready var shore_audio: AudioStreamPlayer2D = $"../../World/Effects/ShoreAudio"
+@onready var music: AudioStreamPlayer2D = $"../../World/Effects/Music"
+@onready var crickets: AudioStreamPlayer2D = $"../../World/Effects/Crickets"
 
 
 
@@ -15,13 +19,30 @@ const CASH_REGISTER = preload("uid://cofymlbl5yxhp")
 const SHOP_DOOR_BELL = preload("uid://uwkj1u5fh6ow")
 const FOOTSTEPS = preload("uid://b211s3nge70eq")
 const PHONE_VIBRATION = preload("uid://bkfpf6cphoj2b")
+const COINS = preload("uid://lk6idc4bjvhj")
+const DIG_UP = preload("uid://nbf0dv3niolu")
+const DIG_DOWN = preload("uid://71fjns0a228b")
+const PICKUP = preload("uid://bpd11uw8m72hi")
+const CRICKETS = preload("uid://7atwfvff1kkn")
+
 
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	WorldManager.day_ended().connect(on_day_ended)
+
+var _tween: Tween
+func on_day_ended() -> void:
+	if _tween: _tween.kill()
+	_tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE).set_parallel()
+	_tween.tween_property(shore_audio,"volume_linear",0,1)
+	_tween.tween_property(music,"volume_linear",0,2)
+	_tween.tween_callback(crickets.play)
+	_tween.tween_property(crickets,"volume_linear",0.75,2)
+
+
 
 static func play_sound(sound:Sounds,volume:float = 1.0,pitch_scale:float=1.0, start_time:float=-1.0,end_time:float=-1.0) -> void:
 	instance._play_sound(sound,volume,pitch_scale, start_time,end_time)
@@ -44,6 +65,18 @@ func _play_sound(sound:Sounds,volume:float = 1.0,pitch_scale=1.0, start_time:flo
 			
 		Sounds.PHONE_VIBRATION:
 			stream = PHONE_VIBRATION
+			
+		Sounds.COINS:
+			stream = COINS
+			
+		Sounds.DIG_UP:
+			stream = DIG_UP
+			
+		Sounds.DIG_DOWN:
+			stream = DIG_DOWN
+			
+		Sounds.PICKUP:
+			stream = PICKUP
 	
 	var new_audio_player = AudioStreamPlayer.new()
 	WorldManager.effects_root.add_child(new_audio_player)

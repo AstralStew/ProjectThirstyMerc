@@ -5,6 +5,44 @@ func _enter_tree() -> void:
 	instance = self
 	#WorldManager.restart_scene().connect(func():instance = null)
 
+
+#region PERSISTANT DATA
+
+const DS_BETTING_LADS = preload("uid://bmgsdfulpehaw")
+const DS_GENEROUS_BENEFACTORS = preload("uid://dd2nielo8ni6w")
+const DS_GROOM_TO_BE = preload("uid://csmb60o0kj3ea")
+const DS_LOST_NECKLACE = preload("uid://35ita73ayoir")
+const DS_PROSPECTIVE_PROFESSOR = preload("uid://c6f3q77t0owhk")
+const DS_SEAGLASS_COLLECTOR = preload("uid://dya4ayqs6r6lm")
+const DS_THE_SEA_CAPTAIN = preload("uid://2m12td75roo3")
+const DS_THE_PPPP = preload("uid://c1yau71kendsr")
+const DS_THE_FISHER_KING = preload("uid://i0dhngucu2u0")
+const DS_A_GHOST_MAYBE = preload("uid://ca1fdpnlcfcl5")
+
+
+
+
+
+
+
+static var completed_betting_lads : bool = false
+static var completed_generous_benefactors : bool = false
+static var completed_groom_to_be : bool = false
+static var completed_lost_necklace : bool = false
+static var completed_prospective_professor : bool = false
+static var completed_seaglass_collector : bool = false
+static var completed_the_sea_captain : bool = false
+static var completed_the_pppp : bool = false
+static var completed_the_fisher_king : bool = false
+static var completed_a_ghost_maybe : bool = false
+
+
+var on_boardwalk:bool = false
+
+var in_water:bool = false
+
+#endregion
+
 @onready var level: Node2D = $"../../World/Level"
 static var level_root : Node2D :
 	get: return instance.level
@@ -112,10 +150,10 @@ static func end_day() -> void:
 	day_ended().emit()
 	print(DEBUG_NAME,"EndDay > Ending day!")
 	
-	await instance.get_tree().create_timer(4).timeout
-	instance._restart_scene.emit()
-	instance.get_tree().call_deferred("reload_current_scene") # .reload_current_scene.call_deferred() # .call_deferred("reload_current_scene")
-	
+	#await instance.get_tree().create_timer(4).timeout
+	#instance._restart_scene.emit()
+	#instance.get_tree().call_deferred("reload_current_scene") # .reload_current_scene.call_deferred() # .call_deferred("reload_current_scene")
+	#
 
 
 
@@ -128,13 +166,21 @@ func _get_speed_at_tile_position(global_position:Vector2) -> float:
 	var _data_at_pos = boardwalk.get_cell_tile_data(current_pos)
 	if _data_at_pos && _data_at_pos.has_custom_data("Speed"):
 		if _data_at_pos.get_custom_data("Speed") > -1:
+			on_boardwalk = true
+			in_water = false
 			return _data_at_pos.get_custom_data("Speed") as float
+	
+	on_boardwalk = false
 	
 	var beach:TileMapLayer = tilemap.find_child("Beach")
 	current_pos = beach.local_to_map(beach.to_local(global_position))
 	_data_at_pos = beach.get_cell_tile_data(current_pos)
 	if _data_at_pos && _data_at_pos.has_custom_data("Speed"):
 		if _data_at_pos.get_custom_data("Speed") > -1:
+			if _data_at_pos.get_custom_data("Speed") == 0.69:
+				in_water = true
+			else:
+				in_water = false
 			return _data_at_pos.get_custom_data("Speed") as float
 	
 	# Nothing found somehow, return normal speed
@@ -145,3 +191,30 @@ func _get_speed_at_tile_position(global_position:Vector2) -> float:
 func spawn_collectables() -> void:
 	for spawner:SpawnBox in get_tree().get_nodes_in_group("spawners"):
 		await spawner.spawn()
+
+
+
+static func complete_dialogue(dialogue_setting:DialogueSettings) -> void:
+	match dialogue_setting:
+		DS_BETTING_LADS:
+			completed_betting_lads  = true
+		DS_GENEROUS_BENEFACTORS:
+			completed_generous_benefactors  = true
+		DS_GROOM_TO_BE:
+			completed_groom_to_be  = true
+		DS_LOST_NECKLACE:
+			completed_lost_necklace  = true
+		DS_PROSPECTIVE_PROFESSOR:
+			completed_prospective_professor  = true
+		DS_SEAGLASS_COLLECTOR:
+			completed_seaglass_collector  = true
+		DS_THE_SEA_CAPTAIN:
+			completed_the_sea_captain  = true
+		DS_THE_PPPP:
+			completed_the_pppp  = true
+		DS_THE_FISHER_KING:
+			completed_the_fisher_king = true
+		DS_A_GHOST_MAYBE:
+			completed_a_ghost_maybe = true
+			
+			

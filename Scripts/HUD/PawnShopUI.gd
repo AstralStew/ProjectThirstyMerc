@@ -82,49 +82,6 @@ func on_button_pressed(button:Button) -> void:
 	AudioManager.play_sound(AudioManager.Sounds.CASH_REGISTER)
 	
 	
-	#AudioManager.play_sound(AudioManager.Sounds.UI_POP_UP)
-	
-
-
-#
-#func _on_rent_pressed() -> void:
-	#print_rich(DEBUG_NAME,"OnRentPress > Rent pressed!")
-	#var button:Button = button_group.get_pressed_button()
-	#
-	#match button.text:
-		#"Long Brush":
-			#if TT_BRUSH.cost <= InventoryManager.dosh:
-				#InventoryManager.add_dosh(-TT_BRUSH.cost)
-				#Bag.setup_tool(TT_BRUSH)
-		#"Magnifying Glass":
-			#if TT_MAGNIFYING_GLASS.cost <= InventoryManager.dosh:
-				#InventoryManager.add_dosh(-TT_MAGNIFYING_GLASS.cost)
-				#Bag.setup_tool(TT_MAGNIFYING_GLASS)
-		#"Binoculars":
-			#if TT_BINOCULARS.cost <= InventoryManager.dosh:
-				#InventoryManager.add_dosh(-TT_BINOCULARS.cost)
-				#Bag.setup_tool(TT_BINOCULARS)
-		#"Metal Detector":
-			#if TT_METAL_DETECTOR.cost <= InventoryManager.dosh:
-				#InventoryManager.add_dosh(-TT_METAL_DETECTOR.cost)
-				#Bag.setup_tool(TT_METAL_DETECTOR)
-		#"Old Shovel":
-			#if TT_SHOVEL.cost <= InventoryManager.dosh:
-				#InventoryManager.add_dosh(-TT_SHOVEL.cost)
-				#Bag.setup_tool(TT_SHOVEL)
-		#"Zen Rake":
-			#pass
-		#"Fishing Rod":
-			#pass
-		#"Pickerupper":
-			#pass
-	#
-	#reset_button(button,true)
-	#rent.disabled = true
-	#update_buttons()
-	#
-	#AudioManager.play_sound(AudioManager.Sounds.CASH_REGISTER)
-
 
 func _on_leave_pressed() -> void:
 	print_rich(DEBUG_NAME,"OnLeavePressed > Leave pressed!")

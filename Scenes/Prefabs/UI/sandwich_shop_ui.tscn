@@ -1,0 +1,475 @@
+[gd_scene format=3 uid="uid://b0vxw41k4ks70"]
+
+[ext_resource type="Script" uid="uid://y1bha6tmqp14" path="res://Scripts/HUD/SandwichShopUI.gd" id="1_p3syl"]
+[ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="3_y41ro"]
+[ext_resource type="Texture2D" uid="uid://ct47ogxdwqton" path="res://Assets/Images/SpriteSheet_Buildings.png" id="4_p3syl"]
+[ext_resource type="ButtonGroup" uid="uid://bfpnt4etcf1sr" path="res://Resources/ButtonGroups/sandwich_shop_button_group.tres" id="4_y41ro"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28ath"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8235294, 0.9254902, 0.6, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k3ma"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 22.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwp57"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 24.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b14wf"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 1.0
+expand_margin_right = 24.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k55q4"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+expand_margin_left = 1.0
+expand_margin_right = 11.0
+shadow_color = Color(0.54509807, 0.22745098, 0.28627452, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asuqw"]
+content_margin_left = 3.0
+content_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opjrb"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 22.0
+expand_margin_right = 1.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v1oo"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 24.0
+expand_margin_right = 1.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skhme"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 24.0
+expand_margin_right = 1.0
+shadow_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kut41"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+expand_margin_left = 11.0
+expand_margin_right = 1.0
+shadow_color = Color(0.54509807, 0.22745098, 0.28627452, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k3ma"]
+content_margin_left = 3.0
+content_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp5f6"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ow7q"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3miyi"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.82, 0.3116, 0.3539667, 0)
+border_color = Color(0.7, 0.336, 0.3663334, 0)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.55, 0.23100002, 0.28948337, 0)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[node name="SandwichShopUI" type="Control" unique_id=1650898770]
+z_index = -10
+texture_filter = 1
+custom_maximum_size = Vector2(360, 280)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 280.0
+size_flags_horizontal = 0
+script = ExtResource("1_p3syl")
+button_group = ExtResource("4_y41ro")
+metadata/_custom_type_script = "uid://y1bha6tmqp14"
+
+[node name="DialogueBanner" type="Control" parent="." unique_id=2006371414]
+z_index = 1
+anchors_preset = 0
+offset_top = 10.5
+offset_right = 360.0
+offset_bottom = 290.5
+
+[node name="DialogueBubble" type="Panel" parent="DialogueBanner" unique_id=248984960]
+layout_mode = 0
+offset_left = -53.0
+offset_top = -74.5
+offset_right = 407.5
+offset_bottom = -23.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ol4r")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="DialogueBanner/DialogueBubble" unique_id=1303164933]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.75
+offset_top = -21.5
+offset_right = 165.75
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+theme_override_constants/shadow_offset_x = 82
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "SANDWICHES, GET YA SANDWICHES 'ERE!
+Oh hey lil lady. Welcome to [color=4c2242]Victor's Rotisserie[/color], what can I getcha?"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Options" type="Control" parent="." unique_id=1142599987]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsMarginContainer" type="MarginContainer" parent="Options" unique_id=379854355]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -130
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = -130
+theme_override_constants/margin_bottom = 0
+
+[node name="LeftBanner" type="HBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1767429045]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="Options/OptionsMarginContainer/LeftBanner" unique_id=2062052670]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LeftBanner" type="Panel" parent="Options/OptionsMarginContainer/LeftBanner" unique_id=224402325]
+custom_minimum_size = Vector2(90, 398)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_28ath")
+
+[node name="RightBanner" type="HBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1457921560]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="RightBanner" type="Panel" parent="Options/OptionsMarginContainer/RightBanner" unique_id=1232212724]
+custom_minimum_size = Vector2(90, 398)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_28ath")
+
+[node name="Control" type="Control" parent="Options/OptionsMarginContainer/RightBanner" unique_id=680291275]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LeftTools" type="VBoxContainer" parent="Options/OptionsMarginContainer" unique_id=2088399658]
+custom_maximum_size = Vector2(100, 140)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="SpeedySandwich" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1414520098]
+custom_minimum_size = Vector2(99.755, 24)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+toggle_mode = true
+button_group = ExtResource("4_y41ro")
+text = "Speedy Sandwich"
+alignment = 2
+
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/SpeedySandwich" unique_id=199479917]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_y41ro")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
+text = "$1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RightTools" type="VBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1889026244]
+custom_maximum_size = Vector2(100, 160)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="MuscleJuice" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=1262964191]
+custom_minimum_size = Vector2(99.755, 24)
+layout_mode = 2
+size_flags_vertical = 6
+layout_direction = 3
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+toggle_mode = true
+button_group = ExtResource("4_y41ro")
+text = "Muscle Juice"
+alignment = 2
+
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/MuscleJuice" unique_id=1962599673]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_y41ro")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+text = "$3"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Leave" type="Button" parent="." unique_id=237836838]
+visible = false
+layout_mode = 0
+offset_left = 134.5
+offset_top = 210.0
+offset_right = 224.5
+offset_bottom = 230.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3miyi")
+text = "LEAVE"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=213103597]
+y_sort_enabled = true
+
+[node name="Background" type="Sprite2D" parent="Node2D" unique_id=704532674]
+position = Vector2(208, -144)
+texture = ExtResource("4_p3syl")
+region_enabled = true
+region_rect = Rect2(304, 48, 32, 32)
+
+[node name="Character" type="Sprite2D" parent="Node2D" unique_id=1731005842]
+position = Vector2(209, -141)
+texture = ExtResource("4_p3syl")
+region_enabled = true
+region_rect = Rect2(304, 80, 32, 32)
+
+[node name="Foreground" type="Sprite2D" parent="Node2D" unique_id=2003934124]
+position = Vector2(181, -139)
+texture = ExtResource("4_p3syl")
+region_enabled = true
+region_rect = Rect2(336, 0, 104, 72)
+
+[connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

@@ -67,7 +67,8 @@ func display_question_mark() -> void:
 	#_tween.tween_interval(0.1)
 
 
-func _on_gui_input(event: InputEvent) -> void:
+func _on_gui_input(event: InputEvent) -> void:	
+	if PlayerCharacter.instance.is_talking: return
 	#if _tween: _tween.kill()
 	#question_mark.call_deferred("queue_free")
 	

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://bmgsdfulpehaw"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_fxian"]
+[ext_resource type="Resource" uid="uid://cpymbs4tdpnb7" path="res://Resources/Collectables/ct_shark_tooth.tres" id="2_mcldb"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="3_u4ue4"]
+
+[resource]
+script = ExtResource("3_u4ue4")
+name = "Betting Lads"
+npc_default_text = "Could you help settle a bet? My mate here reckons there's no sharks on this beach. Could you bring back like %s?"
+npc_complete_text = "NYEH SUCK IT, I FLIPPIN' TOLD YOU DAWG! ... Ahem, uhh thanks for that! You can have half."
+requirements = Dictionary[ExtResource("1_fxian"), int]({
+ExtResource("2_mcldb"): 3
+})
+player_has_requirements_text = "Check it ~!"
+player_leave_incomplete_text = "Yeah I'm petty af, let's do this!"
+player_leave_complete_text = "Haha gotem!"
+reward = 5
+metadata/_custom_type_script = "uid://yl10xow1syvr"

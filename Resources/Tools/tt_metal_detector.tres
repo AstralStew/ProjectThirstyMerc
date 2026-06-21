@@ -7,7 +7,7 @@
 script = ExtResource("2_6sobm")
 name = "Metal Detector"
 description = "Detects any metal objects in a straight line from a medium distance"
-cost = 14
+cost = 9
 prefab = ExtResource("1_2dj3j")
 utility = 2
 metadata/_custom_type_script = "uid://c7j4vdr0vkiuy"

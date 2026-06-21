@@ -422,7 +422,7 @@ text = "$0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Binoculars" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=1433438537]
+[node name="MetalDetector" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=240695621]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -438,10 +438,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
 button_group = ExtResource("2_d3kil")
-text = "Binoculars"
+text = "Metal Detector"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/Binoculars" unique_id=811135806]
+[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/MetalDetector" unique_id=1846684845]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -470,7 +470,7 @@ text = "$0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="MetalDetector" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=240695621]
+[node name="Binoculars" type="Button" parent="Tools/ToolsMarginContainer/LeftTools" unique_id=1433438537]
 custom_minimum_size = Vector2(99.755, 24)
 layout_mode = 2
 size_flags_vertical = 6
@@ -486,10 +486,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
 button_group = ExtResource("2_d3kil")
-text = "Metal Detector"
+text = "Binoculars"
 alignment = 2
 
-[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/MetalDetector" unique_id=1846684845]
+[node name="Label" type="Label" parent="Tools/ToolsMarginContainer/LeftTools/Binoculars" unique_id=811135806]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
