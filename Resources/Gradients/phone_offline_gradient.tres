@@ -1,0 +1,13 @@
+[gd_resource type="GradientTexture2D" format=3 uid="uid://bj6mqp5bh8oj"]
+
+[sub_resource type="Gradient" id="Gradient_2e5js"]
+interpolation_mode = 2
+interpolation_color_space = 1
+colors = PackedColorArray(0.81960785, 0.3137255, 0.35686275, 1, 0.96862745, 0.4509804, 0.5568628, 1)
+
+[resource]
+gradient = SubResource("Gradient_2e5js")
+width = 8
+height = 8
+fill_from = Vector2(0.0964591, 0.08913309)
+fill_to = Vector2(1, 1)

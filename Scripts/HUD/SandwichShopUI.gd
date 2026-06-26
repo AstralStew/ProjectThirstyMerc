@@ -9,7 +9,7 @@ class_name SandwichShopUI extends ShopUI
 
 #var _tween: Tween
 func open() -> void:
-	AudioManager.play_sound(AudioManager.Sounds.SHOP_DOOR_BELL,0.25)
+	AudioManager.play_sound(AudioManager.SHOP_DOOR_BELL,0.25)
 	if _tween: _tween.kill()
 	_tween = create_tween()
 	_tween.tween_interval(0.42)
@@ -23,7 +23,7 @@ func open() -> void:
 	_tween.tween_property(leave,"visible",true,0)
 
 func close() -> void:
-	AudioManager.play_sound(AudioManager.Sounds.SHOP_DOOR_BELL,0.25)
+	AudioManager.play_sound(AudioManager.SHOP_DOOR_BELL,0.25)
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel(true)
 	#_tween.tween_property(rent,"visible",false,0)
@@ -57,14 +57,14 @@ func on_button_pressed(button:Button) -> void:
 	
 	update_buttons()
 	
-	AudioManager.play_sound(AudioManager.Sounds.CASH_REGISTER)
+	AudioManager.play_sound(AudioManager.CASH_REGISTER)
 	
 	
 
 func _on_leave_pressed() -> void:
 	print_rich(DEBUG_NAME,"OnLeavePressed > Leave pressed!")
 	
-	AudioManager.play_sound(AudioManager.Sounds.UI_POP_UP,1,0.8)
+	AudioManager.play_sound(AudioManager.UI_POP_UP,1,0.8)
 	
 	HudManager.stop_shop()
 	

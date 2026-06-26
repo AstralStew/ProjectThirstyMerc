@@ -16,6 +16,7 @@ rotate_source = 1
 dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(37.000015, 10.000015), Vector2(323, 265)])
 reset_on_drag_end = true
+instructions = "drag outside the circle to hint towards buried objects!"
 metadata/_custom_type_script = "uid://drhpp74rjokfy"
 
 [node name="Gfx" type="Control" parent="." unique_id=497739244]

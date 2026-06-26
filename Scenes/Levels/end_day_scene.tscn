@@ -1,0 +1,759 @@
+[gd_scene format=3 uid="uid://bhil8guw1ebbo"]
+
+[ext_resource type="Script" uid="uid://b3cdw5tqta3mu" path="res://Scripts/EndDayScene.gd" id="1_1wd6t"]
+[ext_resource type="Texture2D" uid="uid://cd1ttfy6p0auk" path="res://Assets/Images/SpriteSheet_Tiles.png" id="2_1wd6t"]
+[ext_resource type="AudioStream" uid="uid://7atwfvff1kkn" path="res://Assets/Audio/Ambient/129678__freethinkeranon__crickets.mp3" id="2_lguqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ol4r"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pokys"]
+bg_color = Color(0.3529412, 0.7254902, 0.63529414, 1)
+border_width_left = 10
+border_width_top = 1
+border_width_right = 10
+border_width_bottom = 1
+border_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+expand_margin_left = 8.0
+expand_margin_top = 2.0
+expand_margin_right = 8.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2k4b"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wutec"]
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 4
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0amph"]
+content_margin_left = 5.0
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocvkx"]
+border_width_left = 6
+border_width_top = 6
+border_width_right = 7
+border_width_bottom = 4
+border_color = Color(0.8235294, 0.9254902, 0.6, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp5f6"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ow7q"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9647059, 0.65882355, 0.7019608, 1)
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+shadow_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[node name="EndDayScene" type="Control" unique_id=1502761640]
+z_index = 100
+texture_filter = 1
+custom_maximum_size = Vector2(360, 280)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 280.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 0
+script = ExtResource("1_1wd6t")
+metadata/_custom_type_script = "uid://b3cdw5tqta3mu"
+
+[node name="DialogueBanner" type="Control" parent="." unique_id=2006371414]
+z_index = 1
+anchors_preset = 0
+offset_top = 10.5
+offset_right = 360.0
+offset_bottom = 290.5
+
+[node name="DialogueBubble" type="Panel" parent="DialogueBanner" unique_id=248984960]
+layout_mode = 0
+offset_left = -53.0
+offset_top = -74.5
+offset_right = 407.5
+offset_bottom = -23.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ol4r")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="DialogueBanner/DialogueBubble" unique_id=1303164933]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.75
+offset_top = -21.5
+offset_right = 165.75
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.8235294, 0.9254902, 0.6, 1)
+theme_override_constants/shadow_offset_x = 82
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "As-salamu alaykum! The annual [color=6ed6a4]Pawn's Point[/color] clean up drive has begun. We will pay you for any rubbish you find out on the beach."
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Gfx" type="Control" parent="." unique_id=972030772]
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 280.0
+mouse_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Gfx" unique_id=523484007]
+texture_repeat = 2
+position = Vector2(-25, -16)
+scale = Vector2(5.06875, 3.8999999)
+texture = ExtResource("2_1wd6t")
+centered = false
+region_enabled = true
+region_rect = Rect2(264, 120, 80, 80)
+
+[node name="MarginContainer" type="MarginContainer" parent="Gfx" unique_id=1559619832]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Gfx/MarginContainer" unique_id=418043209]
+layout_mode = 2
+theme_override_constants/separation = -7
+
+[node name="Book" type="MarginContainer" parent="Gfx/MarginContainer/VBoxContainer" unique_id=198577700]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-1, 0.5)
+offset_transform_scale = Vector2(0.9, 0.9)
+offset_transform_rotation = -0.5235988
+offset_transform_visual_only = false
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 0
+
+[node name="Binding" type="Panel" parent="Gfx/MarginContainer/VBoxContainer/Book" unique_id=68769105]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pokys")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Gfx/MarginContainer/VBoxContainer/Book" unique_id=1204597025]
+layout_mode = 2
+alignment = 1
+
+[node name="LeftPanel" type="PanelContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer" unique_id=610854941]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_g2k4b")
+
+[node name="Border" type="PanelContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel" unique_id=1846851857]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_wutec")
+
+[node name="Background" type="ColorRect" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border" unique_id=230593065]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(0.43137255, 0.8392157, 0.6431373, 1)
+
+[node name="LeftPage" type="VBoxContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border" unique_id=1753724966]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="ItemsFoundHeader" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage" unique_id=757632744]
+custom_minimum_size = Vector2(0, 13)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_font_sizes/normal_font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "ITEMS FOUND"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ItemsFound" type="VBoxContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage" unique_id=1637545396]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="Coins" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=519951813]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "2 x Cyan Seaglass"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="Bottlecaps" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1746220815]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="PullTabs" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=2048190943]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="OldCans" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=345755892]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="BrokenLures" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=962025627]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="CyanSeaglass" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=185184904]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="RedSeaglass" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=2064791030]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="DarkSeaglass" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1799905762]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="VibrantSeaglass" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=864709150]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="SharkTooth" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1730030752]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="ClayPottery" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1540944491]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="JadePottery" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1411986509]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="PristinePottery" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=516623113]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="AncientPottery" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1151944751]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="GoldRing" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=2079635973]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="JadeRing" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=573425114]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="AncientRing" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=945737972]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="TopazNecklace" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=2034172253]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="GoldNecklace" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1731594063]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="RubyNecklace" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=592963464]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="EmeraldNecklace" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=135260177]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="Fossil" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/LeftPanel/Border/LeftPage/ItemsFound" unique_id=1352917788]
+custom_minimum_size = Vector2(0, 9)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_font_sizes/normal_font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 2
+
+[node name="RightPanel" type="PanelContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer" unique_id=1731260102]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_g2k4b")
+
+[node name="Border" type="PanelContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel" unique_id=2052738647]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ocvkx")
+
+[node name="Background" type="ColorRect" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border" unique_id=485663487]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(0.96862745, 0.4509804, 0.5568628, 1)
+
+[node name="RightPage" type="VBoxContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border" unique_id=365286049]
+custom_maximum_size = Vector2(-1, 233)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="BeachgoersHelpedHeader" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage" unique_id=1983531249]
+custom_minimum_size = Vector2(0, 13)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_font_sizes/normal_font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+bbcode_enabled = true
+text = "BEACHGOERS HELPED"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="BeachgoersHelped" type="VBoxContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage" unique_id=1526945728]
+custom_maximum_size = Vector2(-1, 223)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="BettingLads" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=655207687]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "Seaglass Collector"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="GenerousBenefactors" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=1046331123]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "Lost Necklace"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AGhostMaybe" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=1649953085]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="GroomToBe" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=259364349]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TheFisherKing" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=407953441]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="LostNecklace" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=110672533]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="The PPPP" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=20726868]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ProspectiveProfessor" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=486093895]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SeaglassCollector" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=1254341560]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TheSeaCaptain" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=1270173064]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "???"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Blank" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/BeachgoersHelped" unique_id=1964217965]
+custom_minimum_size = Vector2(0, 10.48)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Allowance" type="VBoxContainer" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage" unique_id=983332839]
+custom_maximum_size = Vector2(-1, 223)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="AllowanceHeader" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/Allowance" unique_id=905259926]
+custom_minimum_size = Vector2(0, 15.35)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_font_sizes/normal_font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+bbcode_enabled = true
+text = "ALLOWANCE  "
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="DoshEarned" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/Allowance" unique_id=964453945]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
+theme_override_font_sizes/normal_font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "Earned: $24"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DoshSpent" type="RichTextLabel" parent="Gfx/MarginContainer/VBoxContainer/Book/HBoxContainer/RightPanel/Border/RightPage/Allowance" unique_id=205333168]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_font_sizes/normal_font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_0amph")
+text = "Spent: $24"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Leave" type="Button" parent="Gfx/MarginContainer/VBoxContainer" unique_id=237836838]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.9, 0.9)
+theme_override_colors/font_color = Color(0.4392157, 0.1764706, 0.31764707, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yp5f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ow7q")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yp5f6")
+disabled = true
+text = "NEXT DAY"
+
+[node name="Crickets" type="AudioStreamPlayer" parent="." unique_id=213284750]
+stream = ExtResource("2_lguqr")
+volume_db = -80.0
+autoplay = true

@@ -62,6 +62,9 @@ static var collectables_root : Node2D :
 static var effects_root : Node2D :
 	get: return instance.effects
 
+
+
+
 @export var day_duration: float = 20
 @export var day_start_in_mins: float = 480
 @export var day_end_in_mins: float = 1201
@@ -150,10 +153,6 @@ static func end_day() -> void:
 	day_ended().emit()
 	print(DEBUG_NAME,"EndDay > Ending day!")
 	
-	#await instance.get_tree().create_timer(4).timeout
-	#instance._restart_scene.emit()
-	#instance.get_tree().call_deferred("reload_current_scene") # .reload_current_scene.call_deferred() # .call_deferred("reload_current_scene")
-	#
 
 
 

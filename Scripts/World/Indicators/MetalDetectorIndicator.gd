@@ -1,8 +1,5 @@
 class_name MetalDetectorIndicator extends DirectionIndicator
 
-
-
-
 @onready var area_2d: Area2D = $Node2D/Area2D
 
 @export_group("READ ONLY")
@@ -18,11 +15,12 @@ class_name MetalDetectorIndicator extends DirectionIndicator
 #func _process(delta: float) -> void:
 	#pass
 
+signal on_detected
 
 func _physics_process(delta: float) -> void:
 	if area_2d.has_overlapping_areas():
 		#print("yep")
-		var _closest_area: Area2D = null
+		var _closest_area: Collectable = null
 		var _new_distance: float = 0
 		for _area in area_2d.get_overlapping_areas():
 			if _area is Collectable:
@@ -39,6 +37,7 @@ func _physics_process(delta: float) -> void:
 		if _closest_area != null && current_distance < beep_range_near ** 2: 
 			print("area found at " + str(current_distance))
 			_closest_area.reveal()
+			on_detected.emit()
 			
 		
 	else:

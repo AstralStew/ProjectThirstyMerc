@@ -5,13 +5,6 @@ func _enter_tree() -> void:
 	instance = self
 	WorldManager.restart_scene().connect(func():instance = null)
 
-
-
-const ALOTL_IDLE = preload("uid://cj757bbo2w6ww")
-const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
-
-
-
 @onready var balance_label: Label = $Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder/BalanceLabel
 @onready var time_label: RichTextLabel = $Gfx/PanelContainer/VBoxContainer/PanelContainer/PurpleBorder/NotificationHolder/TimeLabel
 
@@ -21,14 +14,28 @@ const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
 
 @onready var ask_question_button: Button = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons/AskQuestionButton
 @onready var buy_tokens_button: Button = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/MarginContainer/PhoneScreen1/Buttons/BuyTokensButton
+@onready var gradient: TextureRect = $Gfx/PanelContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/Gradient
 
 
-@export var idle_wait_range: Vector2 = Vector2(30,60)
+const ALOTL_IDLE = preload("uid://cj757bbo2w6ww")
+const ALOTL_THINK = preload("uid://bt7t5a0oe1r65")
+
+const PHONE_ONLINE_GRADIENT = preload("uid://b1bj74rijwepf")
+const PHONE_OFFLINE_GRADIENT = preload("uid://bj6mqp5bh8oj")
+
+
+
+@export var offline_distance: float = 650
+
+@export var idle_wait_range: Vector2 = Vector2(40,60)
 @export var on_collectable_chance: float = 0.3
-
 
 @export var alotl_speech_speed : float = 1.0
 
+@export var buzz_duration = 0.4
+
+@export_group("READ ONLY")
+@export var is_offline: bool = false
 @export var time_since_buzz_up: float = 0.0
 
 func _ready() -> void:
@@ -50,7 +57,62 @@ func _process(delta: float) -> void:
 			if time_label.text.split(":")[0] != WorldManager.day_fake_time.split(":")[0]:
 				pulse_time()
 			time_label.text = WorldManager.day_fake_time
-			
+		
+		if !is_offline && abs(PlayerCharacter.instance.global_position.x) > offline_distance:
+			go_offline()
+		elif is_offline && abs(PlayerCharacter.instance.global_position.x) < offline_distance:
+			come_online()
+
+func go_offline()-> void:
+	is_offline = true
+	
+	
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel()
+	#_tween.tween_property(dragged_object,"position",Vector2(0, target_translation_y / _tween.get_loops_left()),buzz_duration).as_relative().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	_tween.tween_property(dragged_object,"rotation_degrees",3,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+	_tween.tween_property(dragged_object,"rotation_degrees",-3,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay(buzz_duration/6)
+	_tween.tween_property(dragged_object,"rotation_degrees",0,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*2)
+	_tween.tween_property(dragged_object,"rotation_degrees",2,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*3)
+	_tween.tween_property(dragged_object,"rotation_degrees",-2,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*4)
+	_tween.tween_property(dragged_object,"rotation_degrees",0,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*5)
+	_tween.tween_callback(AudioManager.play_sound.bind(AudioManager.PHONE_VIBRATION,0.7,0.95,-1.0,0.6))
+	
+	AudioManager.play_sound(AudioManager.ERROR)
+	
+	gradient.texture = PHONE_OFFLINE_GRADIENT
+	alotl_speech_label.modulate = Color(0.298, 0.133, 0.259, 1.0)
+	alotl_speech_label.text = ("Connection was lost.
+{network_error}"
+	)
+	ask_question_button.disabled = true
+	buy_tokens_button.disabled = true
+	
+func come_online() -> void:
+	is_offline = false
+	if _tween: _tween.kill()
+	_tween = create_tween().set_parallel()
+	#_tween.tween_property(dragged_object,"position",Vector2(0, target_translation_y / _tween.get_loops_left()),buzz_duration).as_relative().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	_tween.tween_property(dragged_object,"rotation_degrees",3,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+	_tween.tween_property(dragged_object,"rotation_degrees",-3,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay(buzz_duration/6)
+	_tween.tween_property(dragged_object,"rotation_degrees",0,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*2)
+	_tween.tween_property(dragged_object,"rotation_degrees",2,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*3)
+	_tween.tween_property(dragged_object,"rotation_degrees",-2,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*4)
+	_tween.tween_property(dragged_object,"rotation_degrees",0,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*5)
+	_tween.tween_callback(AudioManager.play_sound.bind(AudioManager.PHONE_VIBRATION,0.7,0.95,-1.0,0.6))
+	AudioManager.play_sound(AudioManager.ERROR,1.0,2.0)
+	
+	gradient.texture = PHONE_ONLINE_GRADIENT
+	alotl_speech_label.modulate = Color(0.212, 0.486, 0.314, 1.0)
+	alotl_speech_label.text = ("Hi, my name is Alotl.
+Your friendly digital
+beachcomb assistant!"
+	)
+	ask_question_button.disabled = false
+	buy_tokens_button.disabled = false
+	
+	randomly_prompting()
+
 
 var _time_tween:Tween
 func pulse_time() -> void:
@@ -75,7 +137,7 @@ func pulse_dosh() -> void:
 		await get_tree().create_timer(0.25).timeout
 	_waiting_to_flash_dosh = false
 	
-	AudioManager.play_sound(AudioManager.Sounds.COINS)
+	AudioManager.play_sound(AudioManager.COINS)
 	balance_label.modulate = Color.WHITE * 3
 	balance_label.offset_transform_scale = Vector2(1.45,1.45)
 	if _dosh_tween: _dosh_tween.kill()
@@ -97,6 +159,7 @@ func _alotl_speech(speech:String) -> void:
 
 
 func on_collectable_added(type:CollectableType) -> void:
+	if is_offline: return
 	if randf() > on_collectable_chance: return
 	
 	
@@ -105,6 +168,7 @@ func on_collectable_added(type:CollectableType) -> void:
 
 
 func ask_question() -> void:
+	if is_offline: return
 	alotl_speech(AskAlotlManager.pop_random_unprompted_option())
 	if randi() % 2: alotl_texture.texture = ALOTL_IDLE
 	else: alotl_texture.texture = ALOTL_THINK
@@ -112,6 +176,7 @@ func ask_question() -> void:
 
 
 func buy_token() -> void:
+	if is_offline: return
 	if InventoryManager.dosh < 5:
 		alotl_speech("You have insufficient funds, please try again in a few minutes")
 		return
@@ -123,14 +188,15 @@ func buy_token() -> void:
 
 
 func randomly_prompting() -> void:
+	time_since_buzz_up = 0
 	var random_time: float = 0.0
 	await get_tree().create_timer(3.5).timeout
-	while(true):
+	while(!is_offline):
 		random_time = randf_range(idle_wait_range.x,idle_wait_range.y)
 		while (time_since_buzz_up < random_time):
-			time_since_buzz_up += get_physics_process_delta_time()
-			if !is_inside_tree() || !is_instance_valid(get_tree()):
+			if is_offline || !is_inside_tree() || !is_instance_valid(get_tree()):
 				return
+			time_since_buzz_up += get_physics_process_delta_time()
 			await get_tree().physics_frame
 				
 		#alotl_speech()
@@ -138,7 +204,7 @@ func randomly_prompting() -> void:
 		
 
 func buzz_up(text:String) -> void:
-	
+	if is_offline: return
 	time_since_buzz_up = 0
 	
 	if is_resetting: return
@@ -151,7 +217,7 @@ func buzz_up(text:String) -> void:
 	else: alotl_texture.texture = ALOTL_THINK
 	
 	#await get_tree().create_timer(3.5).timeout
-	var duration = 0.4
+	
 	var target_translation_y = -(dragged_object.position.y - 250) if dragged_object.position.y > 250 else 0
 	#if dragged_object.position.y > 250:
 	
@@ -159,14 +225,14 @@ func buzz_up(text:String) -> void:
 	_tween = create_tween().set_parallel().set_loops(3)
 	
 	
-	_tween.tween_property(dragged_object,"position",Vector2(0, target_translation_y / _tween.get_loops_left()),duration).as_relative().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
-	_tween.tween_property(dragged_object,"rotation_degrees",3,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
-	_tween.tween_property(dragged_object,"rotation_degrees",-3,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay(duration/6)
-	_tween.tween_property(dragged_object,"rotation_degrees",0,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*2)
-	_tween.tween_property(dragged_object,"rotation_degrees",2,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*3)
-	_tween.tween_property(dragged_object,"rotation_degrees",-2,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*4)
-	_tween.tween_property(dragged_object,"rotation_degrees",0,duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((duration/6)*5)
-	_tween.tween_callback(AudioManager.play_sound.bind(AudioManager.Sounds.PHONE_VIBRATION,0.7,0.95,-1.0,0.6))
-	_tween.tween_interval(duration*1.5)
+	_tween.tween_property(dragged_object,"position",Vector2(0, target_translation_y / _tween.get_loops_left()),buzz_duration).as_relative().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	_tween.tween_property(dragged_object,"rotation_degrees",3,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+	_tween.tween_property(dragged_object,"rotation_degrees",-3,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay(buzz_duration/6)
+	_tween.tween_property(dragged_object,"rotation_degrees",0,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*2)
+	_tween.tween_property(dragged_object,"rotation_degrees",2,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*3)
+	_tween.tween_property(dragged_object,"rotation_degrees",-2,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*4)
+	_tween.tween_property(dragged_object,"rotation_degrees",0,buzz_duration/6).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC).set_delay((buzz_duration/6)*5)
+	_tween.tween_callback(AudioManager.play_sound.bind(AudioManager.PHONE_VIBRATION,0.7,0.95,-1.0,0.6))
+	_tween.tween_interval(buzz_duration*1.5)
 	
 	

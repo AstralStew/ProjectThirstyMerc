@@ -34,11 +34,11 @@ func add_footstep() -> void:
 	steps_since_audio = (steps_since_audio + 1) % footsteps_before_sound
 	if steps_since_audio == 0:
 		if WorldManager.instance.on_boardwalk:
-			AudioManager.play_sound(AudioManager.Sounds.FOOTSTEPS,0.3,0.5 + randf(),0,0.5)
+			AudioManager.play_sound(AudioManager.FOOTSTEPS,0.3,0.5 + randf(),0,0.5)
 		elif WorldManager.instance.in_water:
-			AudioManager.play_sound(AudioManager.Sounds.FOOTSTEPS,0.9,0.65 + randf(),4.8,5.9)
+			AudioManager.play_sound(AudioManager.FOOTSTEPS,0.9,0.65 + randf(),4.8,5.9)
 		else:
-			AudioManager.play_sound(AudioManager.Sounds.FOOTSTEPS,0.25,0.93 + randf(),3.55,4.5)
+			AudioManager.play_sound(AudioManager.FOOTSTEPS,0.25,0.93 + randf(),3.55,4.5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

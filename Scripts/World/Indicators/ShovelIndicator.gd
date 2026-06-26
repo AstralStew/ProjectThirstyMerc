@@ -15,6 +15,7 @@ const DEBUG_NAME : String = "[b][ShovelIndicator][/b] "
 
 signal dig_up
 signal dig_down
+signal on_dig
 
 
 func _physics_process(delta: float) -> void:
@@ -24,6 +25,7 @@ func _physics_process(delta: float) -> void:
 		shovel_up = true
 		print_rich(DEBUG_NAME,"PhysicsProcess > Shovel up! Indicator pos y = " + str(indicator_position_y))
 		dig_up.emit()
+		AudioManager.play_sound(AudioManager.DIG_UP,0.35,0.9 + (randf() * 0.2))
 	elif shovel_up && indicator_position_y >= dig_down_threshold:
 		shovel_up = false
 		print_rich(DEBUG_NAME,"PhysicsProcess > Ready to dig! Indicator pos y = " + str(indicator_position_y))
@@ -31,11 +33,14 @@ func _physics_process(delta: float) -> void:
 		if area_2d.has_overlapping_areas():
 			for _area in area_2d.get_overlapping_areas():
 				_on_area_entered(_area)
-				if !ready_to_dig: break
+				AudioManager.play_sound(AudioManager.DIG_DOWN,0.75,0.45+ (randf() * 0.2),0.25)
+				if !ready_to_dig: return
+		AudioManager.play_sound(AudioManager.DIG_DOWN,0.5,0.9 + (randf() * 0.2),0.25)
 
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:
 		print_rich(DEBUG_NAME,"OnAreaEntered")
 		area.dig(PlayerCharacter.instance.base_dig_strength)
+		on_dig.emit()
 		ready_to_dig = false

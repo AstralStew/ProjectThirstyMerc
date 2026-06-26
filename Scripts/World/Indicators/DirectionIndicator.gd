@@ -1,4 +1,10 @@
 class_name DirectionIndicator extends Node2D
+static var instance : DirectionIndicator = null
+func _enter_tree() -> void:
+	if instance != null:
+		instance.queue_free()
+	instance = self
+	WorldManager.restart_scene().connect(func():instance = null)
 
 @export var global_offset : Vector2 = Vector2.ZERO
 

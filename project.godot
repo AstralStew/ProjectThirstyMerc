@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Touch Sand"
-run/main_scene="uid://cx8j5ddukoq0l"
+run/main_scene="uid://gorsmb0dptaq"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,10 @@ window/size/viewport_height=560
 window/size/window_width_override=1440
 window/size/window_height_override=1120
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/cheatsheet_viewer/plugin.cfg")
 
 [file_customization]
 

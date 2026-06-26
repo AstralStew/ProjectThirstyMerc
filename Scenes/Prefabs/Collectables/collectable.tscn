@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqo6tqnt78qv8"]
 
 [ext_resource type="Script" uid="uid://btco0bah4lyb5" path="res://Scripts/World/Collectables/Collectable.gd" id="1_v2a6p"]
+[ext_resource type="AudioStream" uid="uid://cp1yanw1lh1se" path="res://Assets/Audio/Sfx/Collectables/35631__reinsamba__crystal_glass.wav" id="2_wdiyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iton"]
 size = Vector2(8, 8)
@@ -15,13 +16,22 @@ script = ExtResource("1_v2a6p")
 metadata/_custom_type_script = "uid://btco0bah4lyb5"
 
 [node name="BuriedGfx" type="Node2D" parent="." unique_id=1376092548]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="BuriedGfx" unique_id=1962678075]
+z_index = 10
 offset_left = -2.0
 offset_top = -2.0
 offset_right = 2.0
 offset_bottom = 2.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="BuriedGfx/ColorRect" unique_id=697420935]
+z_index = 10
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 4.0
+rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
 
@@ -54,3 +64,7 @@ color = Color(0.6640047, 0.32725295, 3.85046e-07, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1644836759]
 shape = SubResource("RectangleShape2D_7iton")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=646481673]
+stream = ExtResource("2_wdiyu")
+pitch_scale = 2.5

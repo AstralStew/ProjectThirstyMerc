@@ -16,10 +16,12 @@ var real_sprite: Sprite2D = null # = $RealGfx/ObjectGfx/RealSprite
 @export var player_y_offset_on_collect: float = -10
 @export var mirage_strength: float = 7
 
+@export var reveal_cooldown: float = 0.25
 
 @export_group("READ ONLY")
 @export var is_collected: bool = false
 @export var is_buried: bool = true
+@export var is_reveal_cooldowning: bool = false
 @export_range(0,1) var dig_progress: int = -1
 
 # Called when the node enters the scene tree for the first time.
@@ -45,8 +47,11 @@ func setup(type:CollectableType) -> void:
 
 var _tween : Tween
 var _sample: float = 0
+
+
 func reveal(duration: float = 1.0,mirage: bool = false):
-	if is_collected || !is_buried: return
+	if is_collected || !is_buried|| is_reveal_cooldowning: return
+	reveal_cooldowning() 
 	
 	buried_gfx.visible = true
 	buried_gfx.modulate = Color.WHITE
@@ -54,6 +59,7 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	buried_gfx.rotation = 0
 	buried_gfx.get_child(0).position = Vector2.ZERO
 	buried_gfx.get_child(0).rotation = 0
+	buried_gfx.get_child(0).scale = Vector2.ONE * 1.5
 	
 	_sample = 0
 	
@@ -61,12 +67,17 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	_tween = create_tween().set_parallel()
 	#_tween.tween_property(buried_gfx,"modulate.a",0,duration)
 	_tween.tween_property(self,"_sample",1,duration)
+	#_tween.tween_property(buried_gfx.get_child(0),"scale",Vector2.ONE * 1.25,duration/2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	_tween.tween_property(buried_gfx.get_child(0),"scale",Vector2.ONE,duration/2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)#.set_delay(duration/2)
+	
 	if mirage: 
 		_tween.tween_property(buried_gfx,"position",Vector2.ONE * randf() * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from(Vector2.ONE * randf() * mirage_strength).set_ease(Tween.EASE_OUT_IN)
 		_tween.tween_property(buried_gfx,"rotation",(randf()-1) * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from((randf()-1) * mirage_strength).set_ease(Tween.EASE_IN_OUT)
 		_tween.tween_property(buried_gfx.get_child(0),"position",Vector2.ONE * randf() * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from(Vector2.ONE * randf() * mirage_strength).set_ease(Tween.EASE_IN_OUT)
 		_tween.tween_property(buried_gfx.get_child(0),"rotation",(randf()-1) * mirage_strength,duration).set_trans(Tween.TRANS_SINE).from((randf()-1) * mirage_strength).set_ease(Tween.EASE_OUT_IN)
-	
+		AudioManager.play_sound(AudioManager.COLLECTABLE_REVEAL,0.25,2 + randf())
+	else:
+		AudioManager.play_sound(AudioManager.COLLECTABLE_REVEAL,0.25,0.65 + randf())
 	
 	while _tween.is_running() && is_buried && !is_collected:
 		buried_gfx.modulate = Color(BURIED_HINT_GRADIENT.sample(_sample),min(1,1.5*(1-_sample)))
@@ -75,6 +86,11 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	buried_gfx.position = Vector2.ZERO
 	
 
+func reveal_cooldowning() -> void:
+	if is_reveal_cooldowning: return
+	is_reveal_cooldowning = true
+	await get_tree().create_timer(reveal_cooldown).timeout
+	is_reveal_cooldowning = false
 
 
 func dig(progress:int = 1) -> void:

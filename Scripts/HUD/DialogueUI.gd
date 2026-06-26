@@ -19,28 +19,16 @@ var _dialogue_settings: DialogueSettings
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#button_group.pressed.connect(on_button_pressed)
-	#for button in button_group.get_buttons():
-		#button.mouse_entered.connect(on_button_hover.bind(button))
-		#button.mouse_exited.connect(on_button_unhover.bind(button))
-	
-	#gated_response.mouse_entered.connect(on_button_hover.bind(gated_response))
-	#gated_response.mouse_exited.connect(on_button_unhover.bind(gated_response))
-	#leave.mouse_entered.connect(on_button_hover.bind(leave))
-	#leave.mouse_exited.connect(on_button_unhover.bind(leave))
-	
 	
 	gated_response.pressed.connect(_on_gated_response_pressed)
 	leave.pressed.connect(_on_leave_pressed)
 	
-	
 	update_buttons()
 	open()
+	
 
 func setup(dialogue_settings:DialogueSettings) -> void:
 	_dialogue_settings = dialogue_settings
-	
-	
 	dialogue_label.text = dialogue_settings.npc_default_text
 	
 	if _dialogue_settings.is_completed:
@@ -80,7 +68,9 @@ func reset_button(button:Button,disabled:bool) -> void:
 var _tween: Tween
 func open() -> void:
 	
-	#AudioManager.play_sound(AudioManager.Sounds.SHOP_DOOR_BELL,0.25)
+	#AudioManager.play_sound(AudioManager.SHOP_DOOR_BELL,0.25)
+	ScreenBars.activate(0.225,0.69)
+	
 	if _tween: _tween.kill()
 	_tween = create_tween()
 	_tween.tween_interval(0.42)
@@ -94,7 +84,10 @@ func open() -> void:
 	_tween.tween_property(leave,"visible",true,0)
 
 func close() -> void:
-	#AudioManager.play_sound(AudioManager.Sounds.SHOP_DOOR_BELL,0.25)
+	
+	#AudioManager.play_sound(AudioManager.SHOP_DOOR_BELL,0.25)
+	ScreenBars.activate(0,0.69)
+	
 	if _tween: _tween.kill()
 	_tween = create_tween().set_parallel(true)
 	#_tween.tween_property(rent,"visible",false,0)
@@ -128,7 +121,7 @@ func _on_gated_response_pressed() -> void:
 func _on_leave_pressed() -> void:
 	print_rich(DEBUG_NAME,"OnLeavePressed > Leave pressed!")
 	
-	AudioManager.play_sound(AudioManager.Sounds.UI_POP_UP,1,0.8)
+	AudioManager.play_sound(AudioManager.UI_POP_UP,1,0.8)
 	
 	HudManager.stop_dialogue()
 	

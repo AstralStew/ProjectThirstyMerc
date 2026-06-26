@@ -131,11 +131,13 @@ func start_shopping() -> void:
 	_shop_target.is_shopping = true
 	set_deferred("is_talking", true)
 	set_movement_target(global_position)
+	set_deferred("is_walking",false)
 	call_deferred("turn_back")
+	
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
 	HudManager.start_shop(_shop_target) # .start_dialogue((_npc_target.global_position - global_position)/2)
-	is_walking = false
+	#is_walking = false
 
 static func stop_shopping() -> void:
 	instance._stop_shopping()
@@ -198,6 +200,7 @@ func start_talking() -> void:
 	set_movement_target(global_position)
 	WorldManager.pause_day()
 	Bag.set_tools_usable(false)
+	set_deferred("is_walking",false)
 	
 	call_deferred("turn_to_face_direction",global_position.direction_to(target.global_position))
 	target.start_talking()

@@ -14,6 +14,7 @@ dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(36, 11), Vector2(334, 220)])
 initial_position_offset = Vector2(0, -15)
 reset_on_drag_end = true
+instructions = "swing all the way up + down to dig!"
 metadata/_custom_type_script = "uid://ddcfnn4fvctf8"
 
 [node name="Gfx" type="CanvasGroup" parent="." unique_id=320257706]

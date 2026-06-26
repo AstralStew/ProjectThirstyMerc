@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://gorsmb0dptaq"]
+
+[ext_resource type="Script" uid="uid://bqmm4aj48q6cv" path="res://Scripts/HUD/ScreenBars.gd" id="1_coy0t"]
+[ext_resource type="Script" uid="uid://dr86ui7vp0rk5" path="res://Scripts/Main.gd" id="1_nu5rl"]
+[ext_resource type="Script" uid="uid://nermkdy1w5v" path="res://Scripts/Managers/AudioManager.gd" id="3_xmwv8"]
+
+[node name="Main" type="Node" unique_id=1349214838]
+script = ExtResource("1_nu5rl")
+metadata/_custom_type_script = "uid://dr86ui7vp0rk5"
+
+[node name="Transitions" type="CanvasLayer" parent="." unique_id=752610473]
+layer = 2
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="ScreenBars" type="VBoxContainer" parent="Transitions" unique_id=1193696351]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = -360.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = -10
+alignment = 1
+script = ExtResource("1_coy0t")
+metadata/_custom_type_script = "uid://bqmm4aj48q6cv"
+
+[node name="ScreenBarsTop" type="ColorRect" parent="Transitions/ScreenBars" unique_id=1850203277]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 2
+color = Color(1, 0.92941177, 0.84313726, 1)
+
+[node name="ScreenBarsBottom" type="ColorRect" parent="Transitions/ScreenBars" unique_id=25651808]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 10
+color = Color(1, 0.92941177, 0.84313726, 1)
+
+[node name="CurrentSceneHolder" type="Node" parent="." unique_id=1010791045]
+
+[node name="AudioManager" type="Node" parent="." unique_id=888440136]
+script = ExtResource("3_xmwv8")
+metadata/_custom_type_script = "uid://nermkdy1w5v"

@@ -23,6 +23,10 @@ func start() -> void:
 	
 	(_direction_indicator as ShovelIndicator).dig_down.connect(on_dig_down)
 	(_direction_indicator as ShovelIndicator).dig_up.connect(on_dig_up)
+	(_direction_indicator as ShovelIndicator).on_dig.connect(on_dig)
+	
+	
+	
 	
 	z_index = -5
 	
@@ -37,12 +41,19 @@ func digging() -> void:
 		await get_tree().process_frame
 
 func on_dig_up()-> void:
-	AudioManager.play_sound(AudioManager.Sounds.DIG_UP)
 	dig_flash()
 
 func on_dig_down()-> void:
-	AudioManager.play_sound(AudioManager.Sounds.DIG_DOWN)
 	dig_flash()
+
+
+func on_dig() -> void:
+	if instructions_ui == null: return
+	if on_drag_end.is_connected(instructions_ui.disappear):
+		on_drag_end.disconnect(instructions_ui.disappear)
+	instructions_ui.disappear()
+	instructions_ui = null
+	instructions = ""
 
 var _dig_tween:Tween
 func dig_flash() -> void:

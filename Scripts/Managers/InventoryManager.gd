@@ -76,7 +76,15 @@ static var inventory : Dictionary[CollectableType,int] = {}
 	#CT_SEA_GLASS_DARK: 1,
 	#CT_SEA_GLASS_RED: 1,
 	#CT_SEA_GLASS_VIBRANT:1,
-	#CT_NECKLACE_GOLD :1
+	#CT_NECKLACE_GOLD :1,
+	#CT_RING_ANCIENT: 1,
+	#CT_BOTTLECAP: 1,
+	#CT_BROKEN_LURE: 1,
+	#CT_NECKLACE_EMERALD: 1,
+	#CT_PULL_TAB: 1,
+	#CT_NECKLACE_RUBY: 1,
+	#CT_OLD_CAN: 1,
+	#
 #}
 signal _on_collectable_added(collectable)
 static func on_collectable_added() -> Signal:
@@ -86,7 +94,7 @@ signal _on_inventory_changed(new_total)
 static func on_inventory_changed() -> Signal:
 	return instance._on_inventory_changed
 
-static var dosh : int = 6:
+static var dosh : int = 60:
 	get: return dosh
 	set(value):
 		dosh = clamp(value,0,1000)
@@ -99,7 +107,7 @@ static func add_dosh(amount:int) -> void:
 	instance._add_dosh(amount)
 	if amount > 0:
 		total_dosh_earned += amount
-		#AudioManager.play_sound(AudioManager.Sounds.COINS)
+		#AudioManager.play_sound(AudioManager.COINS)
 	elif amount < 0: total_dosh_spent += abs(amount)
 func _add_dosh(amount:int) -> void:
 	dosh += amount
@@ -114,11 +122,13 @@ func _add_collectable(type:CollectableType,amount:int) -> void:
 	else:
 		if inventory.has(type):
 			inventory[type] = inventory[type] + amount
+			if amount > 0:
+				AudioManager.play_sound(AudioManager.PICKUP)
 			if inventory[type] <= 0:
 				inventory.erase(type)
 		elif amount > 0:
 			inventory[type] = amount
-			AudioManager.play_sound(AudioManager.Sounds.PICKUP)
+			AudioManager.play_sound(AudioManager.PICKUP)
 		_on_inventory_changed.emit(inventory)
 		_on_collectable_added.emit(type)
 	

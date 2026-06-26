@@ -109,10 +109,10 @@ grow_vertical = 2
 theme_override_constants/margin_left = -300
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = -300
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_bottom = 60
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1603724259]
-custom_minimum_size = Vector2(28, 60)
+custom_minimum_size = Vector2(-1, 60)
 custom_maximum_size = Vector2(280, -1)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -135,11 +135,12 @@ vertical_alignment = 1
 [node name="PlayerResponses" type="VBoxContainer" parent="MarginContainer" unique_id=1889026244]
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 4
+size_flags_vertical = 8
 theme_override_constants/separation = 12
 alignment = 2
 
 [node name="Control" type="Control" parent="MarginContainer/PlayerResponses" unique_id=2008312633]
+visible = false
 custom_minimum_size = Vector2(0, 93.905)
 layout_mode = 2
 
@@ -147,6 +148,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(100, 24)
 layout_mode = 2
 size_flags_vertical = 6
+offset_transform_enabled = true
 layout_direction = 3
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
@@ -194,6 +196,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(100, 24)
 layout_mode = 2
 size_flags_vertical = 6
+offset_transform_enabled = true
 layout_direction = 3
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
 theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)

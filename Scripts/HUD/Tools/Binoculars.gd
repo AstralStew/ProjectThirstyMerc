@@ -29,10 +29,20 @@ func start() -> void:
 	
 	(_direction_indicator as BinocularIndicator).on_near.connect(on_near)
 	(_direction_indicator as BinocularIndicator).on_far.connect(on_far)
+	(_direction_indicator as BinocularIndicator).on_detected.connect(on_detected)
 	
 	z_index = -5
 	
 	call_deferred("seeing")
+
+func on_detected() -> void:
+	if instructions_ui == null: return
+	if on_drag_end.is_connected(instructions_ui.disappear):
+		on_drag_end.disconnect(instructions_ui.disappear)
+	instructions_ui.disappear()
+	instructions_ui = null
+	instructions = ""
+
 
 func on_near() -> void:
 	if is_resetting: return

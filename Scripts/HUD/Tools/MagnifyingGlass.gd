@@ -28,9 +28,12 @@ func start() -> void:
 	_direction_indicator = direction_indicator_prefab.instantiate()
 	PlayerCharacter.instance.add_child(_direction_indicator)
 	_direction_indicator.rotation_degrees = 0
-	
 	(_direction_indicator as MagnifyingGlassIndicator).on_near.connect(on_near)
 	(_direction_indicator as MagnifyingGlassIndicator).on_far.connect(on_far)
+	(_direction_indicator as MagnifyingGlassIndicator).on_detected.connect(on_detected)
+	
+	#var instructions_ui = HudManager.add_instructions("drag within the square to reveal buried objects!")
+	#on_drag_end.connect(instructions_ui.disappear)
 	
 	z_index = -5
 	
@@ -52,6 +55,13 @@ func on_far() -> void:
 	_tween = create_tween()
 	_tween.tween_property(dragged_object,"scale",Vector2.ONE * far_scale,transition_duration)
 
+func on_detected() -> void:
+	if instructions_ui == null: return
+	if on_drag_end.is_connected(instructions_ui.disappear):
+		on_drag_end.disconnect(instructions_ui.disappear)
+	instructions_ui.disappear()
+	instructions_ui = null
+	instructions = ""
 
 var _zoom_tween:Tween
 func seeing() -> void:

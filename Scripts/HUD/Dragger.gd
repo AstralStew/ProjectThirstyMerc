@@ -14,6 +14,9 @@ var DEBUG_NAME: String:
 @export var reset_ease: Tween.EaseType = Tween.EASE_IN_OUT
 @export var reset_trans: Tween.TransitionType = Tween.TRANS_LINEAR
 
+@export var instructions: String = ""
+var instructions_ui : InstructionsUI = null
+
 @export_group("READ ONLY")
 
 @export var is_usable : bool = false :
@@ -29,6 +32,7 @@ var DEBUG_NAME: String:
 @export var value : float
 @export var value_x_only : float
 @export var value_y_only : float
+@export var motion_strength : float
 @export var is_resetting : bool = false
 
 
@@ -99,7 +103,11 @@ func _on_gui_input(event: InputEvent) -> void:
 		if respect_grab_position:
 			_grab_pos = dragged_object.get_local_mouse_position()
 		dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
-
+		
+		if instructions != "":
+			instructions_ui = HudManager.add_instructions(instructions)
+			on_drag_end.connect(instructions_ui.disappear)
+		
 		on_drag_start.emit()
 	elif event.is_action_released("Click"):
 		is_dragging = false
@@ -107,8 +115,15 @@ func _on_gui_input(event: InputEvent) -> void:
 			resetting()
 		on_drag_end.emit()
 	
-	if is_dragging && event is InputEventMouseMotion:
-		dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
+	if is_dragging:
+		if event is InputEventMouseMotion:
+			dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
+			if !(event as InputEventMouseMotion).screen_relative.is_zero_approx():
+				motion_strength = (event as InputEventMouseMotion).screen_relative.length_squared()
+			else:
+				motion_strength = 0
+		else:
+			motion_strength = 0
 		#dragged_object.position = get_global_mouse_position().clamp(position_bounds[0],position_bounds[1])
 	
 		#dragged_object.position = (dragged_object.position + event.relative).clamp(position_bounds[0],position_bounds[1])

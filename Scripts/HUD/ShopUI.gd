@@ -49,7 +49,7 @@ func on_button_pressed(button:Button) -> void:
 func _on_leave_pressed() -> void:
 	print_rich(DEBUG_NAME,"OnLeavePressed > Leave pressed!")
 	
-	AudioManager.play_sound(AudioManager.Sounds.UI_POP_UP,1,0.8)
+	AudioManager.play_sound(AudioManager.UI_POP_UP,1,0.8)
 	
 	HudManager.stop_dialogue()
 	

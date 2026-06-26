@@ -24,6 +24,7 @@ var _sqr_radius : float = 0.0
 
 signal on_near
 signal on_far
+signal on_detected
 
 func _ready() -> void:
 	super._ready()
@@ -54,3 +55,4 @@ func _physics_process(delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:
 		area.reveal(0.5,false)
+		on_detected.emit()

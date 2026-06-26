@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://t7ey4k3bnh57"]
+
+[ext_resource type="Script" uid="uid://bipjw088cxqft" path="res://Scripts/HUD/InstructionsUI.gd" id="1_q2atv"]
+[ext_resource type="FontFile" uid="uid://cwv1nyo616hys" path="res://Resources/Theme/Jersey10-Regular.ttf" id="2_xthlm"]
+
+[node name="InstructionsUI" type="Control" unique_id=908106005]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 280.0
+mouse_filter = 2
+script = ExtResource("1_q2atv")
+appear_duration = 0.5
+appear_ease = 1
+moving_loop_duration = 4.2
+moving_loop_rotation = 1.0
+moving_loop_scale = 0.05
+disappear_duration = 0.25
+disappear_ease = 1
+disappear_trans = 7
+metadata/_custom_type_script = "uid://bipjw088cxqft"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1302015853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="InstructionLabel" type="Label" parent="MarginContainer" unique_id=1770915009]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0, 0)
+theme_override_colors/font_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_colors/font_shadow_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_colors/font_outline_color = Color(0.8235294, 0.9254902, 0.6, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("2_xthlm")
+theme_override_font_sizes/font_size = 20
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0tcjrsdnm5rs" path="res://Scripts/HUD/Tools/MetalDetector.gd" id="1_7rkj5"]
 [ext_resource type="PackedScene" uid="uid://du5p2psjdb5fi" path="res://Scenes/Prefabs/Indicators/metal_detector_indicator.tscn" id="2_0y2oq"]
+[ext_resource type="AudioStream" uid="uid://dd00fn4irksos" path="res://Assets/Audio/Sfx/Tools/562238__anonio82__square.wav" id="3_0y2oq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obvom"]
 bg_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
@@ -26,6 +27,7 @@ position_bounds = Array[Vector2]([Vector2(60, 215), Vector2(300, 215)])
 initial_position_offset = Vector2(0, -16)
 respect_grab_position = true
 reset_on_drag_end = true
+instructions = "point + follow the green light to reveal metal objects!"
 metadata/_custom_type_script = "uid://d0tcjrsdnm5rs"
 
 [node name="Gfx" type="Control" parent="." unique_id=1776884264]
@@ -86,3 +88,7 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
 color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1559833703]
+stream = ExtResource("3_0y2oq")
+volume_db = -25.0
