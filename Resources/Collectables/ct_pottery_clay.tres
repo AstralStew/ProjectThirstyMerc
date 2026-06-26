@@ -7,4 +7,5 @@
 script = ExtResource("1_iw86r")
 name = "Clay Pottery"
 small_texture = ExtResource("2_s4wbh")
+price = 3
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

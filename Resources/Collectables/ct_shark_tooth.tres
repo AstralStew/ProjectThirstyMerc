@@ -7,5 +7,6 @@
 script = ExtResource("1_dt605")
 name = "Shark Tooth"
 small_texture = ExtResource("2_dt605")
+price = 3
 digs_required = 2
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

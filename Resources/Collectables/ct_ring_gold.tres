@@ -7,6 +7,7 @@
 script = ExtResource("1_we2bj")
 name = "Gold Ring"
 small_texture = ExtResource("3_6hwum")
+price = 12
 digs_required = 5
 is_metal = true
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

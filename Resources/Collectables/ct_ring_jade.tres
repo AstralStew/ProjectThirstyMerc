@@ -7,5 +7,6 @@
 script = ExtResource("1_p7syg")
 name = "Jade Ring"
 small_texture = ExtResource("2_7npp3")
+price = 8
 digs_required = 5
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

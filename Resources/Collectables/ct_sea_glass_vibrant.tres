@@ -7,5 +7,6 @@
 script = ExtResource("1_3ss71")
 name = "Vibrant Seaglass"
 small_texture = ExtResource("2_3ss71")
+price = 4
 digs_required = 2
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

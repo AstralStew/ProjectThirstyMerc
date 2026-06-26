@@ -1,0 +1,1111 @@
+[gd_scene format=3 uid="uid://b3xun4nvuo1wn"]
+
+[ext_resource type="Script" uid="uid://bce11kontq8g2" path="res://Scripts/World/Characters/NPCharacterStatic.gd" id="1_tniwf"]
+[ext_resource type="Texture2D" uid="uid://csane6fusip" path="res://Resources/Atlases/Characters/NPC1_Body_Back.tres" id="2_kk132"]
+[ext_resource type="Texture2D" uid="uid://b6b8jl8chpgo2" path="res://Resources/Atlases/Characters/NPC1_Body_Front.tres" id="3_vk0vw"]
+[ext_resource type="Texture2D" uid="uid://br5x0uje0cg17" path="res://Resources/Atlases/Characters/NPC1_Body_Side.tres" id="4_wm1ky"]
+[ext_resource type="Texture2D" uid="uid://bs4jy1dk3iior" path="res://Resources/Atlases/Characters/NPC1_Head_Back.tres" id="5_6jfdo"]
+[ext_resource type="Texture2D" uid="uid://dvqyputrheado" path="res://Resources/Atlases/Characters/NPC1_Head_Front.tres" id="6_lok1h"]
+[ext_resource type="Texture2D" uid="uid://w773s5rkat5q" path="res://Resources/Atlases/Characters/NPC1_Head_Side.tres" id="7_8ue76"]
+[ext_resource type="Texture2D" uid="uid://ktjkhfytrrma" path="res://Resources/Atlases/Characters/NPC3_Body_Back.tres" id="8_dayi6"]
+[ext_resource type="Texture2D" uid="uid://biprmgbcrei4g" path="res://Resources/Atlases/Characters/NPC3_Body_Front.tres" id="9_hxl8a"]
+[ext_resource type="Texture2D" uid="uid://4nmv2iatu1bf" path="res://Resources/Atlases/Characters/NPC3_Body_Side.tres" id="10_j4wvn"]
+[ext_resource type="Texture2D" uid="uid://b1p3eyvui0exq" path="res://Resources/Atlases/Characters/NPC3_Head_Back.tres" id="11_4wne2"]
+[ext_resource type="Texture2D" uid="uid://b0gyien0bc7i6" path="res://Resources/Atlases/Characters/NPC3_Head_Front.tres" id="12_u3kbg"]
+[ext_resource type="Texture2D" uid="uid://cnkb3hs7gq4na" path="res://Resources/Atlases/Characters/NPC3_Head_Side.tres" id="13_h0g82"]
+[ext_resource type="Texture2D" uid="uid://oel3xdwluryf" path="res://Resources/Atlases/Characters/NPC4_Body_Back.tres" id="14_d4kjq"]
+[ext_resource type="Texture2D" uid="uid://dlqu2piivak38" path="res://Resources/Atlases/Characters/NPC4_Body_Front.tres" id="15_yp81a"]
+[ext_resource type="Texture2D" uid="uid://cwifbyxf2fyux" path="res://Resources/Atlases/Characters/NPC4_Body_Side.tres" id="16_fcs3q"]
+[ext_resource type="Texture2D" uid="uid://sirysvl5qoij" path="res://Resources/Atlases/Characters/NPC4_Head_Back.tres" id="17_4nuk5"]
+[ext_resource type="Texture2D" uid="uid://dtvnf7vctfl7l" path="res://Resources/Atlases/Characters/NPC4_Head_Front.tres" id="18_r2mhx"]
+[ext_resource type="Texture2D" uid="uid://8gmjkbgfjp2a" path="res://Resources/Atlases/Characters/NPC4_Head_Side.tres" id="19_yw445"]
+[ext_resource type="Texture2D" uid="uid://cic4i2mi66nnl" path="res://Resources/Atlases/Characters/NPC5_Body_Back.tres" id="20_jguh5"]
+[ext_resource type="Texture2D" uid="uid://bcfmnnnjh048t" path="res://Resources/Atlases/Characters/NPC5_Body_Front.tres" id="21_hdtyf"]
+[ext_resource type="Texture2D" uid="uid://dg0hsg80tqrg2" path="res://Resources/Atlases/Characters/NPC5_Body_Side.tres" id="22_nuy6i"]
+[ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/Characters/NPC5_Head_Back.tres" id="23_fte5q"]
+[ext_resource type="Texture2D" uid="uid://b8vqrtpatpf41" path="res://Resources/Atlases/Characters/NPC5_Head_Front.tres" id="24_sfeku"]
+[ext_resource type="Texture2D" uid="uid://is0qvu05ig62" path="res://Resources/Atlases/Characters/NPC5_Head_Side.tres" id="25_tf5tu"]
+[ext_resource type="Texture2D" uid="uid://btrjsip6o7ldi" path="res://Resources/Atlases/Characters/NPC6_Body_Back.tres" id="26_bo8ha"]
+[ext_resource type="Texture2D" uid="uid://cyxxkmi6b5wul" path="res://Resources/Atlases/Characters/NPC6_Body_Front.tres" id="27_dk1x5"]
+[ext_resource type="Texture2D" uid="uid://bs6r4ou82qkm0" path="res://Resources/Atlases/Characters/NPC6_Body_Side.tres" id="28_2qa6h"]
+[ext_resource type="Texture2D" uid="uid://c8dgib533totu" path="res://Resources/Atlases/Characters/NPC6_Head_Back.tres" id="29_2cwyt"]
+[ext_resource type="Texture2D" uid="uid://rcploqbyjy" path="res://Resources/Atlases/Characters/NPC6_Head_Front.tres" id="30_51gnf"]
+[ext_resource type="Texture2D" uid="uid://d4m13ax4skxym" path="res://Resources/Atlases/Characters/NPC6_Head_Side.tres" id="31_h0vda"]
+[ext_resource type="Texture2D" uid="uid://qxc6ufk0ltvk" path="res://Resources/Atlases/Characters/NPC7_Body_Back.tres" id="32_eivnb"]
+[ext_resource type="Texture2D" uid="uid://cf27rp7sf2e38" path="res://Resources/Atlases/Characters/NPC7_Body_Front.tres" id="33_5uk0o"]
+[ext_resource type="Texture2D" uid="uid://fo0lgd8j66n1" path="res://Resources/Atlases/Characters/NPC7_Body_Side.tres" id="34_t7qph"]
+[ext_resource type="Texture2D" uid="uid://bn13hemnbckse" path="res://Resources/Atlases/Characters/NPC7_Head_Back.tres" id="35_vjlhc"]
+[ext_resource type="Texture2D" uid="uid://bu551wo01lywd" path="res://Resources/Atlases/Characters/NPC7_Head_Front.tres" id="36_kfjt2"]
+[ext_resource type="Texture2D" uid="uid://dq77s2mw8c8lv" path="res://Resources/Atlases/Characters/NPC7_Head_Side.tres" id="37_5vmeo"]
+[ext_resource type="Texture2D" uid="uid://cg13i4yvadbyo" path="res://Resources/Atlases/Characters/NPC8_Body_Back.tres" id="38_guv7i"]
+[ext_resource type="Texture2D" uid="uid://cm50ce5q1328y" path="res://Resources/Atlases/Characters/NPC8_Body_Front.tres" id="39_217ad"]
+[ext_resource type="Texture2D" uid="uid://b3y5gsoiggr1o" path="res://Resources/Atlases/Characters/NPC8_Body_Side.tres" id="40_o15bc"]
+[ext_resource type="Texture2D" uid="uid://52iswlgo4hjv" path="res://Resources/Atlases/Characters/NPC8_Head_Back.tres" id="41_t3p3r"]
+[ext_resource type="Texture2D" uid="uid://lhfm3pn6hq8l" path="res://Resources/Atlases/Characters/NPC8_Head_Front.tres" id="42_6k6kf"]
+[ext_resource type="Texture2D" uid="uid://biq33fma8st7v" path="res://Resources/Atlases/Characters/NPC8_Head_Side.tres" id="43_oqlca"]
+[ext_resource type="Texture2D" uid="uid://cd4wbqvabxnff" path="res://Resources/Atlases/Characters/NPC9_Body_Back.tres" id="44_islrr"]
+[ext_resource type="Texture2D" uid="uid://rdvifq0g6fs2" path="res://Resources/Atlases/Characters/NPC9_Body_Front.tres" id="45_djcui"]
+[ext_resource type="Texture2D" uid="uid://b6dfyswtmkcn8" path="res://Resources/Atlases/Characters/NPC9_Body_Side.tres" id="46_tqsxl"]
+[ext_resource type="Texture2D" uid="uid://dhkybhw3pf7ma" path="res://Resources/Atlases/Characters/NPC9_Head_Back.tres" id="47_gm5k5"]
+[ext_resource type="Texture2D" uid="uid://kuq5juvohw6n" path="res://Resources/Atlases/Characters/NPC9_Head_Front.tres" id="48_l11f1"]
+[ext_resource type="Texture2D" uid="uid://cavrwl7mqysmb" path="res://Resources/Atlases/Characters/NPC9_Head_Side.tres" id="49_hqx64"]
+[ext_resource type="Texture2D" uid="uid://bf6n61w812eat" path="res://Resources/Atlases/Characters/NPC10_Body_Back.tres" id="50_7u3mk"]
+[ext_resource type="Texture2D" uid="uid://dff6obc4fpxea" path="res://Resources/Atlases/Characters/NPC10_Body_Front.tres" id="51_18mwf"]
+[ext_resource type="Texture2D" uid="uid://b63ffyaxc7b5v" path="res://Resources/Atlases/Characters/NPC10_Body_Side.tres" id="52_3auvy"]
+[ext_resource type="Texture2D" uid="uid://cgmpdsgpf8cua" path="res://Resources/Atlases/Characters/NPC10_Head_Back.tres" id="53_s0cqk"]
+[ext_resource type="Texture2D" uid="uid://bnhf62nphk44e" path="res://Resources/Atlases/Characters/NPC10_Head_Front.tres" id="54_71bom"]
+[ext_resource type="Texture2D" uid="uid://cowx7plgnl3sq" path="res://Resources/Atlases/Characters/NPC10_Head_Side.tres" id="55_dtth4"]
+[ext_resource type="Script" uid="uid://daf0h2p3no1m4" path="res://Scripts/World/Characters/NPCharacter.gd" id="56_w54am"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odvjr"]
+size = Vector2(9, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikfsv"]
+size = Vector2(9, 13)
+
+[node name="NPCs" type="Node" unique_id=560521259]
+
+[node name="NPCharacterStatic_1" type="Node2D" parent="." unique_id=779539165 node_paths=PackedStringArray("body", "head")]
+position = Vector2(18, 22)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("2_kk132")
+body_front = ExtResource("3_vk0vw")
+body_side = ExtResource("4_wm1ky")
+head_back = ExtResource("5_6jfdo")
+head_front = ExtResource("6_lok1h")
+head_side = ExtResource("7_8ue76")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_1" unique_id=113225402]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("3_vk0vw")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_1" unique_id=466024170]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("6_lok1h")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_1" unique_id=1196002598]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_1" unique_id=1648991788 groups=["tilemaps"]]
+collision_layer = 4096
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_1/TilemapCollider" unique_id=670985375]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_3" type="Node2D" parent="." unique_id=2035101015 node_paths=PackedStringArray("body", "head")]
+position = Vector2(57, 23)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("8_dayi6")
+body_front = ExtResource("9_hxl8a")
+body_side = ExtResource("10_j4wvn")
+head_back = ExtResource("11_4wne2")
+head_front = ExtResource("12_u3kbg")
+head_side = ExtResource("13_h0g82")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_3" unique_id=1098809349]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("9_hxl8a")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_3" unique_id=740312936]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("12_u3kbg")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_3" unique_id=839821715]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_3" unique_id=1481759759 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_3/TilemapCollider" unique_id=1766427799]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_4" type="Node2D" parent="." unique_id=370162429 node_paths=PackedStringArray("body", "head")]
+position = Vector2(87, 23)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("14_d4kjq")
+body_front = ExtResource("15_yp81a")
+body_side = ExtResource("16_fcs3q")
+head_back = ExtResource("17_4nuk5")
+head_front = ExtResource("18_r2mhx")
+head_side = ExtResource("19_yw445")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_4" unique_id=1518914177]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("15_yp81a")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_4" unique_id=1489666705]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("18_r2mhx")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_4" unique_id=440771542]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_4" unique_id=1287408167 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_4/TilemapCollider" unique_id=896746047]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_5" type="Node2D" parent="." unique_id=1297094330 node_paths=PackedStringArray("body", "head")]
+position = Vector2(117, 23)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("20_jguh5")
+body_front = ExtResource("21_hdtyf")
+body_side = ExtResource("22_nuy6i")
+head_back = ExtResource("23_fte5q")
+head_front = ExtResource("24_sfeku")
+head_side = ExtResource("25_tf5tu")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_5" unique_id=1524084410]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("21_hdtyf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_5" unique_id=950863071]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("24_sfeku")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_5" unique_id=1762787204]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_5" unique_id=772743739 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_5/TilemapCollider" unique_id=628429081]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_6" type="Node2D" parent="." unique_id=466723483 node_paths=PackedStringArray("body", "head")]
+position = Vector2(147, 24)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("26_bo8ha")
+body_front = ExtResource("27_dk1x5")
+body_side = ExtResource("28_2qa6h")
+head_back = ExtResource("29_2cwyt")
+head_front = ExtResource("30_51gnf")
+head_side = ExtResource("31_h0vda")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_6" unique_id=1368727323]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("27_dk1x5")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_6" unique_id=1582302930]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("30_51gnf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_6" unique_id=1551373360]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_6" unique_id=676357983 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_6/TilemapCollider" unique_id=1536577847]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_7" type="Node2D" parent="." unique_id=655066921 node_paths=PackedStringArray("body", "head")]
+position = Vector2(182, 23)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("32_eivnb")
+body_front = ExtResource("33_5uk0o")
+body_side = ExtResource("34_t7qph")
+head_back = ExtResource("35_vjlhc")
+head_front = ExtResource("36_kfjt2")
+head_side = ExtResource("37_5vmeo")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_7" unique_id=1696643806]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("33_5uk0o")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_7" unique_id=1039337357]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("36_kfjt2")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_7" unique_id=466344061]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_7" unique_id=176914822 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_7/TilemapCollider" unique_id=1655619802]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_8" type="Node2D" parent="." unique_id=641421548 node_paths=PackedStringArray("body", "head")]
+position = Vector2(217, 25)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("38_guv7i")
+body_front = ExtResource("39_217ad")
+body_side = ExtResource("40_o15bc")
+head_back = ExtResource("41_t3p3r")
+head_front = ExtResource("42_6k6kf")
+head_side = ExtResource("43_oqlca")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_8" unique_id=96641306]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("39_217ad")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_8" unique_id=1446974446]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("42_6k6kf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_8" unique_id=1856190039]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_8" unique_id=206404059 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_8/TilemapCollider" unique_id=793835029]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_9" type="Node2D" parent="." unique_id=245198626 node_paths=PackedStringArray("body", "head")]
+position = Vector2(255, 22)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("44_islrr")
+body_front = ExtResource("45_djcui")
+body_side = ExtResource("46_tqsxl")
+head_back = ExtResource("47_gm5k5")
+head_front = ExtResource("48_l11f1")
+head_side = ExtResource("49_hqx64")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_9" unique_id=1264535687]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("45_djcui")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_9" unique_id=1664311040]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("48_l11f1")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_9" unique_id=1943076149]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_9" unique_id=1492333632 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_9/TilemapCollider" unique_id=1672263077]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_10" type="Node2D" parent="." unique_id=980986071 node_paths=PackedStringArray("body", "head")]
+position = Vector2(290, 23)
+script = ExtResource("1_tniwf")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("50_7u3mk")
+body_front = ExtResource("51_18mwf")
+body_side = ExtResource("52_3auvy")
+head_back = ExtResource("53_s0cqk")
+head_front = ExtResource("54_71bom")
+head_side = ExtResource("55_dtth4")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="NPCharacterStatic_10" unique_id=704109085]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("51_18mwf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacterStatic_10" unique_id=1899015301]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("54_71bom")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="NPCharacterStatic_10" unique_id=898518747]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="NPCharacterStatic_10" unique_id=708182275 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacterStatic_10/TilemapCollider" unique_id=605982801]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacter1" type="CharacterBody2D" parent="." unique_id=621277115 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(18, 66)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("2_kk132")
+body_front = ExtResource("3_vk0vw")
+body_side = ExtResource("4_wm1ky")
+head_back = ExtResource("5_6jfdo")
+head_front = ExtResource("6_lok1h")
+head_side = ExtResource("7_8ue76")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter1" unique_id=62074385]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("3_vk0vw")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter1" unique_id=1909709889]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("6_lok1h")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter1" unique_id=540969052]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter1" unique_id=225395904]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter1" unique_id=915798751]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter3" type="CharacterBody2D" parent="." unique_id=1888513960 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(57, 65)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("8_dayi6")
+body_front = ExtResource("9_hxl8a")
+body_side = ExtResource("10_j4wvn")
+head_back = ExtResource("11_4wne2")
+head_front = ExtResource("12_u3kbg")
+head_side = ExtResource("13_h0g82")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter3" unique_id=868201635]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("9_hxl8a")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter3" unique_id=446636416]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("12_u3kbg")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter3" unique_id=1333442523]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter3" unique_id=967284840]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter3" unique_id=556621025]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter4" type="CharacterBody2D" parent="." unique_id=828450110 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(89, 65)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("14_d4kjq")
+body_front = ExtResource("15_yp81a")
+body_side = ExtResource("16_fcs3q")
+head_back = ExtResource("17_4nuk5")
+head_front = ExtResource("18_r2mhx")
+head_side = ExtResource("19_yw445")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter4" unique_id=38694254]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("15_yp81a")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter4" unique_id=929628401]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("18_r2mhx")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter4" unique_id=790230487]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter4" unique_id=639213713]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter4" unique_id=560366550]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter5" type="CharacterBody2D" parent="." unique_id=944747496 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(118, 65)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("20_jguh5")
+body_front = ExtResource("21_hdtyf")
+body_side = ExtResource("22_nuy6i")
+head_back = ExtResource("23_fte5q")
+head_front = ExtResource("24_sfeku")
+head_side = ExtResource("25_tf5tu")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter5" unique_id=314433168]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("21_hdtyf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter5" unique_id=1552419107]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("24_sfeku")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter5" unique_id=1467719945]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter5" unique_id=2124348427]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter5" unique_id=1834751316]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter6" type="CharacterBody2D" parent="." unique_id=1020379521 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(147, 66)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("26_bo8ha")
+body_front = ExtResource("27_dk1x5")
+body_side = ExtResource("28_2qa6h")
+head_back = ExtResource("29_2cwyt")
+head_front = ExtResource("30_51gnf")
+head_side = ExtResource("31_h0vda")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter6" unique_id=11830116]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("27_dk1x5")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter6" unique_id=1915920321]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("30_51gnf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter6" unique_id=1115468778]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter6" unique_id=1803872767]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter6" unique_id=412866647]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter7" type="CharacterBody2D" parent="." unique_id=1452943414 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(182, 66)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("32_eivnb")
+body_front = ExtResource("33_5uk0o")
+body_side = ExtResource("34_t7qph")
+head_back = ExtResource("35_vjlhc")
+head_front = ExtResource("36_kfjt2")
+head_side = ExtResource("37_5vmeo")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter7" unique_id=90578439]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("33_5uk0o")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter7" unique_id=245912302]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("36_kfjt2")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter7" unique_id=596583312]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter7" unique_id=2000481079]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter7" unique_id=2098335414]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter8" type="CharacterBody2D" parent="." unique_id=1931501807 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(216, 66)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("38_guv7i")
+body_front = ExtResource("39_217ad")
+body_side = ExtResource("40_o15bc")
+head_back = ExtResource("41_t3p3r")
+head_front = ExtResource("42_6k6kf")
+head_side = ExtResource("43_oqlca")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter8" unique_id=647885663]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("39_217ad")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter8" unique_id=1899483650]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("42_6k6kf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter8" unique_id=262341928]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter8" unique_id=1452632805]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter8" unique_id=690955971]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter9" type="CharacterBody2D" parent="." unique_id=2011352128 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(255, 66)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("44_islrr")
+body_front = ExtResource("45_djcui")
+body_side = ExtResource("46_tqsxl")
+head_back = ExtResource("47_gm5k5")
+head_front = ExtResource("48_l11f1")
+head_side = ExtResource("49_hqx64")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter9" unique_id=117523856]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("45_djcui")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter9" unique_id=664054087]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("48_l11f1")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter9" unique_id=2128061172]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter9" unique_id=1417616834]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter9" unique_id=1867537297]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacter10" type="CharacterBody2D" parent="." unique_id=1519798923 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(290, 67)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("56_w54am")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("50_7u3mk")
+body_front = ExtResource("51_18mwf")
+body_side = ExtResource("52_3auvy")
+head_back = ExtResource("53_s0cqk")
+head_front = ExtResource("54_71bom")
+head_side = ExtResource("55_dtth4")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="NPCharacter10" unique_id=2069633033]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("51_18mwf")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="NPCharacter10" unique_id=544353115]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("54_71bom")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCharacter10" unique_id=19406478]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NPCharacter10" unique_id=261343919]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="NPCharacter10" unique_id=291402961]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="gui_input" from="NPCharacterStatic_1/ClickBoundary" to="NPCharacterStatic_1" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_3/ClickBoundary" to="NPCharacterStatic_3" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_4/ClickBoundary" to="NPCharacterStatic_4" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_5/ClickBoundary" to="NPCharacterStatic_5" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_6/ClickBoundary" to="NPCharacterStatic_6" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_7/ClickBoundary" to="NPCharacterStatic_7" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_8/ClickBoundary" to="NPCharacterStatic_8" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_9/ClickBoundary" to="NPCharacterStatic_9" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacterStatic_10/ClickBoundary" to="NPCharacterStatic_10" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter1/ClickBoundary" to="NPCharacter1" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter3/ClickBoundary" to="NPCharacter3" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter4/ClickBoundary" to="NPCharacter4" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter5/ClickBoundary" to="NPCharacter5" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter6/ClickBoundary" to="NPCharacter6" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter7/ClickBoundary" to="NPCharacter7" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter8/ClickBoundary" to="NPCharacter8" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter9/ClickBoundary" to="NPCharacter9" method="_on_gui_input"]
+[connection signal="gui_input" from="NPCharacter10/ClickBoundary" to="NPCharacter10" method="_on_gui_input"]

@@ -77,8 +77,11 @@
 [ext_resource type="Texture2D" uid="uid://dg0hsg80tqrg2" path="res://Resources/Atlases/Characters/NPC5_Body_Side.tres" id="39_7iwal"]
 [ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/Characters/NPC5_Head_Back.tres" id="40_pwxri"]
 [ext_resource type="Script" uid="uid://bce11kontq8g2" path="res://Scripts/World/Characters/NPCharacterStatic.gd" id="40_v51k6"]
+[ext_resource type="PackedScene" uid="uid://o1nj37n8rjj4" path="res://Scenes/LevelDesign/barrel.tscn" id="41_2vg6v"]
 [ext_resource type="Texture2D" uid="uid://b8vqrtpatpf41" path="res://Resources/Atlases/Characters/NPC5_Head_Front.tres" id="41_eeytp"]
+[ext_resource type="PackedScene" uid="uid://cxg2y31rsa75b" path="res://Scenes/Prefabs/UI/tchotchke_shop_ui.tscn" id="41_ph7pm"]
 [ext_resource type="Texture2D" uid="uid://is0qvu05ig62" path="res://Resources/Atlases/Characters/NPC5_Head_Side.tres" id="42_jqptc"]
+[ext_resource type="PackedScene" uid="uid://c7hya75wm66ar" path="res://Scenes/LevelDesign/crate.tscn" id="42_ph7pm"]
 [ext_resource type="FontFile" uid="uid://b4tttdkjagiv4" path="res://Resources/Theme/Micro5-Regular.ttf" id="50_asuqw"]
 [ext_resource type="AudioStream" uid="uid://0lvrx1etaaqt" path="res://Assets/Audio/Ambient/518637__jackmichaelking__gentle-ocean-waves-birdsong-and-gull.wav" id="53_kut41"]
 [ext_resource type="Script" uid="uid://c78bk3m36tub3" path="res://Scripts/World/FollowOffset.gd" id="54_b14wf"]
@@ -132,9 +135,9 @@
 [ext_resource type="Texture2D" uid="uid://b1bj74rijwepf" path="res://Resources/Gradients/phone_online_gradient.tres" id="127_lfx2n"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbc1q"]
-vertices = PackedVector2Array(308, -379, 308, -360.14063, 293.07813, -363.04688, 303.5, -386, -223, -372, -223, -359.9297, -236, -361.7422, -244.5, -398, -225.5, -398, -42, -414.6328, -25.5, -416.8828, -25.5, -414, -42, -410.04688, -245.07031, -360.42188, -257, -359.4297, -257, -372, -255, -402, -285, -357.1328, -296, -356.22656, -296, -372, -285, -372, -236, -288.71875, -244.07031, -288.27344, -208.5, -399, -208.5, -414.46875, -198.35156, -414.10938, -195.99219, -408.5625, -195, -372, 191.5, -392, 191.5, -408.64063, 276, -406.9375, 276, -397, 251.57031, -357, -318.6172, -390, -318.79688, -402, -303, -402, -303, -398, -299, -390, -298.5, -398, -298.5, -382, -299, -373, 322.5, -390, 334.6172, -390, 334.45313, -379, 322.5, -386, 17.921875, -362.82813, 18.929688, -286, 12, -286, 12, -363.10156, -255, -409.25, -244.5, -409.14063, -177, -375, -73.5, -409.7422, -73.5, -396, -153, -375, -318.35156, -372, -318.35938, -373, 71.60156, -409, 83, -409, 83, -404, 68.60156, -400, 90, -404, 90, -394, 56.351563, -357, 108, -394, 108, -396, 119, -396, 119, -401, 142, -401, 172.5, -392, 142, -409, 151, -409, 151, -413, 169, -413, 169, -409.10156, 284, -397, 284, -390, 302, -404, 300, -404, 300, -407.6797, 303, -407.85156, 303, -390, 302, -390, 303.5, -390, -23.476563, -356, -163, -356, -163, -358, -153, -358, -177, -365, -187, -365, -187, -356, -194.67188, -356, -195, -356.03906, -279.5, -382, -279.5, -398, -279, -398, -279, -402, -225.5, -399, -54.5, -396, -54.5, -409.92188, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, 172.5, -409.02344, -8.859375, -414, -4.7421875, -400, 334.89063, -408, 305.45313, -408, 334.90625, -409.70313, -68, 155, -68, 259, -71.5, 233, -71.5, 213, -90.5, 233, -83, 259, -99, 255, -99, 241, -76, 155, -90.5, 213, -103.5, 198, -103.5, 178, -108.89844, 134, -109.89844, 81, -83.90625, 81, -82.89844, 133, -84, 138, -100, 229, -122.703125, 229, -122.47656, 198, -122.34375, 178, -122.03125, 134, -78, 133, -78, 138, -84, 152, -76, 152, -83, 263, -84, 263, -84, 268, -105, 268, -105, 263, -109, 263, -109, 259, -122.85156, 251, -117, 251, -117, 255, -122.90625, 259, -100, 241)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16, 7, 6), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(21, 22, 13, 6), PackedInt32Array(23, 24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31, 32), PackedInt32Array(33, 34, 35, 36), PackedInt32Array(37, 33, 36, 38), PackedInt32Array(37, 38, 39, 40), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(44, 43, 0, 3), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(16, 49, 50, 7), PackedInt32Array(51, 26, 52, 53, 54), PackedInt32Array(55, 56, 40, 19), PackedInt32Array(57, 58, 59, 60), PackedInt32Array(60, 59, 61, 62, 63, 45), PackedInt32Array(64, 65, 66, 32), PackedInt32Array(32, 66, 67, 68, 69), PackedInt32Array(68, 70, 71, 69), PackedInt32Array(71, 72, 73, 74), PackedInt32Array(31, 75, 76), PackedInt32Array(77, 78, 79, 80), PackedInt32Array(77, 80, 81, 82), PackedInt32Array(81, 83, 3), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(51, 88, 89, 27, 26), PackedInt32Array(27, 89, 90, 91, 92), PackedInt32Array(93, 94, 95), PackedInt32Array(95, 96, 16), PackedInt32Array(4, 8, 97, 23, 27), PackedInt32Array(98, 99, 12, 84), PackedInt32Array(2, 100, 101, 102), PackedInt32Array(84, 87, 54, 53, 98), PackedInt32Array(74, 103, 69, 71), PackedInt32Array(19, 40, 39, 93, 20), PackedInt32Array(15, 20, 93, 16), PackedInt32Array(102, 82, 81, 3, 2), PackedInt32Array(93, 95, 16), PackedInt32Array(11, 104, 105, 84, 12), PackedInt32Array(48, 84, 105, 60), PackedInt32Array(45, 48, 60), PackedInt32Array(32, 63, 62, 64), PackedInt32Array(32, 69, 28), PackedInt32Array(102, 32, 31, 76), PackedInt32Array(102, 76, 82), PackedInt32Array(106, 107, 108), PackedInt32Array(109, 110, 111, 112), PackedInt32Array(113, 111, 110, 114, 115, 116), PackedInt32Array(117, 109, 112, 118, 119, 120), PackedInt32Array(120, 121, 122, 123, 124, 125), PackedInt32Array(126, 127, 128, 119, 118), PackedInt32Array(120, 129, 130, 121), PackedInt32Array(124, 131, 132, 125), PackedInt32Array(120, 125, 133), PackedInt32Array(133, 134, 117, 120), PackedInt32Array(114, 135, 136, 115), PackedInt32Array(136, 137, 138, 139, 115), PackedInt32Array(139, 140, 141, 115), PackedInt32Array(142, 143, 144, 145), PackedInt32Array(141, 145, 144, 115), PackedInt32Array(113, 116, 146, 126, 118)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-249, -283, -250, -355, -323, -349, -324, -415, -323, -420, -257, -419, -256.9904, -414.28387, -223.6132, -413.9272, -223, -420, -195, -419, -192.70096, -413.5968, -47, -415, -47, -419, -25, -422, -23, -436, -11, -435, -6, -422, -1, -405, 65, -405, 68, -414, 146, -414, 146, -418, 174, -418, 174, -414, 273, -412, 275, -418, 285, -418, 288, -412, 340, -415, 339, -349, 298, -357, 297, -285, 282, -285, 280, -357, 252, -352, 56, -352, 23, -357, 24, -281, 7, -281, 7, -357, -23, -351, -195, -351, -231, -356, -231, -284), PackedVector2Array(-115, 76, -79, 76, -78, 128, -63, 128, -63, 273, -128, 273, -127, 129, -114, 129)])
+vertices = PackedVector2Array(268.53906, -407.2422, 276, -412.5625, 276, -397, 251.57031, -357, -92.359375, -398, -73.5, -402.90625, -73.5, -396, -153, -375, 303.5, -386, 308, -379, 308, -360.14063, 293.07813, -363.04688, 284, -390, -260, -387.6328, -244.5, -398, -225.5, -398, -223, -372, -223, -359.9297, -236, -361.7422, -257, -372, -42, -414.6328, -25.5, -416.8828, -25.5, -414, -42, -411.14063, 256.22656, -408.3672, 252.40625, -456, 259.39844, -456, 263.2578, -409.6875, -236, -288.71875, -244.07031, -288.27344, -245.03906, -358.1875, -208.5, -399, -208.5, -414.46875, -198.35156, -414.10938, -196.25781, -409.1797, -195, -372, 191.5, -392, 191.5, -401.78906, 244.39844, -400.97656, 322.5, -390, 334.6172, -390, 334.45313, -379, 322.5, -386, 17.921875, -362.82813, 18.929688, -286, 12, -286, 12, -363.10156, -255, -402, -255, -409.25, -244.5, -409.14063, 284, -397, 302, -404, 300, -404, 300, -407.6797, 303, -407.85156, 303, -390, 302, -390, 303.5, -390, -23.476563, -356, -163, -356, -163, -358, -153, -358, -177, -375, -177, -365, -187, -365, -187, -356, -194.67188, -356, -195, -356.03906, -285.03125, -398, -284, -398, -284, -387.6328, -285.77344, -396.3672, -281.59375, -375.4375, -274.29688, -372, -260, -402, -225.5, -399, 71.60156, -409, 83, -409, 83, -404, 68.60156, -400, 90, -404, 90, -394, 56.351563, -357, 108, -394, 108, -396, 119, -396, 119, -401, 142, -401, 142, -409, 145.47656, -409, 172.5, -403.07813, 172.5, -392, 292.0703, -290, 286.8672, -290, 284.84375, -362.9375, -54.5, -396, -4.7421875, -400, -54.5, -407.8672, -8.859375, -414, -137.46875, -398, -257, -363.8203, 334.89063, -408, 305.45313, -408, 334.90625, -409.70313, -68, 155, -68, 259, -71.5, 233, -71.5, 213, -90.5, 233, -83, 259, -99, 255, -99, 241, -76, 155, -90.5, 213, -103.5, 198, -103.5, 178, -108.89844, 134, -109.89844, 81, -83.90625, 81, -82.89844, 133, -84, 138, -100, 229, -122.703125, 229, -122.47656, 198, -122.34375, 178, -122.03125, 134, -78, 133, -78, 138, -84, 152, -76, 152, -83, 263, -84, 263, -84, 268, -105, 268, -105, 263, -109, 263, -109, 259, -122.85156, 251, -117, 251, -117, 255, -122.90625, 259, -100, 241)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 18), PackedInt32Array(31, 32, 33, 34, 35), PackedInt32Array(36, 37, 38), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(42, 41, 9, 8), PackedInt32Array(43, 44, 45, 46), PackedInt32Array(47, 48, 49, 14), PackedInt32Array(2, 50, 12, 3), PackedInt32Array(51, 52, 53, 54), PackedInt32Array(51, 54, 55, 56), PackedInt32Array(55, 57, 8), PackedInt32Array(58, 59, 60, 61), PackedInt32Array(62, 63, 64, 35, 34), PackedInt32Array(35, 64, 65, 66, 67), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(72, 71, 70), PackedInt32Array(73, 72, 70, 13, 19), PackedInt32Array(13, 74, 47, 14), PackedInt32Array(16, 15, 75, 31, 35), PackedInt32Array(76, 77, 78, 79), PackedInt32Array(79, 78, 80, 81, 82), PackedInt32Array(83, 84, 85), PackedInt32Array(85, 86, 87), PackedInt32Array(87, 88, 89, 90, 91), PackedInt32Array(11, 92, 93, 94), PackedInt32Array(95, 58, 61, 7, 6), PackedInt32Array(56, 55, 8), PackedInt32Array(96, 58, 95, 97, 23, 22, 98), PackedInt32Array(12, 56, 8), PackedInt32Array(12, 11, 94), PackedInt32Array(12, 94, 3), PackedInt32Array(24, 27, 0, 3, 38), PackedInt32Array(38, 3, 82, 36), PackedInt32Array(91, 36, 82), PackedInt32Array(87, 91, 82, 85), PackedInt32Array(83, 85, 82), PackedInt32Array(81, 83, 82), PackedInt32Array(96, 79, 82, 43), PackedInt32Array(96, 43, 46), PackedInt32Array(96, 46, 58), PackedInt32Array(99, 4, 7), PackedInt32Array(34, 99, 7, 62), PackedInt32Array(19, 18, 30, 100), PackedInt32Array(101, 102, 103), PackedInt32Array(104, 105, 106, 107), PackedInt32Array(108, 106, 105, 109, 110, 111), PackedInt32Array(112, 104, 107, 113, 114, 115), PackedInt32Array(115, 116, 117, 118, 119, 120), PackedInt32Array(121, 122, 123, 114, 113), PackedInt32Array(115, 124, 125, 116), PackedInt32Array(119, 126, 127, 120), PackedInt32Array(115, 120, 128), PackedInt32Array(128, 129, 112, 115), PackedInt32Array(109, 130, 131, 110), PackedInt32Array(131, 132, 133, 134, 110), PackedInt32Array(134, 135, 136, 110), PackedInt32Array(137, 138, 139, 140), PackedInt32Array(136, 140, 139, 110), PackedInt32Array(108, 111, 141, 121, 113)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-249, -283, -250, -355, -286, -372, -291, -397, -285, -410, -256.9904, -414.28387, -223.6132, -413.9272, -223, -420, -195, -419, -192.70096, -413.5968, -137, -403, -93, -403, -47, -415, -47, -419, -25, -422, -23, -436, -11, -435, -6, -422, -1, -405, 65, -405, 68, -414, 146, -414, 178, -407, 243, -406, 251, -411, 247, -461, 264, -461, 268, -413, 275, -418, 285, -418, 288, -412, 340, -415, 339, -349, 298, -357, 297, -285, 282, -285, 280, -357, 252, -352, 56, -352, 23, -357, 24, -281, 7, -281, 7, -357, -23, -351, -195, -351, -231, -356, -231, -284), PackedVector2Array(-115, 76, -79, 76, -78, 128, -63, 128, -63, 273, -128, 273, -127, 129, -114, 129)])
 parsed_geometry_type = 1
 parsed_collision_mask = 8192
 source_geometry_mode = 1
@@ -780,1050 +783,6 @@ texture_filter = 1
 [node name="Characters" type="Node2D" parent="World/Entities" unique_id=277602795]
 y_sort_enabled = true
 
-[node name="NPCharacterStatic_1" type="Node2D" parent="World/Entities/Characters" unique_id=619051865 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(24, -1122)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("13_obvom")
-body_front = ExtResource("13_uaga3")
-body_side = ExtResource("15_olq2e")
-head_back = ExtResource("16_w61bx")
-head_front = ExtResource("17_uvj3q")
-head_side = ExtResource("18_mqs2o")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_1" unique_id=752801819]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("13_uaga3")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_1" unique_id=2009804805]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("17_uvj3q")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_1" unique_id=1938372088]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_1" unique_id=1043322153 groups=["tilemaps"]]
-collision_layer = 4096
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_1/TilemapCollider" unique_id=813713025]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_3" type="Node2D" parent="World/Entities/Characters" unique_id=934931423 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(63, -1121)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("25_opjrb")
-body_front = ExtResource("26_kut41")
-body_side = ExtResource("27_b14wf")
-head_back = ExtResource("28_5v1oo")
-head_front = ExtResource("29_skhme")
-head_side = ExtResource("30_a6xwo")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_3" unique_id=849307847]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("26_kut41")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_3" unique_id=1717324909]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("29_skhme")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_3" unique_id=84501203]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_3" unique_id=1265822595 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_3/TilemapCollider" unique_id=399165019]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_4" type="Node2D" parent="World/Entities/Characters" unique_id=757790930 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(93, -1121)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("31_1ol4r")
-body_front = ExtResource("32_2e2dr")
-body_side = ExtResource("33_k55q4")
-head_back = ExtResource("34_fwp57")
-head_front = ExtResource("35_yp5f6")
-head_side = ExtResource("36_jr3pb")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_4" unique_id=322413655]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("32_2e2dr")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_4" unique_id=1360154553]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("35_yp5f6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_4" unique_id=1978308634]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_4" unique_id=1403247259 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_4/TilemapCollider" unique_id=907660420]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_5" type="Node2D" parent="World/Entities/Characters" unique_id=472997708 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(123, -1121)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("37_3miyi")
-body_front = ExtResource("38_5ow7q")
-body_side = ExtResource("39_7iwal")
-head_back = ExtResource("40_pwxri")
-head_front = ExtResource("41_eeytp")
-head_side = ExtResource("42_jqptc")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_5" unique_id=739722367]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("38_5ow7q")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_5" unique_id=415528467]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("41_eeytp")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_5" unique_id=1832325578]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_5" unique_id=1631847464 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_5/TilemapCollider" unique_id=576933617]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_6" type="Node2D" parent="World/Entities/Characters" unique_id=236378436 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(153, -1120)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("61_soqnh")
-body_front = ExtResource("62_74nox")
-body_side = ExtResource("63_d71kx")
-head_back = ExtResource("64_24c38")
-head_front = ExtResource("65_dokcy")
-head_side = ExtResource("66_e3dpf")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_6" unique_id=798056716]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("62_74nox")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_6" unique_id=300565525]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("65_dokcy")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_6" unique_id=319417262]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_6" unique_id=70532284 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_6/TilemapCollider" unique_id=115451846]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_7" type="Node2D" parent="World/Entities/Characters" unique_id=203583090 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(188, -1121)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("67_b3hdi")
-body_front = ExtResource("68_i3xsu")
-body_side = ExtResource("69_3o5s7")
-head_back = ExtResource("70_r6av7")
-head_front = ExtResource("71_hwdj6")
-head_side = ExtResource("72_2e5js")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_7" unique_id=210385883]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("68_i3xsu")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_7" unique_id=651492062]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("71_hwdj6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_7" unique_id=756480059]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_7" unique_id=1676993074 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_7/TilemapCollider" unique_id=1440369231]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_8" type="Node2D" parent="World/Entities/Characters" unique_id=988845837 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(223, -1119)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("73_kxti4")
-body_front = ExtResource("74_twx1o")
-body_side = ExtResource("75_6a7w7")
-head_back = ExtResource("76_wv3i1")
-head_front = ExtResource("77_ggqqs")
-head_side = ExtResource("78_iytyc")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_8" unique_id=1694677224]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("74_twx1o")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_8" unique_id=1381855802]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("77_ggqqs")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_8" unique_id=1469000296]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_8" unique_id=2108208776 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_8/TilemapCollider" unique_id=1581758299]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_9" type="Node2D" parent="World/Entities/Characters" unique_id=997251801 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(261, -1122)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("79_ll0tv")
-body_front = ExtResource("80_wmrth")
-body_side = ExtResource("81_hr1m3")
-head_back = ExtResource("82_yrekk")
-head_front = ExtResource("83_ro0fp")
-head_side = ExtResource("84_tka60")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_9" unique_id=1597832343]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("80_wmrth")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_9" unique_id=1839471738]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("83_ro0fp")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_9" unique_id=1239094681]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_9" unique_id=848684332 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_9/TilemapCollider" unique_id=1819961517]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_10" type="Node2D" parent="World/Entities/Characters" unique_id=1301941643 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-position = Vector2(296, -1121)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("85_0l665")
-body_front = ExtResource("86_q6jiy")
-body_side = ExtResource("87_f8c4r")
-head_back = ExtResource("88_lfptq")
-head_front = ExtResource("89_b4jab")
-head_side = ExtResource("90_30cwf")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_10" unique_id=3910954]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("86_q6jiy")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacterStatic_10" unique_id=1907669784]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("89_b4jab")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacterStatic_10" unique_id=1448520871]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/NPCharacterStatic_10" unique_id=1544280681 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacterStatic_10/TilemapCollider" unique_id=990870687]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacter1" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1089761424 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(24, -1078)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("13_obvom")
-body_front = ExtResource("13_uaga3")
-body_side = ExtResource("15_olq2e")
-head_back = ExtResource("16_w61bx")
-head_front = ExtResource("17_uvj3q")
-head_side = ExtResource("18_mqs2o")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter1" unique_id=1694146432]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("13_uaga3")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter1" unique_id=1878871244]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("17_uvj3q")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter1" unique_id=1666107541]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter1" unique_id=119417887]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter1" unique_id=1527824473]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter3" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=951362949 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(63, -1079)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("25_opjrb")
-body_front = ExtResource("26_kut41")
-body_side = ExtResource("27_b14wf")
-head_back = ExtResource("28_5v1oo")
-head_front = ExtResource("29_skhme")
-head_side = ExtResource("30_a6xwo")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter3" unique_id=14621421]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("26_kut41")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter3" unique_id=740079862]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("29_skhme")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter3" unique_id=575157114]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter3" unique_id=656605456]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter3" unique_id=966068071]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter4" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=897260763 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(95, -1079)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("31_1ol4r")
-body_front = ExtResource("32_2e2dr")
-body_side = ExtResource("33_k55q4")
-head_back = ExtResource("34_fwp57")
-head_front = ExtResource("35_yp5f6")
-head_side = ExtResource("36_jr3pb")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter4" unique_id=1299211474]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("32_2e2dr")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter4" unique_id=1054263851]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("35_yp5f6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter4" unique_id=1757863380]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter4" unique_id=2020328845]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter4" unique_id=579150060]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter5" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1578700878 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(124, -1079)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("37_3miyi")
-body_front = ExtResource("38_5ow7q")
-body_side = ExtResource("39_7iwal")
-head_back = ExtResource("40_pwxri")
-head_front = ExtResource("41_eeytp")
-head_side = ExtResource("42_jqptc")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter5" unique_id=423040698]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("38_5ow7q")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter5" unique_id=229184193]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("41_eeytp")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter5" unique_id=1960393255]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter5" unique_id=1642387736]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter5" unique_id=20377181]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter6" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1755391632 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(153, -1078)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("61_soqnh")
-body_front = ExtResource("62_74nox")
-body_side = ExtResource("63_d71kx")
-head_back = ExtResource("64_24c38")
-head_front = ExtResource("65_dokcy")
-head_side = ExtResource("66_e3dpf")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter6" unique_id=2144317263]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("62_74nox")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter6" unique_id=352075475]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("65_dokcy")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter6" unique_id=52423707]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter6" unique_id=1516984058]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter6" unique_id=812223138]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter7" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=1136530757 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(188, -1078)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("67_b3hdi")
-body_front = ExtResource("68_i3xsu")
-body_side = ExtResource("69_3o5s7")
-head_back = ExtResource("70_r6av7")
-head_front = ExtResource("71_hwdj6")
-head_side = ExtResource("72_2e5js")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter7" unique_id=441528048]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("68_i3xsu")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter7" unique_id=820156799]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("71_hwdj6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter7" unique_id=608140675]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter7" unique_id=1143135406]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter7" unique_id=1311106540]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter8" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=748143412 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(222, -1078)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("73_kxti4")
-body_front = ExtResource("74_twx1o")
-body_side = ExtResource("75_6a7w7")
-head_back = ExtResource("76_wv3i1")
-head_front = ExtResource("77_ggqqs")
-head_side = ExtResource("78_iytyc")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter8" unique_id=1597343468]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("74_twx1o")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter8" unique_id=13061939]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("77_ggqqs")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter8" unique_id=1255314801]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter8" unique_id=622867144]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter8" unique_id=1008218331]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter9" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=703970503 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(261, -1078)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("79_ll0tv")
-body_front = ExtResource("80_wmrth")
-body_side = ExtResource("81_hr1m3")
-head_back = ExtResource("82_yrekk")
-head_front = ExtResource("83_ro0fp")
-head_side = ExtResource("84_tka60")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter9" unique_id=668766923]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("80_wmrth")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter9" unique_id=552475261]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("83_ro0fp")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter9" unique_id=1929021006]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter9" unique_id=572236152]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter9" unique_id=619667772]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="NPCharacter10" type="CharacterBody2D" parent="World/Entities/Characters" unique_id=325530577 node_paths=PackedStringArray("body", "head")]
-process_mode = 4
-process_priority = -1
-position = Vector2(296, -1077)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(150, 0), Vector2(-390, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("85_0l665")
-body_front = ExtResource("86_q6jiy")
-body_side = ExtResource("87_f8c4r")
-head_back = ExtResource("88_lfptq")
-head_front = ExtResource("89_b4jab")
-head_side = ExtResource("90_30cwf")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/NPCharacter10" unique_id=1895019599]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("86_q6jiy")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/NPCharacter10" unique_id=950583260]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("89_b4jab")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/NPCharacter10" unique_id=162076915]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/NPCharacter10" unique_id=2051775010]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/NPCharacter10" unique_id=668220182]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="MiddleTop" type="Node2D" parent="World/Entities/Characters" unique_id=211406085]
 y_sort_enabled = true
 
@@ -2033,7 +992,102 @@ text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NPCharacterStatic_1" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1047366758 node_paths=PackedStringArray("body", "head")]
+[node name="StarTchotchke" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=449668256]
+position = Vector2(-284, -388)
+script = ExtResource("16_b14wf")
+shop_ui = ExtResource("41_ph7pm")
+texture_bob = 1.0
+texture_random_turn = true
+texture_random_turn_chance = 0.125
+metadata/_custom_type_script = "uid://cboevetfqgec8"
+
+[node name="Foreground" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=907753223]
+position = Vector2(-11, -7.6236877)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(96, 0, 8, 32)
+
+[node name="Foreground2" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=1129575834]
+position = Vector2(-3, -7.6236877)
+texture = ExtResource("4_kiiqx")
+region_enabled = true
+region_rect = Rect2(152, 0, 8, 32)
+
+[node name="Barrel_0" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=2139641766 instance=ExtResource("41_2vg6v")]
+position = Vector2(-21, -10)
+
+[node name="Barrel_1" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=585130603 instance=ExtResource("41_2vg6v")]
+position = Vector2(-13, 6)
+
+[node name="Crate_0" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=214343221 instance=ExtResource("42_ph7pm")]
+position = Vector2(13, -6)
+
+[node name="Crate_1" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=742320646 instance=ExtResource("42_ph7pm")]
+position = Vector2(-10, 29)
+
+[node name="Barrel_2" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=730383056 instance=ExtResource("41_2vg6v")]
+position = Vector2(-3, 34)
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=1569445462]
+show_behind_parent = true
+z_index = 1
+texture_filter = 1
+position = Vector2(-7, -19)
+texture = ExtResource("86_q6jiy")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Character" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=1686815649]
+z_index = 1
+texture_filter = 1
+position = Vector2(-7, -19)
+texture = ExtResource("89_b4jab")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=508998437]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -36.623688
+offset_right = 1.0
+offset_bottom = 15.376312
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="QuestionMark" type="Label" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=1874102318]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -70.62369
+offset_right = 9.0
+offset_bottom = -18.123688
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2810022, 1.2810022)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.81960785, 0.3137255, 0.35686275, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("3_6h5vk")
+theme_override_font_sizes/font_size = 24
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NPCharacterStatic_SeaglassCollector" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1047366758 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-64, -406)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -2049,21 +1103,21 @@ head_front = ExtResource("17_uvj3q")
 head_side = ExtResource("18_mqs2o")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_1" unique_id=1077470396]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=1077470396]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("13_uaga3")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_1" unique_id=864776562]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=864776562]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("17_uvj3q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_1" unique_id=1550664624]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=1550664624]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -2077,115 +1131,14 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_1" unique_id=1714098191 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=1714098191 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_1/TilemapCollider" unique_id=1137455693]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector/TilemapCollider" unique_id=1137455693]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_3" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=964635901 node_paths=PackedStringArray("body", "head")]
-position = Vector2(-289, -392)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-dialogue_settings = ExtResource("97_b3hdi")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("25_opjrb")
-body_front = ExtResource("26_kut41")
-body_side = ExtResource("27_b14wf")
-head_back = ExtResource("28_5v1oo")
-head_front = ExtResource("29_skhme")
-head_side = ExtResource("30_a6xwo")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_3" unique_id=1870332521]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("26_kut41")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_3" unique_id=379620095]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("29_skhme")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_3" unique_id=453796779]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_3" unique_id=1288641438 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_3/TilemapCollider" unique_id=1642727427]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_4" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=374093312 node_paths=PackedStringArray("body", "head")]
-position = Vector2(-218, -409)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("31_1ol4r")
-body_front = ExtResource("32_2e2dr")
-body_side = ExtResource("33_k55q4")
-head_back = ExtResource("34_fwp57")
-head_front = ExtResource("35_yp5f6")
-head_side = ExtResource("36_jr3pb")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_4" unique_id=258818522]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("32_2e2dr")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_4" unique_id=883085388]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("35_yp5f6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_4" unique_id=1379379642]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_4" unique_id=1043935622 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_4/TilemapCollider" unique_id=1794705071]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_5" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=991410897 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_PPPP" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=991410897 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-16, -424)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -2201,21 +1154,21 @@ head_front = ExtResource("41_eeytp")
 head_side = ExtResource("42_jqptc")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_5" unique_id=681733161]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=681733161]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("38_5ow7q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_5" unique_id=286188599]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=286188599]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("41_eeytp")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_5" unique_id=2123131602]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=2123131602]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -2229,14 +1182,14 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_5" unique_id=86725003 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=86725003 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_5/TilemapCollider" unique_id=954897594]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP/TilemapCollider" unique_id=954897594]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_6" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1726889915 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_BettingLad" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1726889915 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-235, -408)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -2252,21 +1205,21 @@ head_front = ExtResource("65_dokcy")
 head_side = ExtResource("66_e3dpf")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_6" unique_id=1738521092]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=1738521092]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("62_74nox")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_6" unique_id=518902404]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=518902404]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("65_dokcy")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_6" unique_id=1229453805]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=1229453805]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -2280,11 +1233,61 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_6" unique_id=1126499608 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=1126499608 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_6/TilemapCollider" unique_id=1258349212]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad/TilemapCollider" unique_id=1258349212]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_BettingLadFriend" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=374093312 node_paths=PackedStringArray("body", "head")]
+position = Vector2(-218, -409)
+script = ExtResource("40_v51k6")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("31_1ol4r")
+body_front = ExtResource("32_2e2dr")
+body_side = ExtResource("33_k55q4")
+head_back = ExtResource("34_fwp57")
+head_front = ExtResource("35_yp5f6")
+head_side = ExtResource("36_jr3pb")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend" unique_id=258818522]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("32_2e2dr")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend" unique_id=883085388]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("35_yp5f6")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend" unique_id=1379379642]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend" unique_id=1043935622 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend/TilemapCollider" unique_id=1794705071]
 shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="NPCharacterStatic_7" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1910301203 node_paths=PackedStringArray("body", "head")]
@@ -2337,7 +1340,7 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_7/TilemapCollider" unique_id=1600261186]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_8" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1393725912 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_Benefactor" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1393725912 node_paths=PackedStringArray("body", "head")]
 position = Vector2(313, -396)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -2353,21 +1356,21 @@ head_front = ExtResource("77_ggqqs")
 head_side = ExtResource("78_iytyc")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_8" unique_id=1962111222]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=1962111222]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("74_twx1o")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_8" unique_id=425061240]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=425061240]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("77_ggqqs")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_8" unique_id=1564033718]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=1564033718]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -2381,15 +1384,131 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_8" unique_id=409484683 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=409484683 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_8/TilemapCollider" unique_id=595185618]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor/TilemapCollider" unique_id=595185618]
 shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="Middle" type="Node2D" parent="World/Entities/Characters" unique_id=1998630094]
 y_sort_enabled = true
+
+[node name="NPCharacter_LostNecklace" type="CharacterBody2D" parent="World/Entities/Characters/Middle" unique_id=1585223500 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(-30, -158)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("11_gqlrj")
+dialogue_settings = ExtResource("100_r6av7")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(-60, -50), Vector2(100, -40), Vector2(2, 70)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("67_b3hdi")
+body_front = ExtResource("68_i3xsu")
+body_side = ExtResource("69_3o5s7")
+head_back = ExtResource("70_r6av7")
+head_front = ExtResource("71_hwdj6")
+head_side = ExtResource("72_2e5js")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=1756332522]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("68_i3xsu")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=1331286607]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("71_hwdj6")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=1666260794]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=551244164]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=626065719]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPCharacterStatic_TheSeaCaptain" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=964635901 node_paths=PackedStringArray("body", "head")]
+position = Vector2(380, -106)
+script = ExtResource("40_v51k6")
+body = NodePath("Body")
+head = NodePath("Head")
+dialogue_settings = ExtResource("97_b3hdi")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("25_opjrb")
+body_front = ExtResource("26_kut41")
+body_side = ExtResource("27_b14wf")
+head_back = ExtResource("28_5v1oo")
+head_front = ExtResource("29_skhme")
+head_side = ExtResource("30_a6xwo")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=1870332521]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("26_kut41")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=379620095]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("29_skhme")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=453796779]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=1288641438 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain/TilemapCollider" unique_id=1642727427]
+shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="NPCharacterStatic_9" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=716385645 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-240, -76)
@@ -2541,75 +1660,10 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_11/TilemapCollider" unique_id=1337006294]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacter11" type="CharacterBody2D" parent="World/Entities/Characters/Middle" unique_id=1585223500 node_paths=PackedStringArray("body", "head")]
-process_priority = -1
-position = Vector2(-30, -158)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-dialogue_settings = ExtResource("100_r6av7")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(-60, -50), Vector2(100, -40), Vector2(2, 70)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("67_b3hdi")
-body_front = ExtResource("68_i3xsu")
-body_side = ExtResource("69_3o5s7")
-head_back = ExtResource("70_r6av7")
-head_front = ExtResource("71_hwdj6")
-head_side = ExtResource("72_2e5js")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter11" unique_id=1756332522]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("68_i3xsu")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter11" unique_id=1331286607]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("71_hwdj6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacter11" unique_id=1666260794]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Middle/NPCharacter11" unique_id=551244164]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacter11" unique_id=626065719]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="MiddleBottom" type="Node2D" parent="World/Entities/Characters" unique_id=1545165991]
 y_sort_enabled = true
 
-[node name="NPCharacter" type="CharacterBody2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1241284690 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacter_GroomToBe" type="CharacterBody2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1241284690 node_paths=PackedStringArray("body", "head")]
 process_priority = -1
 position = Vector2(115, 72)
 collision_layer = 2
@@ -2631,24 +1685,24 @@ head_front = ExtResource("17_uvj3q")
 head_side = ExtResource("18_mqs2o")
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter" unique_id=365105227]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=365105227]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("13_uaga3")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter" unique_id=651257947]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=651257947]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("17_uvj3q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter" unique_id=1606013968]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=1606013968]
 shape = SubResource("RectangleShape2D_ikfsv")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter" unique_id=1783195041]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=1783195041]
 simplify_epsilon = 3.0
 avoidance_enabled = true
 radius = 8.0
@@ -2660,7 +1714,7 @@ debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacter" unique_id=2137400028]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=2137400028]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -2673,6 +1727,107 @@ offset_right = 9.0
 offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="NPCharacterStatic_WifeToBe" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=341166845 node_paths=PackedStringArray("body", "head")]
+position = Vector2(127, 114)
+script = ExtResource("40_v51k6")
+body = NodePath("Body")
+head = NodePath("Head")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("67_b3hdi")
+body_front = ExtResource("68_i3xsu")
+body_side = ExtResource("69_3o5s7")
+head_back = ExtResource("70_r6av7")
+head_front = ExtResource("71_hwdj6")
+head_side = ExtResource("72_2e5js")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=287223769]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("68_i3xsu")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=966188214]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("71_hwdj6")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=2022537454]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=4724460 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe/TilemapCollider" unique_id=1063089994]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_TheFisherKing" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1451407439 node_paths=PackedStringArray("body", "head")]
+position = Vector2(-81, 223)
+script = ExtResource("40_v51k6")
+body = NodePath("Body")
+head = NodePath("Head")
+dialogue_settings = ExtResource("103_3o5s7")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("37_3miyi")
+body_front = ExtResource("38_5ow7q")
+body_side = ExtResource("39_7iwal")
+head_back = ExtResource("40_pwxri")
+head_front = ExtResource("41_eeytp")
+head_side = ExtResource("42_jqptc")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=1056168615]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("38_5ow7q")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=760313427]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("41_eeytp")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=1585024789]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=1617947386 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing/TilemapCollider" unique_id=2028434719]
+shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="NPCharacterStatic_9" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1362103260 node_paths=PackedStringArray("body", "head")]
 position = Vector2(40, 47)
@@ -2924,109 +2079,73 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_13/TilemapCollider" unique_id=555404993]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_14" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=341166845 node_paths=PackedStringArray("body", "head")]
-position = Vector2(127, 114)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("67_b3hdi")
-body_front = ExtResource("68_i3xsu")
-body_side = ExtResource("69_3o5s7")
-head_back = ExtResource("70_r6av7")
-head_front = ExtResource("71_hwdj6")
-head_side = ExtResource("72_2e5js")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14" unique_id=287223769]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("68_i3xsu")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14" unique_id=966188214]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("71_hwdj6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14" unique_id=2022537454]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14" unique_id=4724460 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14/TilemapCollider" unique_id=1063089994]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_15" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1451407439 node_paths=PackedStringArray("body", "head")]
-position = Vector2(-81, 223)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-dialogue_settings = ExtResource("103_3o5s7")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("37_3miyi")
-body_front = ExtResource("38_5ow7q")
-body_side = ExtResource("39_7iwal")
-head_back = ExtResource("40_pwxri")
-head_front = ExtResource("41_eeytp")
-head_side = ExtResource("42_jqptc")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15" unique_id=1056168615]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("38_5ow7q")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15" unique_id=760313427]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("41_eeytp")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15" unique_id=1585024789]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15" unique_id=1617947386 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15/TilemapCollider" unique_id=2028434719]
-shape = SubResource("RectangleShape2D_odvjr")
-
 [node name="Left" type="Node2D" parent="World/Entities/Characters" unique_id=1159020269]
 y_sort_enabled = true
+
+[node name="NPCharacter_Ghost" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1136200963 node_paths=PackedStringArray("body", "head")]
+process_priority = -1
+position = Vector2(-748, 229)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("11_gqlrj")
+dialogue_settings = ExtResource("105_r6av7")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(-150, 0), Vector2(100, 0)])
+body = NodePath("Body")
+head = NodePath("Head")
+movement_speed = 30.0
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("79_ll0tv")
+body_front = ExtResource("80_wmrth")
+body_side = ExtResource("81_hr1m3")
+head_back = ExtResource("82_yrekk")
+head_front = ExtResource("83_ro0fp")
+head_side = ExtResource("84_tka60")
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=616100683]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("80_wmrth")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=662855307]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("83_ro0fp")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=1669697420]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=594838795]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=122790384]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Crab" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1254480588]
 position = Vector2(-533, 6)
@@ -3148,78 +2267,13 @@ debug_path_custom_color = Color(1, 0, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="NPCharacter11" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1136200963 node_paths=PackedStringArray("body", "head")]
-process_priority = -1
-position = Vector2(-748, 229)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("11_gqlrj")
-dialogue_settings = ExtResource("105_r6av7")
-do_wander = true
-wander_points = Array[Vector2]([Vector2(-150, 0), Vector2(100, 0)])
-body = NodePath("Body")
-head = NodePath("Head")
-movement_speed = 30.0
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("79_ll0tv")
-body_front = ExtResource("80_wmrth")
-body_side = ExtResource("81_hr1m3")
-head_back = ExtResource("82_yrekk")
-head_front = ExtResource("83_ro0fp")
-head_side = ExtResource("84_tka60")
-metadata/_custom_type_script = "uid://daf0h2p3no1m4"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter11" unique_id=616100683]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("80_wmrth")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter11" unique_id=662855307]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("83_ro0fp")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/NPCharacter11" unique_id=1669697420]
-shape = SubResource("RectangleShape2D_ikfsv")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/NPCharacter11" unique_id=594838795]
-simplify_epsilon = 3.0
-avoidance_enabled = true
-radius = 8.0
-neighbor_distance = 50.0
-max_neighbors = 3
-max_speed = 1000.0
-debug_use_custom = true
-debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
-debug_path_custom_point_size = 5.0
-debug_path_custom_line_width = 0.45
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Left/NPCharacter11" unique_id=122790384]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="LeftFar" type="Node2D" parent="World/Entities/Characters" unique_id=1165117242]
 y_sort_enabled = true
 
 [node name="Right" type="Node2D" parent="World/Entities/Characters" unique_id=485545118]
 y_sort_enabled = true
 
-[node name="NPCharacter11" type="CharacterBody2D" parent="World/Entities/Characters/Right" unique_id=344604359 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacter_Professor" type="CharacterBody2D" parent="World/Entities/Characters/Right" unique_id=344604359 node_paths=PackedStringArray("body", "head")]
 process_priority = -1
 position = Vector2(503, 222)
 collision_layer = 2
@@ -3241,24 +2295,24 @@ head_front = ExtResource("35_yp5f6")
 head_side = ExtResource("36_jr3pb")
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter11" unique_id=1518153819]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=1518153819]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("32_2e2dr")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter11" unique_id=1226632516]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=1226632516]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("35_yp5f6")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Right/NPCharacter11" unique_id=312985769]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=312985769]
 shape = SubResource("RectangleShape2D_ikfsv")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Right/NPCharacter11" unique_id=1436801209]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=1436801209]
 simplify_epsilon = 3.0
 avoidance_enabled = true
 radius = 8.0
@@ -3270,7 +2324,7 @@ debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Right/NPCharacter11" unique_id=636180072]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=636180072]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -3933,45 +2987,28 @@ polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423,
 
 [node name="PauseMenu" type="Node" parent="." unique_id=1795159322]
 
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_1/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_1" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_3/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_3" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_4/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_4" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_5/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_5" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_6/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_6" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_7/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_7" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_8/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_8" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_9/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_9" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacterStatic_10/ClickBoundary" to="World/Entities/Characters/NPCharacterStatic_10" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter1/ClickBoundary" to="World/Entities/Characters/NPCharacter1" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter3/ClickBoundary" to="World/Entities/Characters/NPCharacter3" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter4/ClickBoundary" to="World/Entities/Characters/NPCharacter4" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter5/ClickBoundary" to="World/Entities/Characters/NPCharacter5" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter6/ClickBoundary" to="World/Entities/Characters/NPCharacter6" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter7/ClickBoundary" to="World/Entities/Characters/NPCharacter7" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter8/ClickBoundary" to="World/Entities/Characters/NPCharacter8" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter9/ClickBoundary" to="World/Entities/Characters/NPCharacter9" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/NPCharacter10/ClickBoundary" to="World/Entities/Characters/NPCharacter10" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/OriginTools/ClickBoundary" to="World/Entities/Characters/MiddleTop/OriginTools" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/VictorsRotisserie/ClickBoundary" to="World/Entities/Characters/MiddleTop/VictorsRotisserie" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/PawnsPoint/ClickBoundary" to="World/Entities/Characters/MiddleTop/PawnsPoint" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_1/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_1" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_3/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_3" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_4/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_4" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_5/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_5" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_6/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_6" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/StarTchotchke/ClickBoundary" to="World/Entities/Characters/MiddleTop/StarTchotchke" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_7/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_7" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_8/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_8" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacter_LostNecklace/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacter_LostNecklace" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_9/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_9" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_10/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_10" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_11/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_11" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacter11/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacter11" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacter/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacter" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_9/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_9" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_10/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_10" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_11/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_11" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_12/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_12" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_13/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_13" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_14" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_15" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Left/NPCharacter11/ClickBoundary" to="World/Entities/Characters/Left/NPCharacter11" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Right/NPCharacter11/ClickBoundary" to="World/Entities/Characters/Right/NPCharacter11" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Left/NPCharacter_Ghost/ClickBoundary" to="World/Entities/Characters/Left/NPCharacter_Ghost" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Right/NPCharacter_Professor/ClickBoundary" to="World/Entities/Characters/Right/NPCharacter_Professor" method="_on_gui_input"]
