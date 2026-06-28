@@ -22,7 +22,6 @@ rotation_bounds = Vector2(-10, 10)
 dragged_object = NodePath("Gfx")
 position_bounds = Array[Vector2]([Vector2(60, 215), Vector2(300, 215)])
 initial_position_offset = Vector2(0, -16)
-respect_grab_position = true
 reset_on_drag_end = true
 instructions = "swing around to reveal non-metal buried objects!"
 metadata/_custom_type_script = "uid://b87u5p1dbfr1p"

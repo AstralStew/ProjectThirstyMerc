@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://i06f5vooou4v"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_sjm06"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="2_ys0lh"]
+
+[resource]
+script = ExtResource("2_ys0lh")
+name = "Hint - Waifu"
+npc_default_text = "My boyfriend seems really anxious all of a sudden! It was just after we went swimming under the pier... I hope he's okay T_T"
+player_leave_incomplete_text = "Nothing to worry about!"
+metadata/_custom_type_script = "uid://yl10xow1syvr"

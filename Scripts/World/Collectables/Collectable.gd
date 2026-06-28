@@ -18,11 +18,14 @@ var real_sprite: Sprite2D = null # = $RealGfx/ObjectGfx/RealSprite
 
 @export var reveal_cooldown: float = 0.25
 
+@export var is_one_off: bool = false
+
 @export_group("READ ONLY")
 @export var is_collected: bool = false
 @export var is_buried: bool = true
 @export var is_reveal_cooldowning: bool = false
 @export_range(0,1) var dig_progress: int = -1
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -59,7 +62,7 @@ func reveal(duration: float = 1.0,mirage: bool = false):
 	buried_gfx.rotation = 0
 	buried_gfx.get_child(0).position = Vector2.ZERO
 	buried_gfx.get_child(0).rotation = 0
-	buried_gfx.get_child(0).scale = Vector2.ONE * 1.5
+	buried_gfx.get_child(0).scale = Vector2.ONE * 2
 	
 	_sample = 0
 	
@@ -132,6 +135,8 @@ func collect() -> void:
 	_tween.tween_callback(move_to_inventory).set_delay(0.65)
 	_tween.tween_callback(create_gain_text).set_delay(0.65)
 	while _tween.is_running(): await get_tree().process_frame
+	
+	if is_one_off: ObjectsManager.remove_one_off_object(self)
 	
 	queue_free()
 

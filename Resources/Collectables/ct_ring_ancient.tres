@@ -8,5 +8,5 @@ script = ExtResource("1_xdwjd")
 name = "Ancient Ring"
 small_texture = ExtResource("2_0sbvr")
 price = 16
-digs_required = 1
+digs_required = 6
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

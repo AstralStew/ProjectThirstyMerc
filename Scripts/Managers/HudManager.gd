@@ -80,6 +80,12 @@ func _stop_dialogue() -> void:
 	await _tween.finished
 	PlayerCharacter.stop_talking()
 
+static func complete_quest(reward:int) -> void:
+	instance._complete_quest(reward)
+func _complete_quest(reward:int) -> void:
+	if reward > 0:
+		await get_tree().create_timer(0.69).timeout
+		InventoryManager.add_dosh(reward)
 
 static func start_shop(shop_character:ShopCharacter) -> void:
 	instance._start_shop(shop_character)

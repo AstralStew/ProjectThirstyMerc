@@ -8,6 +8,6 @@ script = ExtResource("1_rim8x")
 name = "Ruby Necklace"
 small_texture = ExtResource("2_rim8x")
 price = 16
-digs_required = 4
+digs_required = 5
 is_metal = true
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

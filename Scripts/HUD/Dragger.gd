@@ -34,6 +34,7 @@ var instructions_ui : InstructionsUI = null
 @export var value_y_only : float
 @export var motion_strength : float
 @export var is_resetting : bool = false
+@export var is_controlled_by_keyboard: bool = false
 
 
 #var _dragged_object : CanvasItem
@@ -97,33 +98,51 @@ func resetting() -> void:
 func _on_gui_input(event: InputEvent) -> void:
 	if !is_usable: return
 	if is_resetting: return
+	if is_controlled_by_keyboard: return
 	
 	if event.is_action_pressed("Click"):
-		is_dragging = true
-		if respect_grab_position:
-			_grab_pos = dragged_object.get_local_mouse_position()
-		dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
+		start_drag()
 		
-		if instructions != "":
-			instructions_ui = HudManager.add_instructions(instructions)
-			on_drag_end.connect(instructions_ui.disappear)
-		
-		on_drag_start.emit()
 	elif event.is_action_released("Click"):
-		is_dragging = false
-		if reset_on_drag_end:
-			resetting()
-		on_drag_end.emit()
+		end_drag()
 	
 	if is_dragging:
-		if event is InputEventMouseMotion:
-			dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
-			if !(event as InputEventMouseMotion).screen_relative.is_zero_approx():
-				motion_strength = (event as InputEventMouseMotion).screen_relative.length_squared()
-			else:
-				motion_strength = 0
+		dragging()
+		
+		if event is InputEventMouseMotion and !(event as InputEventMouseMotion).screen_relative.is_zero_approx():
+			motion_strength = (event as InputEventMouseMotion).screen_relative.length_squared()
 		else:
 			motion_strength = 0
-		#dragged_object.position = get_global_mouse_position().clamp(position_bounds[0],position_bounds[1])
+		
+
+
+func start_drag() -> void:
+	is_dragging = true
 	
-		#dragged_object.position = (dragged_object.position + event.relative).clamp(position_bounds[0],position_bounds[1])
+	if respect_grab_position:
+		_grab_pos = dragged_object.get_local_mouse_position()
+	else:
+		_grab_pos = Vector2.ZERO
+	
+	if is_controlled_by_keyboard:
+		if _tween: _tween.kill()
+		_tween = create_tween().set_parallel().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+		_tween.tween_property(dragged_object,"position",(get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1]),reset_duration/3)
+		#await get_tree().create_timer(reset_duration/2).timeout2
+	else:
+		dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])
+	
+	if instructions != "":
+		instructions_ui = HudManager.add_instructions(instructions)
+		on_drag_end.connect(instructions_ui.disappear)
+	
+	on_drag_start.emit()
+
+func end_drag() -> void:
+	is_dragging = false
+	if reset_on_drag_end:
+		resetting()
+	on_drag_end.emit()
+
+func dragging() -> void:
+	dragged_object.position = (get_global_mouse_position() - _grab_pos).clamp(position_bounds[0],position_bounds[1])

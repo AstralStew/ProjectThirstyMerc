@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://d3feq0mobyd55"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_g4j7n"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="2_6sm8g"]
+
+[resource]
+script = ExtResource("2_6sm8g")
+name = "Hint - Pottery"
+npc_default_text = "Oh I love beachcombing too! I'm a ceramic artist and there are just TONS of pottery sherds in the western sands, it's great for mosaics! :)"
+player_leave_incomplete_text = "Hey thanks, good luck~!"
+metadata/_custom_type_script = "uid://yl10xow1syvr"

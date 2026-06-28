@@ -21,6 +21,6 @@ func complete_dialogue() -> void:
 	is_completed = true
 	WorldManager.complete_dialogue(self)
 	complete.emit()
-	
-	if reward > 0:
-		InventoryManager.add_dosh(reward)
+	#
+	#if reward > 0:
+		#InventoryManager.add_dosh(reward)

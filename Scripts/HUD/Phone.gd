@@ -52,7 +52,7 @@ func _ready() -> void:
 	randomly_prompting()
 
 func _process(delta: float) -> void:
-	if WorldManager.is_daytime:
+	#if WorldManager.is_daytime:
 		if time_label.text != WorldManager.day_fake_time:
 			if time_label.text.split(":")[0] != WorldManager.day_fake_time.split(":")[0]:
 				pulse_time()
@@ -128,14 +128,14 @@ func update_dosh(new_amount:int) -> void:
 	pulse_dosh()
 
 var _dosh_tween:Tween
-var _waiting_to_flash_dosh:bool = false
+#var _waiting_to_flash_dosh:bool = false
 func pulse_dosh() -> void:
-	if _waiting_to_flash_dosh: return
-	while(Bag.bag_progress < 1):
-		_waiting_to_flash_dosh = true
-		if !is_instance_valid(get_tree()): return
-		await get_tree().create_timer(0.25).timeout
-	_waiting_to_flash_dosh = false
+	#if _waiting_to_flash_dosh: return
+	#while(Bag.bag_progress < 1):
+		#_waiting_to_flash_dosh = true
+		#if !is_instance_valid(get_tree()): return
+		#await get_tree().create_timer(0.25).timeout
+	#_waiting_to_flash_dosh = false
 	
 	AudioManager.play_sound(AudioManager.COINS)
 	balance_label.modulate = Color.WHITE * 3

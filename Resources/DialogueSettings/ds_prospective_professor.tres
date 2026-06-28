@@ -4,15 +4,17 @@
 [ext_resource type="Resource" uid="uid://ck5m6l7jlnh7y" path="res://Resources/Collectables/ct_necklace_ruby.tres" id="2_w48ig"]
 [ext_resource type="Resource" uid="uid://bqdlk7np7c12m" path="res://Resources/Collectables/ct_ring_ancient.tres" id="3_8ltfx"]
 [ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="4_jbo8r"]
+[ext_resource type="Resource" uid="uid://dpv66a4sdtc2f" path="res://Resources/Collectables/ct_pottery_ancient.tres" id="4_w48ig"]
 
 [resource]
 script = ExtResource("4_jbo8r")
 name = "Prospective Professor"
-npc_default_text = "This wreck is fascinating! It seems to have been carrying %s ... I wish I could find them for my research!"
+npc_default_text = "This wreck is fascinating! This ledger suggests it was carrying treasure; %s ... I wish I could find them for my research!"
 npc_complete_text = "Thank you so much! I will be sure to credit you in my paper! And of course, here's your finder's fee."
 requirements = Dictionary[ExtResource("1_kfy6f"), int]({
 ExtResource("2_w48ig"): 1,
-ExtResource("3_8ltfx"): 2
+ExtResource("3_8ltfx"): 2,
+ExtResource("4_w48ig"): 3
 })
 player_has_requirements_text = "I found the missing cargo!"
 player_leave_incomplete_text = "On the case professor :)"

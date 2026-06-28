@@ -36,7 +36,7 @@ func setup(dialogue_settings:DialogueSettings) -> void:
 		leave.text = dialogue_settings.player_leave_complete_text
 		gated_response.modulate.a = 0
 		gated_response.disabled = true
-	else:
+	elif dialogue_settings.requirements.size() > 0:
 		var number_gone_through: int = 0
 		var has_requirements:bool = true
 		var requirements_msg:String = ""
@@ -44,7 +44,7 @@ func setup(dialogue_settings:DialogueSettings) -> void:
 			number_gone_through += 1
 			requirements_msg += (
 				(" and " if (number_gone_through > 1 and number_gone_through == dialogue_settings.requirements.size()) else (", " if requirements_msg != "" else "")) +
-				"[color=fbc697]" + str(dialogue_settings.requirements[requirement]) + " " + requirement.name + "[/color]"
+				"[color=fbc697]" + (str(dialogue_settings.requirements[requirement]) if dialogue_settings.requirements[requirement] > 1 else "a") + " " + requirement.name + "[/color]"
 			)
 			print ("number = " + str(number_gone_through) +" requirements.size = " + str(dialogue_settings.requirements.size()))
 			if InventoryManager.inventory.has(requirement) && InventoryManager.inventory[requirement] >= dialogue_settings.requirements[requirement]:
@@ -57,6 +57,10 @@ func setup(dialogue_settings:DialogueSettings) -> void:
 		else:
 			gated_response.text = "I don't have that..."
 		dialogue_label.text = dialogue_settings.npc_default_text % requirements_msg
+		leave.text = dialogue_settings.player_leave_incomplete_text
+	else:
+		gated_response.visible = false
+		dialogue_label.text = dialogue_settings.npc_default_text
 		leave.text = dialogue_settings.player_leave_incomplete_text
 	
 
@@ -74,13 +78,12 @@ func open() -> void:
 	if _tween: _tween.kill()
 	_tween = create_tween()
 	_tween.tween_interval(0.42)
-	#_tween.tween_property(dialogue_bubble,"position",Vector2(-53,2),0.69).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+	_tween.tween_callback(AudioManager.play_hmmm)
 	_tween.tween_property(margin_container,"theme_override_constants/margin_left",20,0.42).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
 	_tween.set_parallel(true)
 	_tween.tween_property(margin_container,"theme_override_constants/margin_right",20,0.42).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
 	_tween.set_parallel(false)
 	_tween.tween_interval(0.42)
-	#_tween.tween_property(rent,"visible",true,0)
 	_tween.tween_property(leave,"visible",true,0)
 
 func close() -> void:
@@ -107,7 +110,11 @@ func close() -> void:
 
 func _on_gated_response_pressed() -> void:
 	
+	AudioManager.play_sound(AudioManager.SUCCESS,1,0.8)
+	
 	_dialogue_settings.complete_dialogue()
+	
+	completed = true
 	
 	for requirement in _dialogue_settings.requirements:
 		InventoryManager.add_collectable(requirement,-_dialogue_settings.requirements[requirement])
@@ -124,6 +131,9 @@ func _on_leave_pressed() -> void:
 	AudioManager.play_sound(AudioManager.UI_POP_UP,1,0.8)
 	
 	HudManager.stop_dialogue()
+	if completed:
+		HudManager.complete_quest(_dialogue_settings.reward)
+	
 	
 
 func update_buttons() -> void:

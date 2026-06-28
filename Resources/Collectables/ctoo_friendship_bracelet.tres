@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectableType" format=3 uid="uid://df2q8syc34rkv"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_3mgkh"]
+[ext_resource type="Texture2D" uid="uid://ct1ocq88y2gkg" path="res://Resources/Atlases/Collectables/Collectable_Small_RingPlastic.tres" id="2_3mgkh"]
+
+[resource]
+script = ExtResource("1_3mgkh")
+name = "Friendship Bracelet"
+small_texture = ExtResource("2_3mgkh")
+digs_required = 1
+is_metal = true
+metadata/_custom_type_script = "uid://cega64ybpgvx1"

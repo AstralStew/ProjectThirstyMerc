@@ -8,6 +8,11 @@ func _enter_tree() -> void:
 static var objects_root : Node2D :
 	get: return instance.objects
 
+@export var one_off_objects:Array[Collectable]
+static var one_off_objects_collected:Array[bool] =[]
+
+#region Watched objects
+
 var middle_top_enabled:bool = true
 @onready var middle_top_objects: Array[Node2D] = [
 	$"../../World/Entities/Objects/MiddleTop",
@@ -49,14 +54,41 @@ var right_far_enabled:bool = true
 	$"../../World/Entities/Characters/RightFar"
 ]
 
+#endregion
+
+
 func _ready() -> void:
+	setup_one_off_objects()
 	call_deferred("watching")
+	
+
+func setup_one_off_objects() -> void:
+	if one_off_objects_collected.size() == 0: 
+		print_rich(DEBUG_NAME,"SetupOneOffObjects > Objects not setup! Populating...")
+		for i in one_off_objects.size():
+			one_off_objects_collected.append(false)
+			print_rich(DEBUG_NAME,"SetupOneOffObjects > Added bool for collectable: " + one_off_objects[i].name)
+	else:
+		print_rich(DEBUG_NAME,"SetupOneOffObjects > Objects already setup! Checking...")
+		for i in one_off_objects.size():
+			if one_off_objects_collected[i]:
+				print_rich(DEBUG_NAME,"SetupOneOffObjects > Already found! Freeing collectable: " + one_off_objects[i].name)
+				one_off_objects[i].queue_free()
+			else:
+				print_rich(DEBUG_NAME,"SetupOneOffObjects > Not found yet! Ignoring collectable: " + one_off_objects[i].name)
+				
+
+static func remove_one_off_object(collectable:Collectable) -> void:
+	instance._remove_one_off_object(collectable)
+func _remove_one_off_object(collectable:Collectable) -> void:
+	if one_off_objects.has(collectable):
+		one_off_objects_collected[one_off_objects.find(collectable)] = true
 
 func watching() -> void:
 	var player_pos:Vector2 = Vector2.ZERO #= PlayerCharacter.instance.global_position
 	await get_tree().create_timer(0.25).timeout
 	while (true):
-		await get_tree().create_timer(0.69).timeout
+		await get_tree().create_timer(0.42).timeout
 		if !is_instance_valid(get_tree()): return
 		if PlayerCharacter.instance.global_position == player_pos:
 			print_rich(DEBUG_NAME,"Watching > Same position, ignoring.")

@@ -38,7 +38,7 @@ shadow_offset = Vector2(0, 3)
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k3ma"]
-content_margin_left = 5.0
+content_margin_left = 10.0
 content_margin_right = 5.0
 bg_color = Color(1, 0.92941177, 0.84313726, 1)
 border_width_left = 1
@@ -265,8 +265,8 @@ theme_override_colors/default_color = Color(0.21176471, 0.4862745, 0.3137255, 1)
 theme_override_constants/shadow_offset_x = 82
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
-text = "SANDWICHES, GET YA SANDWICHES 'ERE!
-Oh hey lil lady. Welcome to [color=4c2242]Victor's Rotisserie[/color], what can I getcha?"
+text = "SANDWICHES, GET YA SANDWICHES HERE!  ICE COLD SPIDERS!
+Oh g'day darlin~! [color=4c2242]Victor's Rotisserie[/color], you ready or just havin' a squiz?"
 scroll_active = false
 vertical_alignment = 1
 
@@ -323,15 +323,29 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="LeftTools" type="VBoxContainer" parent="Options/OptionsMarginContainer" unique_id=2088399658]
-custom_maximum_size = Vector2(100, 140)
+custom_maximum_size = Vector2(104, 140)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_constants/separation = 12
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="SpeedySandwich" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1414520098]
-custom_minimum_size = Vector2(99.755, 24)
+[node name="DialogueLabel3" type="RichTextLabel" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1266550754]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 13)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 82
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "   RUN SPEED"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PinkSpider" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1414520098]
+custom_minimum_size = Vector2(102.875, 24)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
@@ -344,10 +358,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
 toggle_mode = true
 button_group = ExtResource("4_y41ro")
-text = "Speedy Sandwich"
+text = "Pink Spider"
 alignment = 2
 
-[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/SpeedySandwich" unique_id=199479917]
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/PinkSpider" unique_id=199479917]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -376,16 +390,126 @@ text = "$1"
 horizontal_alignment = 2
 vertical_alignment = 1
 
+[node name="LimeSpider" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1387924676]
+custom_minimum_size = Vector2(102.875, 24)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+toggle_mode = true
+button_group = ExtResource("4_y41ro")
+text = "Lime Spider"
+alignment = 2
+
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/LimeSpider" unique_id=752566622]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_y41ro")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
+text = "$1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColaSpider" type="Button" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1008770757]
+custom_minimum_size = Vector2(102.875, 24)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_4k3ma")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwp57")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b14wf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k55q4")
+toggle_mode = true
+button_group = ExtResource("4_y41ro")
+text = "Cola Spider"
+alignment = 2
+
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/LeftTools/ColaSpider" unique_id=1985568735]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_y41ro")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_asuqw")
+text = "$1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Options/OptionsMarginContainer/LeftTools" unique_id=1574879692]
+custom_minimum_size = Vector2(0, 0.295)
+layout_mode = 2
+
 [node name="RightTools" type="VBoxContainer" parent="Options/OptionsMarginContainer" unique_id=1889026244]
-custom_maximum_size = Vector2(100, 160)
+custom_maximum_size = Vector2(104, 160)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme_override_constants/separation = 12
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="MuscleJuice" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=1262964191]
-custom_minimum_size = Vector2(99.755, 24)
+[node name="DialogueLabel3" type="RichTextLabel" parent="Options/OptionsMarginContainer/RightTools" unique_id=1262177608]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 13)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 82
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "DIG STRENGTH "
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MinimumChips" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=1262964191]
+custom_minimum_size = Vector2(90, 24)
 layout_mode = 2
 size_flags_vertical = 6
 layout_direction = 3
@@ -399,10 +523,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
 toggle_mode = true
 button_group = ExtResource("4_y41ro")
-text = "Muscle Juice"
+text = "Minimum Chips"
 alignment = 2
 
-[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/MuscleJuice" unique_id=1962599673]
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/MinimumChips" unique_id=1962599673]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -430,6 +554,104 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
 text = "$3"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="SteakSanga" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=1302481350]
+custom_minimum_size = Vector2(90, 24)
+layout_mode = 2
+size_flags_vertical = 6
+layout_direction = 3
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+toggle_mode = true
+button_group = ExtResource("4_y41ro")
+text = "Steak Sanga"
+alignment = 2
+
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/SteakSanga" unique_id=537810223]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_y41ro")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+text = "$3"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FishermansBasket" type="Button" parent="Options/OptionsMarginContainer/RightTools" unique_id=294871998]
+custom_minimum_size = Vector2(90, 24)
+layout_mode = 2
+size_flags_vertical = 6
+layout_direction = 3
+theme_override_colors/font_color = Color(0.32941177, 0.6039216, 0.5529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.92941177, 0.84313726, 1)
+theme_override_colors/font_disabled_color = Color(0.69803923, 0.33333334, 0.3647059, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5v1oo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_skhme")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kut41")
+toggle_mode = true
+button_group = ExtResource("4_y41ro")
+text = "Fisherman's Basket"
+alignment = 2
+
+[node name="Label" type="Label" parent="Options/OptionsMarginContainer/RightTools/FishermansBasket" unique_id=971830375]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 12.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 1
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.9843137, 0.7764706, 0.5921569, 1)
+theme_override_colors/font_shadow_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_colors/font_outline_color = Color(0.29803923, 0.13333334, 0.25882354, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_y41ro")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4k3ma")
+text = "$3"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Options/OptionsMarginContainer/RightTools" unique_id=1885592150]
+custom_minimum_size = Vector2(0, 0.295)
+layout_mode = 2
 
 [node name="Leave" type="Button" parent="." unique_id=237836838]
 visible = false

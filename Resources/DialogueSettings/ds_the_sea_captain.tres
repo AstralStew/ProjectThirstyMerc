@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://2m12td75roo3"]
 
 [ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_ehajr"]
-[ext_resource type="Resource" uid="uid://brk0lv0kl46ty" path="res://Resources/Collectables/ct_necklace_topaz.tres" id="2_q2vcx"]
+[ext_resource type="Resource" uid="uid://c78cuwyavy0bu" path="res://Resources/Collectables/ctoo_lucky_dubloon.tres" id="2_ehajr"]
 [ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="3_qvlxg"]
 
 [resource]
@@ -10,7 +10,7 @@ name = "The Sea Captain"
 npc_default_text = "Ahoy there matey! I be wonderin' if a fine lass like'n yaself could help this ole sea dog get 'is flippers on %s what was stolen by crabs?"
 npc_complete_text = "Yarr, she bloomin' did it she did! Aye, she's a real one, and no doubt! Let me share some of me plunder."
 requirements = Dictionary[ExtResource("1_ehajr"), int]({
-ExtResource("2_q2vcx"): 1
+ExtResource("2_ehajr"): 3
 })
 player_has_requirements_text = "Bounty acquired!"
 player_leave_incomplete_text = "Aye aye cap'n!"

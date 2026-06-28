@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://0emwimljh6ew"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_swu0n"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="2_cnupq"]
+
+[resource]
+script = ExtResource("2_cnupq")
+name = "Hint - AskAlotl"
+npc_default_text = "Hahaha, is that AskAlotl? You should uninstall that thing - beyond all the ethical concerns, it's also just super inaccurate - in fact you should probably just do the opposite of what it says!"
+player_leave_incomplete_text = "It definitely seems like it..."
+metadata/_custom_type_script = "uid://yl10xow1syvr"

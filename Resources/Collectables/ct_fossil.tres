@@ -8,5 +8,5 @@ script = ExtResource("1_sbgv2")
 name = "Fossil"
 small_texture = ExtResource("2_sbgv2")
 price = 14
-digs_required = 1
+digs_required = 6
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

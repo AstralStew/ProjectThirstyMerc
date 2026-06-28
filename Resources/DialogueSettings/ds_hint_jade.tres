@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueSettings" format=3 uid="uid://cgbvojvvg8358"]
+
+[ext_resource type="Script" uid="uid://cega64ybpgvx1" path="res://Scripts/World/Collectables/CollectableType.gd" id="1_e5ja8"]
+[ext_resource type="Script" uid="uid://yl10xow1syvr" path="res://Scripts/HUD/DialogueSettings.gd" id="2_hfd2e"]
+
+[resource]
+script = ExtResource("2_hfd2e")
+name = "Hint - AskAlotl"
+npc_default_text = "Did you hear that Pawn's Point has massive jade and emerald reserves? They reckon locals have been mining it in the jungle out west for centuries!"
+player_leave_incomplete_text = "That's fascinating!"
+metadata/_custom_type_script = "uid://yl10xow1syvr"

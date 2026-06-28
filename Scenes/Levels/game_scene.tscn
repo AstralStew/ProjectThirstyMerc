@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://1n1v3vbosvvs" path="res://Assets/Images/Prototyping/footprints.png" id="6_5dgvu"]
 [ext_resource type="Script" uid="uid://bosgpl1akkhc4" path="res://Scripts/Managers/EffectsManager.gd" id="6_lfx2n"]
 [ext_resource type="Script" uid="uid://5mt88on3k4ws" path="res://Scripts/World/ObjectsManager.gd" id="6_odvjr"]
+[ext_resource type="Script" uid="uid://dhba0alxs36jc" path="res://Scripts/Managers/InputManager.gd" id="7_d06js"]
 [ext_resource type="Script" uid="uid://cmai64jlhstqf" path="res://Scripts/World/Characters/Footprints.gd" id="7_uscyt"]
 [ext_resource type="Script" uid="uid://co0h4xrb1vtwp" path="res://Scripts/World/Characters/SpawnBox.gd" id="10_4k3ma"]
 [ext_resource type="Script" uid="uid://daf0h2p3no1m4" path="res://Scripts/World/Characters/NPCharacter.gd" id="11_gqlrj"]
@@ -70,10 +71,14 @@
 [ext_resource type="Texture2D" uid="uid://cwifbyxf2fyux" path="res://Resources/Atlases/Characters/NPC4_Body_Side.tres" id="33_k55q4"]
 [ext_resource type="Resource" uid="uid://c3006xk01ugbk" path="res://Resources/Collectables/ct_pottery_pristine.tres" id="33_tb6w8"]
 [ext_resource type="Texture2D" uid="uid://sirysvl5qoij" path="res://Resources/Atlases/Characters/NPC4_Head_Back.tres" id="34_fwp57"]
+[ext_resource type="PackedScene" uid="uid://cqo6tqnt78qv8" path="res://Scenes/Prefabs/Collectables/collectable.tscn" id="35_i573m"]
 [ext_resource type="Texture2D" uid="uid://dtvnf7vctfl7l" path="res://Resources/Atlases/Characters/NPC4_Head_Front.tres" id="35_yp5f6"]
+[ext_resource type="Resource" uid="uid://df2q8syc34rkv" path="res://Resources/Collectables/ctoo_friendship_bracelet.tres" id="36_0c6eo"]
 [ext_resource type="Texture2D" uid="uid://8gmjkbgfjp2a" path="res://Resources/Atlases/Characters/NPC4_Head_Side.tres" id="36_jr3pb"]
 [ext_resource type="Texture2D" uid="uid://cic4i2mi66nnl" path="res://Resources/Atlases/Characters/NPC5_Body_Back.tres" id="37_3miyi"]
+[ext_resource type="Resource" uid="uid://bts5iauwjnit5" path="res://Resources/Collectables/ctoo_engagement_ring.tres" id="37_b6kkx"]
 [ext_resource type="Texture2D" uid="uid://bcfmnnnjh048t" path="res://Resources/Atlases/Characters/NPC5_Body_Front.tres" id="38_5ow7q"]
+[ext_resource type="Resource" uid="uid://c78cuwyavy0bu" path="res://Resources/Collectables/ctoo_lucky_dubloon.tres" id="38_e1pfn"]
 [ext_resource type="Texture2D" uid="uid://dg0hsg80tqrg2" path="res://Resources/Atlases/Characters/NPC5_Body_Side.tres" id="39_7iwal"]
 [ext_resource type="Texture2D" uid="uid://dk6qjg6mr4cxi" path="res://Resources/Atlases/Characters/NPC5_Head_Back.tres" id="40_pwxri"]
 [ext_resource type="Script" uid="uid://bce11kontq8g2" path="res://Scripts/World/Characters/NPCharacterStatic.gd" id="40_v51k6"]
@@ -128,6 +133,8 @@
 [ext_resource type="Resource" uid="uid://35ita73ayoir" path="res://Resources/DialogueSettings/ds_lost_necklace.tres" id="100_r6av7"]
 [ext_resource type="Resource" uid="uid://i0dhngucu2u0" path="res://Resources/DialogueSettings/ds_the_fisher_king.tres" id="103_3o5s7"]
 [ext_resource type="Resource" uid="uid://ca1fdpnlcfcl5" path="res://Resources/DialogueSettings/ds_a_ghost_maybe.tres" id="105_r6av7"]
+[ext_resource type="Resource" uid="uid://0emwimljh6ew" path="res://Resources/DialogueSettings/ds_hint_askalotl.tres" id="110_qj1o6"]
+[ext_resource type="Resource" uid="uid://i06f5vooou4v" path="res://Resources/DialogueSettings/ds_hint_waifu.tres" id="111_dxpsl"]
 [ext_resource type="AudioStream" uid="uid://cbout4vo5821p" path="res://Assets/Audio/Ambient/423711__myrinvp__jungle-tropical-birds-and-insects.wav" id="119_72pkw"]
 [ext_resource type="Script" uid="uid://dlldgy5sgnq0h" path="res://Scripts/World/Rocks.gd" id="120_0hdji"]
 [ext_resource type="AudioStream" uid="uid://bem4bv8ejxbx2" path="res://Assets/Audio/Ambient/760726__newlocknew__winddsgn_mountain-wind-with-gusts-and-drafts.wav" id="120_g8jsv"]
@@ -192,6 +199,19 @@ corner_radius_bottom_left = 6
 corner_detail = 3
 expand_margin_left = 4.0
 expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gop1j"]
+content_margin_left = 4.0
+bg_color = Color(1, 0.92941177, 0.84313726, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6fju"]
 content_margin_left = 10.0
@@ -346,6 +366,10 @@ metadata/_custom_type_script = "uid://5mt88on3k4ws"
 script = ExtResource("6_lfx2n")
 metadata/_custom_type_script = "uid://bosgpl1akkhc4"
 
+[node name="InputManager" type="Node" parent="Managers" unique_id=595517900]
+script = ExtResource("7_d06js")
+metadata/_custom_type_script = "uid://dhba0alxs36jc"
+
 [node name="World" type="Node" parent="." unique_id=701354549]
 
 [node name="Level" type="Node2D" parent="World" unique_id=1506754726]
@@ -358,9 +382,11 @@ texture_filter = 1
 navigation_polygon = SubResource("NavigationPolygon_pbc1q")
 enter_cost = 1.0
 travel_cost = 2.0
+metadata/_edit_lock_ = true
 
 [node name="MiddleSand" type="NavigationRegion2D" parent="World/Level" unique_id=713974961]
 navigation_polygon = SubResource("NavigationPolygon_m8c54")
+metadata/_edit_lock_ = true
 
 [node name="WaterCutout" type="Polygon2D" parent="World/Level/MiddleSand" unique_id=649808137 groups=["tilemaps"]]
 visible = false
@@ -396,11 +422,13 @@ polygon = PackedVector2Array(897, -311, 924, -305, 933, -276, 955, -272, 963, -2
 
 [node name="LeftSand" type="NavigationRegion2D" parent="World/Level" unique_id=137781120]
 navigation_polygon = SubResource("NavigationPolygon_asuqw")
+metadata/_edit_lock_ = true
 
 [node name="Water" type="NavigationRegion2D" parent="World/Level" unique_id=733410336]
 navigation_polygon = SubResource("NavigationPolygon_e624q")
 enter_cost = 1.0
 travel_cost = 2.0
+metadata/_edit_lock_ = true
 
 [node name="PierCutout" type="Polygon2D" parent="World/Level/Water" unique_id=1999902192 groups=["tilemaps"]]
 visible = false
@@ -522,8 +550,7 @@ ExtResource("12_b14wf"): 2
 number_of_chance_items = 4
 chance_items = Dictionary[ExtResource("11_kut41"), float]({
 ExtResource("16_jqptc"): 1.2,
-ExtResource("20_eeytp"): 1.0,
-ExtResource("16_kut41"): 0.3
+ExtResource("20_eeytp"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
 
@@ -562,12 +589,12 @@ border_color = Color(1, 0, 1, 1)
 border_width = 3.0
 script = ExtResource("10_4k3ma")
 object_types = Dictionary[ExtResource("11_kut41"), int]({
-ExtResource("14_asuqw"): 5,
-ExtResource("16_jqptc"): 2,
-ExtResource("15_eeytp"): 3,
-ExtResource("24_jqptc"): 3,
-ExtResource("29_x5vbi"): 3,
-ExtResource("30_odvjr"): 1
+ExtResource("14_asuqw"): 6,
+ExtResource("16_jqptc"): 3,
+ExtResource("15_eeytp"): 4,
+ExtResource("24_jqptc"): 4,
+ExtResource("29_x5vbi"): 4,
+ExtResource("30_odvjr"): 2
 })
 number_of_chance_items = 3
 chance_items = Dictionary[ExtResource("11_kut41"), float]({
@@ -646,7 +673,7 @@ ExtResource("29_x5vbi"): 1
 number_of_chance_items = 3
 chance_items = Dictionary[ExtResource("11_kut41"), float]({
 ExtResource("30_odvjr"): 1.0,
-ExtResource("31_v51k6"): 1.0,
+ExtResource("31_v51k6"): 0.5,
 ExtResource("25_2rmsh"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
@@ -775,6 +802,31 @@ ExtResource("30_odvjr"): 1.0,
 ExtResource("24_bdgvn"): 1.0
 })
 metadata/_custom_type_script = "uid://co0h4xrb1vtwp"
+
+[node name="Collectable_FriendshipBracelet" parent="World/Level" unique_id=1041127925 instance=ExtResource("35_i573m")]
+position = Vector2(1023, 188)
+collectable_type = ExtResource("36_0c6eo")
+is_one_off = true
+
+[node name="Collectable_EngagementRing" parent="World/Level" unique_id=363912979 instance=ExtResource("35_i573m")]
+position = Vector2(-56, 284)
+collectable_type = ExtResource("37_b6kkx")
+is_one_off = true
+
+[node name="Collectable_LuckyDubloon1" parent="World/Level" unique_id=1294690169 instance=ExtResource("35_i573m")]
+position = Vector2(-729, 122)
+collectable_type = ExtResource("38_e1pfn")
+is_one_off = true
+
+[node name="Collectable_LuckyDubloon2" parent="World/Level" unique_id=929504202 instance=ExtResource("35_i573m")]
+position = Vector2(-543, -14)
+collectable_type = ExtResource("38_e1pfn")
+is_one_off = true
+
+[node name="Collectable_LuckyDubloon3" parent="World/Level" unique_id=1677585363 instance=ExtResource("35_i573m")]
+position = Vector2(-562, 195)
+collectable_type = ExtResource("38_e1pfn")
+is_one_off = true
 
 [node name="Entities" type="Node2D" parent="World" unique_id=1378868865]
 y_sort_enabled = true
@@ -1002,13 +1054,13 @@ texture_random_turn_chance = 0.125
 metadata/_custom_type_script = "uid://cboevetfqgec8"
 
 [node name="Foreground" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=907753223]
-position = Vector2(-11, -7.6236877)
+position = Vector2(-11, -7)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(96, 0, 8, 32)
 
 [node name="Foreground2" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/StarTchotchke" unique_id=1129575834]
-position = Vector2(-3, -7.6236877)
+position = Vector2(-3, -7)
 texture = ExtResource("4_kiiqx")
 region_enabled = true
 region_rect = Rect2(152, 0, 8, 32)
@@ -1087,7 +1139,7 @@ text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NPCharacterStatic_SeaglassCollector" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1047366758 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_Quest_SeaglassCollector" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1047366758 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-64, -406)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -1103,21 +1155,21 @@ head_front = ExtResource("17_uvj3q")
 head_side = ExtResource("18_mqs2o")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=1077470396]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector" unique_id=1077470396]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("13_uaga3")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=864776562]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector" unique_id=864776562]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("17_uvj3q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=1550664624]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector" unique_id=1550664624]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -1131,14 +1183,14 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" unique_id=1714098191 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector" unique_id=1714098191 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector/TilemapCollider" unique_id=1137455693]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector/TilemapCollider" unique_id=1137455693]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_PPPP" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=991410897 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_Quest_PPPP" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=991410897 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-16, -424)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -1154,21 +1206,21 @@ head_front = ExtResource("41_eeytp")
 head_side = ExtResource("42_jqptc")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=681733161]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP" unique_id=681733161]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("38_5ow7q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=286188599]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP" unique_id=286188599]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("41_eeytp")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=2123131602]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP" unique_id=2123131602]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -1182,14 +1234,65 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" unique_id=86725003 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP" unique_id=86725003 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP/TilemapCollider" unique_id=954897594]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP/TilemapCollider" unique_id=954897594]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_BettingLad" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1726889915 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_Quest_Benefactor" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1393725912 node_paths=PackedStringArray("body", "head")]
+position = Vector2(313, -396)
+script = ExtResource("40_v51k6")
+body = NodePath("Body")
+head = NodePath("Head")
+dialogue_settings = ExtResource("99_3o5s7")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("73_kxti4")
+body_front = ExtResource("74_twx1o")
+body_side = ExtResource("75_6a7w7")
+head_back = ExtResource("76_wv3i1")
+head_front = ExtResource("77_ggqqs")
+head_side = ExtResource("78_iytyc")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor" unique_id=1962111222]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("74_twx1o")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor" unique_id=425061240]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("77_ggqqs")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor" unique_id=1564033718]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor" unique_id=409484683 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor/TilemapCollider" unique_id=595185618]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_Quest_BettingLad" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1726889915 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-235, -408)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -1205,21 +1308,21 @@ head_front = ExtResource("65_dokcy")
 head_side = ExtResource("66_e3dpf")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=1738521092]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad" unique_id=1738521092]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("62_74nox")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=518902404]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad" unique_id=518902404]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("65_dokcy")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=1229453805]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad" unique_id=1229453805]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -1233,11 +1336,11 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" unique_id=1126499608 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad" unique_id=1126499608 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad/TilemapCollider" unique_id=1258349212]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad/TilemapCollider" unique_id=1258349212]
 shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="NPCharacterStatic_BettingLadFriend" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=374093312 node_paths=PackedStringArray("body", "head")]
@@ -1340,61 +1443,10 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_7/TilemapCollider" unique_id=1600261186]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_Benefactor" type="Node2D" parent="World/Entities/Characters/MiddleTop" unique_id=1393725912 node_paths=PackedStringArray("body", "head")]
-position = Vector2(313, -396)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-dialogue_settings = ExtResource("99_3o5s7")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("73_kxti4")
-body_front = ExtResource("74_twx1o")
-body_side = ExtResource("75_6a7w7")
-head_back = ExtResource("76_wv3i1")
-head_front = ExtResource("77_ggqqs")
-head_side = ExtResource("78_iytyc")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=1962111222]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("74_twx1o")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=425061240]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("77_ggqqs")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=1564033718]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" unique_id=409484683 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor/TilemapCollider" unique_id=595185618]
-shape = SubResource("RectangleShape2D_odvjr")
-
 [node name="Middle" type="Node2D" parent="World/Entities/Characters" unique_id=1998630094]
 y_sort_enabled = true
 
-[node name="NPCharacter_LostNecklace" type="CharacterBody2D" parent="World/Entities/Characters/Middle" unique_id=1585223500 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacter_Quest_LostNecklace" type="CharacterBody2D" parent="World/Entities/Characters/Middle" unique_id=1585223500 node_paths=PackedStringArray("body", "head")]
 process_priority = -1
 position = Vector2(-30, -158)
 collision_layer = 2
@@ -1416,24 +1468,24 @@ head_front = ExtResource("71_hwdj6")
 head_side = ExtResource("72_2e5js")
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=1756332522]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace" unique_id=1756332522]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("68_i3xsu")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=1331286607]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace" unique_id=1331286607]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("71_hwdj6")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=1666260794]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace" unique_id=1666260794]
 shape = SubResource("RectangleShape2D_ikfsv")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=551244164]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace" unique_id=551244164]
 simplify_epsilon = 3.0
 avoidance_enabled = true
 radius = 8.0
@@ -1445,7 +1497,7 @@ debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacter_LostNecklace" unique_id=626065719]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace" unique_id=626065719]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -1459,7 +1511,7 @@ offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NPCharacterStatic_TheSeaCaptain" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=964635901 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_Quest_TheSeaCaptain" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=964635901 node_paths=PackedStringArray("body", "head")]
 position = Vector2(380, -106)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -1475,21 +1527,21 @@ head_front = ExtResource("29_skhme")
 head_side = ExtResource("30_a6xwo")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=1870332521]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain" unique_id=1870332521]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("26_kut41")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=379620095]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain" unique_id=379620095]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("29_skhme")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=453796779]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain" unique_id=453796779]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -1503,11 +1555,11 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" unique_id=1288641438 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain" unique_id=1288641438 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain/TilemapCollider" unique_id=1642727427]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain/TilemapCollider" unique_id=1642727427]
 shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="NPCharacterStatic_9" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=716385645 node_paths=PackedStringArray("body", "head")]
@@ -1610,11 +1662,12 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_10/TilemapCollider" unique_id=2065064749]
 shape = SubResource("RectangleShape2D_odvjr")
 
-[node name="NPCharacterStatic_11" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=35776969 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_AlotlHater" type="Node2D" parent="World/Entities/Characters/Middle" unique_id=35776969 node_paths=PackedStringArray("body", "head")]
 position = Vector2(161, -176)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
 head = NodePath("Head")
+dialogue_settings = ExtResource("110_qj1o6")
 texture_head_bob = 1.0
 texture_random_turn = true
 body_back = ExtResource("73_kxti4")
@@ -1625,21 +1678,21 @@ head_front = ExtResource("77_ggqqs")
 head_side = ExtResource("78_iytyc")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_11" unique_id=265022135]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater" unique_id=265022135]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("74_twx1o")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_11" unique_id=1963282707]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater" unique_id=1963282707]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("77_ggqqs")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacterStatic_11" unique_id=507556287]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater" unique_id=507556287]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -1653,25 +1706,25 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_11" unique_id=957049817 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater" unique_id=957049817 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_11/TilemapCollider" unique_id=1337006294]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater/TilemapCollider" unique_id=1337006294]
 shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="MiddleBottom" type="Node2D" parent="World/Entities/Characters" unique_id=1545165991]
 y_sort_enabled = true
 
-[node name="NPCharacter_GroomToBe" type="CharacterBody2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1241284690 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacter_Quest_GroomToBe" type="CharacterBody2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1241284690 node_paths=PackedStringArray("body", "head")]
 process_priority = -1
-position = Vector2(115, 72)
+position = Vector2(104, 134)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("11_gqlrj")
 dialogue_settings = ExtResource("96_74nox")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(-100, 100), Vector2(100, -100), Vector2(100, 100), Vector2(-100, -100)])
+wander_points = Array[Vector2]([Vector2(-100, 100), Vector2(100, -100), Vector2(100, 100), Vector2(-100, -100), Vector2(0, 0)])
 body = NodePath("Body")
 head = NodePath("Head")
 movement_speed = 30.0
@@ -1685,24 +1738,24 @@ head_front = ExtResource("17_uvj3q")
 head_side = ExtResource("18_mqs2o")
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=365105227]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe" unique_id=365105227]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("13_uaga3")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=651257947]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe" unique_id=651257947]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("17_uvj3q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=1606013968]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe" unique_id=1606013968]
 shape = SubResource("RectangleShape2D_ikfsv")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=1783195041]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe" unique_id=1783195041]
 simplify_epsilon = 3.0
 avoidance_enabled = true
 radius = 8.0
@@ -1714,7 +1767,7 @@ debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" unique_id=2137400028]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe" unique_id=2137400028]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -1728,57 +1781,7 @@ offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NPCharacterStatic_WifeToBe" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=341166845 node_paths=PackedStringArray("body", "head")]
-position = Vector2(127, 114)
-script = ExtResource("40_v51k6")
-body = NodePath("Body")
-head = NodePath("Head")
-texture_head_bob = 1.0
-texture_random_turn = true
-body_back = ExtResource("67_b3hdi")
-body_front = ExtResource("68_i3xsu")
-body_side = ExtResource("69_3o5s7")
-head_back = ExtResource("70_r6av7")
-head_front = ExtResource("71_hwdj6")
-head_side = ExtResource("72_2e5js")
-metadata/_custom_type_script = "uid://bce11kontq8g2"
-
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=287223769]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("68_i3xsu")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=966188214]
-texture_filter = 1
-position = Vector2(0, 1)
-texture = ExtResource("71_hwdj6")
-region_rect = Rect2(32, 0, 16, 16)
-region_filter_clip_enabled = true
-
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=2022537454]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_top = -9.0
-offset_right = 9.0
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" unique_id=4724460 groups=["tilemaps"]]
-collision_layer = 8192
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe/TilemapCollider" unique_id=1063089994]
-shape = SubResource("RectangleShape2D_odvjr")
-
-[node name="NPCharacterStatic_TheFisherKing" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1451407439 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacterStatic_Quest_TheFisherKing" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1451407439 node_paths=PackedStringArray("body", "head")]
 position = Vector2(-81, 223)
 script = ExtResource("40_v51k6")
 body = NodePath("Body")
@@ -1794,21 +1797,21 @@ head_front = ExtResource("41_eeytp")
 head_side = ExtResource("42_jqptc")
 metadata/_custom_type_script = "uid://bce11kontq8g2"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=1056168615]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing" unique_id=1056168615]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("38_5ow7q")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=760313427]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing" unique_id=760313427]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("41_eeytp")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=1585024789]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing" unique_id=1585024789]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -1822,11 +1825,62 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
-[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" unique_id=1617947386 groups=["tilemaps"]]
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing" unique_id=1617947386 groups=["tilemaps"]]
 collision_layer = 8192
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing/TilemapCollider" unique_id=2028434719]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing/TilemapCollider" unique_id=2028434719]
+shape = SubResource("RectangleShape2D_odvjr")
+
+[node name="NPCharacterStatic_Waifu" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=341166845 node_paths=PackedStringArray("body", "head")]
+position = Vector2(127, 114)
+script = ExtResource("40_v51k6")
+body = NodePath("Body")
+head = NodePath("Head")
+dialogue_settings = ExtResource("111_dxpsl")
+texture_head_bob = 1.0
+texture_random_turn = true
+body_back = ExtResource("67_b3hdi")
+body_front = ExtResource("68_i3xsu")
+body_side = ExtResource("69_3o5s7")
+head_back = ExtResource("70_r6av7")
+head_front = ExtResource("71_hwdj6")
+head_side = ExtResource("72_2e5js")
+metadata/_custom_type_script = "uid://bce11kontq8g2"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu" unique_id=287223769]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("68_i3xsu")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu" unique_id=966188214]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("71_hwdj6")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu" unique_id=2022537454]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="TilemapCollider" type="StaticBody2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu" unique_id=4724460 groups=["tilemaps"]]
+collision_layer = 8192
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu/TilemapCollider" unique_id=1063089994]
 shape = SubResource("RectangleShape2D_odvjr")
 
 [node name="NPCharacterStatic_9" type="Node2D" parent="World/Entities/Characters/MiddleBottom" unique_id=1362103260 node_paths=PackedStringArray("body", "head")]
@@ -2082,15 +2136,16 @@ shape = SubResource("RectangleShape2D_odvjr")
 [node name="Left" type="Node2D" parent="World/Entities/Characters" unique_id=1159020269]
 y_sort_enabled = true
 
-[node name="NPCharacter_Ghost" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1136200963 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacter_Quest_Ghost" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1136200963 node_paths=PackedStringArray("body", "head")]
 process_priority = -1
-position = Vector2(-748, 229)
+position = Vector2(-1077, 228)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("11_gqlrj")
 dialogue_settings = ExtResource("105_r6av7")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(-150, 0), Vector2(100, 0)])
+wander_wait_time = 1.0
+wander_points = Array[Vector2]([Vector2(-100, -75), Vector2(100, -50), Vector2(0, 0)])
 body = NodePath("Body")
 head = NodePath("Head")
 movement_speed = 30.0
@@ -2104,24 +2159,24 @@ head_front = ExtResource("83_ro0fp")
 head_side = ExtResource("84_tka60")
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=616100683]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter_Quest_Ghost" unique_id=616100683]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("80_wmrth")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=662855307]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Left/NPCharacter_Quest_Ghost" unique_id=662855307]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("83_ro0fp")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=1669697420]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/NPCharacter_Quest_Ghost" unique_id=1669697420]
 shape = SubResource("RectangleShape2D_ikfsv")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=594838795]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/NPCharacter_Quest_Ghost" unique_id=594838795]
 simplify_epsilon = 3.0
 avoidance_enabled = true
 radius = 8.0
@@ -2133,7 +2188,7 @@ debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Left/NPCharacter_Ghost" unique_id=122790384]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Left/NPCharacter_Quest_Ghost" unique_id=122790384]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -2151,7 +2206,7 @@ grow_vertical = 2
 position = Vector2(-533, 6)
 script = ExtResource("11_gqlrj")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(-40, 30), Vector2(30, -40), Vector2(15, -10), Vector2(-10, 10)])
+wander_points = Array[Vector2]([Vector2(-40, 30), Vector2(30, -40), Vector2(15, -10), Vector2(-10, 10), Vector2(0, 0)])
 movement_speed = 40.0
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
@@ -2181,7 +2236,7 @@ debug_path_custom_line_width = 0.45
 position = Vector2(-597, 54)
 script = ExtResource("11_gqlrj")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(-50, -50), Vector2(50, 50), Vector2(-40, 0), Vector2(20, -15)])
+wander_points = Array[Vector2]([Vector2(-50, -50), Vector2(50, 50), Vector2(-40, 0), Vector2(20, -15), Vector2(0, 0)])
 movement_speed = 40.0
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
@@ -2211,7 +2266,7 @@ debug_path_custom_line_width = 0.45
 position = Vector2(-487, 117)
 script = ExtResource("11_gqlrj")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(12, 6), Vector2(-20, -60), Vector2(30, 30)])
+wander_points = Array[Vector2]([Vector2(12, 6), Vector2(-20, -60), Vector2(30, 30), Vector2(0, 0)])
 movement_speed = 40.0
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
@@ -2238,10 +2293,10 @@ debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
 [node name="Crab4" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1630287289]
-position = Vector2(-636, 168)
+position = Vector2(-646, 151)
 script = ExtResource("11_gqlrj")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(10, 10), Vector2(-30, -40), Vector2(8, 13), Vector2(12, 69)])
+wander_points = Array[Vector2]([Vector2(10, 10), Vector2(-30, -40), Vector2(8, 13), Vector2(12, 69), Vector2(0, 0)])
 movement_speed = 40.0
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
@@ -2267,13 +2322,133 @@ debug_path_custom_color = Color(1, 0, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
+[node name="Crab5" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1727053889]
+position = Vector2(-537, 196)
+script = ExtResource("11_gqlrj")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(-40, 30), Vector2(30, -40), Vector2(15, -10), Vector2(-10, 10), Vector2(0, 0)])
+movement_speed = 40.0
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/Crab5" unique_id=160638964]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("25_atg6p")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/Crab5" unique_id=763668902]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/Crab5" unique_id=711838289]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="Crab6" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=1227298765]
+position = Vector2(-765, 215)
+script = ExtResource("11_gqlrj")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(-50, -50), Vector2(50, 50), Vector2(-40, 0), Vector2(20, -15), Vector2(0, 0)])
+movement_speed = 40.0
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/Crab6" unique_id=1314490752]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("25_atg6p")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/Crab6" unique_id=329842354]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/Crab6" unique_id=2029963079]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="Crab7" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=26353730]
+position = Vector2(-766, 49)
+script = ExtResource("11_gqlrj")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(12, 6), Vector2(30, 30), Vector2(0, 0)])
+movement_speed = 40.0
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/Crab7" unique_id=2129434871]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("25_atg6p")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/Crab7" unique_id=1907073430]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/Crab7" unique_id=1441045714]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
+[node name="Crab8" type="CharacterBody2D" parent="World/Entities/Characters/Left" unique_id=2005605805]
+position = Vector2(-706, 110)
+script = ExtResource("11_gqlrj")
+do_wander = true
+wander_points = Array[Vector2]([Vector2(-10, -150), Vector2(200, -10), Vector2(10, 50), Vector2(0, 0)])
+movement_speed = 40.0
+metadata/_custom_type_script = "uid://daf0h2p3no1m4"
+
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Left/Crab8" unique_id=956926006]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("25_atg6p")
+region_rect = Rect2(32, 0, 16, 16)
+region_filter_clip_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Left/Crab8" unique_id=1523076414]
+shape = SubResource("RectangleShape2D_ikfsv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Left/Crab8" unique_id=1213447044]
+simplify_epsilon = 3.0
+avoidance_enabled = true
+radius = 8.0
+neighbor_distance = 50.0
+max_neighbors = 3
+max_speed = 1000.0
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+debug_path_custom_point_size = 5.0
+debug_path_custom_line_width = 0.45
+
 [node name="LeftFar" type="Node2D" parent="World/Entities/Characters" unique_id=1165117242]
 y_sort_enabled = true
 
 [node name="Right" type="Node2D" parent="World/Entities/Characters" unique_id=485545118]
 y_sort_enabled = true
 
-[node name="NPCharacter_Professor" type="CharacterBody2D" parent="World/Entities/Characters/Right" unique_id=344604359 node_paths=PackedStringArray("body", "head")]
+[node name="NPCharacter_Quest_Professor" type="CharacterBody2D" parent="World/Entities/Characters/Right" unique_id=344604359 node_paths=PackedStringArray("body", "head")]
 process_priority = -1
 position = Vector2(503, 222)
 collision_layer = 2
@@ -2281,7 +2456,7 @@ collision_mask = 0
 script = ExtResource("11_gqlrj")
 dialogue_settings = ExtResource("98_d71kx")
 do_wander = true
-wander_points = Array[Vector2]([Vector2(-40, -35), Vector2(90, -30), Vector2(-20, 30)])
+wander_points = Array[Vector2]([Vector2(-40, -35), Vector2(90, -30), Vector2(-20, 30), Vector2(0, 0)])
 body = NodePath("Body")
 head = NodePath("Head")
 movement_speed = 30.0
@@ -2295,24 +2470,24 @@ head_front = ExtResource("35_yp5f6")
 head_side = ExtResource("36_jr3pb")
 metadata/_custom_type_script = "uid://daf0h2p3no1m4"
 
-[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=1518153819]
+[node name="Body" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter_Quest_Professor" unique_id=1518153819]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("32_2e2dr")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=1226632516]
+[node name="Head" type="Sprite2D" parent="World/Entities/Characters/Right/NPCharacter_Quest_Professor" unique_id=1226632516]
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("35_yp5f6")
 region_rect = Rect2(32, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=312985769]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Entities/Characters/Right/NPCharacter_Quest_Professor" unique_id=312985769]
 shape = SubResource("RectangleShape2D_ikfsv")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=1436801209]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="World/Entities/Characters/Right/NPCharacter_Quest_Professor" unique_id=1436801209]
 simplify_epsilon = 3.0
 avoidance_enabled = true
 radius = 8.0
@@ -2324,7 +2499,7 @@ debug_path_custom_color = Color(0.6614412, 0.5102225, 0, 1)
 debug_path_custom_point_size = 5.0
 debug_path_custom_line_width = 0.45
 
-[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Right/NPCharacter_Professor" unique_id=636180072]
+[node name="ClickBoundary" type="Control" parent="World/Entities/Characters/Right/NPCharacter_Quest_Professor" unique_id=636180072]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -2403,7 +2578,7 @@ offset = Vector2(0, 16)
 zoom = Vector2(2, 2)
 limit_left = -1250
 limit_top = -541
-limit_right = 1200
+limit_right = 1219
 limit_bottom = 404
 position_smoothing_speed = 2.0
 drag_left_margin = 0.1
@@ -2435,6 +2610,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_atg6p")
 y_sort_enabled = true
 
 [node name="Objects" parent="World/Entities" unique_id=560350465 instance=ExtResource("31_p4uwf")]
+metadata/_edit_lock_ = true
 
 [node name="Effects" type="Node2D" parent="World" unique_id=1779975020]
 z_index = 10
@@ -2501,41 +2677,19 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 20.0
-offset_top = -20.0
+offset_top = -24.5
 offset_right = -20.0
-offset_bottom = -10.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
-[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivots" unique_id=133806033]
-anchors_preset = 0
-offset_left = 11.5
-offset_top = -2.5
-offset_right = 11.5
-offset_bottom = -2.5
-size_flags_horizontal = 3
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.7
-mouse_filter = 2
-
-[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=262668969]
-z_index = 3
-layout_mode = 0
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 5.0
-offset_bottom = 5.0
-rotation = 0.7853982
-pivot_offset_ratio = Vector2(0.5, 0.5)
-color = Color(1, 1, 1, 0.2)
-
 [node name="ToolPivot1" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1856136161]
 anchors_preset = 0
-offset_left = 59.5
-offset_top = 8.5
-offset_right = 59.5
-offset_bottom = 8.5
+offset_left = 11.0
+offset_top = -2.5
+offset_right = 11.0
+offset_bottom = -2.5
 size_flags_horizontal = 3
 size_flags_vertical = 8
 size_flags_stretch_ratio = 2.95
@@ -2552,11 +2706,33 @@ rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 color = Color(1, 1, 1, 0.2)
 
+[node name="ToolHotkey1" type="PanelContainer" parent="HUD/Bag/ToolPivots/ToolPivot1" unique_id=1299596728]
+visible = false
+z_index = 15
+layout_mode = 0
+offset_left = -13.5
+offset_top = 1.9999933
+offset_right = 12.5
+offset_bottom = 28.499992
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_gop1j")
+
+[node name="Label" type="Label" parent="HUD/Bag/ToolPivots/ToolPivot1/ToolHotkey1" unique_id=555254824]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_font_sizes/font_size = 20
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ToolPivot2" type="Control" parent="HUD/Bag/ToolPivots" unique_id=1199015960]
 anchors_preset = 0
-offset_left = 256.5
+offset_left = 61.0
 offset_top = 8.5
-offset_right = 256.5
+offset_right = 61.0
 offset_bottom = 8.5
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -2574,9 +2750,75 @@ rotation = 0.7853982
 pivot_offset_ratio = Vector2(0.5, 0.5)
 color = Color(1, 1, 1, 0.2)
 
+[node name="ToolHotkey2" type="PanelContainer" parent="HUD/Bag/ToolPivots/ToolPivot2" unique_id=999803475]
+visible = false
+z_index = 15
+layout_mode = 0
+offset_left = -13.0
+offset_top = -5.0000067
+offset_right = 13.0
+offset_bottom = 21.499992
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_gop1j")
+
+[node name="Label" type="Label" parent="HUD/Bag/ToolPivots/ToolPivot2/ToolHotkey2" unique_id=1097138253]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_font_sizes/font_size = 20
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ToolPivot3" type="Control" parent="HUD/Bag/ToolPivots" unique_id=133806033]
+anchors_preset = 0
+offset_left = 261.0
+offset_top = 8.5
+offset_right = 261.0
+offset_bottom = 8.5
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.7
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=262668969]
+z_index = 3
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(1, 1, 1, 0.2)
+
+[node name="ToolHotkey3" type="PanelContainer" parent="HUD/Bag/ToolPivots/ToolPivot3" unique_id=1195986539]
+visible = false
+z_index = 15
+layout_mode = 0
+offset_left = -12.5000305
+offset_top = -5.0000057
+offset_right = 13.4999695
+offset_bottom = 21.499994
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_gop1j")
+
+[node name="Label" type="Label" parent="HUD/Bag/ToolPivots/ToolPivot3/ToolHotkey3" unique_id=1796392244]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.23137255, 0.07450981, 0.16862746, 1)
+theme_override_font_sizes/font_size = 20
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BagBackground" type="Polygon2D" parent="HUD/Bag" unique_id=451128958]
 z_index = -2
-position = Vector2(0, -11)
+position = Vector2(0, -15.5)
 color = Color(0.4392157, 0.1764706, 0.31764707, 1)
 polygon = PackedVector2Array(6, 246.28572, 55, 258.2857, 146, 267.2857, 226, 268.2857, 286, 265.2857, 362, 244.28572, 363, 333.2857, -6.286499, 332.2847, -6, 237.28572)
 
@@ -2598,6 +2840,8 @@ polygon = PackedVector2Array(6, 246.28572, 55, 258.2857, 146, 267.2857, 226, 268
 z_index = 4
 texture_filter = 1
 anchors_preset = 0
+offset_top = -4.5
+offset_bottom = -4.5
 script = ExtResource("26_pbc1q")
 on_collectable_chance = 0.15
 alotl_speech_speed = 15.0
@@ -2803,6 +3047,8 @@ texture = ExtResource("63_1ol4r")
 [node name="Notepad" type="Control" parent="HUD/Bag" unique_id=2094549114 node_paths=PackedStringArray("dragged_object")]
 z_index = 3
 anchors_preset = 0
+offset_top = -4.5
+offset_bottom = -4.5
 script = ExtResource("21_aq00n")
 bounce_rotation = -15.0
 bounce_duration = 0.42
@@ -2975,7 +3221,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_uvj3q")
 
 [node name="BagForeground" type="Polygon2D" parent="HUD/Bag" unique_id=645335583]
 z_index = 5
-position = Vector2(0, 0.5)
+position = Vector2(0, -2)
 color = Color(0.23137255, 0.07450981, 0.16862746, 1)
 polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423, 274.44302, 266.1873, 272.0396, 325.27057, 268.034, 362.9236, 248.40633, 364.30573, 316.7526, -4.6350317, 317.0192, -2.9920273, 247.20464)
 
@@ -2991,24 +3237,24 @@ polygon = PackedVector2Array(31.656796, 265.6306, 88.33667, 272.4402, 178.86423,
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/VictorsRotisserie/ClickBoundary" to="World/Entities/Characters/MiddleTop/VictorsRotisserie" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/PawnsPoint/ClickBoundary" to="World/Entities/Characters/MiddleTop/PawnsPoint" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/StarTchotchke/ClickBoundary" to="World/Entities/Characters/MiddleTop/StarTchotchke" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_SeaglassCollector" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_PPPP" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLad" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_SeaglassCollector" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_PPPP" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_Benefactor" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_Quest_BettingLad" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_BettingLadFriend" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_7/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_7" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor/ClickBoundary" to="World/Entities/Characters/MiddleTop/NPCharacterStatic_Benefactor" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacter_LostNecklace/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacter_LostNecklace" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_TheSeaCaptain" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacter_Quest_LostNecklace" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_Quest_TheSeaCaptain" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_9/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_9" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_10/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_10" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_11/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_11" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacter_GroomToBe" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_WifeToBe" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_TheFisherKing" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater/ClickBoundary" to="World/Entities/Characters/Middle/NPCharacterStatic_AlotlHater" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacter_Quest_GroomToBe" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Quest_TheFisherKing" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_Waifu" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_9/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_9" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_10/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_10" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_11/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_11" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_12/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_12" method="_on_gui_input"]
 [connection signal="gui_input" from="World/Entities/Characters/MiddleBottom/NPCharacterStatic_13/ClickBoundary" to="World/Entities/Characters/MiddleBottom/NPCharacterStatic_13" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Left/NPCharacter_Ghost/ClickBoundary" to="World/Entities/Characters/Left/NPCharacter_Ghost" method="_on_gui_input"]
-[connection signal="gui_input" from="World/Entities/Characters/Right/NPCharacter_Professor/ClickBoundary" to="World/Entities/Characters/Right/NPCharacter_Professor" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Left/NPCharacter_Quest_Ghost/ClickBoundary" to="World/Entities/Characters/Left/NPCharacter_Quest_Ghost" method="_on_gui_input"]
+[connection signal="gui_input" from="World/Entities/Characters/Right/NPCharacter_Quest_Professor/ClickBoundary" to="World/Entities/Characters/Right/NPCharacter_Quest_Professor" method="_on_gui_input"]

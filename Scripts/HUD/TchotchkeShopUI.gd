@@ -11,20 +11,65 @@ class_name TchotchkeShopUI extends ShopUI
 
 #@onready var rent: Button = $Rent
 
-@export_group("READ ONLY")
-@export var chosen_items: Array[CollectableType] = []
+static var today_items: Array[CollectableType] = []
+static var tomorrow_items: Array[CollectableType] = []
 
 
 func _ready() -> void:
-	chosen_items = possible_items.duplicate()
-	chosen_items.shuffle()
-	chosen_items.resize(8)
-	for i in chosen_items.size():
-		(button_group.get_buttons()[i] as Button).text = "1 " + chosen_items[i].name
-		(button_group.get_buttons()[i] as Button).disabled = InventoryManager.inventory.has(chosen_items[i])
-		(button_group.get_buttons()[i].get_child(0) as Label).text = "$" + str(chosen_items[i].price)
-		print("button text = " + (button_group.get_buttons()[i] as Button).text)
+	if today_items.size() == 0:
+		today_items = populate_four_items()
+		print("today items = " + str(today_items))
+	if tomorrow_items.size() == 0:
+		tomorrow_items = populate_four_items()
+		print("tomorrow items = " + str(tomorrow_items))
+	
+	for i in 8:
+		if i < 4:
+			(button_group.get_buttons()[i] as Button).text = "1 " + today_items[i].name
+			(button_group.get_buttons()[i] as Button).disabled = InventoryManager.inventory.has(today_items[i])
+			(button_group.get_buttons()[i].get_child(0) as Label).text = "$" + str(today_items[i].price)
+			print("today button text = " + (button_group.get_buttons()[i] as Button).text)
+		else:
+			(button_group.get_buttons()[i] as Button).text = "1 " + tomorrow_items[i-4].name
+			(button_group.get_buttons()[i] as Button).disabled = InventoryManager.inventory.has(tomorrow_items[i-4])
+			(button_group.get_buttons()[i].get_child(0) as Label).text = "$" + str(tomorrow_items[i-4].price)
+			print("today button text = " + (button_group.get_buttons()[i] as Button).text)
+	
+	if !WorldManager.day_ended().is_connected(wipe_chosen_items):
+		WorldManager.day_ended().connect(wipe_chosen_items)
+	
 	super._ready()
+
+func populate_four_items() -> Array[CollectableType]:
+	var items:Array[CollectableType] = []
+	var chosen_item:CollectableType = null
+	for i in 3:
+		chosen_item = null
+		while chosen_item == null:
+			chosen_item = possible_items[randi_range(0,9)]
+			if items.has(chosen_item) || today_items.has(chosen_item) || tomorrow_items.has(chosen_item):
+				print("already has "+chosen_item.name+", redoing choice #"+str(i))
+				chosen_item = null
+				continue
+		print("common choice #"+str(i)+" = "+chosen_item.name)
+		items.append(chosen_item)
+	chosen_item = null
+	while chosen_item == null:
+		chosen_item = possible_items[randi_range(8,16)]
+		if items.has(chosen_item) || today_items.has(chosen_item) || tomorrow_items.has(chosen_item):
+			print("already has "+chosen_item.name+", redoing choice")
+			chosen_item = null
+			continue
+	print("rare choice = "+chosen_item.name)
+	items.append(chosen_item)
+	return items
+
+
+
+static func wipe_chosen_items() -> void:
+	print_rich("[TchotchkeShopUI(Static)] WipeChosenItems > Completed!")
+	today_items = tomorrow_items.duplicate()
+	tomorrow_items.clear()
 
 #var _tween: Tween
 func open() -> void:
@@ -63,9 +108,14 @@ func on_button_unhover(button:Button) -> void:
 func on_button_pressed(button:Button) -> void:
 	print_rich(DEBUG_NAME,"OnButtonPress > Button pressed: '" + button.text + "'")
 	var index = button_group.get_buttons().find(button)
-	if InventoryManager.inventory.has(chosen_items[index]):
-		InventoryManager.add_collectable(chosen_items[index],-1)
-		InventoryManager.add_dosh(chosen_items[index].price)
+	if index < 4:
+		if InventoryManager.inventory.has(today_items[index]):
+			InventoryManager.add_collectable(today_items[index],-1)
+			InventoryManager.add_dosh(today_items[index].price)
+	else:
+		if InventoryManager.inventory.has(tomorrow_items[index-4]):
+			InventoryManager.add_collectable(tomorrow_items[index-4],-1)
+			InventoryManager.add_dosh(tomorrow_items[index-4].price)
 	
 	update_buttons()
 	
@@ -84,27 +134,14 @@ func _on_leave_pressed() -> void:
 func update_buttons() -> void:
 	var active: bool = false
 	var button: Button = null
-	for i in chosen_items.size():
-		active = InventoryManager.inventory.has(chosen_items[i]) && InventoryManager.inventory[chosen_items[i]] >= 1
-		button = button_group.get_buttons()[i]
-		#match button.text:
-			#"1 Bottlecap":
-				#active = InventoryManager.inventory.has(CT_BOTTLECAP) && InventoryManager.inventory[CT_BOTTLECAP] >= 1
-			#"5 Bottlecaps":
-				#active = InventoryManager.inventory.has(CT_BOTTLECAP) && InventoryManager.inventory[CT_BOTTLECAP] >= 5
-			#"1 Pull Tab":
-				#active = InventoryManager.inventory.has(CT_PULL_TAB) && InventoryManager.inventory[CT_PULL_TAB] >= 1
-			#"5 Pull Tabs":
-				#active = InventoryManager.inventory.has(CT_PULL_TAB) && InventoryManager.inventory[CT_PULL_TAB] >= 5
-			#"1 Broken Lure":
-				#active = InventoryManager.inventory.has(CT_BROKEN_LURE) && InventoryManager.inventory[CT_BROKEN_LURE] >= 1
-			#"5 Broken Lures":
-				#active = InventoryManager.inventory.has(CT_BROKEN_LURE) && InventoryManager.inventory[CT_BROKEN_LURE] >= 5
-			#"1 Old Can":
-				#active = InventoryManager.inventory.has(CT_OLD_CAN) && InventoryManager.inventory[CT_OLD_CAN] >= 1
-			#"5 Old Cans":
-				#active = InventoryManager.inventory.has(CT_OLD_CAN) && InventoryManager.inventory[CT_OLD_CAN] >= 5
-		#
+	for i in 8:
+		if i < 4:
+			active = InventoryManager.inventory.has(today_items[i]) && InventoryManager.inventory[today_items[i]] >= 1
+			button = button_group.get_buttons()[i]
+		else:
+			active = InventoryManager.inventory.has(tomorrow_items[i-4]) && InventoryManager.inventory[tomorrow_items[i-4]] >= 1
+			button = button_group.get_buttons()[i]
+
 		if active:
 			(button.get_child(0) as Label).add_theme_color_override("font_color",Color(0.984, 0.776, 0.592, 1.0))
 			button.disabled = false
@@ -117,12 +154,4 @@ func update_buttons() -> void:
 		
 		if button_group.get_pressed_button():
 			button_group.get_pressed_button().set_pressed_no_signal(false)
-		
-			#continue
-		#else:
-			#button.get_child(0).visible = true
-			#if _tool_rentable:
-				#(button.get_child(0) as Label).add_theme_color_override("font_color",Color(0.984, 0.776, 0.592, 1.0))
-			#else:
-				#(button.get_child(0) as Label).add_theme_color_override("font_color",Color(0.82, 0.314, 0.357, 1.0))
 		

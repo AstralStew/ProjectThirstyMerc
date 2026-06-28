@@ -5,7 +5,14 @@ class_name SandwichShopUI extends ShopUI
 
 @onready var options_margin_container: MarginContainer = $Options/OptionsMarginContainer
 
-
+#func _ready() -> void:
+	#button_group.pressed.connect(on_button_pressed)
+	#for button in button_group.get_buttons():
+	#button.mouse_entered.connect(on_button_hover.bind(button))
+	#button.mouse_exited.connect(on_button_unhover.bind(button))
+	#
+	#update_buttons()
+	#open()
 
 #var _tween: Tween
 func open() -> void:
@@ -40,26 +47,40 @@ func on_button_hover(button:Button) -> void:
 func on_button_unhover(button:Button) -> void:
 	print_rich(DEBUG_NAME,"OnButtonUnhover > Button unhovered: '" + button.text + "'")
 
-
 func on_button_pressed(button:Button) -> void:
-	print_rich(DEBUG_NAME,"OnButtonPress > Button pressed: '" + button.text + "'")
-	
 	match button.text:
-		"Speedy Sandwich":
-			InventoryManager.add_dosh(-3)
-			PlayerCharacter.instance.base_movement_speed = clamp(PlayerCharacter.instance.base_movement_speed + 6,40,65)
-			PlayerCharacter.instance.movement_speed = PlayerCharacter.instance.base_movement_speed
-			
-		"Muscle Juice":
-			InventoryManager.add_dosh(-2)
-			PlayerCharacter.instance.base_dig_strength = clamp(PlayerCharacter.instance.base_dig_strength + 1,1,3)
+		"Minimum Chips","Steak Sanga","Fisherman's Basket":
+			on_food_button_pressed(button)
+		"Pink Spider","Lime Spider","Cola Spider":
+			on_drink_button_pressed(button)
 		
-	
 	update_buttons()
 	
 	AudioManager.play_sound(AudioManager.CASH_REGISTER)
+
+func on_food_button_pressed(button:Button) -> void:
+	print_rich(DEBUG_NAME,"OnButtonPress > Button pressed: '" + button.text + "'")
 	
+	match button.text:
+		"Minimum Chips":
+			InventoryManager.add_dosh(-3)
+			PlayerCharacter.instance.base_dig_strength = clamp(PlayerCharacter.instance.base_dig_strength + 1,1,6)
+		"Steak Sanga":
+			InventoryManager.add_dosh(-5)
+			PlayerCharacter.instance.base_dig_strength = clamp(PlayerCharacter.instance.base_dig_strength + 3,1,6)
+		"Fisherman's Basket":
+			InventoryManager.add_dosh(-7)
+			PlayerCharacter.instance.base_dig_strength = clamp(PlayerCharacter.instance.base_dig_strength + 5,1,6)
 	
+	AudioManager.play_sound(AudioManager.EAT,0.69,0.8 + randf() * 0.4,-1,-1,0.4)
+
+func on_drink_button_pressed(button:Button) -> void:
+	InventoryManager.add_dosh(-3)
+	PlayerCharacter.instance.base_movement_speed = clamp(PlayerCharacter.instance.base_movement_speed + 6,40,64)
+	PlayerCharacter.instance.movement_speed = PlayerCharacter.instance.base_movement_speed
+	
+	AudioManager.play_sound(AudioManager.DRINK,0.69,0.8 + randf() * 0.4,1.5,-1,0.4)
+
 
 func _on_leave_pressed() -> void:
 	print_rich(DEBUG_NAME,"OnLeavePressed > Leave pressed!")
@@ -73,12 +94,18 @@ func update_buttons() -> void:
 	var active: bool = false
 	for button in button_group.get_buttons():
 		match button.text:
-			"Speedy Sandwich":
-				active = 3 <= InventoryManager.dosh and PlayerCharacter.instance.base_movement_speed < 65
-				(button.get_child(0) as Label).text = "$" + str(3)
-			"Muscle Juice":
-				active = 3 <= InventoryManager.dosh and PlayerCharacter.instance.base_dig_strength < 3
-				(button.get_child(0) as Label).text = "$" + str(2)
+			"Pink Spider","Lime Spider","Cola Spider":
+				active = 2 <= InventoryManager.dosh and PlayerCharacter.instance.base_movement_speed < 64
+				(button.get_child(0) as Label).text = "$2"
+			"Minimum Chips":
+				active = 3 <= InventoryManager.dosh and PlayerCharacter.instance.base_dig_strength < 6
+				(button.get_child(0) as Label).text = "$3"
+			"Steak Sanga":
+				active = 4 <= InventoryManager.dosh and PlayerCharacter.instance.base_dig_strength < 6
+				(button.get_child(0) as Label).text = "$5"
+			"Fisherman's Basket":
+				active = 7 <= InventoryManager.dosh and PlayerCharacter.instance.base_dig_strength < 6
+				(button.get_child(0) as Label).text = "$7"
 		
 		if active:
 			(button.get_child(0) as Label).add_theme_color_override("font_color",Color(0.984, 0.776, 0.592, 1.0))

@@ -23,2547 +23,2534 @@
 [ext_resource type="PackedScene" uid="uid://lj2sdoqo6m6s" path="res://Scenes/LevelDesign/chair2.tscn" id="18_035np"]
 [ext_resource type="PackedScene" uid="uid://ybde5ab02ohh" path="res://Scenes/LevelDesign/chair1.tscn" id="20_kwuuf"]
 
-[node name="Objects" type="Node2D" unique_id=1905878454]
+[node name="Objects" type="Node2D" unique_id=487794536]
 y_sort_enabled = true
 
-[node name="MiddleTop" type="Node2D" parent="." unique_id=1634350695]
+[node name="MiddleTop" type="Node2D" parent="." unique_id=1220402878]
 y_sort_enabled = true
 
 [node name="Buoy_0" parent="MiddleTop" unique_id=2139641766 instance=ExtResource("1_xdrf3")]
 position = Vector2(226, -466)
 
-[node name="Buoy_1" parent="MiddleTop" unique_id=691407134 instance=ExtResource("1_xdrf3")]
+[node name="Buoy_1" parent="MiddleTop" unique_id=1216850795 instance=ExtResource("1_xdrf3")]
 position = Vector2(254, -466)
 
-[node name="Barrel_5" parent="MiddleTop" unique_id=772306053 instance=ExtResource("2_y16la")]
+[node name="Barrel_5" parent="MiddleTop" unique_id=242046305 instance=ExtResource("2_y16la")]
 position = Vector2(293, -396)
 
-[node name="Barrel_6" parent="MiddleTop" unique_id=305568645 instance=ExtResource("2_y16la")]
+[node name="Barrel_6" parent="MiddleTop" unique_id=735219899 instance=ExtResource("2_y16la")]
 position = Vector2(317, -371)
 
-[node name="Post4_0" parent="MiddleTop" unique_id=862603996 instance=ExtResource("7_xeihd")]
+[node name="Post4_0" parent="MiddleTop" unique_id=945184550 instance=ExtResource("7_xeihd")]
 position = Vector2(-310, -362)
 
-[node name="Post4_1" parent="MiddleTop" unique_id=485339881 instance=ExtResource("7_xeihd")]
+[node name="Post4_1" parent="MiddleTop" unique_id=566865475 instance=ExtResource("7_xeihd")]
 position = Vector2(-271, -362)
 
-[node name="Post4_3" parent="MiddleTop" unique_id=959535473 instance=ExtResource("7_xeihd")]
+[node name="Post4_3" parent="MiddleTop" unique_id=1110636721 instance=ExtResource("7_xeihd")]
 position = Vector2(-209, -362)
 
-[node name="Post4_2" parent="MiddleTop" unique_id=556285028 instance=ExtResource("7_xeihd")]
+[node name="Post4_2" parent="MiddleTop" unique_id=1572078553 instance=ExtResource("7_xeihd")]
 position = Vector2(322, -362)
 
-[node name="Crate_0" parent="MiddleTop" unique_id=1632095643 instance=ExtResource("4_47as6")]
+[node name="Crate_0" parent="MiddleTop" unique_id=881866737 instance=ExtResource("4_47as6")]
 position = Vector2(-311, -417)
 
-[node name="Crate_1" parent="MiddleTop" unique_id=2047056931 instance=ExtResource("4_47as6")]
+[node name="Crate_1" parent="MiddleTop" unique_id=1430417702 instance=ExtResource("4_47as6")]
 position = Vector2(-290, -404)
 
-[node name="Crate_2" parent="MiddleTop" unique_id=1971062014 instance=ExtResource("4_47as6")]
+[node name="Crate_2" parent="MiddleTop" unique_id=725334054 instance=ExtResource("4_47as6")]
 position = Vector2(-273, -423)
 
-[node name="Crate_3" parent="MiddleTop" unique_id=2093414547 instance=ExtResource("4_47as6")]
+[node name="Crate_3" parent="MiddleTop" unique_id=1434322445 instance=ExtResource("4_47as6")]
 position = Vector2(-300, -432)
 
-[node name="Crate_4" parent="MiddleTop" unique_id=1004188133 instance=ExtResource("4_47as6")]
+[node name="Crate_4" parent="MiddleTop" unique_id=17144540 instance=ExtResource("4_47as6")]
 position = Vector2(-266, -408)
 
-[node name="Crate_5" parent="MiddleTop" unique_id=1234850538 instance=ExtResource("4_47as6")]
+[node name="Crate_5" parent="MiddleTop" unique_id=2027339134 instance=ExtResource("4_47as6")]
 position = Vector2(-310, -379)
 
-[node name="Crate_6" parent="MiddleTop" unique_id=1482199726 instance=ExtResource("4_47as6")]
+[node name="Crate_6" parent="MiddleTop" unique_id=1281463473 instance=ExtResource("4_47as6")]
 position = Vector2(-174, -354)
 
-[node name="Crate_7" parent="MiddleTop" unique_id=1283458014 instance=ExtResource("4_47as6")]
+[node name="Crate_7" parent="MiddleTop" unique_id=1937458682 instance=ExtResource("4_47as6")]
 position = Vector2(-164, -364)
 
-[node name="Crate_8" parent="MiddleTop" unique_id=1222037292 instance=ExtResource("4_47as6")]
+[node name="Crate_8" parent="MiddleTop" unique_id=664284174 instance=ExtResource("4_47as6")]
 position = Vector2(289, -403)
 
-[node name="Crate_9" parent="MiddleTop" unique_id=1495202232 instance=ExtResource("4_47as6")]
+[node name="Crate_9" parent="MiddleTop" unique_id=121180015 instance=ExtResource("4_47as6")]
 position = Vector2(329, -368)
 
-[node name="Barrel_0" parent="MiddleTop" unique_id=1890540493 instance=ExtResource("2_y16la")]
+[node name="Barrel_0" parent="MiddleTop" unique_id=544028640 instance=ExtResource("2_y16la")]
 position = Vector2(-299, -421)
 
-[node name="Barrel_1" parent="MiddleTop" unique_id=631874419 instance=ExtResource("2_y16la")]
+[node name="Barrel_1" parent="MiddleTop" unique_id=1054386297 instance=ExtResource("2_y16la")]
 position = Vector2(-294, -418)
 
-[node name="Barrel_2" parent="MiddleTop" unique_id=1496648369 instance=ExtResource("2_y16la")]
+[node name="Barrel_2" parent="MiddleTop" unique_id=2142323174 instance=ExtResource("2_y16la")]
 position = Vector2(-279, -409)
 
-[node name="Barrel_7" parent="MiddleTop" unique_id=540601687 instance=ExtResource("2_y16la")]
+[node name="Barrel_7" parent="MiddleTop" unique_id=658303989 instance=ExtResource("2_y16la")]
 position = Vector2(92, -410)
 
-[node name="Barrel_8" parent="MiddleTop" unique_id=893289715 instance=ExtResource("2_y16la")]
+[node name="Barrel_8" parent="MiddleTop" unique_id=1529011690 instance=ExtResource("2_y16la")]
 position = Vector2(99, -400)
 
-[node name="Barrel_9" parent="MiddleTop" unique_id=35636572 instance=ExtResource("2_y16la")]
+[node name="Barrel_9" parent="MiddleTop" unique_id=967814391 instance=ExtResource("2_y16la")]
 position = Vector2(115, -408)
 
-[node name="Barrel_10" parent="MiddleTop" unique_id=1876591468 instance=ExtResource("2_y16la")]
+[node name="Barrel_10" parent="MiddleTop" unique_id=1430699801 instance=ExtResource("2_y16la")]
 position = Vector2(103, -407)
 
-[node name="Barrel_11" parent="MiddleTop" unique_id=1712775696 instance=ExtResource("2_y16la")]
+[node name="Barrel_11" parent="MiddleTop" unique_id=1162452644 instance=ExtResource("2_y16la")]
 position = Vector2(110, -402)
 
-[node name="Barrel_3" parent="MiddleTop" unique_id=587222103 instance=ExtResource("2_y16la")]
+[node name="Barrel_3" parent="MiddleTop" unique_id=1819098207 instance=ExtResource("2_y16la")]
 position = Vector2(-283, -418)
 
-[node name="Barrel_4" parent="MiddleTop" unique_id=18983603 instance=ExtResource("2_y16la")]
+[node name="Barrel_4" parent="MiddleTop" unique_id=1305341957 instance=ExtResource("2_y16la")]
 position = Vector2(-311, -408)
 
-[node name="Umbrella1_0" parent="MiddleTop" unique_id=522070062 instance=ExtResource("5_xttnp")]
+[node name="Umbrella1_0" parent="MiddleTop" unique_id=336143589 instance=ExtResource("5_xttnp")]
 position = Vector2(-290, -415)
 
-[node name="Umbrella2_0" parent="MiddleTop" unique_id=1149272960 instance=ExtResource("6_asgp3")]
+[node name="Umbrella2_0" parent="MiddleTop" unique_id=2134947546 instance=ExtResource("6_asgp3")]
 position = Vector2(304, -408)
 
-[node name="Chair3_0" parent="MiddleTop" unique_id=860566490 instance=ExtResource("7_hjl25")]
+[node name="Chair3_0" parent="MiddleTop" unique_id=1466495313 instance=ExtResource("7_hjl25")]
 position = Vector2(321, -398)
 
-[node name="Crate_10" parent="MiddleTop" unique_id=1240656983 instance=ExtResource("4_47as6")]
+[node name="Crate_10" parent="MiddleTop" unique_id=1315009728 instance=ExtResource("4_47as6")]
 position = Vector2(131, -407)
 
-[node name="Middle" type="Node2D" parent="." unique_id=1883179679]
+[node name="Middle" type="Node2D" parent="." unique_id=394563927]
 y_sort_enabled = true
 
-[node name="Chair3_3" parent="Middle" unique_id=2060669533 instance=ExtResource("8_i34pf")]
+[node name="Chair3_3" parent="Middle" unique_id=498897441 instance=ExtResource("8_i34pf")]
 position = Vector2(162, -177)
 
 [node name="Tree3_23" parent="Middle" unique_id=1557634134 instance=ExtResource("4_h61yh")]
 position = Vector2(-120, -262)
 
-[node name="Fern17" type="Node2D" parent="Middle" unique_id=843265704]
+[node name="Fern17" type="Node2D" parent="Middle" unique_id=1017866491]
 position = Vector2(342, -313)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/Fern17" unique_id=1392674321]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern17" unique_id=694342712]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern18" type="Node2D" parent="Middle" unique_id=1319321532]
+[node name="Fern18" type="Node2D" parent="Middle" unique_id=2025912341]
 position = Vector2(-50, -286)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/Fern18" unique_id=177978565]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern18" unique_id=628291750]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush1_6" parent="Middle" unique_id=1945211832 instance=ExtResource("13_qrljf")]
+[node name="Bush1_6" parent="Middle" unique_id=1942006580 instance=ExtResource("13_qrljf")]
 y_sort_enabled = true
 position = Vector2(-289, -298)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 
-[node name="Bush1_18" parent="Middle" unique_id=543147672 instance=ExtResource("13_qrljf")]
+[node name="Bush1_18" parent="Middle" unique_id=715782018 instance=ExtResource("13_qrljf")]
 y_sort_enabled = true
 position = Vector2(-126, -249)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 
-[node name="Bush1_20" parent="Middle" unique_id=2142378001 instance=ExtResource("13_qrljf")]
+[node name="Bush1_20" parent="Middle" unique_id=902842083 instance=ExtResource("13_qrljf")]
 y_sort_enabled = true
 position = Vector2(369, -266)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 
-[node name="Fern7" type="Node2D" parent="Middle" unique_id=99768413]
+[node name="Fern7" type="Node2D" parent="Middle" unique_id=1827171472]
 position = Vector2(-176, -310)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/Fern7" unique_id=1164097435]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern7" unique_id=1591663394]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern8" type="Node2D" parent="Middle" unique_id=1758244667]
+[node name="Fern8" type="Node2D" parent="Middle" unique_id=535559083]
 position = Vector2(180, -299)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/Fern8" unique_id=560096914]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern8" unique_id=708927651]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern9" type="Node2D" parent="Middle" unique_id=1931092883]
+[node name="Fern9" type="Node2D" parent="Middle" unique_id=1372073393]
 position = Vector2(395, -288)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/Fern9" unique_id=1223752585]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern9" unique_id=846714254]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_8" parent="Middle" unique_id=395354481 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_8" parent="Middle" unique_id=2115778503 instance=ExtResource("12_kkr2t")]
 y_sort_enabled = true
 position = Vector2(376, -311)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 
-[node name="Tree1_7" parent="Middle" unique_id=192541771 instance=ExtResource("1_mfevw")]
+[node name="Tree1_7" parent="Middle" unique_id=212851655 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(339, -253)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_6" parent="Middle" unique_id=1989833097 instance=ExtResource("1_mfevw")]
+[node name="Tree1_6" parent="Middle" unique_id=1283243730 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(369, -317)
 
-[node name="Bush2_7" parent="Middle" unique_id=2019303618 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_7" parent="Middle" unique_id=747090757 instance=ExtResource("12_kkr2t")]
 y_sort_enabled = true
 position = Vector2(139, -295)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 
-[node name="Rock2_12" parent="Middle" unique_id=1431938019 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_12" parent="Middle" unique_id=2038822907 instance=ExtResource("5_mpj6p")]
 position = Vector2(-139, -302)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Bush1_19" parent="Middle" unique_id=1756573073 instance=ExtResource("13_qrljf")]
+[node name="Bush1_19" parent="Middle" unique_id=1147851880 instance=ExtResource("13_qrljf")]
 y_sort_enabled = true
 position = Vector2(-351, -73)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 
-[node name="Tree1_0" parent="Middle" unique_id=426566746 instance=ExtResource("1_mfevw")]
+[node name="Tree1_0" parent="Middle" unique_id=385951611 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-221, -165)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_1" parent="Middle" unique_id=803987916 instance=ExtResource("1_mfevw")]
+[node name="Tree1_1" parent="Middle" unique_id=13957866 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-321, -253)
 
-[node name="Rock1_11" parent="Middle" unique_id=915981692 instance=ExtResource("2_bq26t")]
+[node name="Rock1_11" parent="Middle" unique_id=1095957733 instance=ExtResource("2_bq26t")]
 position = Vector2(380, -218)
 
-[node name="Rock1_12" parent="Middle" unique_id=1900651764 instance=ExtResource("2_bq26t")]
+[node name="Rock1_12" parent="Middle" unique_id=1040700753 instance=ExtResource("2_bq26t")]
 position = Vector2(-298, -168)
 
-[node name="Tree2_11" parent="Middle" unique_id=1650336711 instance=ExtResource("3_dtfls")]
+[node name="Tree2_11" parent="Middle" unique_id=1309546079 instance=ExtResource("3_dtfls")]
 position = Vector2(-350, -138)
-rotation = -3.0970678
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
-[node name="Rock2_0" parent="Middle" unique_id=273013590 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_0" parent="Middle" unique_id=85466315 instance=ExtResource("5_mpj6p")]
 position = Vector2(73, -274)
 
-[node name="Rock3_0" parent="Middle" unique_id=924253938 instance=ExtResource("6_lmump")]
+[node name="Rock3_0" parent="Middle" unique_id=1802790824 instance=ExtResource("6_lmump")]
 position = Vector2(-68, -247)
 
-[node name="Fern10" type="Node2D" parent="Middle" unique_id=167909877]
+[node name="Fern10" type="Node2D" parent="Middle" unique_id=466554207]
 position = Vector2(-329, -239)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/Fern10" unique_id=1864035960]
+[node name="Gfx" type="Sprite2D" parent="Middle/Fern10" unique_id=2041595057]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Tree1_2" parent="Middle" unique_id=1090003071 instance=ExtResource("1_mfevw")]
+[node name="Tree1_2" parent="Middle" unique_id=975643833 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-383, -77)
 
-[node name="Tree2_10" parent="Middle" unique_id=184942784 instance=ExtResource("3_dtfls")]
+[node name="Tree2_10" parent="Middle" unique_id=1166003770 instance=ExtResource("3_dtfls")]
 position = Vector2(-430, -91)
-rotation = -3.0970678
-scale = Vector2(1, -1)
 
-[node name="VegeCluster10" type="Node2D" parent="Middle" unique_id=569322202]
+[node name="VegeCluster10" type="Node2D" parent="Middle" unique_id=575386265]
 y_sort_enabled = true
 position = Vector2(-381, -108)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Middle/VegeCluster10" unique_id=1864837872]
+[node name="Fern" type="Node2D" parent="Middle/VegeCluster10" unique_id=905727339]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/VegeCluster10/Fern" unique_id=360057414]
+[node name="Gfx" type="Sprite2D" parent="Middle/VegeCluster10/Fern" unique_id=2029942553]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Middle/VegeCluster10" unique_id=42918922 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Middle/VegeCluster10" unique_id=2089007083 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Middle/VegeCluster10" unique_id=2052492123 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Middle/VegeCluster10" unique_id=328678137 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Middle/VegeCluster10" unique_id=2096349 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Middle/VegeCluster10" unique_id=552975000 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeClusterT2" type="Node2D" parent="Middle" unique_id=246206017]
+[node name="VegeClusterT2" type="Node2D" parent="Middle" unique_id=708662804]
 y_sort_enabled = true
 position = Vector2(-429, -93)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Middle/VegeClusterT2" unique_id=971489343]
+[node name="Fern" type="Node2D" parent="Middle/VegeClusterT2" unique_id=462126653]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Middle/VegeClusterT2/Fern" unique_id=559686493]
+[node name="Gfx" type="Sprite2D" parent="Middle/VegeClusterT2/Fern" unique_id=1299375670]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Middle/VegeClusterT2" unique_id=94057390 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Middle/VegeClusterT2" unique_id=296568385 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Middle/VegeClusterT2" unique_id=900913940 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Middle/VegeClusterT2" unique_id=943503465 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Middle/VegeClusterT2" unique_id=1438742555 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Middle/VegeClusterT2" unique_id=1230796511 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="Crate_2" parent="Middle" unique_id=1093952679 instance=ExtResource("4_47as6")]
+[node name="Crate_2" parent="Middle" unique_id=541113692 instance=ExtResource("4_47as6")]
 position = Vector2(390, -122)
 
-[node name="Barrel_2" parent="Middle" unique_id=735943547 instance=ExtResource("2_y16la")]
+[node name="Barrel_2" parent="Middle" unique_id=1061107272 instance=ExtResource("2_y16la")]
 position = Vector2(393, -113)
 
-[node name="Barrel_3" parent="Middle" unique_id=359490906 instance=ExtResource("2_y16la")]
+[node name="Barrel_3" parent="Middle" unique_id=796549195 instance=ExtResource("2_y16la")]
 position = Vector2(380, -117)
 
-[node name="Umbrella1_0" parent="Middle" unique_id=922465140 instance=ExtResource("5_xttnp")]
+[node name="Umbrella1_0" parent="Middle" unique_id=2046411213 instance=ExtResource("5_xttnp")]
 position = Vector2(-228, -82)
 
-[node name="Umbrella2_1" parent="Middle" unique_id=12974464 instance=ExtResource("6_asgp3")]
+[node name="Umbrella2_1" parent="Middle" unique_id=1457118889 instance=ExtResource("6_asgp3")]
 position = Vector2(195, -171)
 scale = Vector2(-1, 1)
 
-[node name="Chair2_2" parent="Middle" unique_id=522274986 instance=ExtResource("18_035np")]
+[node name="Chair2_2" parent="Middle" unique_id=368205819 instance=ExtResource("18_035np")]
 position = Vector2(179, -159)
 
-[node name="Chair3_0" parent="Middle" unique_id=1361256912 instance=ExtResource("7_hjl25")]
+[node name="Chair3_0" parent="Middle" unique_id=581551965 instance=ExtResource("7_hjl25")]
 position = Vector2(-245, -78)
 
-[node name="Chair3_2" parent="Middle" unique_id=246316554 instance=ExtResource("7_hjl25")]
+[node name="Chair3_2" parent="Middle" unique_id=1174039692 instance=ExtResource("7_hjl25")]
 position = Vector2(-211, -79)
 
-[node name="MiddleBottom" type="Node2D" parent="." unique_id=1384561095]
+[node name="MiddleBottom" type="Node2D" parent="." unique_id=61070270]
 y_sort_enabled = true
 
-[node name="Umbrella1_1" parent="MiddleBottom" unique_id=2144109212 instance=ExtResource("5_xttnp")]
+[node name="Umbrella1_1" parent="MiddleBottom" unique_id=506985997 instance=ExtResource("5_xttnp")]
 position = Vector2(-95, 202)
 
-[node name="Post2_3" parent="MiddleBottom" unique_id=2081464046 instance=ExtResource("1_lmump")]
+[node name="Post2_3" parent="MiddleBottom" unique_id=1212038548 instance=ExtResource("1_lmump")]
 position = Vector2(-30, 160)
 
-[node name="Post2_4" parent="MiddleBottom" unique_id=1866978197 instance=ExtResource("1_lmump")]
+[node name="Post2_4" parent="MiddleBottom" unique_id=50163388 instance=ExtResource("1_lmump")]
 position = Vector2(-156, 160)
 
-[node name="Rock1_9" parent="MiddleBottom" unique_id=2096089847 instance=ExtResource("2_bq26t")]
+[node name="Rock1_9" parent="MiddleBottom" unique_id=1076736074 instance=ExtResource("2_bq26t")]
 position = Vector2(-220, 151)
 
-[node name="Tree2_0" parent="MiddleBottom" unique_id=1064523917 instance=ExtResource("3_dtfls")]
+[node name="Tree2_0" parent="MiddleBottom" unique_id=1146607219 instance=ExtResource("3_dtfls")]
 position = Vector2(-341, 165)
-rotation = 3.1415927
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
-[node name="Tree2_1" parent="MiddleBottom" unique_id=1408919676 instance=ExtResource("3_dtfls")]
+[node name="Tree2_1" parent="MiddleBottom" unique_id=1633081647 instance=ExtResource("3_dtfls")]
 position = Vector2(-407, 207)
 
-[node name="Rock2_10" parent="MiddleBottom" unique_id=1450038034 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_10" parent="MiddleBottom" unique_id=1689516640 instance=ExtResource("5_mpj6p")]
 position = Vector2(-293, 204)
 
-[node name="Crate_3" parent="MiddleBottom" unique_id=266606051 instance=ExtResource("4_47as6")]
+[node name="Crate_3" parent="MiddleBottom" unique_id=1463299090 instance=ExtResource("4_47as6")]
 position = Vector2(-111, 240)
 
-[node name="Barrel_4" parent="MiddleBottom" unique_id=2127755533 instance=ExtResource("2_y16la")]
+[node name="Barrel_4" parent="MiddleBottom" unique_id=709678626 instance=ExtResource("2_y16la")]
 position = Vector2(-108, 249)
 
-[node name="Barrel_5" parent="MiddleBottom" unique_id=1237236939 instance=ExtResource("2_y16la")]
+[node name="Barrel_5" parent="MiddleBottom" unique_id=1738599215 instance=ExtResource("2_y16la")]
 position = Vector2(-121, 245)
 
-[node name="Barrel_6" parent="MiddleBottom" unique_id=170385508 instance=ExtResource("2_y16la")]
+[node name="Barrel_6" parent="MiddleBottom" unique_id=1159069033 instance=ExtResource("2_y16la")]
 position = Vector2(-69, 140)
 
-[node name="Barrel_7" parent="MiddleBottom" unique_id=1335905477 instance=ExtResource("2_y16la")]
+[node name="Barrel_7" parent="MiddleBottom" unique_id=961124656 instance=ExtResource("2_y16la")]
 position = Vector2(-75, 146)
 
-[node name="Barrel_8" parent="MiddleBottom" unique_id=244191190 instance=ExtResource("2_y16la")]
+[node name="Barrel_8" parent="MiddleBottom" unique_id=95020531 instance=ExtResource("2_y16la")]
 position = Vector2(-67, 149)
 
-[node name="Buoy_2" parent="MiddleBottom" unique_id=1567769484 instance=ExtResource("1_xdrf3")]
+[node name="Buoy_2" parent="MiddleBottom" unique_id=595750203 instance=ExtResource("1_xdrf3")]
 position = Vector2(-118, 267)
 
-[node name="Buoy_3" parent="MiddleBottom" unique_id=175924252 instance=ExtResource("1_xdrf3")]
+[node name="Buoy_3" parent="MiddleBottom" unique_id=1176823395 instance=ExtResource("1_xdrf3")]
 position = Vector2(-74, 267)
 
-[node name="Chair1_0" parent="MiddleBottom" unique_id=1699611453 instance=ExtResource("20_kwuuf")]
+[node name="Chair1_0" parent="MiddleBottom" unique_id=1722961382 instance=ExtResource("20_kwuuf")]
 position = Vector2(294, 143)
 
-[node name="Chair1_1" parent="MiddleBottom" unique_id=1721198937 instance=ExtResource("20_kwuuf")]
+[node name="Chair1_1" parent="MiddleBottom" unique_id=1562397579 instance=ExtResource("20_kwuuf")]
 position = Vector2(317, 142)
 
-[node name="Chair2_0" parent="MiddleBottom" unique_id=828783405 instance=ExtResource("18_035np")]
+[node name="Chair2_0" parent="MiddleBottom" unique_id=2120904024 instance=ExtResource("18_035np")]
 position = Vector2(127, 113)
 
-[node name="Chair2_1" parent="MiddleBottom" unique_id=2070398265 instance=ExtResource("18_035np")]
+[node name="Chair2_1" parent="MiddleBottom" unique_id=1057482768 instance=ExtResource("18_035np")]
 position = Vector2(102, 113)
 
-[node name="Chair3_5" parent="MiddleBottom" unique_id=1683362333 instance=ExtResource("7_hjl25")]
+[node name="Chair3_5" parent="MiddleBottom" unique_id=549733570 instance=ExtResource("7_hjl25")]
 position = Vector2(30, 45)
 
-[node name="Chair3_7" parent="MiddleBottom" unique_id=1315052561 instance=ExtResource("7_hjl25")]
+[node name="Chair3_7" parent="MiddleBottom" unique_id=2116741397 instance=ExtResource("7_hjl25")]
 position = Vector2(80, 45)
 
-[node name="Chair3_6" parent="MiddleBottom" unique_id=359021063 instance=ExtResource("7_hjl25")]
+[node name="Chair3_6" parent="MiddleBottom" unique_id=545597390 instance=ExtResource("7_hjl25")]
 position = Vector2(55, 44)
 
-[node name="Chair3_1" parent="MiddleBottom" unique_id=397805200 instance=ExtResource("8_i34pf")]
+[node name="Chair3_1" parent="MiddleBottom" unique_id=795814822 instance=ExtResource("8_i34pf")]
 position = Vector2(246, 32)
 
-[node name="Chair3_4" parent="MiddleBottom" unique_id=250631858 instance=ExtResource("8_i34pf")]
+[node name="Chair3_4" parent="MiddleBottom" unique_id=833914620 instance=ExtResource("8_i34pf")]
 position = Vector2(276, 32)
 
-[node name="Chair3_3" parent="MiddleBottom" unique_id=515043759 instance=ExtResource("8_i34pf")]
+[node name="Chair3_3" parent="MiddleBottom" unique_id=840744150 instance=ExtResource("8_i34pf")]
 position = Vector2(226, 124)
 
-[node name="Barrel_0" parent="MiddleBottom" unique_id=2045690542 instance=ExtResource("2_y16la")]
+[node name="Barrel_0" parent="MiddleBottom" unique_id=1368023410 instance=ExtResource("2_y16la")]
 position = Vector2(261, 26)
 
-[node name="Umbrella2_0" parent="MiddleBottom" unique_id=973264339 instance=ExtResource("6_asgp3")]
+[node name="Umbrella2_0" parent="MiddleBottom" unique_id=1994110000 instance=ExtResource("6_asgp3")]
 position = Vector2(209, 115)
 
-[node name="LeftFar" type="Node2D" parent="." unique_id=1914217391]
+[node name="LeftFar" type="Node2D" parent="." unique_id=1507020906]
 y_sort_enabled = true
 
-[node name="Tree1_4" parent="LeftFar" unique_id=800821430 instance=ExtResource("1_mfevw")]
+[node name="Tree1_4" parent="LeftFar" unique_id=1391119202 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1007, -397)
 
-[node name="Tree1_14" parent="LeftFar" unique_id=2125283387 instance=ExtResource("1_mfevw")]
+[node name="Tree1_14" parent="LeftFar" unique_id=2055840589 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1030, -465)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_15" parent="LeftFar" unique_id=1307636485 instance=ExtResource("1_mfevw")]
+[node name="Tree1_15" parent="LeftFar" unique_id=203978746 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-947, -502)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_16" parent="LeftFar" unique_id=238455713 instance=ExtResource("1_mfevw")]
+[node name="Tree1_16" parent="LeftFar" unique_id=1182023384 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1041, -285)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_17" parent="LeftFar" unique_id=235390636 instance=ExtResource("1_mfevw")]
+[node name="Tree1_17" parent="LeftFar" unique_id=430288801 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-992, -214)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_5" parent="LeftFar" unique_id=1256220691 instance=ExtResource("1_mfevw")]
+[node name="Tree1_5" parent="LeftFar" unique_id=2036824467 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1199, -429)
 
-[node name="Tree1_25" parent="LeftFar" unique_id=1617690013 instance=ExtResource("1_mfevw")]
+[node name="Tree1_25" parent="LeftFar" unique_id=1195226341 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1199, -429)
 
-[node name="Tree1_26" parent="LeftFar" unique_id=1200261722 instance=ExtResource("1_mfevw")]
+[node name="Tree1_26" parent="LeftFar" unique_id=843293878 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1277, -357)
 
-[node name="Tree1_27" parent="LeftFar" unique_id=1052900610 instance=ExtResource("1_mfevw")]
+[node name="Tree1_27" parent="LeftFar" unique_id=303823686 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1310, -397)
 
-[node name="Tree1_28" parent="LeftFar" unique_id=1734232740 instance=ExtResource("1_mfevw")]
+[node name="Tree1_28" parent="LeftFar" unique_id=1485849212 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1304, -483)
 
-[node name="Tree1_29" parent="LeftFar" unique_id=2010768055 instance=ExtResource("1_mfevw")]
+[node name="Tree1_29" parent="LeftFar" unique_id=61103369 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1272, -546)
 
-[node name="Tree1_30" parent="LeftFar" unique_id=1480708780 instance=ExtResource("1_mfevw")]
+[node name="Tree1_30" parent="LeftFar" unique_id=1304125696 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1172, -525)
 
-[node name="Tree1_31" parent="LeftFar" unique_id=904375708 instance=ExtResource("1_mfevw")]
+[node name="Tree1_31" parent="LeftFar" unique_id=1311048930 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1071, -552)
 
-[node name="Tree1_32" parent="LeftFar" unique_id=1189893959 instance=ExtResource("1_mfevw")]
+[node name="Tree1_32" parent="LeftFar" unique_id=193523241 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1127, -504)
 
-[node name="Tree1_33" parent="LeftFar" unique_id=1104873147 instance=ExtResource("1_mfevw")]
+[node name="Tree1_33" parent="LeftFar" unique_id=1681707037 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1144, -442)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_13" parent="LeftFar" unique_id=234299454 instance=ExtResource("1_mfevw")]
+[node name="Tree1_13" parent="LeftFar" unique_id=1418018118 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1115, -287)
 
-[node name="Tree1_12" parent="LeftFar" unique_id=9776142 instance=ExtResource("1_mfevw")]
+[node name="Tree1_12" parent="LeftFar" unique_id=1221456091 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1177, -373)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock1_6" parent="LeftFar" unique_id=1595896979 instance=ExtResource("2_bq26t")]
+[node name="Rock1_6" parent="LeftFar" unique_id=573567997 instance=ExtResource("2_bq26t")]
 position = Vector2(-1079, -189)
 
-[node name="Rock1_7" parent="LeftFar" unique_id=326561458 instance=ExtResource("2_bq26t")]
+[node name="Rock1_7" parent="LeftFar" unique_id=633041049 instance=ExtResource("2_bq26t")]
 position = Vector2(-1067, -350)
 
-[node name="Rock1_13" parent="LeftFar" unique_id=990836006 instance=ExtResource("2_bq26t")]
+[node name="Rock1_13" parent="LeftFar" unique_id=1853360825 instance=ExtResource("2_bq26t")]
 position = Vector2(-1255, -295)
 
-[node name="Rock1_14" parent="LeftFar" unique_id=2140060292 instance=ExtResource("2_bq26t")]
+[node name="Rock1_14" parent="LeftFar" unique_id=1891661966 instance=ExtResource("2_bq26t")]
 position = Vector2(-1268, -278)
 
-[node name="Rock1_15" parent="LeftFar" unique_id=357503840 instance=ExtResource("2_bq26t")]
+[node name="Rock1_15" parent="LeftFar" unique_id=1328918854 instance=ExtResource("2_bq26t")]
 position = Vector2(-1244, -306)
 
-[node name="Tree2_2" parent="LeftFar" unique_id=620614279 instance=ExtResource("3_dtfls")]
+[node name="Tree2_2" parent="LeftFar" unique_id=1670505310 instance=ExtResource("3_dtfls")]
 position = Vector2(-1220, -283)
-rotation = -2.8818185
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
-[node name="Tree2_4" parent="LeftFar" unique_id=315246350 instance=ExtResource("3_dtfls")]
+[node name="Tree2_4" parent="LeftFar" unique_id=1925122660 instance=ExtResource("3_dtfls")]
 position = Vector2(-1167.9999, -187)
-rotation = -0.066289276
 
-[node name="Tree2_3" parent="LeftFar" unique_id=1116122238 instance=ExtResource("3_dtfls")]
+[node name="Tree2_3" parent="LeftFar" unique_id=480109559 instance=ExtResource("3_dtfls")]
 position = Vector2(-1068.9999, -389.99997)
-rotation = -0.06226331
 
-[node name="Tree3_4" parent="LeftFar" unique_id=1806214809 instance=ExtResource("4_h61yh")]
+[node name="Tree3_4" parent="LeftFar" unique_id=1891525746 instance=ExtResource("4_h61yh")]
 position = Vector2(-1018, -257)
 
-[node name="Tree3_5" parent="LeftFar" unique_id=1292106311 instance=ExtResource("4_h61yh")]
+[node name="Tree3_5" parent="LeftFar" unique_id=1542287940 instance=ExtResource("4_h61yh")]
 position = Vector2(-1090, -201)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_6" parent="LeftFar" unique_id=2007087012 instance=ExtResource("4_h61yh")]
+[node name="Tree3_6" parent="LeftFar" unique_id=797085371 instance=ExtResource("4_h61yh")]
 position = Vector2(-1057, -407)
 
-[node name="Tree3_14" parent="LeftFar" unique_id=802335050 instance=ExtResource("4_h61yh")]
+[node name="Tree3_14" parent="LeftFar" unique_id=1207888388 instance=ExtResource("4_h61yh")]
 position = Vector2(-1088, -427)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_7" parent="LeftFar" unique_id=2146564615 instance=ExtResource("4_h61yh")]
+[node name="Tree3_7" parent="LeftFar" unique_id=799677640 instance=ExtResource("4_h61yh")]
 position = Vector2(-1117, -372)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_13" parent="LeftFar" unique_id=1377568253 instance=ExtResource("4_h61yh")]
+[node name="Tree3_13" parent="LeftFar" unique_id=726712836 instance=ExtResource("4_h61yh")]
 position = Vector2(-1217, -312)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_8" parent="LeftFar" unique_id=2052127313 instance=ExtResource("4_h61yh")]
+[node name="Tree3_8" parent="LeftFar" unique_id=680604155 instance=ExtResource("4_h61yh")]
 position = Vector2(-1020, -485)
 
-[node name="Tree3_9" parent="LeftFar" unique_id=1238178302 instance=ExtResource("4_h61yh")]
+[node name="Tree3_9" parent="LeftFar" unique_id=1765128950 instance=ExtResource("4_h61yh")]
 position = Vector2(-1218, -532)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_15" parent="LeftFar" unique_id=1324788881 instance=ExtResource("4_h61yh")]
+[node name="Tree3_15" parent="LeftFar" unique_id=2038736689 instance=ExtResource("4_h61yh")]
 position = Vector2(-1133, -548)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_16" parent="LeftFar" unique_id=673530226 instance=ExtResource("4_h61yh")]
+[node name="Tree3_16" parent="LeftFar" unique_id=1276759059 instance=ExtResource("4_h61yh")]
 position = Vector2(-1259, -490)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_17" parent="LeftFar" unique_id=1036992875 instance=ExtResource("4_h61yh")]
+[node name="Tree3_17" parent="LeftFar" unique_id=2040615736 instance=ExtResource("4_h61yh")]
 position = Vector2(-1286, -431)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_18" parent="LeftFar" unique_id=1840005596 instance=ExtResource("4_h61yh")]
+[node name="Tree3_18" parent="LeftFar" unique_id=299911923 instance=ExtResource("4_h61yh")]
 position = Vector2(-1244, -381)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_19" parent="LeftFar" unique_id=666239374 instance=ExtResource("4_h61yh")]
+[node name="Tree3_19" parent="LeftFar" unique_id=1234591532 instance=ExtResource("4_h61yh")]
 position = Vector2(-1306, -325)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_10" parent="LeftFar" unique_id=1462099062 instance=ExtResource("4_h61yh")]
+[node name="Tree3_10" parent="LeftFar" unique_id=1128979174 instance=ExtResource("4_h61yh")]
 position = Vector2(-1011, -169)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock2_4" parent="LeftFar" unique_id=1629526702 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_4" parent="LeftFar" unique_id=1993780345 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1145, -233)
 
-[node name="Rock2_19" parent="LeftFar" unique_id=74915697 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_19" parent="LeftFar" unique_id=737766570 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1209, -291)
 
-[node name="Rock2_20" parent="LeftFar" unique_id=1994794211 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_20" parent="LeftFar" unique_id=2039380235 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1233, -281)
 
-[node name="Rock2_21" parent="LeftFar" unique_id=1855643772 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_21" parent="LeftFar" unique_id=1187445946 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1226, -290)
 
-[node name="Rock2_22" parent="LeftFar" unique_id=1291592929 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_22" parent="LeftFar" unique_id=283090369 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1276, -289)
 
-[node name="Rock2_12" parent="LeftFar" unique_id=909873231 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_12" parent="LeftFar" unique_id=169502191 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1030, -403)
 
-[node name="Rock2_14" parent="LeftFar" unique_id=121357803 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_14" parent="LeftFar" unique_id=90252075 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1103, -488)
 
-[node name="Rock2_15" parent="LeftFar" unique_id=1727226196 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_15" parent="LeftFar" unique_id=940459538 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1124, -439)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock2_16" parent="LeftFar" unique_id=1782678361 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_16" parent="LeftFar" unique_id=431694667 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1055, -464)
 
-[node name="Rock2_17" parent="LeftFar" unique_id=1794981665 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_17" parent="LeftFar" unique_id=652777339 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1111, -520)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock2_13" parent="LeftFar" unique_id=301329174 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_13" parent="LeftFar" unique_id=517837987 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1119, -364)
 
-[node name="Rock2_11" parent="LeftFar" unique_id=2073018129 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_11" parent="LeftFar" unique_id=24907943 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1117, -303)
 
-[node name="Rock3_4" parent="LeftFar" unique_id=204091396 instance=ExtResource("6_lmump")]
+[node name="Rock3_4" parent="LeftFar" unique_id=2037880926 instance=ExtResource("6_lmump")]
 position = Vector2(-1053, -413)
 
-[node name="Rock3_7" parent="LeftFar" unique_id=161386931 instance=ExtResource("6_lmump")]
+[node name="Rock3_7" parent="LeftFar" unique_id=710433435 instance=ExtResource("6_lmump")]
 position = Vector2(-992, -346)
 
-[node name="Rock3_10" parent="LeftFar" unique_id=212834092 instance=ExtResource("6_lmump")]
+[node name="Rock3_10" parent="LeftFar" unique_id=64602534 instance=ExtResource("6_lmump")]
 position = Vector2(-1050, -374)
 
-[node name="Rock3_8" parent="LeftFar" unique_id=1849011575 instance=ExtResource("6_lmump")]
+[node name="Rock3_8" parent="LeftFar" unique_id=1164271121 instance=ExtResource("6_lmump")]
 position = Vector2(-1249, -282)
 
-[node name="Rock3_9" parent="LeftFar" unique_id=2068021662 instance=ExtResource("6_lmump")]
+[node name="Rock3_9" parent="LeftFar" unique_id=1692630673 instance=ExtResource("6_lmump")]
 position = Vector2(-1295, -282)
 
-[node name="Rock3_5" parent="LeftFar" unique_id=683514949 instance=ExtResource("6_lmump")]
+[node name="Rock3_5" parent="LeftFar" unique_id=1788717764 instance=ExtResource("6_lmump")]
 position = Vector2(-1116, -382)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock3_6" parent="LeftFar" unique_id=1956218241 instance=ExtResource("6_lmump")]
+[node name="Rock3_6" parent="LeftFar" unique_id=1629511277 instance=ExtResource("6_lmump")]
 position = Vector2(-1072, -495)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="VegeCluster" type="Node2D" parent="LeftFar" unique_id=1731669696]
+[node name="VegeCluster" type="Node2D" parent="LeftFar" unique_id=543480731]
 y_sort_enabled = true
 position = Vector2(-1126, -303)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster" unique_id=2090377195]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster" unique_id=660116670]
 position = Vector2(-2, 12)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster/Fern" unique_id=51779906]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster/Fern" unique_id=1910780542]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster" unique_id=1427839812]
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster" unique_id=1944618587]
 position = Vector2(-7, -13)
 scale = Vector2(-1, 1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster/Fern2" unique_id=1819849301]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster/Fern2" unique_id=135616300]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster" unique_id=921323791 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster" unique_id=853304517 instance=ExtResource("12_kkr2t")]
 position = Vector2(-2, 2)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster" unique_id=1457707420 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster" unique_id=2108802221 instance=ExtResource("13_qrljf")]
 position = Vector2(-14, 18)
 
-[node name="Bush1_2" parent="LeftFar/VegeCluster" unique_id=1753202927 instance=ExtResource("13_qrljf")]
+[node name="Bush1_2" parent="LeftFar/VegeCluster" unique_id=724987961 instance=ExtResource("13_qrljf")]
 position = Vector2(-24, -31)
 rotation = 2.159234
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster" unique_id=149526170 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster" unique_id=1763550343 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster2" type="Node2D" parent="LeftFar" unique_id=841490022]
+[node name="VegeCluster2" type="Node2D" parent="LeftFar" unique_id=1725555477]
 y_sort_enabled = true
 position = Vector2(-1220, -312)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster2" unique_id=1264776833]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster2" unique_id=812699524]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster2/Fern" unique_id=349515060]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster2/Fern" unique_id=397056230]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster2" unique_id=839725544]
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster2" unique_id=1317443231]
 position = Vector2(-3, 28)
 scale = Vector2(-1, 1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster2/Fern2" unique_id=1415887924]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster2/Fern2" unique_id=1406134938]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster2" unique_id=1593752448 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster2" unique_id=490809231 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster2" unique_id=963141702 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster2" unique_id=1608492195 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_2" parent="LeftFar/VegeCluster2" unique_id=1089198359 instance=ExtResource("13_qrljf")]
+[node name="Bush1_2" parent="LeftFar/VegeCluster2" unique_id=1344703780 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster2" unique_id=1122507275 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster2" unique_id=1124506896 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster3" type="Node2D" parent="LeftFar" unique_id=2090613262]
+[node name="VegeCluster3" type="Node2D" parent="LeftFar" unique_id=1782895691]
 y_sort_enabled = true
 position = Vector2(-1238, -370)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster3" unique_id=1662811870]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster3" unique_id=105621254]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster3/Fern" unique_id=512029870]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster3/Fern" unique_id=1859368594]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster3" unique_id=1438900000 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster3" unique_id=1375591324 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster3" unique_id=417004434 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster3" unique_id=730352417 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster3" unique_id=14619372 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster3" unique_id=1791018637 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster4" type="Node2D" parent="LeftFar" unique_id=626074657]
+[node name="VegeCluster4" type="Node2D" parent="LeftFar" unique_id=1458357994]
 y_sort_enabled = true
 position = Vector2(-1222, -410)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster4" unique_id=1098340207]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster4" unique_id=6980101]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster4/Fern" unique_id=1768796073]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster4/Fern" unique_id=1755642161]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster4" unique_id=1800068096]
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster4" unique_id=753862653]
 position = Vector2(102, 37)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster4/Fern2" unique_id=533898090]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster4/Fern2" unique_id=498464453]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster4" unique_id=967628252 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster4" unique_id=1363885927 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster4" unique_id=1272814621 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster4" unique_id=948953392 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster4" unique_id=2025450607 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster4" unique_id=1323923333 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster11" type="Node2D" parent="LeftFar" unique_id=1061732139]
+[node name="VegeCluster11" type="Node2D" parent="LeftFar" unique_id=1115200975]
 y_sort_enabled = true
 position = Vector2(-1234, -512)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster11" unique_id=399544607]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster11" unique_id=2122660055]
 position = Vector2(9, -9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster11/Fern" unique_id=2085658029]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster11/Fern" unique_id=602930721]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster11" unique_id=1663917101 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster11" unique_id=1690520927 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster11" unique_id=1372468232 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster11" unique_id=695202803 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster11" unique_id=876673769 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster11" unique_id=1043120098 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster12" type="Node2D" parent="LeftFar" unique_id=1727322466]
+[node name="VegeCluster12" type="Node2D" parent="LeftFar" unique_id=1256407835]
 y_sort_enabled = true
 position = Vector2(-1235, -475)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster12" unique_id=248887448]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster12" unique_id=217203909]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster12/Fern" unique_id=151529251]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster12/Fern" unique_id=2084889923]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster12" unique_id=1144491220 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster12" unique_id=264204244 instance=ExtResource("12_kkr2t")]
 position = Vector2(-11, -5)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster12" unique_id=1987142034 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster12" unique_id=879632079 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster12" unique_id=93421172 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster12" unique_id=1200633257 instance=ExtResource("13_qrljf")]
 position = Vector2(-3, -29)
 
-[node name="VegeCluster23" type="Node2D" parent="LeftFar" unique_id=739167144]
+[node name="VegeCluster23" type="Node2D" parent="LeftFar" unique_id=1366873375]
 y_sort_enabled = true
 position = Vector2(-1238, -370)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster23" unique_id=1588774635]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster23" unique_id=628819804]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster23/Fern" unique_id=28813817]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster23/Fern" unique_id=2067247428]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster23" unique_id=129482556 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster23" unique_id=1466669492 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster23" unique_id=1390415182 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster23" unique_id=563608580 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster23" unique_id=833585690 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster23" unique_id=1298063308 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster24" type="Node2D" parent="LeftFar" unique_id=1833153846]
+[node name="VegeCluster24" type="Node2D" parent="LeftFar" unique_id=331894099]
 y_sort_enabled = true
 position = Vector2(-1222, -410)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster24" unique_id=96991196]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster24" unique_id=2074044693]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster24/Fern" unique_id=1724821385]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster24/Fern" unique_id=989254623]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster24" unique_id=330738459 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster24" unique_id=189390498 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster24" unique_id=1481592255 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster24" unique_id=1870496504 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster24" unique_id=262419438 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster24" unique_id=275798319 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster25" type="Node2D" parent="LeftFar" unique_id=1055470941]
+[node name="VegeCluster25" type="Node2D" parent="LeftFar" unique_id=766972902]
 y_sort_enabled = true
 position = Vector2(-1234, -512)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster25" unique_id=1369468445]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster25" unique_id=2038794330]
 position = Vector2(-15, 5)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster25/Fern" unique_id=1474591047]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster25/Fern" unique_id=1919923631]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster25" unique_id=1676860786 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster25" unique_id=1095007288 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster25" unique_id=140775983 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster25" unique_id=1801462226 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster25" unique_id=1614086965 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster25" unique_id=1027863013 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster26" type="Node2D" parent="LeftFar" unique_id=1233512774]
+[node name="VegeCluster26" type="Node2D" parent="LeftFar" unique_id=1097365850]
 y_sort_enabled = true
 position = Vector2(-1235, -475)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster26" unique_id=1021225593]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster26" unique_id=255096001]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster26/Fern" unique_id=50124830]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster26/Fern" unique_id=863715009]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster26" unique_id=300599959 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster26" unique_id=1674178597 instance=ExtResource("12_kkr2t")]
 position = Vector2(-23, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster26" unique_id=1780946900 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster26" unique_id=1023884574 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster26" unique_id=1156865266 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster26" unique_id=638350 instance=ExtResource("13_qrljf")]
 position = Vector2(-4, -17)
 
-[node name="VegeCluster13" type="Node2D" parent="LeftFar" unique_id=418674592]
+[node name="VegeCluster13" type="Node2D" parent="LeftFar" unique_id=513648711]
 y_sort_enabled = true
 position = Vector2(-1227, -447)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster13" unique_id=1800697682]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster13" unique_id=481016167]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster13/Fern" unique_id=113080085]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster13/Fern" unique_id=2023312890]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster13/Fern" unique_id=1552139686]
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster13/Fern" unique_id=754107621]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster13" unique_id=251492338 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster13" unique_id=1441545622 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster13" unique_id=1254385075 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster13" unique_id=1290546896 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster13" unique_id=1350125517 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster13" unique_id=187865200 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster27" type="Node2D" parent="LeftFar" unique_id=515570445]
+[node name="VegeCluster27" type="Node2D" parent="LeftFar" unique_id=1098670600]
 y_sort_enabled = true
 position = Vector2(-1280, -357)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster27" unique_id=137433549]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster27" unique_id=1173066553]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster27/Fern" unique_id=1465402768]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster27/Fern" unique_id=1925516331]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster27" unique_id=1269432460 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster27" unique_id=1372653571 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster27" unique_id=1247981182 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster27" unique_id=501397885 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster27" unique_id=360440304 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster27" unique_id=1694766274 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster28" type="Node2D" parent="LeftFar" unique_id=1327103521]
+[node name="VegeCluster28" type="Node2D" parent="LeftFar" unique_id=1635821772]
 y_sort_enabled = true
 position = Vector2(-1264, -397)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster28" unique_id=1998984534]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster28" unique_id=305103319]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster28/Fern" unique_id=543200213]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster28/Fern" unique_id=683684364]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster28" unique_id=1784591070 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster28" unique_id=273588819 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster28" unique_id=865930682 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster28" unique_id=786579987 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster28" unique_id=1530065630 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster28" unique_id=701415387 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster29" type="Node2D" parent="LeftFar" unique_id=46874417]
+[node name="VegeCluster29" type="Node2D" parent="LeftFar" unique_id=1302172491]
 y_sort_enabled = true
 position = Vector2(-1276, -499)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster29" unique_id=1685986688]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster29" unique_id=1847642959]
 position = Vector2(-3, 8)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster29/Fern" unique_id=827735785]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster29/Fern" unique_id=54068983]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster29" unique_id=1688580836 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster29" unique_id=655682366 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster29" unique_id=720878994 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster29" unique_id=2085188711 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster29" unique_id=1466063811 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster29" unique_id=13091063 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster30" type="Node2D" parent="LeftFar" unique_id=1243389270]
+[node name="VegeCluster30" type="Node2D" parent="LeftFar" unique_id=1602951131]
 y_sort_enabled = true
 position = Vector2(-1277, -462)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster30" unique_id=1803509881]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster30" unique_id=1381948351]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster30/Fern" unique_id=1479090377]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster30/Fern" unique_id=2048179237]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster30" unique_id=2027285754 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster30" unique_id=107343309 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster30" unique_id=963442531 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster30" unique_id=2031592033 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster30" unique_id=361117972 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster30" unique_id=1858275695 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster31" type="Node2D" parent="LeftFar" unique_id=1191535139]
+[node name="VegeCluster31" type="Node2D" parent="LeftFar" unique_id=1466484785]
 y_sort_enabled = true
 position = Vector2(-1269, -434)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster31" unique_id=1259093851]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster31" unique_id=1779976738]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster31/Fern" unique_id=2007804472]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster31/Fern" unique_id=137582323]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster31/Fern" unique_id=1747383502]
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster31/Fern" unique_id=1585702441]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster31" unique_id=350857989 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster31" unique_id=1566707782 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster31" unique_id=686946938 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster31" unique_id=1010704418 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster31" unique_id=1393980334 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster31" unique_id=1396204548 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster32" type="Node2D" parent="LeftFar" unique_id=1937875417]
+[node name="VegeCluster32" type="Node2D" parent="LeftFar" unique_id=1403915320]
 y_sort_enabled = true
 position = Vector2(-1324, -393)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster32" unique_id=206157574]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster32" unique_id=2076442522]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster32/Fern" unique_id=185574219]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster32/Fern" unique_id=2073689862]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster32" unique_id=1020583785 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster32" unique_id=1670913927 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster32" unique_id=1733323357 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster32" unique_id=1827419633 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster32" unique_id=638090382 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster32" unique_id=1530137809 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster33" type="Node2D" parent="LeftFar" unique_id=1726270371]
+[node name="VegeCluster33" type="Node2D" parent="LeftFar" unique_id=120845354]
 y_sort_enabled = true
 position = Vector2(-1308, -433)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster33" unique_id=631974461]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster33" unique_id=796499256]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster33/Fern" unique_id=1818779062]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster33/Fern" unique_id=901145165]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster33" unique_id=249055194 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster33" unique_id=1978427531 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster33" unique_id=1165853571 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster33" unique_id=118986953 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster33" unique_id=1199689034 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster33" unique_id=1972747053 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster34" type="Node2D" parent="LeftFar" unique_id=1884283561]
+[node name="VegeCluster34" type="Node2D" parent="LeftFar" unique_id=723607962]
 y_sort_enabled = true
 position = Vector2(-1320, -535)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster34" unique_id=976296798]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster34" unique_id=308493089]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster34/Fern" unique_id=251700259]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster34/Fern" unique_id=438628223]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster34" unique_id=2127797346 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster34" unique_id=1417364976 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster34" unique_id=366808732 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster34" unique_id=1674694171 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster34" unique_id=948988189 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster34" unique_id=1101853866 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster35" type="Node2D" parent="LeftFar" unique_id=383536904]
+[node name="VegeCluster35" type="Node2D" parent="LeftFar" unique_id=1451546946]
 y_sort_enabled = true
 position = Vector2(-1321, -498)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster35" unique_id=267149135]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster35" unique_id=136084289]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster35/Fern" unique_id=693123580]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster35/Fern" unique_id=735382410]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster35" unique_id=288197085 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster35" unique_id=163875073 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster35" unique_id=939371387 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster35" unique_id=344512370 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster35" unique_id=1261632602 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster35" unique_id=1812762517 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster36" type="Node2D" parent="LeftFar" unique_id=598331130]
+[node name="VegeCluster36" type="Node2D" parent="LeftFar" unique_id=2043306090]
 y_sort_enabled = true
 position = Vector2(-1313, -470)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster36" unique_id=566527466]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster36" unique_id=112103827]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster36/Fern" unique_id=961999211]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster36/Fern" unique_id=1806117565]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster36/Fern" unique_id=971173174]
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster36/Fern" unique_id=1524445596]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster36" unique_id=139236280 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster36" unique_id=1831967911 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster36" unique_id=1700664785 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster36" unique_id=2128472232 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster36" unique_id=748257149 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster36" unique_id=1739526414 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster37" type="Node2D" parent="LeftFar" unique_id=1737259937]
+[node name="VegeCluster37" type="Node2D" parent="LeftFar" unique_id=538973590]
 y_sort_enabled = true
 position = Vector2(-1272, -540)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster37" unique_id=1001128794]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster37" unique_id=1723679152]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster37/Fern" unique_id=1440651547]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster37/Fern" unique_id=1046798606]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster37" unique_id=1395129487 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster37" unique_id=1602136862 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster37" unique_id=1643769525 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster37" unique_id=1436591884 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster37" unique_id=1109528249 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster37" unique_id=353333850 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster38" type="Node2D" parent="LeftFar" unique_id=1871795884]
+[node name="VegeCluster38" type="Node2D" parent="LeftFar" unique_id=136817507]
 y_sort_enabled = true
 position = Vector2(-1218, -545)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster38" unique_id=449982402]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster38" unique_id=1908924952]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster38/Fern" unique_id=2006279077]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster38/Fern" unique_id=109489692]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster38" unique_id=2101593421 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster38" unique_id=396539232 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster38" unique_id=1046500390 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster38" unique_id=1186150254 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster38" unique_id=1814027039 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster38" unique_id=1635937170 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster39" type="Node2D" parent="LeftFar" unique_id=1982355690]
+[node name="VegeCluster39" type="Node2D" parent="LeftFar" unique_id=2017867354]
 y_sort_enabled = true
 position = Vector2(-1171, -543)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster39" unique_id=1887177505]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster39" unique_id=1027653343]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster39/Fern" unique_id=754533092]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster39/Fern" unique_id=567321676]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster39" unique_id=624897715 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster39" unique_id=961284852 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster39" unique_id=2041446313 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster39" unique_id=563059722 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster39" unique_id=1409766691 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster39" unique_id=303347656 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster40" type="Node2D" parent="LeftFar" unique_id=483464494]
+[node name="VegeCluster40" type="Node2D" parent="LeftFar" unique_id=1619189183]
 y_sort_enabled = true
 position = Vector2(-1134, -541)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster40" unique_id=1170625046]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster40" unique_id=939280196]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster40/Fern" unique_id=853440422]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster40/Fern" unique_id=449125465]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster40" unique_id=27970343 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster40" unique_id=1413972250 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster40" unique_id=1564083943 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster40" unique_id=80288594 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster40" unique_id=607749304 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster40" unique_id=731020045 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster41" type="Node2D" parent="LeftFar" unique_id=1258229797]
+[node name="VegeCluster41" type="Node2D" parent="LeftFar" unique_id=1802184417]
 y_sort_enabled = true
 position = Vector2(-1085, -543)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster41" unique_id=1820504404]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster41" unique_id=152927695]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster41/Fern" unique_id=742496830]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster41/Fern" unique_id=1122762679]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster41/Fern" unique_id=600167477]
+[node name="Gfx2" type="Sprite2D" parent="LeftFar/VegeCluster41/Fern" unique_id=437936280]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster41" unique_id=844913677 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster41" unique_id=1526581194 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster41" unique_id=955205392 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster41" unique_id=305483060 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster41" unique_id=1548931378 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster41" unique_id=356560768 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster42" type="Node2D" parent="LeftFar" unique_id=1555931060]
+[node name="VegeCluster42" type="Node2D" parent="LeftFar" unique_id=1017139254]
 y_sort_enabled = true
 position = Vector2(-1174, -518)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster42" unique_id=1320383850]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster42" unique_id=1089368347]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster42/Fern" unique_id=860232363]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster42/Fern" unique_id=1929765053]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster42" unique_id=549339495 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster42" unique_id=1579876474 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster42" unique_id=1968807467 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster42" unique_id=486249515 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster42" unique_id=967944962 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster42" unique_id=2096503520 instance=ExtResource("13_qrljf")]
 position = Vector2(14, -4)
 
-[node name="VegeCluster43" type="Node2D" parent="LeftFar" unique_id=1695771759]
+[node name="VegeCluster43" type="Node2D" parent="LeftFar" unique_id=1290902189]
 y_sort_enabled = true
 position = Vector2(-1120, -523)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster43" unique_id=1961305122]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster43" unique_id=180987638]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster43/Fern" unique_id=365168912]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster43/Fern" unique_id=2002121310]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster43" unique_id=1088616451 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster43" unique_id=1846725636 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster43" unique_id=1746330684 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster43" unique_id=612576068 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster43" unique_id=2058001590 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster43" unique_id=1892514025 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster44" type="Node2D" parent="LeftFar" unique_id=269746381]
+[node name="VegeCluster44" type="Node2D" parent="LeftFar" unique_id=1586649803]
 y_sort_enabled = true
 position = Vector2(-1073, -521)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster44" unique_id=1157722379]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster44" unique_id=450899509]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster44/Fern" unique_id=1341419805]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster44/Fern" unique_id=1906877798]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster44" unique_id=1905767329 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster44" unique_id=186491508 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster44" unique_id=2088756313 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster44" unique_id=735990185 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster44" unique_id=628884321 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster44" unique_id=1564819356 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster45" type="Node2D" parent="LeftFar" unique_id=236290950]
+[node name="VegeCluster45" type="Node2D" parent="LeftFar" unique_id=1560613039]
 y_sort_enabled = true
 position = Vector2(-1358, -310)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=179288502]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=743970489]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern" unique_id=417185508]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern" unique_id=1333444175]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=1354876773]
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=317959094]
 position = Vector2(-48, 30)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern2" unique_id=1106498477]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern2" unique_id=2033240306]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern3" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=1129043506]
+[node name="Fern3" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=1198518023]
 position = Vector2(-26, 17)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern3" unique_id=304198260]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern3" unique_id=1054302611]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern4" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=159766929]
+[node name="Fern4" type="Node2D" parent="LeftFar/VegeCluster45" unique_id=1620630978]
 position = Vector2(-109, 28)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern4" unique_id=1162565668]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster45/Fern4" unique_id=330533972]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster45" unique_id=1330577811 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster45" unique_id=1789984678 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster45" unique_id=982016184 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster45" unique_id=524212924 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster45" unique_id=38572171 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster45" unique_id=1089390619 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster46" type="Node2D" parent="LeftFar" unique_id=895645353]
+[node name="VegeCluster46" type="Node2D" parent="LeftFar" unique_id=1985848934]
 y_sort_enabled = true
 position = Vector2(-1304, -315)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster46" unique_id=2117614533]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster46" unique_id=1842785541]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster46/Fern" unique_id=1654616574]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster46/Fern" unique_id=2095346085]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster46" unique_id=1557344117]
+[node name="Fern2" type="Node2D" parent="LeftFar/VegeCluster46" unique_id=579693127]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster46/Fern2" unique_id=1030966577]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster46/Fern2" unique_id=390833468]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster46" unique_id=631248404 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster46" unique_id=1974030298 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster46" unique_id=1820082953 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster46" unique_id=201020689 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_2" parent="LeftFar/VegeCluster46" unique_id=1907837040 instance=ExtResource("13_qrljf")]
+[node name="Bush1_2" parent="LeftFar/VegeCluster46" unique_id=1183030551 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster46" unique_id=1512756267 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster46" unique_id=257334820 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster47" type="Node2D" parent="LeftFar" unique_id=1532364123]
+[node name="VegeCluster47" type="Node2D" parent="LeftFar" unique_id=510873069]
 y_sort_enabled = true
 position = Vector2(-1257, -313)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster47" unique_id=1336572366]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster47" unique_id=1416690288]
 position = Vector2(-21, 13)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster47/Fern" unique_id=211819748]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster47/Fern" unique_id=431212978]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster47" unique_id=265296700 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster47" unique_id=2121598022 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster47" unique_id=1132125861 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster47" unique_id=798955437 instance=ExtResource("13_qrljf")]
 position = Vector2(-23, 34)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster47" unique_id=974615764 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster47" unique_id=893074159 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster49" type="Node2D" parent="LeftFar" unique_id=2089271356]
+[node name="VegeCluster49" type="Node2D" parent="LeftFar" unique_id=577943412]
 y_sort_enabled = true
 position = Vector2(-1365, -354)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster49" unique_id=627255844]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster49" unique_id=1237367536]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster49/Fern" unique_id=224227577]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster49/Fern" unique_id=465285483]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster49" unique_id=1530250724 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster49" unique_id=63719088 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster49" unique_id=1834709081 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster49" unique_id=179719278 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster49" unique_id=1695981421 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster49" unique_id=123250311 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster50" type="Node2D" parent="LeftFar" unique_id=735809748]
+[node name="VegeCluster50" type="Node2D" parent="LeftFar" unique_id=650038641]
 y_sort_enabled = true
 position = Vector2(-1318, -352)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster50" unique_id=1041519752]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster50" unique_id=1764519075]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster50/Fern" unique_id=2200563]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster50/Fern" unique_id=1233578150]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster50" unique_id=101129719 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster50" unique_id=1421303460 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster50" unique_id=1573604832 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster50" unique_id=1120654791 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster50" unique_id=1961454880 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster50" unique_id=916082798 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster14" type="Node2D" parent="LeftFar" unique_id=831386504]
+[node name="VegeCluster14" type="Node2D" parent="LeftFar" unique_id=1343859408]
 y_sort_enabled = true
 position = Vector2(-1125, -463)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster14" unique_id=497146299]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster14" unique_id=1053188066]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster14/Fern" unique_id=794851634]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster14/Fern" unique_id=521355677]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster14" unique_id=1735771629 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster14" unique_id=2092093433 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster14" unique_id=655281860 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster14" unique_id=191362234 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster14" unique_id=1510941343 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster14" unique_id=1096066462 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster15" type="Node2D" parent="LeftFar" unique_id=1393212190]
+[node name="VegeCluster15" type="Node2D" parent="LeftFar" unique_id=419347426]
 y_sort_enabled = true
 position = Vector2(-1084, -420)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster15" unique_id=514277389]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster15" unique_id=367605657]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster15/Fern" unique_id=911727880]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster15/Fern" unique_id=630334786]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster15" unique_id=817766325 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster15" unique_id=2044581355 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster15" unique_id=568969096 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster15" unique_id=1807778130 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster15" unique_id=1110826050 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster15" unique_id=529531031 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster16" type="Node2D" parent="LeftFar" unique_id=1739411138]
+[node name="VegeCluster16" type="Node2D" parent="LeftFar" unique_id=2133355419]
 y_sort_enabled = true
 position = Vector2(-1039, -450)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster16" unique_id=130948937]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster16" unique_id=813010013]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster16/Fern" unique_id=1726854389]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster16/Fern" unique_id=892670203]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster16" unique_id=1394925602 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster16" unique_id=1458671544 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster16" unique_id=1731275954 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster16" unique_id=1719766742 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster16" unique_id=1905788646 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster16" unique_id=614931768 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster17" type="Node2D" parent="LeftFar" unique_id=1189864991]
+[node name="VegeCluster17" type="Node2D" parent="LeftFar" unique_id=1766968372]
 y_sort_enabled = true
 position = Vector2(-1007, -315)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster17" unique_id=1716257736]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster17" unique_id=686191320]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster17/Fern" unique_id=1416836699]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster17/Fern" unique_id=1679808151]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster17" unique_id=2136671558 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster17" unique_id=2076464373 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster17" unique_id=1276127304 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster17" unique_id=1402038955 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster17" unique_id=1289367933 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster17" unique_id=1932646905 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster18" type="Node2D" parent="LeftFar" unique_id=1211177962]
+[node name="VegeCluster18" type="Node2D" parent="LeftFar" unique_id=1835394540]
 y_sort_enabled = true
 position = Vector2(-1029, -282)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster18" unique_id=1549504610]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster18" unique_id=1984497047]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster18/Fern" unique_id=1833665788]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster18/Fern" unique_id=655759298]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster18" unique_id=1167531601 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster18" unique_id=944876238 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster18" unique_id=564152061 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster18" unique_id=291869498 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster18" unique_id=1793920772 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster18" unique_id=256941338 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster19" type="Node2D" parent="LeftFar" unique_id=1492008701]
+[node name="VegeCluster19" type="Node2D" parent="LeftFar" unique_id=707322167]
 y_sort_enabled = true
 position = Vector2(-1008, -249)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster19" unique_id=503132760]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster19" unique_id=2017841203]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster19/Fern" unique_id=39400535]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster19/Fern" unique_id=1435181308]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster19" unique_id=1607536111 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster19" unique_id=139623959 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster19" unique_id=1590908178 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster19" unique_id=1542291360 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster19" unique_id=1980210190 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster19" unique_id=1414519931 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster20" type="Node2D" parent="LeftFar" unique_id=1456810043]
+[node name="VegeCluster20" type="Node2D" parent="LeftFar" unique_id=161263423]
 y_sort_enabled = true
 position = Vector2(-1001, -188)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster20" unique_id=870147948]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster20" unique_id=1760095748]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster20/Fern" unique_id=79316283]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster20/Fern" unique_id=371983034]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster20" unique_id=1575875402 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster20" unique_id=647556295 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster20" unique_id=1735713134 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster20" unique_id=676687208 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster20" unique_id=472527970 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster20" unique_id=490442725 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster22" type="Node2D" parent="LeftFar" unique_id=348239110]
+[node name="VegeCluster22" type="Node2D" parent="LeftFar" unique_id=1309551743]
 y_sort_enabled = true
 position = Vector2(-1039, -341)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster22" unique_id=973597459]
+[node name="Fern" type="Node2D" parent="LeftFar/VegeCluster22" unique_id=1449572372]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster22/Fern" unique_id=1292800697]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/VegeCluster22/Fern" unique_id=1867230259]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="LeftFar/VegeCluster22" unique_id=524538925 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="LeftFar/VegeCluster22" unique_id=1837226026 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="LeftFar/VegeCluster22" unique_id=721379905 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="LeftFar/VegeCluster22" unique_id=740913399 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="LeftFar/VegeCluster22" unique_id=744906337 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="LeftFar/VegeCluster22" unique_id=884777572 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="Fern17" type="Node2D" parent="LeftFar" unique_id=230090019]
+[node name="Fern17" type="Node2D" parent="LeftFar" unique_id=1105664341]
 position = Vector2(-1090, -183)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/Fern17" unique_id=182985117]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/Fern17" unique_id=1875913912]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern2" type="Node2D" parent="LeftFar" unique_id=1367676138]
+[node name="Fern2" type="Node2D" parent="LeftFar" unique_id=1171772853]
 position = Vector2(-1120, -373)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="LeftFar/Fern2" unique_id=571141508]
+[node name="Gfx" type="Sprite2D" parent="LeftFar/Fern2" unique_id=68728947]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Left" type="Node2D" parent="." unique_id=688298897]
+[node name="Left" type="Node2D" parent="." unique_id=581961475]
 y_sort_enabled = true
 
-[node name="Tree1_24" parent="Left" unique_id=1747379090 instance=ExtResource("1_mfevw")]
+[node name="Tree1_24" parent="Left" unique_id=719229812 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-878, 74)
 
-[node name="Rock1_3" parent="Left" unique_id=576280681 instance=ExtResource("2_bq26t")]
+[node name="Rock1_3" parent="Left" unique_id=578526792 instance=ExtResource("2_bq26t")]
 position = Vector2(-785, 20)
 
-[node name="Rock1_4" parent="Left" unique_id=1881553278 instance=ExtResource("2_bq26t")]
+[node name="Rock1_4" parent="Left" unique_id=2044193737 instance=ExtResource("2_bq26t")]
 position = Vector2(-742, 169)
 
-[node name="Rock1_5" parent="Left" unique_id=899930541 instance=ExtResource("2_bq26t")]
+[node name="Rock1_5" parent="Left" unique_id=1852668960 instance=ExtResource("2_bq26t")]
 position = Vector2(-970, 159)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock1_8" parent="Left" unique_id=95823421 instance=ExtResource("2_bq26t")]
+[node name="Rock1_8" parent="Left" unique_id=814335716 instance=ExtResource("2_bq26t")]
 position = Vector2(-1071, -29)
 
-[node name="Tree2_5" parent="Left" unique_id=1515010467 instance=ExtResource("3_dtfls")]
+[node name="Tree2_5" parent="Left" unique_id=1207097622 instance=ExtResource("3_dtfls")]
 position = Vector2(-1087.0001, 101)
-rotation = -0.066289276
 
-[node name="Tree2_6" parent="Left" unique_id=1038405499 instance=ExtResource("3_dtfls")]
+[node name="Tree2_6" parent="Left" unique_id=405646792 instance=ExtResource("3_dtfls")]
 position = Vector2(-829, 213)
-rotation = -3.129801
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
-[node name="Rock2_1" parent="Left" unique_id=997265638 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_1" parent="Left" unique_id=1094846805 instance=ExtResource("5_mpj6p")]
 position = Vector2(-699, 66)
 
-[node name="Rock2_3" parent="Left" unique_id=1081327347 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_3" parent="Left" unique_id=14160822 instance=ExtResource("5_mpj6p")]
 position = Vector2(-1001, -5)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Fern16" type="Node2D" parent="Left" unique_id=1590916087]
+[node name="Fern16" type="Node2D" parent="Left" unique_id=1539696694]
 position = Vector2(-876, 89)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern16" unique_id=1552319]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern16" unique_id=1209605552]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Tree1_3" parent="Left" unique_id=1784985597 instance=ExtResource("1_mfevw")]
+[node name="Tree1_3" parent="Left" unique_id=717337837 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-878, 74)
 
-[node name="Rock2_2" parent="Left" unique_id=1204512832 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_2" parent="Left" unique_id=1164546472 instance=ExtResource("5_mpj6p")]
 position = Vector2(-885, 119)
 
-[node name="Rock2_18" parent="Left" unique_id=238513259 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_18" parent="Left" unique_id=1954086204 instance=ExtResource("5_mpj6p")]
 position = Vector2(-785, 165)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_19" parent="Left" unique_id=294771940 instance=ExtResource("1_mfevw")]
+[node name="Tree1_19" parent="Left" unique_id=921009224 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-896, -99)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_20" parent="Left" unique_id=793244769 instance=ExtResource("1_mfevw")]
+[node name="Tree1_20" parent="Left" unique_id=15149164 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-785, -128)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_22" parent="Left" unique_id=1689821499 instance=ExtResource("1_mfevw")]
+[node name="Tree1_22" parent="Left" unique_id=102323541 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-536, -122)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_23" parent="Left" unique_id=1451658125 instance=ExtResource("1_mfevw")]
+[node name="Tree1_23" parent="Left" unique_id=1258342450 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-472, -60)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree2_7" parent="Left" unique_id=580248647 instance=ExtResource("3_dtfls")]
+[node name="Tree2_7" parent="Left" unique_id=2042187562 instance=ExtResource("3_dtfls")]
 position = Vector2(-994.00006, -85)
-rotation = -3.0970678
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
-[node name="Tree2_9" parent="Left" unique_id=870023760 instance=ExtResource("3_dtfls")]
+[node name="Tree2_9" parent="Left" unique_id=999675099 instance=ExtResource("3_dtfls")]
 position = Vector2(-595, -45)
-rotation = -3.0970678
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
-[node name="Tree3_0" parent="Left" unique_id=135607067 instance=ExtResource("4_h61yh")]
+[node name="Tree3_0" parent="Left" unique_id=680778474 instance=ExtResource("4_h61yh")]
 position = Vector2(-482, -105)
 
-[node name="Tree3_11" parent="Left" unique_id=283624360 instance=ExtResource("4_h61yh")]
+[node name="Tree3_11" parent="Left" unique_id=1297477012 instance=ExtResource("4_h61yh")]
 position = Vector2(-1068, -115)
 
-[node name="VegeCluster21" type="Node2D" parent="Left" unique_id=1742949769]
+[node name="VegeCluster21" type="Node2D" parent="Left" unique_id=1115085038]
 y_sort_enabled = true
 position = Vector2(-1000, -136)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeCluster21" unique_id=712796936]
+[node name="Fern" type="Node2D" parent="Left/VegeCluster21" unique_id=500827124]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster21/Fern" unique_id=1985471651]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster21/Fern" unique_id=1027964445]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeCluster21" unique_id=317315703 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeCluster21" unique_id=1063100380 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Left/VegeCluster21" unique_id=1631660403 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeCluster21" unique_id=397001663 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Left/VegeCluster21" unique_id=1632932622 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeCluster21" unique_id=1496893001 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster7" type="Node2D" parent="Left" unique_id=839737799]
+[node name="VegeCluster7" type="Node2D" parent="Left" unique_id=1860343217]
 y_sort_enabled = true
 position = Vector2(-746, -126)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeCluster7" unique_id=1529785556]
+[node name="Fern" type="Node2D" parent="Left/VegeCluster7" unique_id=75443398]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster7/Fern" unique_id=1164731103]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster7/Fern" unique_id=1018827282]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeCluster7" unique_id=1131686241 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeCluster7" unique_id=410421990 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Left/VegeCluster7" unique_id=937704540 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeCluster7" unique_id=1212119215 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Left/VegeCluster7" unique_id=899586326 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeCluster7" unique_id=1810536356 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster8" type="Node2D" parent="Left" unique_id=444757517]
+[node name="VegeCluster8" type="Node2D" parent="Left" unique_id=671840430]
 y_sort_enabled = true
 position = Vector2(-624, -134)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeCluster8" unique_id=1680741031]
+[node name="Fern" type="Node2D" parent="Left/VegeCluster8" unique_id=927539442]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster8/Fern" unique_id=2125201551]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster8/Fern" unique_id=361732055]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeCluster8" unique_id=159652810 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeCluster8" unique_id=130328301 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Left/VegeCluster8" unique_id=2124658619 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeCluster8" unique_id=790716271 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Left/VegeCluster8" unique_id=2040970025 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeCluster8" unique_id=1919360062 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeClusterT3" type="Node2D" parent="Left" unique_id=1979387508]
+[node name="VegeClusterT3" type="Node2D" parent="Left" unique_id=2032244172]
 y_sort_enabled = true
 position = Vector2(-573, -109)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT3" unique_id=406879218]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT3" unique_id=544730825]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT3/Fern" unique_id=1787575066]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT3/Fern" unique_id=1922183816]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT3" unique_id=269923889 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT3" unique_id=2041000835 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT3" unique_id=962350207 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT3" unique_id=1471496268 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT3" unique_id=1696024809 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT3" unique_id=1603662120 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="Fern13" type="Node2D" parent="Left" unique_id=2087313562]
+[node name="Fern13" type="Node2D" parent="Left" unique_id=773419266]
 position = Vector2(-779, -102)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern13" unique_id=1234380700]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern13" unique_id=500539196]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Tree1_18" parent="Left" unique_id=518298881 instance=ExtResource("1_mfevw")]
+[node name="Tree1_18" parent="Left" unique_id=1658957573 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-1017, -126)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree1_21" parent="Left" unique_id=989709018 instance=ExtResource("1_mfevw")]
+[node name="Tree1_21" parent="Left" unique_id=250045030 instance=ExtResource("1_mfevw")]
 y_sort_enabled = false
 position = Vector2(-655, -98)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree2_8" parent="Left" unique_id=1994756366 instance=ExtResource("3_dtfls")]
+[node name="Tree2_8" parent="Left" unique_id=127669628 instance=ExtResource("3_dtfls")]
 position = Vector2(-745.00006, -99.00001)
-rotation = -3.0970678
-scale = Vector2(1, -1)
 
-[node name="Tree3_2" parent="Left" unique_id=1711483860 instance=ExtResource("4_h61yh")]
+[node name="Tree3_2" parent="Left" unique_id=1594083676 instance=ExtResource("4_h61yh")]
 position = Vector2(-717, -107)
 
-[node name="VegeClusterT5" type="Node2D" parent="Left" unique_id=1568767433]
+[node name="VegeClusterT5" type="Node2D" parent="Left" unique_id=1816981867]
 y_sort_enabled = true
 position = Vector2(-810, -120)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT5" unique_id=1468621422]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT5" unique_id=1263942776]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT5/Fern" unique_id=1842226582]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT5/Fern" unique_id=341298312]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT5" unique_id=1307699661 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT5" unique_id=1510223607 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT5" unique_id=1584558565 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT5" unique_id=1387042663 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT5" unique_id=1950582916 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT5" unique_id=1416318772 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="Tree3_1" parent="Left" unique_id=1739399420 instance=ExtResource("4_h61yh")]
+[node name="Tree3_1" parent="Left" unique_id=1041010311 instance=ExtResource("4_h61yh")]
 position = Vector2(-575, -77)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Tree3_3" parent="Left" unique_id=1773895759 instance=ExtResource("4_h61yh")]
+[node name="Tree3_3" parent="Left" unique_id=766281767 instance=ExtResource("4_h61yh")]
 position = Vector2(-810, -79)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="VegeCluster5" type="Node2D" parent="Left" unique_id=95760708]
+[node name="VegeCluster5" type="Node2D" parent="Left" unique_id=559336504]
 y_sort_enabled = true
 position = Vector2(-952, -132)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeCluster5" unique_id=232363080]
+[node name="Fern" type="Node2D" parent="Left/VegeCluster5" unique_id=497463689]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster5/Fern" unique_id=531471655]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster5/Fern" unique_id=322296188]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeCluster5" unique_id=474533105 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeCluster5" unique_id=2134495626 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Left/VegeCluster5" unique_id=2007395769 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeCluster5" unique_id=1640085365 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Left/VegeCluster5" unique_id=1934932704 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeCluster5" unique_id=1377806268 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster6" type="Node2D" parent="Left" unique_id=856951573]
+[node name="VegeCluster6" type="Node2D" parent="Left" unique_id=1624353003]
 y_sort_enabled = true
 position = Vector2(-846, -130)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeCluster6" unique_id=417592943]
+[node name="Fern" type="Node2D" parent="Left/VegeCluster6" unique_id=692005182]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster6/Fern" unique_id=1596702669]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster6/Fern" unique_id=713567291]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeCluster6" unique_id=1637853099 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeCluster6" unique_id=894410696 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Left/VegeCluster6" unique_id=2130698259 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeCluster6" unique_id=1907558096 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Left/VegeCluster6" unique_id=1276381593 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeCluster6" unique_id=618140799 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeCluster9" type="Node2D" parent="Left" unique_id=540310856]
+[node name="VegeCluster9" type="Node2D" parent="Left" unique_id=610112309]
 y_sort_enabled = true
 position = Vector2(-509, -114)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeCluster9" unique_id=1366357063]
+[node name="Fern" type="Node2D" parent="Left/VegeCluster9" unique_id=913850964]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster9/Fern" unique_id=785402933]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeCluster9/Fern" unique_id=742982029]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeCluster9" unique_id=1055409293 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeCluster9" unique_id=1913721929 instance=ExtResource("12_kkr2t")]
 position = Vector2(-5, -6)
 
-[node name="Bush1_0" parent="Left/VegeCluster9" unique_id=2126934996 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeCluster9" unique_id=1178724544 instance=ExtResource("13_qrljf")]
 position = Vector2(-17, 6)
 
-[node name="Bush1_1" parent="Left/VegeCluster9" unique_id=2142488279 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeCluster9" unique_id=1853760043 instance=ExtResource("13_qrljf")]
 position = Vector2(10, -14)
 
-[node name="VegeClusterT7" type="Node2D" parent="Left" unique_id=1913765085]
+[node name="VegeClusterT7" type="Node2D" parent="Left" unique_id=1300170991]
 y_sort_enabled = true
 position = Vector2(-859, -96)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT7" unique_id=280488909]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT7" unique_id=16317115]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT7/Fern" unique_id=1124016171]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT7/Fern" unique_id=1328299610]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT7" unique_id=2103964224 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT7" unique_id=1516587133 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT7" unique_id=1995988233 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT7" unique_id=1217728877 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT7" unique_id=1069083414 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT7" unique_id=2352493 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="VegeClusterT8" type="Node2D" parent="Left" unique_id=815569629]
+[node name="VegeClusterT8" type="Node2D" parent="Left" unique_id=185049660]
 y_sort_enabled = true
 position = Vector2(-683, -88)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT8" unique_id=734952966]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT8" unique_id=731347931]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT8/Fern" unique_id=1783681173]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT8/Fern" unique_id=1918265471]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT8" unique_id=454364144 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT8" unique_id=190990061 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT8" unique_id=1223647459 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT8" unique_id=1864374554 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT8" unique_id=301639269 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT8" unique_id=1958815464 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="VegeClusterT10" type="Node2D" parent="Left" unique_id=163875022]
+[node name="VegeClusterT10" type="Node2D" parent="Left" unique_id=931450202]
 y_sort_enabled = true
 position = Vector2(-529, -90)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT10" unique_id=1332544484]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT10" unique_id=1409241976]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT10/Fern" unique_id=759716697]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT10/Fern" unique_id=75062089]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT10" unique_id=461658683 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT10" unique_id=1113730102 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT10" unique_id=1341213444 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT10" unique_id=933396045 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT10" unique_id=834652913 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT10" unique_id=1447473760 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="VegeClusterT4" type="Node2D" parent="Left" unique_id=296406813]
+[node name="VegeClusterT4" type="Node2D" parent="Left" unique_id=1385864791]
 y_sort_enabled = true
 position = Vector2(-687, -114)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT4" unique_id=306075518]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT4" unique_id=1364761949]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT4/Fern" unique_id=2016645913]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT4/Fern" unique_id=890223723]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT4" unique_id=576230290 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT4" unique_id=1379913546 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT4" unique_id=2018892523 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT4" unique_id=735421180 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT4" unique_id=1183931055 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT4" unique_id=1226551393 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="VegeClusterT6" type="Node2D" parent="Left" unique_id=1024961462]
+[node name="VegeClusterT6" type="Node2D" parent="Left" unique_id=1510288806]
 y_sort_enabled = true
 position = Vector2(-923, -119)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT6" unique_id=2091971271]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT6" unique_id=1485683857]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT6/Fern" unique_id=1372249245]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT6/Fern" unique_id=1481221105]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT6" unique_id=364410704 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT6" unique_id=552679205 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT6" unique_id=172221521 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT6" unique_id=923117157 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT6" unique_id=940791477 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT6" unique_id=248684532 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="VegeClusterT9" type="Node2D" parent="Left" unique_id=1839337128]
+[node name="VegeClusterT9" type="Node2D" parent="Left" unique_id=569567995]
 y_sort_enabled = true
 position = Vector2(-609, -86)
 metadata/_edit_group_ = true
 
-[node name="Fern" type="Node2D" parent="Left/VegeClusterT9" unique_id=786015555]
+[node name="Fern" type="Node2D" parent="Left/VegeClusterT9" unique_id=951053406]
 position = Vector2(0, 9)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT9/Fern" unique_id=626791906]
+[node name="Gfx" type="Sprite2D" parent="Left/VegeClusterT9/Fern" unique_id=1078989066]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Bush2_0" parent="Left/VegeClusterT9" unique_id=1840208101 instance=ExtResource("12_kkr2t")]
+[node name="Bush2_0" parent="Left/VegeClusterT9" unique_id=948098819 instance=ExtResource("12_kkr2t")]
 position = Vector2(1, 11)
 
-[node name="Bush1_0" parent="Left/VegeClusterT9" unique_id=289055246 instance=ExtResource("13_qrljf")]
+[node name="Bush1_0" parent="Left/VegeClusterT9" unique_id=499442544 instance=ExtResource("13_qrljf")]
 position = Vector2(16, 3)
 
-[node name="Bush1_1" parent="Left/VegeClusterT9" unique_id=351524774 instance=ExtResource("13_qrljf")]
+[node name="Bush1_1" parent="Left/VegeClusterT9" unique_id=1363256391 instance=ExtResource("13_qrljf")]
 position = Vector2(-10, -4)
 
-[node name="Fern11" type="Node2D" parent="Left" unique_id=649583578]
+[node name="Fern11" type="Node2D" parent="Left" unique_id=330914066]
 position = Vector2(-462, -114)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern11" unique_id=174755841]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern11" unique_id=1767689232]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern14" type="Node2D" parent="Left" unique_id=514297391]
+[node name="Fern14" type="Node2D" parent="Left" unique_id=1806717203]
 position = Vector2(-989, -154)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern14" unique_id=969592855]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern14" unique_id=1093462314]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern15" type="Node2D" parent="Left" unique_id=403104256]
+[node name="Fern15" type="Node2D" parent="Left" unique_id=888403868]
 position = Vector2(-1040, -110)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern15" unique_id=200686243]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern15" unique_id=966325174]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern18" type="Node2D" parent="Left" unique_id=48493775]
+[node name="Fern18" type="Node2D" parent="Left" unique_id=1102202739]
 position = Vector2(-1083, -115)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern18" unique_id=1878622378]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern18" unique_id=1343726481]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Fern12" type="Node2D" parent="Left" unique_id=1295904579]
+[node name="Fern12" type="Node2D" parent="Left" unique_id=2018226769]
 position = Vector2(-641, -93)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
-[node name="Gfx" type="Sprite2D" parent="Left/Fern12" unique_id=2047715307]
+[node name="Gfx" type="Sprite2D" parent="Left/Fern12" unique_id=2045886459]
 texture_filter = 1
 position = Vector2(4, -14)
 texture = ExtResource("11_ns0n4")
 region_enabled = true
 region_rect = Rect2(288, 120, 56, 40)
 
-[node name="Right" type="Node2D" parent="." unique_id=1065187033]
+[node name="Right" type="Node2D" parent="." unique_id=1061050039]
 y_sort_enabled = true
 
-[node name="Post2_2" parent="Right" unique_id=1183831393 instance=ExtResource("1_lmump")]
+[node name="Post2_2" parent="Right" unique_id=1278711430 instance=ExtResource("1_lmump")]
 position = Vector2(555, 180)
 
-[node name="Post2_4" parent="Right" unique_id=224908841 instance=ExtResource("1_lmump")]
+[node name="Post2_4" parent="Right" unique_id=708980416 instance=ExtResource("1_lmump")]
 position = Vector2(547, 244)
 
-[node name="Post1_14" parent="Right" unique_id=621592071 instance=ExtResource("2_xeihd")]
+[node name="Post1_14" parent="Right" unique_id=1737869762 instance=ExtResource("2_xeihd")]
 position = Vector2(453, 171)
 
-[node name="Rock1_0" parent="Right" unique_id=112620312 instance=ExtResource("2_bq26t")]
+[node name="Rock1_0" parent="Right" unique_id=1902782487 instance=ExtResource("2_bq26t")]
 position = Vector2(1091, -21)
 
-[node name="Rock1_1" parent="Right" unique_id=2126362789 instance=ExtResource("2_bq26t")]
+[node name="Rock1_1" parent="Right" unique_id=943492150 instance=ExtResource("2_bq26t")]
 position = Vector2(793, 131)
 
-[node name="Rock1_2" parent="Right" unique_id=2048133926 instance=ExtResource("2_bq26t")]
+[node name="Rock1_2" parent="Right" unique_id=1845989568 instance=ExtResource("2_bq26t")]
 position = Vector2(1125, 214)
 
-[node name="Rock1_16" parent="Right" unique_id=1660109020 instance=ExtResource("2_bq26t")]
+[node name="Rock1_16" parent="Right" unique_id=1702484080 instance=ExtResource("2_bq26t")]
 position = Vector2(1224, 267)
 
-[node name="Rock1_10" parent="Right" unique_id=395710998 instance=ExtResource("2_bq26t")]
+[node name="Rock1_10" parent="Right" unique_id=1031274452 instance=ExtResource("2_bq26t")]
 position = Vector2(539, 116)
 
-[node name="Rock2_5" parent="Right" unique_id=636248152 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_5" parent="Right" unique_id=1473223191 instance=ExtResource("5_mpj6p")]
 position = Vector2(847, 257)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock2_6" parent="Right" unique_id=1287046614 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_6" parent="Right" unique_id=453342977 instance=ExtResource("5_mpj6p")]
 position = Vector2(1021, 360)
 
-[node name="Rock2_23" parent="Right" unique_id=939577645 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_23" parent="Right" unique_id=1559512663 instance=ExtResource("5_mpj6p")]
 position = Vector2(1211, 279)
 
-[node name="Rock2_7" parent="Right" unique_id=1725691802 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_7" parent="Right" unique_id=421635366 instance=ExtResource("5_mpj6p")]
 position = Vector2(1105, 43)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
-[node name="Rock2_8" parent="Right" unique_id=1712382835 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_8" parent="Right" unique_id=427527151 instance=ExtResource("5_mpj6p")]
 position = Vector2(887, -44)
 
-[node name="Rock3_1" parent="Right" unique_id=97573187 instance=ExtResource("6_lmump")]
+[node name="Rock3_1" parent="Right" unique_id=1134723370 instance=ExtResource("6_lmump")]
 position = Vector2(1038, 28)
 
-[node name="Rock3_2" parent="Right" unique_id=626217049 instance=ExtResource("6_lmump")]
+[node name="Rock3_2" parent="Right" unique_id=1400072975 instance=ExtResource("6_lmump")]
 position = Vector2(975, 272)
 
-[node name="Post3_0" parent="Right" unique_id=256463304 instance=ExtResource("10_5k8gr")]
+[node name="Post3_0" parent="Right" unique_id=628593903 instance=ExtResource("10_5k8gr")]
 position = Vector2(495, 199)
 
-[node name="Post1_15" parent="Right" unique_id=1537618730 instance=ExtResource("2_xeihd")]
+[node name="Post1_15" parent="Right" unique_id=1455504206 instance=ExtResource("2_xeihd")]
 position = Vector2(972, 147)
 
-[node name="Post3_2" parent="Right" unique_id=1427701330 instance=ExtResource("10_5k8gr")]
+[node name="Post3_2" parent="Right" unique_id=1920472040 instance=ExtResource("10_5k8gr")]
 position = Vector2(911, 88)
 
-[node name="Post3_1" parent="Right" unique_id=2113422382 instance=ExtResource("10_5k8gr")]
+[node name="Post3_1" parent="Right" unique_id=259423583 instance=ExtResource("10_5k8gr")]
 position = Vector2(440, 217)
 
-[node name="Barrel_9" parent="Right" unique_id=243167014 instance=ExtResource("2_y16la")]
+[node name="Barrel_9" parent="Right" unique_id=683461951 instance=ExtResource("2_y16la")]
 position = Vector2(436, 238)
 
-[node name="Barrel_10" parent="Right" unique_id=965177434 instance=ExtResource("2_y16la")]
+[node name="Barrel_10" parent="Right" unique_id=617894221 instance=ExtResource("2_y16la")]
 position = Vector2(965, 155)
 
-[node name="Barrel_11" parent="Right" unique_id=633962884 instance=ExtResource("2_y16la")]
+[node name="Barrel_11" parent="Right" unique_id=1863246524 instance=ExtResource("2_y16la")]
 position = Vector2(914, 98)
 
-[node name="RightFar" type="Node2D" parent="." unique_id=1412176351]
+[node name="RightFar" type="Node2D" parent="." unique_id=256525605]
 y_sort_enabled = true
 
-[node name="Rock2_9" parent="RightFar" unique_id=1857070743 instance=ExtResource("5_mpj6p")]
+[node name="Rock2_9" parent="RightFar" unique_id=1401462159 instance=ExtResource("5_mpj6p")]
 position = Vector2(1021, -204)
 
-[node name="Rock3_3" parent="RightFar" unique_id=2041799272 instance=ExtResource("6_lmump")]
+[node name="Rock3_3" parent="RightFar" unique_id=1065573356 instance=ExtResource("6_lmump")]
 position = Vector2(859, -341)
 
-[node name="Rock1_3" parent="RightFar" unique_id=220300610 instance=ExtResource("2_bq26t")]
+[node name="Rock1_3" parent="RightFar" unique_id=945768210 instance=ExtResource("2_bq26t")]
 position = Vector2(912, -232)
 
-[node name="Rock1_4" parent="RightFar" unique_id=2080593305 instance=ExtResource("2_bq26t")]
+[node name="Rock1_4" parent="RightFar" unique_id=1434471171 instance=ExtResource("2_bq26t")]
 position = Vector2(1147, -346)

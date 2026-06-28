@@ -8,4 +8,5 @@ script = ExtResource("1_nsxkn")
 name = "Ancient Pottery"
 small_texture = ExtResource("2_nsxkn")
 price = 9
+digs_required = 6
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

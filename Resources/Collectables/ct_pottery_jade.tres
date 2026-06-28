@@ -8,4 +8,5 @@ script = ExtResource("1_pfohf")
 name = "Jade Pottery"
 small_texture = ExtResource("2_pfohf")
 price = 8
+digs_required = 5
 metadata/_custom_type_script = "uid://cega64ybpgvx1"

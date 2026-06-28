@@ -19,6 +19,11 @@ func _enter_tree() -> void:
 @onready var tool_pivot_2: Control = $ToolPivots/ToolPivot2
 @onready var tool_pivot_3: Control = $ToolPivots/ToolPivot3
 
+@onready var tool_hotkey_1: PanelContainer = $ToolPivots/ToolPivot1/ToolHotkey1
+@onready var tool_hotkey_2: PanelContainer = $ToolPivots/ToolPivot2/ToolHotkey2
+@onready var tool_hotkey_3: PanelContainer = $ToolPivots/ToolPivot3/ToolHotkey3
+
+
 @onready var phone: Phone = $Phone
 @onready var notepad: Notepad = $Notepad
 
@@ -26,8 +31,14 @@ func _enter_tree() -> void:
 @export_group("READ ONLY")
 
 @export var tool_1:Rotator = null
+static var get_tool_1:Rotator:
+	get: return instance.tool_1
 @export var tool_2:Rotator = null
+static var get_tool_2:Rotator:
+	get: return instance.tool_2
 @export var tool_3:Rotator = null
+static var get_tool_3:Rotator:
+	get: return instance.tool_3
 
 signal _tool_pivots_moved
 static func tool_pivots_moved() -> Signal:
@@ -78,12 +89,15 @@ static func set_tools_usable(toggle:bool=true) -> void:
 func _set_tools_usable(toggle:bool=true) -> void:
 	if tool_1:
 		tool_1.is_usable = toggle
+		tool_hotkey_1.visible = toggle
 		print_rich(DEBUG_NAME,"SetToolsUsable > Toggled tool 1 '" + tool_1.name + ("' on" if toggle else "off"))
 	if tool_2:
 		tool_2.is_usable = toggle
+		tool_hotkey_2.visible = toggle
 		print_rich(DEBUG_NAME,"SetToolsUsable > Toggled tool 2 '" + tool_2.name + ("' on" if toggle else "off"))
 	if tool_3:
 		tool_3.is_usable = toggle
+		tool_hotkey_3.visible = toggle
 		print_rich(DEBUG_NAME,"SetToolsUsable > Toggled tool 3 '" + tool_3.name + ("' on" if toggle else "off"))
 	
 	phone.is_usable = toggle
